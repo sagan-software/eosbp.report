@@ -1,0 +1,481 @@
+[%raw "require('isomorphic-fetch')"];
+
+[%raw "process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'"];
+
+/* Select a BP node */
+let getEosHttpEndpoint = () => "http://node2.liquideos.com";
+
+let chainId = "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906";
+
+/* Get list of block producers */
+let getBlockProducers = (~httpEndpoint, ~lowerBound="0", ()) =>
+  Eos.Config.t(~httpEndpoint, ~chainId, ())
+  |. Eos.make
+  |. Eos.getTableRows(
+       ~json=true,
+       ~code="eosio",
+       ~scope="eosio",
+       ~table="producers",
+       ~tableKey="",
+       ~lowerBound,
+       ~upperBound="-1",
+       ~limit=5000,
+     )
+  |> Js.Promise.then_(result => {
+       let rows = result##rows;
+       Js.log2(
+         "PRODUCERS:",
+         {
+           "count": rows |> Js.Array.length,
+           "first": rows[0]##owner,
+           "more": result##more,
+           "httpEndpoint": httpEndpoint,
+         },
+       );
+       rows
+       |> Js.Array.map(row =>
+            {
+              "producer": row##owner,
+              "votes": row##total_votes,
+              "url": row##url,
+              "isActive": row##is_active,
+            }
+          )
+       |> Js.Promise.resolve;
+     });
+
+let normalizeBpUrl = rawUrl => {
+  let url = rawUrl;
+  /* Remove invalid unicode characters from beginning and end */
+  let url =
+    url
+    |> Js.String.replaceByRe([%bs.re "/^[^\\x00-\\x7F]/g"], "")
+    |> Js.String.replaceByRe([%bs.re "/[^\\x00-\\x7F]$/g"], "")
+    |> Js.String.replaceByRe([%bs.re "/\\/$/g"], "");
+
+  /* Add protocol if missing */
+  let url =
+    Js.String.startsWith("http", url) || Js.String.startsWith("https", url) ?
+      url : "http://" ++ url;
+  /* Add /bp.json if necessary */
+  let url = Js.String.endsWith(".json", url) ? url : url ++ "/bp.json";
+  url;
+};
+
+type json('error) =
+  | ValidJson4(Fetch.Response.t, Js.Json.t)
+  | ValidJson5(Fetch.Response.t, Js.Json.t)
+  | InvalidJson(Fetch.Response.t)
+  | BadResponse(Fetch.Response.t)
+  | BadUrl
+  | TimedOut
+  | Unreachable
+  | UnknownError('error);
+
+/* Fetch bp.json file for producer */
+let headers =
+  Fetch.HeadersInit.make({
+    "Content-Type": "application/json",
+    "Origin": "http://eosbpdotjson.io",
+    "Referer": "http://eosbpdotjson.io",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+  });
+
+module Json5 = {
+  [@bs.module "json5"] external parseExn : string => Js.Json.t = "parse";
+};
+
+exception UnhandledPromise;
+
+external asJsError : Js.Promise.error => Js.Exn.t = "%identity";
+external asFetchError : Js.Promise.error => {. "code": string} = "%identity";
+
+let thenTimeout = (timeout, promise) =>
+  Js.Promise.make((~resolve, ~reject) => {
+    let timeoutId =
+      Js.Global.setTimeout(
+        () => reject(. [%bs.raw {|new Error("TimedOut")|}]) |> ignore,
+        timeout,
+      );
+    promise
+    |> Js.Promise.then_(res => {
+         Js.Global.clearTimeout(timeoutId);
+         resolve(. res) |> Js.Promise.resolve;
+       })
+    |> ignore;
+  });
+
+let getBpJson = bpUrl =>
+  Js.Promise.(
+    bpUrl
+    |> normalizeBpUrl
+    |. Fetch.fetchWithInit(Fetch.RequestInit.make(~headers, ()))
+    |> then_(res => all2((res |> resolve, res |> Fetch.Response.text)))
+    |> then_(((res, text)) => {
+         let isOk = res |> Fetch.Response.ok;
+         let isHtml =
+           res
+           |. Fetch.Response.headers
+           |> Fetch.Headers.get("Content-Type")
+           |> Js.Option.getWithDefault("")
+           |. Js.Re.test([%bs.re "/html/"]);
+         if (isOk && ! isHtml) {
+           (
+             switch (text |> Js.Json.parseExn) {
+             | json => ValidJson4(res, json)
+             | exception _error =>
+               switch (text |> Json5.parseExn) {
+               | json => ValidJson5(res, json)
+               | exception _error => InvalidJson(res)
+               }
+             }
+           )
+           |> resolve;
+         } else {
+           res |. BadResponse |> resolve;
+         };
+       })
+    |> catch(error =>
+         (
+           switch (error |> asJsError |> Js.Exn.name) {
+           | Some("FetchError") =>
+             switch ((error |> asFetchError)##code) {
+             | "ENOTFOUND" => Unreachable
+             | "ECONNRESET" => Unreachable
+             | "EHOSTUNREACH" => Unreachable
+             | "ECONNREFUSED" => Unreachable
+             | "ETIMEDOUT" => TimedOut
+             | _ => error |. UnknownError
+             }
+           | _ => error |. UnknownError
+           }
+         )
+         |> Js.Promise.resolve
+       )
+    |> thenTimeout(25 * 1000)
+    |> catch(error =>
+         (
+           switch (error |> asJsError |> Js.Exn.message) {
+           | Some("TimedOut") => TimedOut
+           | _ => error |. UnknownError
+           }
+         )
+         |> Js.Promise.resolve
+       )
+  );
+
+let logResults = results => {
+  let producer = results##producer;
+  let url = results##url;
+  switch (results##json) {
+  | ValidJson4(res, _json) =>
+    let jsonUrl = res |> Fetch.Response.url;
+    NpmLog.info({j|valid json - $producer|j}, "%s", jsonUrl);
+  | ValidJson5(res, _json) =>
+    let jsonUrl = res |> Fetch.Response.url;
+    NpmLog.warn({j|valid json5 - $producer|j}, "%s", jsonUrl);
+  | InvalidJson(res) =>
+    NpmLog.error(
+      {j|invalid json - $producer|j},
+      "%j",
+      {
+        "url": url,
+        "responseUrl": res |> Fetch.Response.url,
+        "statusCode": res |> Fetch.Response.status,
+        "statusText": res |> Fetch.Response.statusText,
+      },
+    )
+  | BadResponse(res) =>
+    NpmLog.error(
+      {j|bad response - $producer|j},
+      "%j",
+      {
+        "url": url,
+        "responseUrl": res |> Fetch.Response.url,
+        "statusCode": res |> Fetch.Response.status,
+        "statusText": res |> Fetch.Response.statusText,
+      },
+    )
+  | BadUrl => NpmLog.error({j|bad url - $producer|j}, "%j", {"url": url})
+  | TimedOut => NpmLog.error({j|timed out - $producer|j}, "%j", {"url": url})
+  | Unreachable =>
+    NpmLog.error({j|unreachable - $producer|j}, "%j", {"url": url})
+  | UnknownError(error) =>
+    NpmLog.error({j|error - $producer|j}, "%o", {"url": url, "error": error})
+  };
+};
+
+let getBpInfo = (info: EosBp.Table.Row.t) => {
+  let url = info.url |> String.trim;
+  if (url == "") {
+    Js.Promise.resolve({
+      "producer": info.owner,
+      "votes": info.totalVotes,
+      "url": info.url,
+      "json": BadUrl,
+    });
+  } else {
+    getBpJson(url)
+    |> Js.Promise.then_(json => {
+         let results = {
+           "producer": info.owner,
+           "votes": info.totalVotes,
+           "url": info.url,
+           "json": json,
+         };
+         logResults(results);
+         results |> Js.Promise.resolve;
+       });
+  };
+};
+
+let getJson = json =>
+  switch (json) {
+  | ValidJson4(_, json) => Some(json)
+  | ValidJson5(_, json) => Some(json)
+  | _ => None
+  };
+
+Js.Promise.(
+  EosBp.Fetch.tableRows(~httpEndpoint="http://node2.liquideos.com", ())
+  |> then_(response => {
+       let bps =
+         response
+         |> EosBp.Fetch.Response.getData
+         |> Js.Option.getWithDefault([||]);
+       bps
+       |> Js.Array.map(getBpInfo)
+       |> all
+       |> then_(results => resolve((bps, results)));
+     })
+  |> then_(((bps, results)) => {
+       let numBps = bps |> Js.Array.length;
+       let numResults = results |> Js.Array.length;
+       NpmLog.info("done fetching", {j|$numResults / $numBps results|j}, "");
+       let stats =
+         Js.Array.reduce(
+           (results, info) =>
+             switch (info##json) {
+             | ValidJson4(_, _) =>
+               {"validJson4": results##validJson4 + 1}
+               |> Js.Obj.assign(results)
+             | ValidJson5(_, _) =>
+               {"validJson5": results##validJson5 + 1}
+               |> Js.Obj.assign(results)
+             | InvalidJson(_) =>
+               {"invalidJson": results##invalidJson + 1}
+               |> Js.Obj.assign(results)
+             | BadResponse(_) =>
+               {"badResponse": results##badResponse + 1}
+               |> Js.Obj.assign(results)
+             | BadUrl =>
+               {"badUrl": results##badUrl + 1} |> Js.Obj.assign(results)
+             | TimedOut =>
+               {"timedOut": results##timedOut + 1} |> Js.Obj.assign(results)
+             | Unreachable =>
+               {"unreachable": results##unreachable + 1}
+               |> Js.Obj.assign(results)
+             | UnknownError(_) =>
+               {"unknownError": results##unknownError + 1}
+               |> Js.Obj.assign(results)
+             },
+           {
+             "validJson4": 0,
+             "validJson5": 0,
+             "invalidJson": 0,
+             "badResponse": 0,
+             "badUrl": 0,
+             "timedOut": 0,
+             "unreachable": 0,
+             "unknownError": 0,
+           },
+           results,
+         );
+       let printNum = num => {
+         let percent = float_of_int(num) /. float_of_int(numResults) *. 100.;
+         let percentStr = Js.Float.toFixedWithPrecision(percent, ~digits=1);
+         {j|\t\t$num / $numResults ($percentStr%)|j};
+       };
+       [|
+         ("ValidJson4", stats##validJson4),
+         ("ValidJson5", stats##validJson5),
+         ("InvalidJson", stats##invalidJson),
+         ("BadResponse", stats##badResponse),
+         ("BadUrl", stats##badUrl),
+         ("TimedOut", stats##timedOut),
+         ("Unreachable", stats##unreachable),
+         ("UnknownError", stats##unknownError),
+       |]
+       |> Js.Array.sortInPlaceWith(((_, a), (_, b)) => b - a)
+       |> Js.Array.forEach(((label, num)) =>
+            NpmLog.info("stats", {j|$label: %s|j}, printNum(num))
+          );
+       results
+       /* |> Js.Array.map(data =>
+            switch (data##json |> getJson) {
+            | Some(json) =>
+              Js.Obj.assign(data, {"errors": validateJson(json)})
+            | None => Js.Obj.assign(data, {"errors": [||]})
+            }
+          ) */
+       |> Js.Array.reduce(
+            (results, data) => {
+              let producer = data##producer;
+              switch (data##json |> getJson) {
+              | Some(json) =>
+                let errors = json |> EosBp.Json.validate;
+                let numErrors = Js.Array.length(errors);
+                NpmLog.info({j|validation - $producer|j}, "%j", errors);
+                Js.Array.push((numErrors, json), results) |> ignore;
+              | None =>
+                /* NpmLog.debug(
+                     {j|validation - $producer|j},
+                     "no json data, skipping...",
+                     "",
+                   ) */
+                ()
+              };
+              results;
+            },
+            [||],
+          )
+       |> resolve;
+     })
+  |> then_(data => {
+       NpmLog.info(
+         "json",
+         "num json objects: " ++ (Js.Array.length(data) |> string_of_int),
+         "",
+       );
+       data
+       |> Js.Array.reduce(
+            (results, (numErrors, json)) =>
+              json
+              |> Js.Json.decodeObject
+              |> Js.Option.getWithDefault(Js.Dict.empty())
+              |. Js.Dict.get("nodes")
+              |> Js.Option.getWithDefault(Js.Json.array([||]))
+              |> Js.Json.decodeArray
+              |> Js.Option.getWithDefault([||])
+              |> Js.Array.map(node => (numErrors, node))
+              |> Js.Array.concat(results),
+            [||],
+          )
+       |> resolve;
+     })
+  |> then_(nodes => {
+       let httpNodes =
+         nodes
+         |> Js.Array.map(((numErrors, node)) => {
+              let nodeObj =
+                node
+                |> Js.Json.decodeObject
+                |> Js.Option.getWithDefault(Js.Dict.empty());
+              let apiEndpoint =
+                nodeObj
+                |. Js.Dict.get("api_endpoint")
+                |> Js.Option.getWithDefault(Js.Json.string(""))
+                |> Js.Json.decodeString
+                |> Js.Option.getWithDefault("");
+              let sslEndpoint =
+                nodeObj
+                |. Js.Dict.get("ssl_endpoint")
+                |> Js.Option.getWithDefault(Js.Json.string(""))
+                |> Js.Json.decodeString
+                |> Js.Option.getWithDefault("");
+              (numErrors, apiEndpoint, sslEndpoint);
+            })
+         |> Js.Array.filter(((_numErrors, apiEndpoint, sslEndpoint)) =>
+              apiEndpoint
+              |> Js.String.length > 0
+              || sslEndpoint
+              |> Js.String.length > 0
+            );
+       let numTotal = nodes |> Js.Array.length;
+       let numHttp = httpNodes |> Js.Array.length;
+       NpmLog.info("nodes", {j|total=$numTotal http=$numHttp|j}, "");
+       httpNodes
+       |> Js.Array.sortInPlaceWith(((a, _, _), (b, _, _)) => a - b)
+       |> Js.Array.forEach(((numErrors, apiEndpoint, sslEndpoint)) =>
+            NpmLog.info(
+              "node",
+              {j|($numErrors, $apiEndpoint, $sslEndpoint)|j},
+              "",
+            )
+          );
+       httpNodes |> resolve;
+     })
+  |> then_(httpNodes => {
+       let endpoint = "/v1/chain/get_info";
+       httpNodes
+       |> Js.Array.map(((_numErrors, apiEndpoint, sslEndpoint)) => {
+            let apiPromise =
+              apiEndpoint |> Js.String.length > 0 ?
+                Fetch.fetch(apiEndpoint ++ endpoint)
+                |> then_(res => Some((apiEndpoint, res)) |> resolve)
+                |> catch(_ => None |> resolve)
+                |> thenTimeout(5 * 1000)
+                |> catch(_ => None |> resolve) :
+                resolve(None);
+            let sslPromise =
+              sslEndpoint |> Js.String.length > 0 ?
+                Fetch.fetch(sslEndpoint ++ endpoint)
+                |> then_(res => Some((sslEndpoint, res)) |> resolve)
+                |> catch(_ => None |> resolve)
+                |> thenTimeout(5 * 1000)
+                |> catch(_ => None |> resolve) :
+                resolve(None);
+            all2((apiPromise, sslPromise));
+          })
+       |> all;
+     })
+  |> then_(httpResults =>
+       httpResults
+       |> Js.Array.reduce(
+            (results, (apiResult, sslResult)) => {
+              switch (apiResult) {
+              | Some(res) => Js.Array.push(res, results) |> ignore
+              | None => ()
+              };
+              switch (sslResult) {
+              | Some(res) => Js.Array.push(res, results) |> ignore
+              | None => ()
+              };
+              results;
+            },
+            [||],
+          )
+       |> resolve
+     )
+  |> then_(responses =>
+       responses
+       |> Js.Array.reduce(
+            (result, (endpoint, res)) => {
+              let url = res |. Fetch.Response.url;
+              let statusCode = res |. Fetch.Response.status;
+              let statusText = res |. Fetch.Response.statusText;
+              NpmLog.info(
+                "response",
+                {j|$statusCode ($statusText) $url |j},
+                "",
+              );
+              if (res |. Fetch.Response.ok) {
+                Js.Array.push((endpoint, res), result) |> ignore;
+              };
+              result;
+            },
+            [||],
+          )
+       |> resolve
+     )
+  |> then_(okResponses => {
+       let numOkResponses = Js.Array.length(okResponses);
+       NpmLog.info("good endpoint", {j|total=$numOkResponses|j}, "");
+       okResponses
+       |> Js.Array.forEach(((endpoint, _)) =>
+            NpmLog.info("good endpoint", endpoint, "")
+          );
+       okResponses |> resolve;
+     })
+  |> then_(_ => Node.Process.exit(0) |> resolve)
+);

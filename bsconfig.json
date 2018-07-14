@@ -1,0 +1,38 @@
+{
+	"name": "react-template",
+	"bsc-flags": ["-bs-super-errors"],
+	"reason": {
+		"react-jsx": 2
+	},
+	"sources": [
+		{
+			"dir": "scripts",
+			"subdirs": true
+		},
+		{
+			"dir": "src",
+			"subdirs": true
+		}
+	],
+	"package-specs": [
+		{
+			"module": "commonjs",
+			"in-source": true
+		}
+	],
+	"suffix": ".js",
+	"namespace": true,
+	"bs-dependencies": [
+		"@glennsl/bs-json",
+		"@jsiebern/bs-material-ui",
+		"@sagan-software/bs-eos",
+		"@sagan-software/bs-react-helmet",
+		"@yamadayuki/bs-url",
+		"bs-fetch",
+		"bs-material-ui-icons",
+		"bs-webapi",
+		"reason-react"
+	],
+	"ppx-flags": ["./node_modules/@jsiebern/bs-material-ui/ppx_withStyles_linux"],
+	"refmt": 3
+}
