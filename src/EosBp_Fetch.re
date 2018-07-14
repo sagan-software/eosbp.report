@@ -20,6 +20,7 @@ module Response = {
       | exception _error => InvalidJson(url, res, text)
       }
     };
+
   let mapJson = (fn, response) =>
     switch (response) {
     | ValidJson4(url, xhr, data) => ValidJson4(url, xhr, data |> fn)

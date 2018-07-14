@@ -3,6 +3,9 @@
 
 module Log = NpmLog;
 
+[@bs.module "mkdirp"]
+external mkdirpSync : string => unit = "sync";
+
 /* let consoleTransport =
      Log.(console(~format=Format.(combine([|metadata(), cli(), simple()|]))));
 
@@ -10,7 +13,26 @@ module Log = NpmLog;
 
 let httpEndpoint = "http://node2.liquideos.com";
 
-let handleRow = row =>
+let writeBpJson = (row: EosBp_Table.Row.t, xhr, json) => {
+  let dirname = Node.Path.join([|Env.buildDir, row.owner|]);
+  let text = xhr |. Xhr.getResponseText |> Js.Option.getWithDefault("");
+  mkdirpSync(dirname);
+  Node.Fs.writeFileAsUtf8Sync(
+    Node.Path.join([|dirname, "bp-raw.json"|]),
+    text,
+  );
+  Node.Fs.writeFileAsUtf8Sync(
+    Node.Path.join([|dirname, "bp.json"|]),
+    json |. Js.Json.stringifyWithSpace(2),
+  );
+  Log.info(
+    "write bp.json",
+    "wrote files",
+    Node.Path.relative(~from=Node.Process.cwd(), ~to_=dirname, ()),
+  );
+};
+
+let fetchBpJson = row =>
   Js.Promise.(
     EosBp.Fetch.Response.(
       EosBp.Fetch.bpJsonRaw(~row, ())
@@ -26,10 +48,10 @@ let handleRow = row =>
            switch (result) {
            | ValidJson4(url, xhr, json) =>
              Log.info(label, "Valid JSON4", metadata(url, xhr));
-             resolve(Some(json));
+             resolve(Some((row, xhr, json)));
            | ValidJson5(url, xhr, json) =>
              Log.warn(label, "Valid JSON5", metadata(url, xhr));
-             resolve(Some(json));
+             resolve(Some((row, xhr, json)));
            | InvalidJson(url, xhr, _text) =>
              Log.error(label, "Invalid JSON", metadata(url, xhr));
              resolve(None);
@@ -69,11 +91,21 @@ Js.Promise.(
          |> EosBp.Fetch.Response.getData
          |> Js.Option.getWithDefault([||]);
        Js.log2("got table rows", rows |> Js.Array.length);
-       rows |> Js.Array.map(handleRow) |> all;
+       rows |> Js.Array.map(fetchBpJson) |> all;
      })
+  |> then_(results =>
+       results
+       |> Js.Array.forEach(result =>
+            switch (result) {
+            | Some((row, xhr, json)) => writeBpJson(row, xhr, json)
+            | None => ()
+            }
+          )
+       |> resolve
+     )
   |> then_(_results => {
-       Log.info("", "Done", "");
-       Node.Process.exit(0);
+       Log.info("", "Done", Env.buildDir);
+       /* Node.Process.exit(0); */
        resolve();
      })
 );
