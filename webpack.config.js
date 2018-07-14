@@ -1,4 +1,3 @@
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
@@ -14,7 +13,7 @@ module.exports = {
 		publicPath: "/",
 	},
 	performance: {
-		hints: isProd ? "error" : false,
+		hints: isProd ? "warning" : false,
 	},
 	devServer: {
 		contentBase: false,
@@ -25,9 +24,6 @@ module.exports = {
 		historyApiFallback: true,
 	},
 	plugins: [
-		new CleanWebpackPlugin(["build"], {
-			verbose: true,
-		}),
 		new HtmlWebpackPlugin({
 			inject: true,
 			showErrors: true,

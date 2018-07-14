@@ -1,5 +1,4 @@
 open MaterialUi;
-module Icon = MaterialUIIcons;
 
 let component = ReasonReact.statelessComponent(__MODULE__);
 
@@ -33,7 +32,7 @@ let make = _children => {
       </AppBar>
       <div>
         <Grid container=true alignItems=`Flex_End>
-          <Grid item=true> <Icon.Search /> </Grid>
+          <Grid item=true />
           <Grid item=true>
             <TextField
               label=("Search" |> ReasonReact.string)
@@ -59,54 +58,54 @@ let make = _children => {
               </TableRow>
             </TableHead>
             <TableBody>
-            <TableRow>
-              <TableCell numeric=true>
-                ("1" |> ReasonReact.string)
-              </TableCell>
-              <TableCell> "eosnewyork.io" </TableCell>
-              <TableCell>
-                <a href="#">
-                  <code>
-                    (
-                      "https://bp.eosnewyork.io/bp.json" |> ReasonReact.string
-                    )
-                  </code>
-                </a>
-              </TableCell>
-              <TableCell numeric=true>
-                ("5 days ago" |> ReasonReact.string)
-              </TableCell>
-              <TableCell>
-                <LinearProgress variant=`Determinate value=(`Float(100.)) />
-              </TableCell>
-              <TableCell>
-                <code> ("68,956,425" |> ReasonReact.string) </code>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell numeric=true>
-                ("2" |> ReasonReact.string)
-              </TableCell>
-              <TableCell> "eosnewyork.io" </TableCell>
-              <TableCell>
-                <a href="#">
-                  <code>
-                    (
-                      "https://bp.eosnewyork.io/bp.json" |> ReasonReact.string
-                    )
-                  </code>
-                </a>
-              </TableCell>
-              <TableCell numeric=true>
-                ("5 days ago" |> ReasonReact.string)
-              </TableCell>
-              <TableCell>
-                <LinearProgress variant=`Determinate value=(`Float(80.)) />
-              </TableCell>
-              <TableCell>
-                <code> ("68,956,425" |> ReasonReact.string) </code>
-              </TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell numeric=true>
+                  ("1" |> ReasonReact.string)
+                </TableCell>
+                <TableCell> "eosnewyork.io" </TableCell>
+                <TableCell>
+                  <a href="#">
+                    <code>
+                      (
+                        "https://bp.eosnewyork.io/bp.json" |> ReasonReact.string
+                      )
+                    </code>
+                  </a>
+                </TableCell>
+                <TableCell numeric=true>
+                  ("5 days ago" |> ReasonReact.string)
+                </TableCell>
+                <TableCell>
+                  <LinearProgress variant=`Determinate value=(`Float(100.)) />
+                </TableCell>
+                <TableCell>
+                  <code> ("68,956,425" |> ReasonReact.string) </code>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell numeric=true>
+                  ("2" |> ReasonReact.string)
+                </TableCell>
+                <TableCell> "eosnewyork.io" </TableCell>
+                <TableCell>
+                  <a href="#">
+                    <code>
+                      (
+                        "https://bp.eosnewyork.io/bp.json" |> ReasonReact.string
+                      )
+                    </code>
+                  </a>
+                </TableCell>
+                <TableCell numeric=true>
+                  ("5 days ago" |> ReasonReact.string)
+                </TableCell>
+                <TableCell>
+                  <LinearProgress variant=`Determinate value=(`Float(80.)) />
+                </TableCell>
+                <TableCell>
+                  <code> ("68,956,425" |> ReasonReact.string) </code>
+                </TableCell>
+              </TableRow>
             </TableBody>
           </Table>
         </Paper>

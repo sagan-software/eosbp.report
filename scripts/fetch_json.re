@@ -3,8 +3,7 @@
 
 module Log = NpmLog;
 
-[@bs.module "mkdirp"]
-external mkdirpSync : string => unit = "sync";
+[@bs.module "mkdirp"] external mkdirpSync : string => unit = "sync";
 
 /* let consoleTransport =
      Log.(console(~format=Format.(combine([|metadata(), cli(), simple()|]))));
@@ -30,6 +29,7 @@ let writeBpJson = (row: EosBp_Table.Row.t, xhr, json) => {
     "wrote files",
     Node.Path.relative(~from=Node.Process.cwd(), ~to_=dirname, ()),
   );
+  Js.Promise.resolve();
 };
 
 let fetchBpJson = row =>
@@ -95,13 +95,13 @@ Js.Promise.(
      })
   |> then_(results =>
        results
-       |> Js.Array.forEach(result =>
+       |> Js.Array.map(result =>
             switch (result) {
             | Some((row, xhr, json)) => writeBpJson(row, xhr, json)
-            | None => ()
+            | None => Js.Promise.resolve()
             }
           )
-       |> resolve
+       |> all
      )
   |> then_(_results => {
        Log.info("", "Done", Env.buildDir);

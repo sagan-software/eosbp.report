@@ -8,7 +8,7 @@
 	"scripts": {
 		"build-bsb": "yarn clean-bsb && bsb -make-world",
 		"build-webpack": "webpack",
-		"build": "yarn build-bsb && yarn build-webpack",
+		"build-prod": "yarn build-bsb && env-cmd .env.prod yarn build-webpack",
 		"start-bsb": "yarn clean-bsb && bsb -make-world -w",
 		"start-webpack": "env-cmd .env.dev webpack-dev-server --hot --inline --progress",
 		"start": "yarn build-bsb && concurrently --raw --kill-others \"yarn start-bsb\" \"yarn start-webpack\"",

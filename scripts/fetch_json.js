@@ -24,7 +24,7 @@ function writeBpJson(row, xhr, json) {
   Fs.writeFileSync(Path.join(dirname, "bp-raw.json"), text, "utf8");
   Fs.writeFileSync(Path.join(dirname, "bp.json"), JSON.stringify(json, null, 2), "utf8");
   Npmlog.info("write bp.json", "wrote files", Path.relative(Process.cwd(), dirname));
-  return /* () */0;
+  return Promise.resolve(/* () */0);
 }
 
 function fetchBpJson(row) {
@@ -91,14 +91,14 @@ EosBp_Fetch$ReactTemplate.tableRows(httpEndpoint, undefined, /* () */0).then((fu
             console.log("got table rows", rows.length);
             return Promise.all(rows.map(fetchBpJson));
           })).then((function (results) {
-          return Promise.resolve((results.forEach((function (result) {
-                              if (result !== undefined) {
-                                var match = result;
-                                return writeBpJson(match[0], match[1], match[2]);
-                              } else {
-                                return /* () */0;
-                              }
-                            })), /* () */0));
+          return Promise.all(results.map((function (result) {
+                            if (result !== undefined) {
+                              var match = result;
+                              return writeBpJson(match[0], match[1], match[2]);
+                            } else {
+                              return Promise.resolve(/* () */0);
+                            }
+                          })));
         })).then((function () {
         Npmlog.info("", "Done", Env$ReactTemplate.buildDir);
         return Promise.resolve(/* () */0);
