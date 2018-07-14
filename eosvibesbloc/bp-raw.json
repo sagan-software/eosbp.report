@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "eosvibesbloc",
+  "producer_public_key": "EOS5wjoLzkppkupmajDM59StKoFSR9AZugfnRSkuBZKDgTrBHP6ZZ",
+  "org": {
+    "candidate_name": "EOSVibes",
+    "website": "https://eosvibes.io",
+    "code_of_conduct":"https://github.com/EOSVibes/docs/blob/master/constitution/v0.1.md",
+    "email":"hello@eosvibes.io",
+    "branding":{
+      "logo_256":"https://eosvibes.io/assets/ev-256.png",
+      "logo_1024":"https://eosvibes.io/assets/ev-1024.png",
+      "logo_svg":"https://eosvibes.io/assets/ev.svg"
+    },
+    "location": {
+        "name": "Amsterdam",
+	"country": "Netherlands",
+	"latitude": 52.3702,
+	"longitude": 4.8952
+    },
+    "social": {
+      "steemit": "eosvibes",
+      "twitter": "eosvibes_bp",
+      "youtube": "UCtVglTz9Bh7IOf3_4FhgidA",
+      "facebook": "",
+      "github":"eosvibes",
+      "reddit": "EosVibes",
+      "keybase": "",
+      "telegram": "eosvibes_bp",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Amsterdam",
+        "country": "Netherlands",
+        "latitude": 52.3702,
+        "longitude": 4.8952
+      },
+      "is_producer": true,
+      "p2p_endpoint": "m.eosvbes.io:9876",
+      "api_endpoint": "http://m.eosvibes.io",
+      "ssl_endpoint": "http://m.eosvibes.io"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "privexinceos",
+  "producer_public_key": "EOS7UU7G3gAzaT2gQ2nBJeJCbCx1e7cUj5GWnNBULQCXD61cj62zL",
+  "org": {
+    "candidate_name": "Privex Inc.",
+    "website": "https://www.privex.io",
+    "code_of_conduct":"https://www.privex.io/code-of-conduct",
+    "email":"eos@privex.io",
+    "branding":{
+      "logo_256":"https://www.privex.io/static/img/logo-privex.png",
+      "logo_1024":"https://www.privex.io/static/img/logo-privex.png",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Belize City",
+      "country": "BZ",
+      "latitude": 17.498611,
+      "longitude": -88.188611
+    },
+    "social": {
+      "steemit": "privex",
+      "twitter": "privexinc",
+      "youtube": "",
+      "facebook": "",
+      "github":"privex",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Falkenstein",
+        "country": "Germany",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "eos-seed-de.privex.io:9876",
+      "api_endpoint": "http://eos-api.privex.io",
+      "ssl_endpoint": "https://eos-api.privex.io"
+    }
+  ]
+}

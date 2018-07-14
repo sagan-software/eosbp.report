@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "blockgenesys",
+  "producer_public_key": "EOS7fTAGzA2KxRG8FFiGngdgJW4L7oDwrQgnCKYmYFQK9aN53qfG7",
+  "org": {
+    "candidate_name": "Block Genesys",
+    "website": "https://www.blockgenesys.com",
+    "code_of_conduct": "https://www.blockgenesys.com/conduct",
+    "ownership_disclosure": "https://www.blockgenesys.com/ownership",
+    "email": "hello@blockgenesys.com",
+    "location": {
+      "name": "Hong Kong",
+      "country": "HK",
+      "latitude": 22.286394,
+      "longitude": 114.149139
+    },
+    "branding": {
+      "logo_256": "https://www.blockgenesys.com/logo_256.png",
+      "logo_1024": "https://www.blockgenesys.com/logo_1024.png",
+      "logo_svg": "https://www.blockgenesys.com/logo_svg.svg"
+    },
+    "social": {
+      "steemit": "blockgenesys",
+      "twitter": "@blockgenesys",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "",
+      "keybase": "blockgenesys",
+      "telegram": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "London",
+        "country": "GB",
+        "latitude": 51.512838,
+        "longitude": -0.087177
+      },
+      "node_type": "full",
+      "p2p_endpoint": "node1.blockgenesys.com:9876",
+      "api_endpoint": "http://blockgenesys.com:8888",
+      "ssl_endpoint": "https://blockgenesys.com:8443"
+    }
+  ]
+}
+

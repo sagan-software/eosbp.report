@@ -1,0 +1,69 @@
+{
+  "producer_account_name": "franceosysbp",
+  "producer_public_key": "EOS7FurktbYTCLzwVpjckHxC2Wx1zuWysUzyjWXhG9fm9E2geV6ZA",
+  "org": {
+    "candidate_name": "franceos",
+    "website": "https://franceos.fr",
+    "email": "hello@franceos.fr",
+    "code_of_conduct": "https://franceos.fr",
+    "ownership_disclosure": "https://franceos.fr",
+    "location": {
+      "name": "Toulouse",
+      "country": "FR",
+      "latitude": 43.604652,
+      "longitude": 1.444209
+    },
+    "branding": {
+      "logo_256": "https://www.franceos.fr/wp-content/uploads/2018/07/franceos-logo-256x256.png",
+      "logo_1024": "https://www.franceos.fr/wp-content/uploads/2018/07/franceos-logo-1024x1024.png",
+      "logo_svg": "https://www.franceos.fr/wp-content/uploads/2018/07/franceos-logo.svg"
+    },
+    "social": {
+      "steemit": "franceos",
+      "twitter": "franceos__",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "",
+      "keybase": "franceos_fr",
+      "telegram": "franceos"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Roubaix",
+        "country": "FR",
+        "latitude": 50.692705,
+        "longitude": 3.177847
+      },
+      "node_type": "full",
+      "is_producer": false,
+      "p2p_endpoint": "peer.franceos.fr:19876",
+      "api_endpoint": "",
+      "ssl_endpoint": "https://api.franceos.fr"
+    },
+    {
+      "location": {
+        "name": "Roubaix",
+        "country": "FR",
+        "latitude": 50.692705,
+        "longitude": 3.177847
+      },
+      "node_type": "producer",
+      "is_producer": true
+    },
+    {
+      "location": {
+        "name": "London",
+        "country": "UK",
+        "latitude": 51.51118829,
+        "longitude": -0.09617353
+      },
+      "node_type": "full",
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

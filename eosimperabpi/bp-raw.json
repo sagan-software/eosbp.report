@@ -1,0 +1,47 @@
+{
+  "producer_account_name": "eosimperabpi",
+  "producer_public_key": "EOS7MSVEZkq8YBqvd2ez2zCARAcKch2q8uo6LdGczC5pWASAKy2s9",
+  "org": {
+    "candidate_name": "EOS IMPERA",
+    "website": "https://www.eosimpera.io",
+    "code_of_conduct": "",
+    "ownership_disclosure": "",
+    "email": "info@eosimpera.io",
+    "branding": {
+      "logo_256": "https://eosimpera.io/Logo_256.jpg",
+      "logo_1024": "https://eosimpera.io/Logo_1024.jpg",
+      "logo_svg": "https://eosimpera.io/eosimpera.svg"
+    },
+    
+      "location": {
+      "name": "Italy",
+      "country": "IT",
+      "latitude": 41.9027835,
+      "longitude": 12.496365500000024
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "",
+      "keybase": "",
+      "telegram": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "ITALY",
+        "country": "IT",
+        "latitude": 41.9027835,
+        "longitude": 12.496365500000024
+      },
+      "is_producer": false,
+      "node_type": "full",
+      "p2p_endpoint": "node.eosimpera.io:9876",
+      "api_endpoint": "api.eosimpera.io",
+      "ssl_endpoint": "api.eosimpera.io"
+    }
+  ]
+}

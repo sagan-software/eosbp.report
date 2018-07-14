@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eoscocoshost",
+  "producer_public_key": "EOS6f1JapkWZAkzGZuwrEfWEvMFvj8Uz8DeeE9wsrXCobWa5SQejv",
+  "org": {
+    "candidate_name": "COCOS BCX",
+    "website": "http://www.cocosbcx.io/",
+    "code_of_conduct": "https://steemit.com/eos/@eoscocos/eos-cocos-block-producer-report",
+    "email": "contact@cocosbcx.io",
+    "branding": {
+      "logo_256": "http://www.cocosbcx.io/bp-standard-info/EOS-COCOS-256.jpg",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "BeiJing",
+      "country": "PRC",
+      "latitude": 39.512147,
+      "longitude": 116.357241
+    },
+    "social": {
+      "steemit": "eoscocos",
+      "twitter": "https://twitter.com/cocosbcx",
+      "youtube": "",
+      "facebook": "",
+      "github": "https://github.com/cocosbcx",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "BeiJing",
+        "country": "PRC",
+        "latitude": 39.512147,
+        "longitude": 116.357241
+      },
+      "is_producer": false,
+      "p2p_endpoint": "http://peer1.cocosbcx.io:14251",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "BeiJing",
+        "country": "PRC",
+        "latitude": 39.512147,
+        "longitude": 116.357241
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

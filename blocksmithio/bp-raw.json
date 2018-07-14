@@ -1,0 +1,56 @@
+{
+  "producer_account_name": "blocksmithio",
+  "producer_public_key": "EOS6XVaKPQNJeyCdKXG3VbLD7VZZbah8jNQBafCySPgzEtnNiM7L8",
+  "org": {
+    "candidate_name": "EOS BlockSmith",
+    "website": "https://eosblocksmith.io",
+    "code_of_conduct":"https://medium.com/@eosBlockSmith/block-producer-independence-and-integrity-pledge-119f72b49131",
+    "ownership_disclosure": "https://medium.com/@eosBlockSmith/eos-blocksmith-disclosure-of-ownership-fcfc57fe3613",
+    "email":"jerry@eosblocksmith.io",
+    "branding":{
+      "logo_256":"https://eosblocksmith.io/eosblocksmith_256.jpg",
+      "logo_1024":"https://eosblocksmith.io/eosblocksmith_1024.jpg",
+      "logo_svg":"https://eosblocksmith.io/eosblocksmith.svg"
+    },
+    "location": {
+      "name": "OK",
+      "country": "US",
+      "latitude": 35.4676 ,
+      "longitude": 97.5164
+    },
+    "social": {
+      "steemit": "eosblocksmith",
+      "twitter": "eosBlockSmith",
+      "youtube": "",
+      "facebook": "",
+      "github":"eosBlockSmith",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "eosBlockSmith",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+     	"name": "Oklahoma",
+        "country": "US",
+        "latitude": 35.4676,
+        "longitude": 97.5164
+
+      },
+      "node_type": "full",
+      "p2p_endpoint": "node0.eosblocksmith.io:9876",
+      "ssl_endpoint": "https://node0.eosblocksmith.io"
+   },
+   {
+      "location": {
+        "name": "Oklahoma",
+        "country": "US",
+         "latitude": 35.4676,
+        "longitude": 97.5164
+      },
+      "node_type": "producer"
+    }
+ ]
+}

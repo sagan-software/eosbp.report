@@ -1,0 +1,44 @@
+{
+  "producer_account_name": "disfundbpeos",
+  "producer_public_key": "EOS8YKiT2wKYFHw75xaXA58S6exo9CsDnr3iuMMpsSwZ2W473Tdif",
+  "org": {
+    "candidate_name": "Distributed Fund EOS BP",
+    "website": "http://distributed.fund/",
+    "code_of_conduct": "https://steemit.com/eos/@distributedfund1/distributed-fund-bp-constitution-draft",
+    "email": "ns@distributed.fund",
+    "branding":{
+      "logo_256": "https://i.imgur.com/gVijzUK.png",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Saint Petersburg, Russia",
+      "country": "643",
+      "latitude": 59.93863,
+      "longitude": 30.2641667
+    },
+    "social": {
+      "steemit": "distributedfund1",
+      "twitter": "@DistributedFund",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "",
+      "keybase": "nstoev",
+      "telegram": "@nstoyev"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Saint Petersburg, Russia", 
+        "country": "643",
+        "latitude": 59.93863,
+        "longitude": 30.2641667
+      },
+      "is_producer": true,
+      "p2p_endpoint": "195.43.95.98:9876",
+      "api_endpoint": "http://195.43.95.98:8888/",
+      "ssl_endpoint": ""
+    }
+  ]
+}

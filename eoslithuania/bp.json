@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eoslithuania",
+  "producer_public_key": "EOS8EhBDNGiqHtwhmPyxFqsqAZfirZUzhqvaErbFVbQem7i5QrNXk",
+  "org": {
+    "candidate_name": "EOS Lithuania",
+    "website": "https://eosio.lt",
+    "code_of_conduct": "https://steemit.com/eos/@eoslithuania/eos-lithuania-code-of-conduct",
+    "email": "info@eosio.lt",
+    "branding": {
+      "logo_256": "https://eosio.lt/wp-content/uploads/2018/05/cropped-LOGO-W-1.png",
+      "logo_1024": "https://eosio.lt/wp-content/uploads/2018/05/cropped-LOGO-W-1.png",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "Vilnius",
+      "country": "LT",
+      "latitude": 54.6875278,
+      "longitude": 25.2756038
+    },
+    "social": {
+      "steemit": "eoslithuania",
+      "twitter": "crypto4economy",
+      "youtube": "UC12IE2S5D46z5JWGLNkMcJQ",
+      "facebook": "cryptoeconomy.world",
+      "github": "eoslithuania",
+      "reddit": "",
+      "keybase": "ministras",
+      "telegram": "eoslithuania",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "eoslithuania",
+        "country": "LT",
+        "latitude": 54.6560291,
+        "longitude": 25.2267303
+      },
+      "is_producer": true,
+      "p2p_endpoint": "node.eosio.lt:9878",
+      "api_endpoint": "http://api.eosio.lt",
+      "ssl_endpoint": "https://api.eosio.lt"
+    },
+    {
+      "location": {
+        "name": "eoslithuania",
+        "country": "LT",
+        "latitude": 54.7240811,
+        "longitude": 25.2952333
+      },
+      "is_producer": true,
+      "p2p_endpoint": "node.eosio.lt:9878",
+      "api_endpoint": "http://api.eosio.lt",
+      "ssl_endpoint": "https://api.eosio.lt"
+    }
+  ]
+}

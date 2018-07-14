@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "eoslawyereos",
+  "producer_public_key": "EOS78J1hRNUKTzdGHUE8zLRVTSQLC8qfPKQLfF9iEeNRPZxWMJwvx",
+  "org": {
+    "candidate_name": "eos.lawyer",
+    "website": "https://eos.lawyer",
+    "code_of_conduct":"https://steemit.com/eos/@eos.lawyer/eos-lawyer-block-producer-candidate",
+    "email":"eoslawyer@outlook.com",
+    "branding":{
+      "logo_256":"https://eos.lawyer/images/eos_lawyer_logo.jpg",
+      "logo_1024":"https://eos.lawyer/images/eos_lawyer_logo.jpg",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Shenzhen",
+      "country": "China",
+      "latitude": 114.064417,
+      "longitude": 22.559825
+    },
+    "social": {
+      "steemit": "https://steemit.com/@eos.lawyer",
+      "twitter": "https://twitter.com/eoslawyer",
+      "youtube": "",
+      "facebook": "",
+      "github":"https://github.com/eoslawyer",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "eoslawyer",
+      "wechat":"eoslawyer"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "East US",
+        "country": "US",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "node.eos.lawyer:9876",
+      "api_endpoint": "node.eos.lawyer:8888",
+      "ssl_endpoint": ""
+    }
+  ]
+}

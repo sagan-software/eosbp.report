@@ -1,0 +1,83 @@
+{
+  "producer_account_name": "eosyskoreabp",
+  "producer_public_key": "EOS7TjKVBkBcSmjsXF4jJfZ1QU9RqVHuBkkcHNJoEcHGR79CoLf2f",
+  "org": {
+    "candidate_name": "EOSYS",
+    "website": "http://eosys.io/",
+    "code_of_conduct": "https://medium.com/eosys/eosys-ownership-disclosure-code-of-conduct-4214e2550e67",
+    "ownership_disclosure": "https://medium.com/eosys/eosys-ownership-disclosure-code-of-conduct-4214e2550e67",
+    "email": "eosys@eosys.io",
+    "branding": {
+      "logo_256": "http://eosys.io/logo_eosys_256.png",
+      "logo_1024": "http://eosys.io/logo_eosys_1024.png",
+      "logo_svg": "http://eosys.io/logo_eosys.svg"
+    },
+    "location": {
+      "name": "Seoul",
+      "country": "KR",
+      "latitude": 37.4992135,
+      "longitude": 127.0359171
+    },
+    "social": {
+      "steemit": "eosys",
+      "twitter": "EOSYS_IO",
+      "youtube": "UCfqueDutLB7th60V6ZZX9Ww",
+      "facebook": "",
+      "github": "EOSYS-io",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "EOSYSIO",
+      "wechat": "charlespyo"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.681936,
+        "longitude": 139.724209
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.681936,
+        "longitude": 139.724209
+      },
+      "is_producer": false,
+      "p2p_endpoint": "pub0.eosys.io:6637",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.681936,
+        "longitude": 139.724209
+      },
+      "is_producer": false,
+      "p2p_endpoint": "pub1.eosys.io:6637",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.681936,
+        "longitude": 139.724209
+      },
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": "https://rpc.eosys.io:443"
+    }
+  ]
+}

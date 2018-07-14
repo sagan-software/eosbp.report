@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "eosvietnambp",
+  "producer_public_key": "EOS6LThT4JZmqbqPjzk1Sf8VCBQg6XWX6hjaVmHJDSRkfWsTxZdLG",
+  "org": {
+    "candidate_name": "EOS VietNam",
+    "website": "https://www.eosviet.io/",
+    "code_of_conduct":"https://www.eosviet.io/#corporate-pledge",
+    "ownership_disclosure":"https://eosviet.io/ownership/",
+    "email":"admin@eosviet.io",
+    "branding":{
+      "logo_256":"https://www.eosviet.io/EOSVIET-256x256.png",
+      "logo_1024":"https://www.eosviet.io/EOSVIET-1024X1024.png",
+      "logo_svg":"https://www.eosviet.io/EOSVIET.svg"
+    },
+    "location": {
+      "name": "Ho Chi Minh City, Vietnam",
+      "country": "VN",
+      "latitude": 10.770392,
+      "longitude": 106.724206
+    },
+    "social": {
+      "steemit": "eosvietnam",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "",
+      "keybase": "eosviet",
+      "telegram": "EOSViet",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+      "name": "Ho Chi Minh City, Vietnam",
+      "country": "VN",
+      "latitude": 10.770392,
+      "longitude": 106.724206
+      },
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+      "name": "Ho Chi Minh City, Vietnam",
+      "country": "VN",
+      "latitude": 10.770392,
+      "longitude": 106.724206
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

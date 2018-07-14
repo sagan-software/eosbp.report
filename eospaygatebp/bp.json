@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "eospaygatebp",
+  "producer_public_key": "EOS6An3xHstoTrAjhALB4R5LzTgwvcXZL5hTNtFeNyFRXutJiq1WJ",
+  "org": {
+    "candidate_name": "EOSPAY",
+    "website": "https://bp.eospay.host",
+    "code_of_conduct": "https://www.eospay.host/pledge",
+    "email": "eospay@paygate.net",
+    "branding": {
+      "logo_256": "https://ipfs.eospay.host/ipfs/QmPBKeAcC8JKVMigtxgyhhC5asQPQwd1hK1MrhkDkDZXHU",
+      "logo_1024": "https://ipfs.eospay.host/ipfs/QmbCPJRVkV69jVyenZrrGLvWXppCaXPoed9gjGoDjFpwwz",
+      "logo_svg": "https://ipfs.eospay.host/ipfs/QmcMQVAbKXDK9rxugzM9C99od9T7iEPDcJ8jXPf5ULMJHg"
+    },
+    "location": {
+      "name": "Seoul",
+      "country": "KR",
+      "latitude": 37.5084307,
+      "longitude": 127.10525370000005
+    },
+    "social": {
+      "steemit": "eospay",
+      "twitter": "eospay",
+      "youtube": "",
+      "facebook": "",
+      "github": "",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "eospayworld",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "SEOUL Center",
+        "country": "KR",
+        "latitude": 37.5084307,
+        "longitude": 127.10525370000005
+      },
+      "is_producer": true,
+      "p2p_endpoint": "mainnet.eospay.host:19876",
+      "api_endpoint": "https://mainnet.eospay.host",
+      "ssl_endpoint": "https://mainnet.eospay.host"
+    }
+  ]
+}

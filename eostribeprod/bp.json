@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eostribeprod",
+  "producer_public_key": "EOS6J5d6rwHJYPZnuv7KRrf5cekTf3atRTjMgbU1YMKuNnrgGvEdE",
+  "org": {
+    "candidate_name": "EOS Tribe",
+    "website": "https://www.eostribe.io",
+    "code_of_conduct": "https://steemit.com/cryptocurrency/@eostribe/eos-tribe-code-of-conduct",
+    "ownership_disclosure": "https://steemit.com/eos/@eostribe/eos-tribe-ownership-disclosure",
+    "email": "info@eostribe.io",
+    "branding": {
+      "logo_256": "https://s3.amazonaws.com/eostribe/eos-tribe-logo-square-256px.png",
+      "logo_1024": "https://s3.amazonaws.com/eostribe/eos-tribe-logo-square-1024px.png",
+      "logo_svg": "https://eostribe.io/images/logo.svg"
+    },
+    "location": {
+      "name": "Cheyenne, WY",
+      "country": "US",
+      "latitude": 41.13998,
+      "longitude": -104.820244
+    },
+    "social": {
+      "steemit": "eostribe",
+      "telegram": "eostribe",
+      "wechat": "realeostribe",
+      "twitter": "eostribe",
+      "facebook": "groups/eostribe",
+      "reddit": "eostribeBP",
+      "keybase": "eostribe"
+    },
+    "support": {
+      "name": "Eugene Luzgin",
+      "email": "eugene@eostribe.io",
+      "contact": "+1-801-556-5050"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Cheyenne, WY",
+        "country": "US",
+        "latitude": 41.13998,
+        "longitude": -104.820244
+      },
+      "node_type": "full",
+      "p2p_endpoint": "api2.eostribe.io:9115",
+      "ssl_endpoint": "https://api2.eostribe.io"
+    },
+    {
+      "location": {
+        "name": "Cheyenne, WY",
+        "country": "US",
+        "latitude": 41.13998,
+        "longitude": -104.820244
+      },
+      "node_type": "producer"
+    }
+  ]
+}

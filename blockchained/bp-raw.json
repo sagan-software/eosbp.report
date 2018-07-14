@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "blockchained",
+  "producer_public_key": "EOS7NkhhRMNz4HoBxvea27gsWJoYjaWzWQCBSmkToZP1cC5e5uMp6",
+  "org": {
+    "candidate_name": "BLCKCHND",
+    "website": "https://eos.blckchnd.com",
+    "code_of_conduct":"https://steemit.com/eos/@blockchained/blckchnd-and-graphene-lab-join-forces-to-enter-the-competition-as-a-candidate-for-eos-bp",
+    "email":"eos@blckchnd.com",
+    "branding":{
+      "logo_256":"https://eos.blckchnd.com/blckchnd-256.png",
+      "logo_1024":"https://eos.blckchnd.com/blckchnd-1024.png",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "St. Petersburg",
+      "country": "RU",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "blockchained",
+      "twitter": "BLCKCHND",
+      "youtube": "",
+      "facebook": "",
+      "github":"blckchnd",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "blckchnd_EOS",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "EOS BLOCKCHND",
+        "country": "Germany",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "is_producer": true,
+      "p2p_endpoint": "p2p.eos.blckchnd.com:9876",
+      "api_endpoint": "https://api-eos.blckchnd.com",
+      "ssl_endpoint": "https://api-eos.blckchnd.com"
+    }
+  ]
+}

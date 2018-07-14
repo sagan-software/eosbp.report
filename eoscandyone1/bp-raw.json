@@ -1,0 +1,47 @@
+{
+  "producer_account_name": "eoscandyone1",
+  "producer_public_key": "EOS8SZrDZ6s1H9wrJrzeUqqm4QFXFgUZ9515osJsAbsgth4RknaeP",
+  "org": {
+    "candidate_name": "Candy.ONE",
+    "website": "https://candy.one",
+    "code_of_conduct":"",
+    "email":"eos@candy.one",
+    "branding":{
+      "logo_256":"https://o3pvuu23u.qnssl.com/candy/images/logo-256.png",
+      "logo_1024":"https://o3pvuu23u.qnssl.com/candy/images/logo-1024.png",
+      "logo_svg":"https://o3pvuu23u.qnssl.com/candy/images/logo-svg.svg"
+    },
+    "location": {
+      "name": "Beijing, China",
+      "country": "CN",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "https://twitter.com/realCandyOne",
+      "youtube": "",
+      "facebook": "https://www.facebook.com/realcandyone",
+      "github":"",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "https://t.me/candyoneofficial2",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo, Japan",
+        "country": "JP",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "eos-peer.candy.one:9876",
+      "api_endpoint": "http://eos-api.candy.one",
+      "ssl_endpoint": "https://eos-api.candy.one"
+    }
+  ]
+}
+

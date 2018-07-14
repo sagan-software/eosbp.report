@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eoscleanerbp",
+  "producer_public_key": "EOS78TFJoRhhQBbAwvdknietfteVYt4GW8bdKSPnw3t3eWHfLrKG4",
+  "org": {
+    "candidate_name": "EOSCleaner",
+    "website": "https://eoscleaner.com",
+    "code_of_conduct": "",
+    "email": "",
+    "branding": {
+      "logo_256": "https://eoscleaner.com/images/eoscleaner-256.jpeg",
+      "logo_1024": "https://eoscleaner.com/images/eoscleaner-1024.jpeg",
+      "logo_svg": "https://eoscleaner.com/images/eoscleaner.svg"
+    },
+    "location": {
+      "name": "HongKong",
+      "country": "HongKong, China",
+      "latitude": 22.2843,
+      "longitude": 114.1727
+    },
+    "social": {
+      "steemit": "https://steemit.com/@eoscleanerbp",
+      "twitter": "https://twitter.com/eoscleaner",
+      "youtube": "",
+      "facebook": "",
+      "github": "https://github.com/eoscleaner",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "https://t.me/eoscleaner",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo Node B-pub",
+        "country": "Japan",
+        "latitude": 35.4981,
+        "longitude": 139.4952
+      },
+      "is_producer": false,
+      "p2p_endpoint": "18.179.100.214:19876",
+      "api_endpoint": "http://api.eoscleaner.com",
+      "ssl_endpoint": "https://api.eoscleaner.com"
+    },
+    {
+      "location": {
+        "name": "Tokyo Node A",
+        "country": "Japan",
+        "latitude": 35.4981,
+        "longitude": 139.4952
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

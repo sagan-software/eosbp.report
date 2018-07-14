@@ -1,0 +1,57 @@
+{
+  "producer_account_name": "eoseouldotio",
+  "producer_public_key": "EOS6SSA4gYCSZ3q9NWpxGsYDv5MWjSwKseyq25RRZexwj8EM6YHDa",
+  "org": {
+    "candidate_name": "EOSeoul",
+    "website": "https://eoseoul.io",
+    "code_of_conduct" : "https://www.eoseoul.io/conduct.html",
+    "ownership_disclosure" : "https://www.eoseoul.io/disclosure.html",
+    "email":"eoseoul@neowiz.com",
+    "branding":{
+      "logo_256":"https://cdn.steemitimages.com/DQmeiC8NPvLrVWi9nv9fvZceYqQjHJmCG36i6nNzspUuBBs/EOSeoul_logo_256.png",
+      "logo_1024":"https://cdn.steemitimages.com/DQmYfVdxYMNeJAmtpi5CXFi8jRnKCvddPoKt3vUGtrPySBn/EOSeoul_logo_BK_1024.png",
+      "logo_svg":"https://cdn.steemitimages.com/DQmakY4p7oxQPxpPz5VSMdMnwp4SbSUiDjXYuDpDNPpfhcU/EOSeoul_logo.svg"
+    },
+    "location": {
+      "name": "Seoul, Korea",
+      "country": "KR",
+      "latitude": 37.400226,
+      "longitude": 127.104194
+    },
+    "social": {
+      "steemit": "eoseoul",
+      "twitter": "eoseoul_kor",
+      "youtube": "UCC7kpjBdGB4idE7JAe0Lviw",
+      "facebook": "EOSeoul.kr",
+      "github":"eoseoul",
+      "reddit": "eoseoul",
+      "keybase": "mrmsm",
+      "telegram": "eoseoul",
+      "wechat":"eoseoul"
+    }
+  },
+  "nodes": [
+    {
+       "location": {
+        "name": "AWS Seoul",
+        "country": "KR",
+        "latitude": 37.400226,
+        "longitude": 127.104194
+      },
+      "node_type": "full",
+      "p2p_endpoint": "api-full2.eoseoul.io:9876",
+      "api_endpoint": "http://user-api.eoseoul.io",
+      "ssl_endpoint": "https://user-api.eoseoul.io"
+    },
+    {
+       "location": {
+        "name": "EOSeoul IDC",
+        "country": "KR",
+        "latitude": 37.482242,
+        "longitude": 126.879722
+      },
+      "node_type": "producer"
+    }
+
+  ]
+}

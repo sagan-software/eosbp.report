@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "stakedstaked",
+  "producer_public_key": "EOS8mqUDLnCjeXQpqTWzSjcr3FoXNDKrXo7W5qJGPrgpxjEH2KLUm",
+  "org": {
+    "candidate_name": "Staked",
+    "website": "https://staked.us",
+    "code_of_conduct": "https://staked.us/eos-code-of-conduct/",
+    "email": "eos@staked.us",
+    "branding":{
+      "logo_256":"https://staked.us/static/i/fav/logo_256.png",
+      "logo_1024":"https://staked.us/static/i/fav/logo_1024.png",
+      "logo_svg":"https://staked.us/static/i/logo.svg"
+    },
+    "location": {
+      "name": "Boston, MA",
+      "country": "US",
+      "latitude": 42.3601,
+      "longitude": 71.0589
+    },
+    "social": {
+      "steemit": "staked",
+      "twitter": "staked_us",
+      "youtube": "",
+      "facebook": "",
+      "github": "stakedllc",
+      "reddit": "",
+      "keybase": "tim_ogilvie",
+      "telegram": "timogilvie",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Virginia",
+        "country": "US",
+        "latitude": 39.020812,
+        "longitude": -77.433357
+      },
+      "is_producer": false,
+      "p2p_endpoint": "eos.staked.us:9870",
+      "api_endpoint": "http://eosrpc.staked.us:8888",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Virginia",
+        "country": "US",
+        "latitude": 39.020812,
+        "longitude": -77.433357
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}
+

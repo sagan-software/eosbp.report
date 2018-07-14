@@ -1,0 +1,40 @@
+{
+  "producer_account_name": "okcapitalbp1",
+  "producer_public_key": "EOS589tCchPXBH5RPuegMpP4boDvWc7pLLUmVXWDtXmB6cfmU6ReR",
+  "org": {
+    "candidate_name": "EOS.OK",
+    "website": "www.okex.com/eosbp",
+    "code_of_conduct": "",
+    "email": "dapeng.hu@okcoin.com",
+    "branding": {
+      "logo_256": "www.okex.com/eosbp/okex-256.jpeg",
+      "logo_1024": "www.okex.com/eosbp/okex-1024.jpeg"
+    },
+    "location": {
+      "name": "Beijing",
+      "country": "China",
+      "latitude": 120.14568,
+      "longitude": 116.30817
+    },
+    "social": {
+      "steemit": "https://steemit.com/eos/@eosok",
+      "twitter": "https://twitter.com/eos_ok",
+      "github": "https://github.com/eosok",
+      "telegram": "https://t.me/eos_ok"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "Japan",
+        "latitude": 139.6932,
+        "longitude": 35.6898
+      },
+      "is_producer": false,
+      "p2p_endpoint": "18.182.28.112:9876",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

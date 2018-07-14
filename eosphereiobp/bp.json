@@ -1,0 +1,61 @@
+{
+  "producer_account_name": "eosphereiobp",
+  "producer_public_key": "EOS5FYRrG3ThNU56d3uZ8d4bo4MsN5Fig9WPY3xYSpH3RqPhpoH3A",
+  "org": {
+    "candidate_name": "EOSphere",
+    "website": "https://www.eosphere.io",
+    "code_of_conduct": "https://steemit.com/eos/@eosphere/eosphere-s-position-on-dividends",
+    "ownership_disclosure": "https://www.eosphere.io/ownership/",
+    "email": "info@eosphere.io",
+    "branding": {
+      "logo_256": "https://www.eosphere.io/eospherelogosquare256.png",
+      "logo_1024": "https://www.eosphere.io/eospherelogosquare1024.png",
+      "logo_svg": "https://www.eosphere.io/eospherelogosquare.svg"
+    },
+    "location": {
+      "name": "Australia",
+      "country": "AU",
+      "latitude": -31.953512,
+      "longitude": 115.857048
+    },
+    "social": {
+      "steemit": "eosphere",
+      "twitter": "eosphere_io",
+      "youtube": "eosphere",
+      "facebook": "eosphereio",
+      "github": "eosphere",
+      "reddit": "eosphere",
+      "keybase": "eosphere",
+      "telegram": "@rossco99",
+      "wechat": "ross-eosphere"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Sydney, Australia",
+        "country": "AU",
+        "latitude": -33.865143,
+        "longitude": 151.2099
+      },
+      "is_producer": false,
+      "node_type": "full",
+      "p2p_endpoint": "peer1.eosphere.io:9876",
+      "api_endpoint": "http://node1.eosphere.io",
+      "ssl_endpoint": "https://node1.eosphere.io"
+    },
+    {
+      "location": {
+        "name": "Sydney, Australia",
+        "country": "AU",
+        "latitude": -33.865143,
+        "longitude": 151.2099
+      },
+      "is_producer": false,
+      "node_type": "full",
+      "p2p_endpoint": "peer2.eosphere.io:9876",
+      "api_endpoint": "http://node2.eosphere.io",
+      "ssl_endpoint": "https://node2.eosphere.io"
+    }
+  ]
+}

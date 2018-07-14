@@ -1,0 +1,42 @@
+{
+  "producer_account_name": "libertyblock",
+  "producer_public_key": "EOS5jDCYph3hctKED9tHbe9L77q8JZToeuMnefMDdyfPkrb89FzSt",
+  "org": {
+    "candidate_name": "LibertyBlock",
+    "website": "https://libertyblock.io",
+    "code_of_conduct":"",
+    "email":"kedarmail@gmail.com",
+    "branding":{
+      "logo_256":"",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Toronto, Canada",
+      "country": "Canada",
+      "latitude": 43.70011,
+      "longitude": 280.5837
+    },
+    "social": {
+      "steemit": "blockliberty",
+      "github":"LibertyBlock",
+      "reddit": "libertyblock",
+      "keybase": "k26dr",
+      "telegram": "k26dr"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+      "name": "Toronto, Canada",
+      "country": "Canada",
+      "latitude": 43.70011,
+      "longitude": 280.5837
+    },
+      "is_producer": false,
+      "p2p_endpoint": "p2p.libertyblock.io:9800",
+      "api_endpoint": "http://mainnet.libertyblock.io:8888",
+      "ssl_endpoint": ""
+    }
+  ]
+}

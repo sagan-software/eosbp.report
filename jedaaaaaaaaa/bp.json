@@ -1,0 +1,42 @@
+{
+  "producer_account_name": "jedaaaaaaaaa",
+  "producer_public_key": "EOS5XP49jx9eJNQZjqvP7pfKNaAe5JmyAbPZMdsiqD61QQEExqUYe",
+  "org": {
+    "candidate_name": "JEDA",
+    "website": "http://www.eosjapan.org",
+    "code_of_conduct": "https://steemit.com/eos/@eosjapan/introducing-jeda-an-eos-io-block-producer-candidate",
+    "email": "info@eosjapan.org",
+    "branding": {
+      "logo_256": "http://www.eosjapan.org/jeda-logo-256.jpg",
+      "logo_1024": "http://www.eosjapan.org/jeda-logo-1024.jpg",
+      "logo_svg": "http://www.eosjapan.org/jeda-logo.svg"
+    },
+    "location": {
+      "name": "Tokyo",
+      "country": "JP",
+      "latitude": 35.679105,
+      "longitude": 139.779609
+    },
+    "social": {
+      "steemit": "eosjapan",
+      "twitter": "eosjapan_jeda",
+      "facebook": "eosjapan",
+      "github": "eosjapan",
+      "telegram": "eosjapan"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.679105,
+        "longitude": 139.779609
+      },
+      "is_producer": false,
+      "p2p_endpoint": "b.jeda.one:3322",
+      "api_endpoint": "http://api.jeda.one:8888",
+      "ssl_endpoint": ""
+    }
+  ]
+}

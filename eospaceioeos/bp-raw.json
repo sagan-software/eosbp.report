@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "eospaceioeos",
+  "producer_public_key": "EOS7dZPHgFJXwHz84JWf5QgybxLpp95cxYE5c4yngsrSqgVFczaPs",
+  "org": {
+    "candidate_name": "EOSpace",
+    "website": "https://eospace.io",
+    "code_of_conduct":"https://eospace.io/code-of-conduct.html",
+    "ownership_disclosure":"https://eospace.io/ownership.html",
+    "email":"contact@eospace.io",
+    "branding":{
+      "logo_256":"https://eospace.io/images/logo/eospace_logo_256x256.png",
+      "logo_1024":"https://eospace.io/images/logo/eospace_logo_1024x1024.png",
+      "logo_svg":"https://eospace.io/images/logo/eospace.svg"
+    },
+    "location": {
+      "name": "Beijing",
+      "country": "CN",
+      "latitude": 39.92,
+      "longitude": 116.46
+    },
+    "social": {
+      "steemit": "princeandfox",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github":"EOSBlock",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "tyeenoprom",
+      "wechat":"Tyeenoprom"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Los Angeles",
+        "country": "US",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "is_producer": false,
+      "node_type": "full",
+      "p2p_endpoint": "p2p.mainnet.eospace.io:88",
+      "api_endpoint": "http://api.mainnet.eospace.io",
+      "ssl_endpoint": "https://api.mainnet.eospace.io"
+    }
+  ]
+}

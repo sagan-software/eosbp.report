@@ -1,0 +1,56 @@
+{
+    "producer_account_name": "wizznetwork1",
+    "producer_public_key": "EOS8S4V1znYv72vedfLWMLecZEQ3ZCSLD5oPNmStUYKdbu9PdLJ48",
+    "org": {
+      "candidate_name": "WIZZ NETWORK EOS",
+      "website": "https://wizz.network/eos",
+      "ownership_disclosure": "https://wizz.network/eos/disclosures",
+      "code_of_conduct":"https://wizz.network/eos/code",
+      "email":"admin@wizz.network",
+      "branding":{
+        "logo_256":"https://wizz.network/256.jpg",
+        "logo_1024":"https://wizz.network/1024.jpg",
+        "logo_svg":"https://wizz.network/wizz.svg"
+      },
+      "location": {
+        "name": "TAMPA",
+        "country": "US",
+        "latitude": 28.019860,
+        "longitude": -82.524756
+      },
+      "social": {
+        "steemit": "",
+        "twitter": "wizz_network",
+        "youtube": "UCKgbvzFGcuBtXODdfHl54Vw",
+        "facebook": "wizznetworks",
+        "github":"wizznetworks",
+        "reddit": "",
+        "keybase": "",
+        "telegram": "wizznetwork",
+        "wechat":"wizznetwork"
+      }
+    },
+    "nodes": [
+      {
+        "location": {
+        "name": "TAMPA",
+        "country": "US",
+        "latitude": 28.019860,
+        "longitude": -82.524756
+        },
+        "node_type": "full",
+        "p2p_endpoint": "",
+        "api_endpoint": "",
+        "ssl_endpoint": ""
+      },
+      {
+        "location": {
+          "name": "TAMPA",
+        "country": "US",
+        "latitude": 28.019860,
+        "longitude": -82.524756
+        },
+        "node_type": "producer"
+      }
+    ]
+  }

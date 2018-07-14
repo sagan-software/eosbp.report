@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "eosflareiobp",
+  "producer_public_key": "EOS6FLARENUBrQSqSRWk4BZG6oyUcepnTb1T6j3LgrExpJaL4gk89",
+  "org": {
+    "candidate_name": "EOS Flare",
+    "website": "https://eosflare.io",
+    "code_of_conduct":"https://node.eosflare.io/eosflare-code-of-conduct.txt",
+    "email":"contact@eosflare.io",
+    "branding":{
+      "logo_256":"",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Global",
+      "country": "US",
+      "latitude": 41.22,
+      "longitude": -95.86
+    },
+    "social": {
+      "steemit": "eosflare",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Global",
+        "country": "US",
+        "latitude": 41.22,
+        "longitude": -95.86
+      },
+      "is_producer": true,
+      "p2p_endpoint": "node.eosflare.io:1883",
+      "api_endpoint": "http://node.eosflare.io",
+      "ssl_endpoint": "https://node.eosflare.io"
+    }
+  ]
+}

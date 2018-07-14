@@ -1,0 +1,57 @@
+{
+  "producer_account_name": "eosnationftw",
+  "producer_public_key": "EOS8PkNNBYU1xnbcjBUNm1mT6N68QiGvCDgPT97rqurLBEjDanSXK",
+  "org": {
+    "candidate_name": "EOS Nation",
+    "website": "https://eosnation.io",
+    "ownership_disclosure": "https://eosnation.io#core-team",
+    "code_of_conduct": "https://steemit.com/eos/@eosnation/eos-nation-roadmap-on-values-community-project-timeline-finances-and-transparency",
+    "email": "info@eosnation.io",
+    "branding": {
+      "logo_256": "https://eosnation.keybase.pub/logo_256.png",
+      "logo_1024": "https://eosnation.keybase.pub/logo_1024.png",
+      "logo_svg": "https://eosnation.keybase.pub/logo.svg"
+    },
+    "location": {
+      "name": "Toronto",
+      "country": "CA",
+      "latitude": 43.655045,
+      "longitude": -79.381306
+    },
+    "social": {
+      "steemit": "eosnation",
+      "twitter": "EOS_Nation",
+      "facebook": "groups/EOSNation",
+      "github": "EOS-Nation",
+      "telegram": "EOSNation",
+      "youtube": "channel/UCXgAY9DyooykrubRXw3xK1g",
+      "reddit": "EOSNation",
+      "keybase": "eosnation",
+      "wechat": "Eosnation"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Toronto",
+        "country": "CA",
+        "latitude": 43.655045,
+        "longitude": -79.381306
+      },
+      "node_type": "full",
+      "p2p_endpoint": "peer.eosn.io:9876",
+      "bnet_endpoint": "peer.eosn.io:4321",
+      "api_endpoint": "http://api.eosn.io",
+      "ssl_endpoint": "https://api.eosn.io"
+    },
+    {
+      "location": {
+        "name": "Toronto",
+        "country": "CA",
+        "latitude": 43.655045,
+        "longitude": -79.381306
+      },
+      "node_type": "producer"
+    }
+  ]
+}

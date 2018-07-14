@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "aus1genereos",
+  "producer_public_key": "EOS57ZyzVjoEG2bvzmYmmeiH8YnYtRudxNKxppx17q7Hg29F8tW4t",
+  "org": {
+    "candidate_name": "GenerEOS",
+    "website": "https://www.genereos.io",
+    "code_of_conduct":"https://www.genereos.io/index.php/code-of-conduct",
+    "ownership_disclosure":"https://www.genereos.io/#ownership",
+    "email":"contact@genereos.io",
+    "branding":{
+      "logo_256":"https://www.genereos.io/wp-content/uploads/2018/05/genereos-16.png",
+      "logo_1024":"https://www.genereos.io/wp-content/uploads/2018/05/genereos-16.png",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Sydney",
+      "country": "AU",
+      "latitude": -33.865143,
+      "longitude": 151.209900
+    },
+    "social": {
+      "steemit": "genereos",
+      "twitter": "GenerEOSSydney",
+      "youtube": "channel/UC7TN0V2KCVTYvIHbtj_9Dvw",
+      "facebook": "generEOS/",
+      "github":"generEOS",
+      "reddit": "generEOS",
+      "keybase": "",
+      "telegram": "generEOS",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Sydney",
+        "country": "AU",
+        "latitude": -33.865143,
+        "longitude": 151.209900
+      },
+      "is_producer": false,
+      "p2p_endpoint": "p2p.genereos.io:9876",
+      "api_endpoint": "http://mainnet.genereos.io",
+      "ssl_endpoint": "https://mainnet.genereos.io"
+    },
+    {
+      "location": {
+        "name": "Sydney",
+        "country": "AU",
+        "latitude": -33.865143,
+        "longitude": 151.209900
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

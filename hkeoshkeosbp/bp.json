@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "hkeoshkeosbp",
+  "producer_public_key": "EOS8SXELcUbgtBTmi7of9CJTUc6eGPw68G8ph7nLD7wpHkEosEShs",
+  "org": {
+    "candidate_name": "hkeos",
+    "website": "https://www.hkeos.com",
+    "code_of_conduct": "https://steemit.com/eos/@hkeos/hkeos-candidacy-update-and-partnership-announcement",
+    "email": "jae@hkeos.com",
+    "ownership_disclosure": "https://www.hkeos.com/Ownership",
+    "branding": {
+      "logo_256": "https://www.hkeos.com/img/hkeoslogo_256.png",
+      "logo_1024": "https://www.hkeos.com/img/hkeoslogo_1024.png",
+      "logo_svg": "https://www.hkeos.com/img/hkeoslogo_svg.svg"
+    },
+    "location": {
+      "name": "Hong Kong",
+      "country": "HK",
+      "latitude": 22.3964,
+      "longitude": 114.1095
+    },
+    "social": {
+      "steemit": "hkeos",
+      "twitter": "eos_hk",
+      "youtube": "",
+      "facebook": "",
+      "github": "hkeos",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "jaechung",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "node_type": "full",
+      "p2p_endpoint": "p2p.hkeos.com:9876",
+      "api_endpoint": "http://api.hkeos.com",
+      "ssl_endpoint": "https://api.hkeos.com"
+    }
+  ]
+}

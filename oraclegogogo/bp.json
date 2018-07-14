@@ -1,0 +1,55 @@
+{
+  "producer_account_name": "oraclegogogo",
+  "producer_public_key": "EOS5Xvj7ZGRsSmc3dZfn7opqBoL7bcgXff5bKJ5NBomPFPuuk8JCQ",
+  "org": {
+    "candidate_name": "OracleChain",
+    "website": "https://oraclechain.io",
+    "code_of_conduct": "",
+    "email": "contact@oraclechain.io",
+    "branding": {
+      "logo_256": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png",
+      "logo_1024": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "Beijing",
+      "country": "CN",
+      "latitude": 39.9497,
+      "longitude": 16.2756
+    },
+    "social_network": {
+      "steemit": "https://steemit.com/@oraclechain",
+      "twitter": "https://twitter.com/Oracle_Chain",
+      "github": "https://github.com/OracleChain",
+      "telegram": "https://t.me/OracleChainChat",
+      "facebook": "https://t.me/OracleChainChat",
+      "weibo": " https://www.weibo.com/u/6347445425?is_hot=1"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Beijing",
+        "country": "CN",
+        "latitude": 39.9497,
+        "longitude": 16.2756
+      },
+      "is_producer": false,
+      "p2p_endpoint": "dns1-p2p.oraclechain.io:49876",
+      "api_endpoint": "http://dns1-rpc.oraclechain.io:58888",
+      "ssl_endpoint": "https://dns1-rpc.oraclechain.io:50443"
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SGP",
+        "latitude": 1.3278,
+        "longitude": 103.8567
+      },
+      "is_producer": true,
+      "p2p_endpoint": "dns2-p2p.oraclechain.io:49876",
+      "api_endpoint": "http://dns2-rpc.oraclechain.io:58888",
+      "ssl_endpoint": "https://dns2-rpc.oraclechain.io:50443"
+    }
+  ]
+}

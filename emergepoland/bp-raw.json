@@ -1,0 +1,49 @@
+{
+  "producer_account_name": "emergepoland",
+  "producer_public_key": "EOS7ghyBJsLyNiyJBwLDnRBUCfNcYENeqiZb1hAjS5yhHA4KmpMRn",
+  "org": {
+    "candidate_name": "EOS Emerge Poland",
+    "website": "https://eosemerge.io",
+    "code_of_conduct":"https://steemit.com/eos/@eosemerge/eos-emerge-poland-roadmap-on-values-community-and-transparency",
+    "ownership_disclosure":"https://steemit.com/eos/@eosemerge/eos-emerge-poland-finances-token-rewards-position-on-dividends",
+    "email":"support@eosemerge.io",
+    "branding":{
+      "logo_256":"https://s33.postimg.cc/9prv71h8f/256.png",
+      "logo_1024":"https://s33.postimg.cc/g4qw3g0q7/1024.png",
+      "logo_svg":"https://eosemerge.io/emergepoland.svg"
+    },
+    "location": {
+      "name": "Katowice",
+      "country": "PL",
+      "latitude": 50.264892,
+      "longitude": 19.023782
+    },
+    "social": {
+      "steemit": "eosemerge",
+      "twitter": "eos_emerge",
+      "youtube": "",
+      "facebook": "",
+      "github":"emergepoland",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "eosemerge",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "DC1",
+        "country": "PL",
+        "latitude": 50.264892,
+        "longitude": 19.023782
+      },
+     "is_producer": false,
+      "node_type": "full",
+      "p2p_endpoint": "dc1.eosemerge.io:9876",
+      "api_endpoint": "http://dc1.eosemerge.io",
+      "bnet_endpoint": "dc1.eosemerge.io:9877",
+      "ssl_endpoint": "https://dc1.eosemerge.io"
+    }
+  ]
+}		

@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "eoscafeblock",
+  "producer_public_key": "EOS7MAPWVuYcxNtc2n9e6WaEedEZd9thGVHn2Wpu2PoMhNiteTTqL",
+  "org": {
+    "candidate_name": "EOS Cafe Calgary",
+    "website": "https://eoscafecalgary.com",
+    "code_of_conduct": "https://steemit.com/blockproducer/@eoscafe/eos-cafe-calgary-code-of-conduct-roadmap-finances-and-voting",
+    "email": "syedjafri@eoscalgary.io",
+    "ownership_disclosure": "https://github.com/eoscafe/ownership-disclosure",
+    "branding": {
+      "logo_256": "https://eoscafecalgary.com/cafe_logo_256.png",
+      "logo_1024": "https://eoscafecalgary.com/cafe_logo_1024.png",
+      "logo_svg": "https://eoscafecalgary.com/Eos_cafe_profile_picture.svg"
+    },
+    "location": {
+      "name": "Calgary",
+      "country": "CA",
+      "latitude": 51.0486,
+      "longitude": 114.0708
+    },
+    "social": {
+      "steemit": "eoscafecalgary",
+      "twitter": "eoscafecalgary",
+      "youtube": "eoscafecalgary",
+      "facebook": "",
+      "github": "eoscafe",
+      "reddit": "eoscafe",
+      "keybase": "eoscalgary",
+      "telegram": "eoscafecalgary",
+      "wechat": "wxid_st7mrsz0e1c522"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Calgary",
+        "country": "CA",
+        "latitude": 51.0486,
+        "longitude": 114.0708
+      },
+      "is_producer": false,
+      "p2p_endpoint": "mainnet.eoscalgary.io:5222",
+      "api_endpoint": "http://mainnet.eoscalgary.io",
+      "ssl_endpoint": "",
+      "node_type": "full"
+    }
+  ]
+}

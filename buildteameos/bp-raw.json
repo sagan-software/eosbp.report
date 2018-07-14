@@ -1,0 +1,70 @@
+{
+  "producer_account_name": "buildteameos",
+  "producer_public_key": "EOS64Nk17n1K52Uj8U2ZsXpvLVb3oC6rwWMQ9zo6wGA1wArZFXQen",
+  "org": {
+    "candidate_name": "BuildTeam",
+    "website": "https://buildteam.io",
+    "code_of_conduct":"https://steemit.com/eos/@buildteam/buildteam-eos-block-producer-candidacy-announcement",
+    "email":"info@buildteam.io",
+    "branding":{
+      "logo_256":"https://steemitimages.com/u/buildteam/avatar",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Distributed Team",
+      "country": "Worldwide",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "buildteam",
+      "twitter": "@buildteamio",
+      "youtube": "channel/UCgYRM9vXStNGPouX480gq7A/videos",
+      "facebook": "",
+      "github":"BuildTeamDev",
+      "reddit": "buildteam",
+      "keybase": "buildteam",
+      "telegram": "BuildTeam",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Paris",
+        "country": "France",
+        "latitude": 48.8126738,
+        "longitude": 2.2014839
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Nuremberg",
+        "country": "Germany",
+        "latitude": 49.4521,
+        "longitude": 11.0767
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Nuremberg",
+        "country": "Germany",
+        "latitude": 49.4521,
+        "longitude": 11.0767
+      },
+      "is_producer": false,
+      "p2p_endpoint": "eosbp.buildteam.io:8532",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

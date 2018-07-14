@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eosbarcelona",
+  "producer_public_key": "EOS8SCLYdpqBZC5dbBGKUyeHp272hnqNqZXgNSGs6StyHW1eDJZZz",
+  "org": {
+    "candidate_name": "eosBarcelona",
+    "website": "http://eosbarcelona.com",
+    "code_of_conduct": "https://steemit.com/eos/@jrosich/introducing-eosbarcelona",
+    "email": "contact@blockdappslab.com",
+    "branding": {
+      "logo_256": "http://eosbarcelona.com/eosLogo-256.png",
+      "logo_1024": "http://eosbarcelona.com/eosLogo-256.png",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "Barcelona",
+      "country": "Spain",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "jrosich",
+      "twitter": "eosbarcelona",
+      "youtube": "",
+      "facebook": "",
+      "github": "",
+      "reddit": "",
+      "keybase": "eosbarcelona",
+      "telegram": "https://t.me/eosbarcelona",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "UK",
+        "country": "UK",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "159.65.214.150:9876",
+      "api_endpoint": "",
+      "ssl_endpoint": "http://eosbarcelona.com"
+    },
+    {
+      "location": {
+        "name": "",
+        "country": "",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "producer_account_name": "eosasia11111",
+  "producer_public_key": "EOS76gG6ATpqfVf5KrVjh3f4JAa4EKzAwWabTucNQ4Xv2TmVAj9bN",
+  "org": {
+    "candidate_name": "EOS Asia",
+    "website": "https://www.eosasia.one",
+    "code_of_conduct": "https://steemit.com/eos-blockproducers/@eos-asia/eos-asia-s-roadmap-and-views-on-dividends",
+    "ownership_disclosure": "https://www.eosasia.one/disclosure.html",
+    "email": "bp@eosasia.one",
+    "branding": {
+      "logo_256": "https://www.eosasia.one/bp/logo-256.png",
+      "logo_1024": "https://www.eosasia.one/bp/logo-1024.png",
+      "logo_svg": "https://www.eosasia.one/bp/logo-big.svg"
+    },
+    "location": {
+      "name": "Hong Kong",
+      "country": "HK",
+      "latitude": 22.3964,
+      "longitude": 114.1095
+    },
+    "social": {
+      "steemit": "eos-asia",
+      "twitter": "eosasia_one",
+      "github": "eosasia",
+      "telegram": "EOSAsia",
+      "wechat": "",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "eos-asia",
+      "keybase": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Changhua",
+        "country": "TW",
+        "latitude": 24.0518,
+        "longitude": 120.5161
+      },
+      "node_type": "full",
+      "p2p_endpoint": "peering1.mainnet.eosasia.one:80",
+      "api_endpoint": "http://api1.eosasia.one",
+      "ssl_endpoint": "https://api1.eosasia.one"
+    },
+    {
+      "location": {
+        "name": "Changhua",
+        "country": "TW",
+        "latitude": 24.0518,
+        "longitude": 120.5161
+      },
+      "node_type": "producer"
+    }
+  ]
+}

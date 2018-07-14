@@ -1,0 +1,60 @@
+{
+  "producer_account_name": "eosukblocpro",
+  "producer_public_key": "EOS5s2XeT1rUF9EztcpjT6hqTiRb15f21UeRoamSygc5FkYzWrmfJ",
+  "org": {
+    "candidate_name": "EOS UK",
+    "website": "https://eosuk.io",
+    "code_of_conduct": "https://steemit.com/eos/@bodget/eos-uk-block-producer-agreed-code-of-conduct",
+    "ownership_disclosure": "https://steemit.com/eos/@bodget/eos-uk-statement-of-ownership",
+    "email": "bp@eosuk.io",
+    "branding": {
+      "logo_256": "https://eosuk.io/eos-uk-logo-256.png",
+      "logo_1024": "https://eosuk.io/eos-uk-logo-1024.png",
+      "logo_svg": "https://eosuk.io/eos-uk-logo.svg"
+    },
+    "location": {
+      "name": "Nottingham",
+      "country": "GB",
+      "latitude": 52.9047081,
+      "longitude": -1.1510991
+    },
+    "social": {
+      "steemit": "bodget",
+      "twitter": "eosukbp",
+      "youtube": "channel/UCGxatJjuafURvxMDKXwi8WA/videos",
+      "facebook": "eosukbp",
+      "github": "eos-uk",
+      "reddit": "bodget",
+      "keybase": "eosuk",
+      "telegram": "eosuk",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Nottingham",
+        "country": "GB",
+        "latitude": 52.9895614,
+        "longitude": -1.1766419
+      },
+      "node_type": "producer",
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Nottingham",
+        "country": "GB",
+        "latitude": 52.9895614,
+        "longitude": -1.1766419
+      },
+      "node_type": "full",
+      "p2p_endpoint": "api.eosuk.io:12000",
+      "api_endpoint": "http://api.eosuk.io",
+      "ssl_endpoint": "https://api.eosuk.io"
+    }
+  ]
+}

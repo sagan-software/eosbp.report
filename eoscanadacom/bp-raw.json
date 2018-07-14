@@ -1,0 +1,55 @@
+{
+  "producer_account_name": "eoscanadacom",
+  "producer_public_key": "EOS5HYV7rWeRxpZMCooe8YHRFQHKK7ncdmmUMTe3wCMaY2EvyVzUx",
+  "org": {
+    "candidate_name": "EOS Canada",
+    "website": "https://www.eoscanada.com/",
+    "code_of_conduct":"https://www.eoscanada.com/en/code-of-conduct",
+    "email":"info@eoscanada.com",
+    "branding":{
+      "logo_256":"https://cdn2.hubspot.net/hubfs/4518039/eos-canada-logo-square-256px.png",
+      "logo_1024":"https://cdn2.hubspot.net/hubfs/4518039/eos-canada-logo-square-1024px.png",
+      "logo_svg":"https://cdn2.hubspot.net/hubfs/4518039/eos-canada-logo-square-01.svg"
+    },
+    "location": {
+      "name": "Montreal, Quebec",
+      "country": "CA",
+      "latitude": 45.50884,
+      "longitude": -73.58781
+    },
+    "social": {
+      "steemit": "eos-canada",
+      "twitter": "EOS_Canada",
+      "youtube": "eoscanada",
+      "facebook": "eoscanadacom",
+      "github": "eoscanada",
+      "reddit": "EOSCanada",
+      "keybase": "eoscanada",
+      "telegram": "EOSCanada",
+      "wechat": "EOSCanada"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Montreal, Canada",
+        "country": "Canada",
+        "latitude": 45.50884,
+        "longitude": -73.58781
+      },
+      "is_producer": false,
+      "p2p_endpoint": "peering.mainnet.eoscanada.com:9876",
+      "api_endpoint": "http://mainnet.eoscanada.com",
+      "ssl_endpoint": "https://mainnet.eoscanada.com"
+    },
+    {
+      "location": {
+        "name": "Montreal, Canada",
+        "country": "Canada",
+        "latitude": 45.50884,
+        "longitude": -73.58781
+      },
+      "is_producer": true
+    }
+  ]
+}
