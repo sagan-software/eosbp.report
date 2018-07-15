@@ -175,11 +175,11 @@ let httpEndpoint = "http://node2.liquideos.com";
 let producerDir = (row: EosBp.Table.Row.t) =>
   Node.Path.join([|Env.buildDir, row.owner|]);
 
-let writeProducerFile = (~row: EosBp.Table.Row.t, ~filename, ~contents) => {
+let writeProducerFile = (~row: EosBp.Table.Row.t, ~filename, ~contents, ~mode) => {
   let dirname = producerDir(row);
   let fullpath = Node.Path.join([|dirname, filename|]);
   mkdirpSync(dirname);
-  Node.Fs.writeFileAsUtf8Sync(fullpath, contents);
+  Node.Fs.writeFileSync(fullpath, contents, mode);
   Log.info(
     "write",
     filename,
@@ -190,12 +190,18 @@ let writeProducerFile = (~row: EosBp.Table.Row.t, ~filename, ~contents) => {
 
 let writeBpJson = ((response, data, row: EosBp.Table.Row.t)) => {
   let writeBpRawJson =
-    writeProducerFile(~row, ~filename="bp-raw.json", ~contents=response.text);
+    writeProducerFile(
+      ~row,
+      ~filename="bp-raw.json",
+      ~contents=response.text,
+      ~mode=`utf8,
+    );
   let writeBpJson =
     writeProducerFile(
       ~row,
       ~filename="bp.json",
       ~contents=data.json |. Js.Json.stringifyWithSpace(2),
+      ~mode=`utf8,
     );
   Js.Promise.all2((writeBpRawJson, writeBpJson));
 };
@@ -351,7 +357,7 @@ let fetchImage =
       Js.String.startsWith("http", url) || Js.String.startsWith("https", url) ?
         url : "http://" ++ url;
 
-    Request.make(~url, ~timeout=15000, ())
+    Request.make(~url, ~timeout=15000, ~encoding=Js.Null_undefined.null, ())
     |> Js.Promise.then_(res => {
          let contentType =
            res
@@ -360,7 +366,12 @@ let fetchImage =
          switch (imageExtension(contentType)) {
          | Some(ext) =>
            let filename = basename ++ ext;
-           writeProducerFile(~row, ~filename, ~contents=res |. Request.body);
+           writeProducerFile(
+             ~row,
+             ~filename,
+             ~contents=res |. Request.body,
+             ~mode=`binary,
+           );
          | None => Js.Promise.resolve()
          };
        })
@@ -420,7 +431,7 @@ Js.Promise.(
             | _ => Js.Promise.resolve([||])
             }
           )
-       |. allChunked(p => p, 10)
+       |. allChunked(p => p, 5)
        |> then_(_ => resolve((rows, responses)))
      )
   |> then_(_results => {

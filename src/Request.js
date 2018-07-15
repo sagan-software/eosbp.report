@@ -19,10 +19,11 @@ var UnknownError = Caml_exceptions.create("Request-ReactTemplate.UnknownError");
 
 var $$Error = /* module */[];
 
-function make(url, $staropt$star, $staropt$star$1, body, $staropt$star$2, headers, _) {
+function make(url, $staropt$star, $staropt$star$1, body, $staropt$star$2, headers, $staropt$star$3, _) {
   var method__ = $staropt$star !== undefined ? $staropt$star : "GET";
   var json = $staropt$star$1 !== undefined ? $staropt$star$1 : false;
   var timeout = $staropt$star$2 !== undefined ? $staropt$star$2 : 0;
+  var encoding = $staropt$star$3 !== undefined ? Js_primitive.valFromOption($staropt$star$3) : undefined;
   return RequestPromise({
                 url: url,
                 method: method__,
@@ -32,7 +33,8 @@ function make(url, $staropt$star, $staropt$star$1, body, $staropt$star$2, header
                 simple: false,
                 time: true,
                 timeout: timeout,
-                headers: Js_dict.fromArray(Js_option.getWithDefault(/* array */[], headers))
+                headers: Js_dict.fromArray(Js_option.getWithDefault(/* array */[], headers)),
+                encoding: encoding
               }).catch((function (e) {
                 var match = e.error.code;
                 var tmp = match === "ETIMEDOUT" ? [

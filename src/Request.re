@@ -24,6 +24,7 @@ module Options = {
     time: bool,
     timeout: int,
     headers: Js.Dict.t(string),
+    encoding: Js.Null_undefined.t(string),
   };
 };
 
@@ -44,7 +45,16 @@ module Error = {
 };
 
 let make =
-    (~url, ~method_="GET", ~json=false, ~body=?, ~timeout=0, ~headers=?, ()) =>
+    (
+      ~url,
+      ~method_="GET",
+      ~json=false,
+      ~body=?,
+      ~timeout=0,
+      ~headers=?,
+      ~encoding=Js.Null_undefined.undefined,
+      (),
+    ) =>
   Options.t(
     ~url,
     ~method_,
@@ -55,6 +65,7 @@ let make =
     ~time=true,
     ~timeout,
     ~headers=headers |> Js.Option.getWithDefault([||]) |> Js.Dict.fromArray,
+    ~encoding,
     (),
   )
   |> make_
