@@ -6,14 +6,18 @@ var Url = require("url");
 var Path = require("path");
 var Block = require("bs-platform/lib/js/block.js");
 var Curry = require("bs-platform/lib/js/curry.js");
+var Eosjs = require("eosjs");
 var Json5 = require("json5");
 var Js_exn = require("bs-platform/lib/js/js_exn.js");
 var Mkdirp = require("mkdirp");
 var Npmlog = require("npmlog");
 var Process = require("process");
+var Js_option = require("bs-platform/lib/js/js_option.js");
+var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
 var Json_encode = require("@glennsl/bs-json/src/Json_encode.bs.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
+var BignumberJs = require("bignumber.js");
 var Caml_exceptions = require("bs-platform/lib/js/caml_exceptions.js");
 var Env$ReactTemplate = require("../src/Env.js");
 var Request$ReactTemplate = require("../src/Request.js");
@@ -172,7 +176,9 @@ function requireDecoded(promise) {
               }));
 }
 
-function tableRowsRaw(httpEndpoint) {
+var BigNumber = /* module */[];
+
+function tableRowsRaw(httpEndpoint, lowerBound, _) {
   var body = JSON.stringify(Json_encode.object_(/* :: */[
             /* tuple */[
               "scope",
@@ -196,9 +202,15 @@ function tableRowsRaw(httpEndpoint) {
                   /* :: */[
                     /* tuple */[
                       "limit",
-                      5000
+                      100
                     ],
-                    /* [] */0
+                    /* :: */[
+                      /* tuple */[
+                        "lower_bound",
+                        Js_option.getWithDefault("", lowerBound)
+                      ],
+                      /* [] */0
+                    ]
                   ]
                 ]
               ]
@@ -207,8 +219,48 @@ function tableRowsRaw(httpEndpoint) {
   return fetchWithBase(httpEndpoint, "/v1/chain/get_table_rows", "POST", body, undefined, /* () */0);
 }
 
-function tableRows(httpEndpoint) {
-  return thenDecode(EosBp_Table$ReactTemplate.decode, tableRowsRaw(httpEndpoint));
+function tableRows(httpEndpoint, lowerBound, _) {
+  return requireDecoded(thenDecode(EosBp_Table$ReactTemplate.decode, tableRowsRaw(httpEndpoint, lowerBound, /* () */0))).then((function (param) {
+                var table = param[2];
+                var data = param[1];
+                var response = param[0];
+                var total = table[/* rows */0].length;
+                var more = table[/* more */1];
+                Npmlog.info("regproducer", "total=" + (String(total) + (" more=" + (String(more) + ""))), "");
+                if (more) {
+                  var lastIndex = table[/* rows */0].length - 1 | 0;
+                  var lastRow = Belt_Array.get(table[/* rows */0], lastIndex);
+                  if (lastRow !== undefined) {
+                    var nextLowerBound = new BignumberJs(Eosjs.modules.format.encodeName(lastRow[/* owner */0], false)).plus(1).toString();
+                    return tableRows(httpEndpoint, nextLowerBound, /* () */0).then((function (param) {
+                                  var t2 = param[2];
+                                  var newTable_000 = /* rows */t2[/* rows */0].concat(table[/* rows */0]);
+                                  var newTable_001 = /* more */t2[/* more */1];
+                                  var newTable = /* record */[
+                                    newTable_000,
+                                    newTable_001
+                                  ];
+                                  return Promise.resolve(/* tuple */[
+                                              param[0],
+                                              param[1],
+                                              newTable
+                                            ]);
+                                }));
+                  } else {
+                    return Promise.resolve(/* tuple */[
+                                response,
+                                data,
+                                table
+                              ]);
+                  }
+                } else {
+                  return Promise.resolve(/* tuple */[
+                              response,
+                              data,
+                              table
+                            ]);
+                }
+              }));
 }
 
 function bpJsonRaw(row) {
@@ -314,11 +366,9 @@ function withoutNone(optsArray) {
               }), /* array */[]);
 }
 
-requireDecoded(thenDecode(EosBp_Table$ReactTemplate.decode, tableRowsRaw(httpEndpoint))).then((function (param) {
+tableRows(httpEndpoint, undefined, /* () */0).then((function (param) {
               var table = param[2];
-              var total = table[/* rows */0].length;
-              var more = table[/* more */1];
-              Npmlog.info("regproducer", "total=" + (String(total) + (" more=" + (String(more) + ""))), "");
+              Npmlog.info("regproducer", "total", table[/* rows */0].length);
               return allChunked(table[/* rows */0], fetchBpJson, 25).then((function (responses) {
                               return Promise.resolve(withoutNone(responses));
                             })).then((function (responses) {
@@ -343,6 +393,7 @@ requireDecoded(thenDecode(EosBp_Table$ReactTemplate.decode, tableRowsRaw(httpEnd
 
 var Log = 0;
 
+exports.Log = Log;
 exports.BadUrl = BadUrl;
 exports.fetchWithUrl = fetchWithUrl;
 exports.fetchWithBase = fetchWithBase;
@@ -353,11 +404,11 @@ exports.InvalidJson = InvalidJson;
 exports.thenDecode = thenDecode;
 exports.DecodeError = DecodeError;
 exports.requireDecoded = requireDecoded;
+exports.BigNumber = BigNumber;
 exports.tableRowsRaw = tableRowsRaw;
 exports.tableRows = tableRows;
 exports.bpJsonRaw = bpJsonRaw;
 exports.bpJson = bpJson;
-exports.Log = Log;
 exports.httpEndpoint = httpEndpoint;
 exports.writeBpJson = writeBpJson;
 exports.chunks = chunks;

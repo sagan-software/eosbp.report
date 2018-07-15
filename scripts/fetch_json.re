@@ -1,5 +1,7 @@
 [%raw "process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'"];
 
+module Log = NpmLog;
+
 type data('data) = {
   json: Js.Json.t,
   isJson5: bool,
@@ -86,7 +88,17 @@ let requireDecoded = promise =>
        }
      );
 
-let tableRowsRaw = httpEndpoint => {
+[@bs.module "eosjs"] [@bs.scope ("modules", "format")]
+external encodeName : (string, bool) => string = "";
+
+module BigNumber = {
+  type t;
+  [@bs.module] [@bs.new] external fromString : string => t = "bignumber.js";
+  [@bs.send] external plusInt : (t, int) => t = "plus";
+  [@bs.send] external toString : t => string = "";
+};
+
+let tableRowsRaw = (httpEndpoint, ~lowerBound=?, ()) => {
   let method_ = "POST";
   let baseUrl = httpEndpoint;
   let path = "/v1/chain/get_table_rows";
@@ -97,7 +109,11 @@ let tableRowsRaw = httpEndpoint => {
         ("code", string("eosio")),
         ("table", string("producers")),
         ("json", bool(true)),
-        ("limit", int(5000)),
+        ("limit", int(100)),
+        (
+          "lower_bound",
+          lowerBound |> Js.Option.getWithDefault("") |> string,
+        ),
       ]
       |> object_
       |> Js.Json.stringify
@@ -105,8 +121,39 @@ let tableRowsRaw = httpEndpoint => {
   fetchWithBase(~baseUrl, ~path, ~method_, ~body, ());
 };
 
-let tableRows = httpEndpoint =>
-  httpEndpoint |> tableRowsRaw |> thenDecode(EosBp_Table.decode);
+let rec tableRows = (httpEndpoint, ~lowerBound=?, ()) =>
+  tableRowsRaw(httpEndpoint, ~lowerBound?, ())
+  |> thenDecode(EosBp_Table.decode)
+  |> requireDecoded
+  |> Js.Promise.then_(((response, data, table: EosBp.Table.t)) => {
+       let total = table.rows |> Js.Array.length;
+       let more = table.more;
+       Log.info("regproducer", {j|total=$total more=$more|j}, "");
+       more ?
+         {
+           let lastIndex = Js.Array.length(table.rows) - 1;
+           let lastRow = Belt.Array.get(table.rows, lastIndex);
+           switch (lastRow) {
+           | Some(row) =>
+             let nextLowerBound =
+               row.owner
+               |. encodeName(false)
+               |> BigNumber.fromString
+               |. BigNumber.plusInt(1)
+               |> BigNumber.toString;
+             tableRows(httpEndpoint, ~lowerBound=nextLowerBound, ())
+             |> Js.Promise.then_(((r2, d2, t2: EosBp.Table.t)) => {
+                  let newTable: EosBp.Table.t = {
+                    rows: Js.Array.concat(table.rows, t2.rows),
+                    more: t2.more,
+                  };
+                  Js.Promise.resolve((r2, d2, newTable));
+                });
+           | None => Js.Promise.resolve((response, data, table))
+           };
+         } :
+         Js.Promise.resolve((response, data, table));
+     });
 
 let bpJsonRaw = (row: EosBp_Table.Row.t) =>
   row.url
@@ -120,8 +167,6 @@ let bpJsonRaw = (row: EosBp_Table.Row.t) =>
     Js.Promise.reject(BadUrl(row.url));
 
 let bpJson = row => row |> bpJsonRaw |> thenDecode(EosBp_Json.decode);
-
-module Log = NpmLog;
 
 [@bs.module "mkdirp"] external mkdirpSync : string => unit = "sync";
 
@@ -221,16 +266,13 @@ let withoutNone = optsArray =>
 
 Js.Promise.(
   httpEndpoint
-  |> tableRows
-  |> requireDecoded
-  |> then_(((_response, _data, table: EosBp.Table.t)) => {
-       let total = table.rows |> Js.Array.length;
-       let more = table.more;
-       Log.info("regproducer", {j|total=$total more=$more|j}, "");
+  |. tableRows()
+  |> then_(((_response, _data, table: EosBp.Table.t)) =>{
+    Log.info("regproducer", "total", table.rows |> Js.Array.length);
        table.rows
        |. allChunked(fetchBpJson, 25)
        |> then_(responses => responses |> withoutNone |> resolve)
-       |> then_(responses => resolve((table.rows, responses)));
+       |> then_(responses => resolve((table.rows, responses)))
      })
   |> then_(((rows, responses)) => {
        let numRows = rows |> Js.Array.length;

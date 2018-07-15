@@ -1,1 +1,6 @@
-curl http://node2.liquideos.com/v1/chain/get_table_rows -X POST -d '{"scope":"eosio", "code":"eosio", "table":"producers", "json": true, "limit": 5000}'
+TODO
+
+- Fetch logos
+- Ping nodes
+- Generate reports
+- Fetch all producers from regproducer if 'more' is true
