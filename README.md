@@ -6,3 +6,5 @@ TODO
   - [ ] Validate `bs.json`
   - [ ] Validate `regproducer`
 - [x] Fetch all producers from regproducer if 'more' is true
+
+tmp
