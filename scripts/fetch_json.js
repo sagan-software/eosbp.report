@@ -336,7 +336,7 @@ function fetchBpJson(row) {
   return thenDecode(EosBp_Json$ReactTemplate.decode, bpJsonRaw(row)).then((function (param) {
                   var response = param[0];
                   if (200 <= response[/* statusCode */2] && response[/* statusCode */2] < 400) {
-                    Npmlog.info("fetch", row[/* owner */0], response[/* responseUrl */1]);
+                    Npmlog.info("bp.json", row[/* owner */0], response[/* responseUrl */1]);
                     return Promise.resolve(/* tuple */[
                                 response,
                                 param[1],
@@ -351,7 +351,7 @@ function fetchBpJson(row) {
                 })).catch((function (error) {
                 var match = handleBpJsonError(error);
                 if (match !== undefined) {
-                  Npmlog.error("fetch", row[/* owner */0], match);
+                  Npmlog.error("bp.json", row[/* owner */0], match);
                 }
                 return Promise.resolve(undefined);
               }));

@@ -237,7 +237,7 @@ let fetchBpJson = row =>
   |> bpJson
   |> Js.Promise.then_(((response, data)) =>
        if (200 <= response.statusCode && response.statusCode < 400) {
-         Log.info("fetch", row.owner, response.responseUrl);
+         Log.info("bp.json", row.owner, response.responseUrl);
          Js.Promise.resolve(Some((response, data, row)));
        } else {
          Js.Promise.reject(BadStatus(response));
@@ -245,7 +245,7 @@ let fetchBpJson = row =>
      )
   |> Js.Promise.catch(error => {
        switch (handleBpJsonError(error)) {
-       | Some(message) => Log.error("fetch", row.owner, message)
+       | Some(message) => Log.error("bp.json", row.owner, message)
        | None => ()
        };
        Js.Promise.resolve(None);
