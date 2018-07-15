@@ -35,7 +35,7 @@ function toString(route) {
       return "/";
     }
   } else {
-    return "/" + route[0];
+    return "/" + (route[0] + "/");
   }
 }
 

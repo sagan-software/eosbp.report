@@ -4,6 +4,7 @@
 var React = require("react");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Link$ReactTemplate = require("./Link.js");
+var MaterialUi_Typography = require("@jsiebern/bs-material-ui/src/MaterialUi_Typography.bs.js");
 
 var component = ReasonReact.statelessComponent("ProducerPage-ReactTemplate");
 
@@ -19,7 +20,7 @@ function make(producer, _) {
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function () {
-              return React.createElement("div", undefined, React.createElement("h1", undefined, producer), React.createElement("p", undefined, ReasonReact.element(undefined, undefined, Link$ReactTemplate.make(/* Home */0, undefined, /* array */["Back to home"]))));
+              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, MaterialUi_Typography.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* Headline */579538228, undefined, undefined, /* array */[producer])), ReasonReact.element(undefined, undefined, MaterialUi_Typography.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* Body1 */-904051921, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, Link$ReactTemplate.make(/* Home */0, undefined, /* array */["Back to home"]))])));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],

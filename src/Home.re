@@ -62,9 +62,13 @@ let make = _children => {
                 <TableCell numeric=true>
                   ("1" |> ReasonReact.string)
                 </TableCell>
-                <TableCell> "eosnewyork.io" </TableCell>
                 <TableCell>
-                  <a href="#">
+                  <Link route=(Route.Producer("eosnewyorkio"))>
+                    ("eosnewyorkio" |> ReasonReact.string)
+                  </Link>
+                </TableCell>
+                <TableCell>
+                  <a href="https://bp.eosnewyork.io/bp.json">
                     <code>
                       (
                         "https://bp.eosnewyork.io/bp.json" |> ReasonReact.string
@@ -86,12 +90,17 @@ let make = _children => {
                 <TableCell numeric=true>
                   ("2" |> ReasonReact.string)
                 </TableCell>
-                <TableCell> "eosnewyork.io" </TableCell>
                 <TableCell>
-                  <a href="#">
+                  <Link route=(Route.Producer("eoscanadacom"))>
+                    ("eoscanadacom" |> ReasonReact.string)
+                  </Link>
+                </TableCell>
+                <TableCell>
+                  <a href="https://www.eoscanada.com/hubfs/bp_info.json">
                     <code>
                       (
-                        "https://bp.eosnewyork.io/bp.json" |> ReasonReact.string
+                        "https://www.eoscanada.com/hubfs/bp_info.json"
+                        |> ReasonReact.string
                       )
                     </code>
                   </a>

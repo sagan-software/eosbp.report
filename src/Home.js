@@ -9,6 +9,7 @@ var MaterialUi_Tabs = require("@jsiebern/bs-material-ui/src/MaterialUi_Tabs.bs.j
 var MaterialUi_Paper = require("@jsiebern/bs-material-ui/src/MaterialUi_Paper.bs.js");
 var MaterialUi_Table = require("@jsiebern/bs-material-ui/src/MaterialUi_Table.bs.js");
 var MaterialUi_AppBar = require("@jsiebern/bs-material-ui/src/MaterialUi_AppBar.bs.js");
+var Link$ReactTemplate = require("./Link.js");
 var MaterialUi_TableRow = require("@jsiebern/bs-material-ui/src/MaterialUi_TableRow.bs.js");
 var MaterialUi_TableBody = require("@jsiebern/bs-material-ui/src/MaterialUi_TableBody.bs.js");
 var MaterialUi_TableCell = require("@jsiebern/bs-material-ui/src/MaterialUi_TableCell.bs.js");
@@ -62,9 +63,9 @@ function make() {
                                                 ReasonReact.element(undefined, undefined, MaterialUi_TableBody.make(undefined, undefined, /* array */[
                                                           ReasonReact.element(undefined, undefined, MaterialUi_TableRow.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */["1"])),
-                                                                    ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */["eosnewyork.io"])),
+                                                                    ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, Link$ReactTemplate.make(/* Producer */["eosnewyorkio"], undefined, /* array */["eosnewyorkio"]))])),
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[React.createElement("a", {
-                                                                                    href: "#"
+                                                                                    href: "https://bp.eosnewyork.io/bp.json"
                                                                                   }, React.createElement("code", undefined, "https://bp.eosnewyork.io/bp.json"))])),
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */["5 days ago"])),
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, MaterialUi_LinearProgress.make(undefined, undefined, /* `Float */[
@@ -75,10 +76,10 @@ function make() {
                                                                   ])),
                                                           ReasonReact.element(undefined, undefined, MaterialUi_TableRow.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */["2"])),
-                                                                    ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */["eosnewyork.io"])),
+                                                                    ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, Link$ReactTemplate.make(/* Producer */["eoscanadacom"], undefined, /* array */["eoscanadacom"]))])),
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[React.createElement("a", {
-                                                                                    href: "#"
-                                                                                  }, React.createElement("code", undefined, "https://bp.eosnewyork.io/bp.json"))])),
+                                                                                    href: "https://www.eoscanada.com/hubfs/bp_info.json"
+                                                                                  }, React.createElement("code", undefined, "https://www.eoscanada.com/hubfs/bp_info.json"))])),
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */["5 days ago"])),
                                                                     ReasonReact.element(undefined, undefined, MaterialUi_TableCell.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, MaterialUi_LinearProgress.make(undefined, undefined, /* `Float */[
                                                                                         365180284,

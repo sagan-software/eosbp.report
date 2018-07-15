@@ -22,7 +22,7 @@ let fromString = str =>
 let toString = route =>
   switch (route) {
   | Home => "/"
-  | Producer(producer) => "/" ++ producer
+  | Producer(producer) => "/" ++ producer ++ "/"
   | NotFound => "/?404"
   };
 
