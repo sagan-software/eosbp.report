@@ -3,7 +3,7 @@
   "producer_public_key": "EOS8S4V1znYv72vedfLWMLecZEQ3ZCSLD5oPNmStUYKdbu9PdLJ48",
   "org": {
     "candidate_name": "WIZZ NETWORK EOS",
-    "website": "https://wizz.network/eos",
+    "website": "https://wizz.network/eos/",
     "ownership_disclosure": "https://wizz.network/eos/disclosures",
     "code_of_conduct": "https://wizz.network/eos/code",
     "email": "admin@wizz.network",
@@ -13,8 +13,8 @@
       "logo_svg": "https://wizz.network/wizz.svg"
     },
     "location": {
-      "name": "TAMPA",
-      "country": "US",
+      "name": "TAMPA,FL",
+      "country": "USA",
       "latitude": 28.01986,
       "longitude": -82.524756
     },
@@ -33,20 +33,20 @@
   "nodes": [
     {
       "location": {
-        "name": "TAMPA",
-        "country": "US",
+        "name": "TAMPA,FL",
+        "country": "USA",
         "latitude": 28.01986,
         "longitude": -82.524756
       },
       "node_type": "full",
-      "p2p_endpoint": "",
-      "api_endpoint": "",
+      "p2p_endpoint": "http://104.156.59.166:9876",
+      "api_endpoint": "http://104.156.59.166:8888",
       "ssl_endpoint": ""
     },
     {
       "location": {
-        "name": "TAMPA",
-        "country": "US",
+        "name": "TAMPA,FL",
+        "country": "USA",
         "latitude": 28.01986,
         "longitude": -82.524756
       },

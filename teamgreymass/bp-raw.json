@@ -1,6 +1,7 @@
 {
-  "producer_account_name": "teamgreymass",
-  "producer_public_key": "EOS4xurP5oZk4WvMUp9neKkw94DJ2iq48GtMD5Dff3GKe6krh2ctR",
+ "producer_account_name": "teamgreymass",
+  "producer_public_key": 
+"EOS4xurP5oZk4WvMUp9neKkw94DJ2iq48GtMD5Dff3GKe6krh2ctR",
   "org": {
     "candidate_name": "Greymass",
     "website": "https://greymass.com",
@@ -38,7 +39,6 @@
         "latitude": 45.3168,
         "longitude": -73.8659
       },
-      "is_producer": false,
       "api_endpoint": "http://eos.greymass.com",
       "ssl_endpoint": "https://eos.greymass.com",
       "node_type" : "full"
@@ -50,7 +50,6 @@
         "latitude": 51.5142,
         "longitude": -0.0931
       },
-      "is_producer": false,
       "node_type": "seed",
       "p2p_endpoint": "seed1.greymass.com:9876",
       "bnet_endpoint": "seed1.greymass.com:4321"
@@ -62,7 +61,6 @@
         "latitude": 32.7825,
         "longitude": -96.8207
       },
-      "is_producer": false,
       "node_type": "seed",
       "p2p_endpoint": "seed2.greymass.com:9876",
       "bnet_endpoint": "seed2.greymass.com:4321"
