@@ -5,6 +5,7 @@
     "candidate_name": "EOSVibes",
     "website": "https://eosvibes.io",
     "code_of_conduct": "https://github.com/EOSVibes/docs/blob/master/constitution/v0.1.md",
+    "ownership_disclosure": "https://github.com/EOSVibes/docs/blob/master/constitution/v0.1.md",
     "email": "hello@eosvibes.io",
     "branding": {
       "logo_256": "https://eosvibes.io/assets/ev-256.png",
@@ -13,7 +14,7 @@
     },
     "location": {
       "name": "Amsterdam",
-      "country": "Netherlands",
+      "country": "NL",
       "latitude": 52.3702,
       "longitude": 4.8952
     },
@@ -33,14 +34,16 @@
     {
       "location": {
         "name": "Amsterdam",
-        "country": "Netherlands",
+        "country": "NL",
         "latitude": 52.3702,
         "longitude": 4.8952
       },
-      "is_producer": true,
-      "p2p_endpoint": "m.eosvbes.io:9876",
-      "api_endpoint": "http://m.eosvibes.io",
-      "ssl_endpoint": "http://m.eosvibes.io"
+      "node_type": "full",
+      "is_producer": false,
+      "p2p_endpoint": "node1.eosvbes.io:9876",
+      "bnet_endpoint": "node1.eosvbes.io:9875",
+      "api_endpoint": "http://node1.eosvibes.io",
+      "ssl_endpoint": ""
     }
   ]
 }

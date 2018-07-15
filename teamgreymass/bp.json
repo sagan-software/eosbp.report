@@ -52,7 +52,8 @@
       },
       "is_producer": false,
       "node_type": "seed",
-      "p2p_endpoint": "seed1.greymass.com:9876"
+      "p2p_endpoint": "seed1.greymass.com:9876",
+      "bnet_endpoint": "seed1.greymass.com:4321"
     },
     {
       "location": {
@@ -63,7 +64,8 @@
       },
       "is_producer": false,
       "node_type": "seed",
-      "p2p_endpoint": "seed2.greymass.com:9876"
+      "p2p_endpoint": "seed2.greymass.com:9876",
+      "bnet_endpoint": "seed2.greymass.com:4321"
     }
   ]
 }

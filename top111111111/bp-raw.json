@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "top111111111",
+  "producer_public_key": "EOS4yetL39jMqJpuVrnmuhRsFNnhzXWNZSJT2HqdsDdsqS7dB1AQE",
+  "org": {
+    "candidate_name": "TOP.ONE",
+    "website": "http://www.top.one",
+    "code_of_conduct":"",
+    "email":"contact@top.one",
+    "branding":{
+      "logo_256":"https://top.one/lib/topone_256.png",
+      "logo_1024":"https://top.one/lib/topone_1024.png",
+      "logo_svg":"https://top.one/lib/topone_logo.svg"
+    },
+    "location": {
+      "name": "British Virgin Islands",
+      "country": "British",
+      "latitude": 18.428423,
+      "longitude": -64.613069
+    },
+    "social": {
+      "steemit": "top.one",
+      "twitter": "TOPONE_2017",
+      "youtube": "",
+      "facebook": "top.oneexchange2017",
+      "github":"toponedev",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "topone_2017",
+      "wechat":"toponeofficial"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "Japan",
+        "latitude": 35.670222,
+        "longitude": 139.775163
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "HongKong",
+        "country": "China",
+        "latitude": 22.369524,
+        "longitude": 114.117174
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

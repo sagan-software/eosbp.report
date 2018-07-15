@@ -1,0 +1,70 @@
+{
+  "producer_account_name": "superoneiobp",
+  "producer_public_key": "EOS6jtExp2sGpxMY8jFP1aBhDkdyHvuMS7EAVgDWQ7kaeMtdLH34U",
+  "org": {
+    "candidate_name": "SuperONE",
+    "website": "https://superone.io",
+    "code_of_conduct": "https://eos.live",
+    "email": "support@superone.io",
+    "branding": {
+      "logo_256": "https://superone.io/logo_superone_256.jpg",
+      "logo_1024": "https://superone.io/logo_superone_1024.jpg",
+      "logo_svg": "https://superone.io/logo_superone_256.svg"
+    },
+    "location": {
+      "name": "Guangzhou, China",
+      "country": "CN",
+      "latitude": 23.1344446596,
+      "longitude": 113.3206049913
+    },
+    "social": {
+      "steemit": "superoneio",
+      "twitter": "superoneio",
+      "youtube": "UCMgfqJJrHA-ksUEaibNpdLg",
+      "facebook": "superoneio",
+      "github": "superoneio",
+      "reddit": "",
+      "keybase": "superoneio",
+      "telegram": "superoneio",
+      "wechat": "superoneio"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Shenzhen, China",
+        "country": "CN",
+        "latitude": 22.543096,
+        "longitude": 114.057865
+      },
+      "is_producer": false,
+      "p2p_endpoint": "bp.superone.io:57576",
+      "api_endpoint": "http://api.superone.io",
+      "ssl_endpoint": "https://api.superone.io"
+    },
+    {
+      "location": {
+        "name": "New York, America",
+        "country": "US",
+        "latitude": 40.7830603,
+        "longitude": -73.9712488
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo, Japan",
+        "country": "JP",
+        "latitude": 35.7090259,
+        "longitude": 139.7319925
+      },
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

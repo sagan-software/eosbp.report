@@ -1,21 +1,23 @@
 {
   "producer_account_name": "libertyblock",
-  "producer_public_key": "EOS5jDCYph3hctKED9tHbe9L77q8JZToeuMnefMDdyfPkrb89FzSt",
+  "producer_public_key": "EOS7TqVs7LpMzJwikiWkGTG9UGSwcQVhxP2ZKBM7FCbUwcrryNgHP",
   "org": {
     "candidate_name": "LibertyBlock",
     "website": "https://libertyblock.io",
-    "code_of_conduct":"",
+    "code_of_conduct": "https://libertyblock.io/code-of-conduct",
+    "ownership_disclosure": "https://libertyblock.io/statement-of-ownership",
+
     "email":"kedarmail@gmail.com",
     "branding":{
-      "logo_256":"",
-      "logo_1024":"",
-      "logo_svg":""
+      "logo_256":"https://libertyblock.io/png-256-logo",
+      "logo_1024":"https://libertyblock.io/png-1024-logo",
+      "logo_svg":"https://libertyblock.io/svg-logo-1"
     },
     "location": {
       "name": "Toronto, Canada",
-      "country": "Canada",
+      "country": "CA",
       "latitude": 43.70011,
-      "longitude": 280.5837
+      "longitude": -79.411079
     },
     "social": {
       "steemit": "blockliberty",
@@ -28,15 +30,25 @@
   "nodes": [
     {
       "location": {
-      "name": "Toronto, Canada",
-      "country": "Canada",
-      "latitude": 43.70011,
-      "longitude": 280.5837
-    },
-      "is_producer": false,
-      "p2p_endpoint": "p2p.libertyblock.io:9800",
+        "name": "Toronto, Canada",
+        "country": "CA",
+        "latitude": 43.70011,
+        "longitude": -79.411079
+      },
+      "node_type": "full",
+      "p2p_endpoint": "mainnet.libertyblock.io:9800",
       "api_endpoint": "http://mainnet.libertyblock.io:8888",
-      "ssl_endpoint": ""
+      "ssl_endpoint": "https://mainnet.libertyblock.io:7777"
+    },
+    {
+      "location": {
+        "name": "Toronto, Canada",
+        "country": "CA",
+        "latitude": 43.70011,
+        "longitude": -79.411079
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.libertyblock.io:9800"
     }
   ]
 }

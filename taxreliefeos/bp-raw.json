@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eostaxrelief",
+  "producer_public_key": "EOS5CLuk8Fz3F1vu4jKs3aA3MNsHdRhjBHNjU5DfTGya3rURUQoAp",
+  "org": {
+    "candidate_name": "EOS Tax Relief",
+    "website": "https://eostaxrelief.com",
+    "code_of_conduct":"https://eostaxrelief.com",
+    "email":"robin.hood@eostaxrelief.com",
+    "branding":{
+      "logo_256":"https://abhinavkumar.keybase.pub/eostaxrelief_256.jpg",
+      "logo_1024":"https://abhinavkumar.keybase.pub/eostaxrelief_1024.jpg",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Virginia",
+      "country": "United States of America",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "eostaxrelief",
+      "twitter": "eostaxrelief",
+      "youtube": "",
+      "facebook": "",
+      "github":"eostaxrelief",
+      "reddit": "",
+      "keybase": "abhinavkumar",
+      "telegram": "eostaxrelief",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "South Carolina",
+        "country": "United States of America",
+        "latitude": 33.0723771,
+        "longitude": -80.0410853
+      },
+      "is_producer": true,
+      "p2p_endpoint": "mainnet1.eostaxrelief.com:9876",
+      "api_endpoint": "mainnet1.eostaxrelief.com:80",
+      "ssl_endpoint": "mainnet1.eostaxrelief.com:443"
+    },
+    {
+      "location": {
+        "name": "Mumbai",
+        "country": "India",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "mainnet2.eostaxrelief.com:9876",
+      "api_endpoint": "mainnet2.eostaxrelief.com:80",
+      "ssl_endpoint": "mainnet2.eostaxrelief.com:443"
+    }
+  ]
+}
