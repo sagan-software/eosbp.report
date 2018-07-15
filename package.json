@@ -8,9 +8,9 @@
 	"scripts": {
 		"build-bsb": "yarn clean-bsb && bsb -make-world",
 		"build-webpack": "webpack",
-		"build-prod": "yarn build-bsb && env-cmd .env.prod yarn build-webpack",
+		"build-prod": "yarn build-bsb && NODE_ENV=production yarn build-webpack",
 		"start-bsb": "yarn clean-bsb && bsb -make-world -w",
-		"start-webpack": "env-cmd .env.dev webpack-dev-server --hot --inline --progress",
+		"start-webpack": "NODE_ENV=development webpack-dev-server --hot --inline --progress",
 		"start": "yarn build-bsb && concurrently --raw --kill-others \"yarn start-bsb\" \"yarn start-webpack\"",
 		"clean-bsb": "bsb -clean-world",
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -32,7 +32,6 @@
 		"bs-webapi": "^0.10.0",
 		"clean-webpack-plugin": "^0.1.19",
 		"concurrently": "^3.6.0",
-		"env-cmd": "^8.0.2",
 		"eosjs": "^15.0.3",
 		"html-webpack-plugin": "^3.2.0",
 		"isomorphic-fetch": "^2.2.1",
