@@ -8,6 +8,7 @@ var Block = require("bs-platform/lib/js/block.js");
 var Curry = require("bs-platform/lib/js/curry.js");
 var Eosjs = require("eosjs");
 var Json5 = require("json5");
+var Helmet = require("@sagan-software/bs-react-helmet/src/Helmet.js");
 var Js_exn = require("bs-platform/lib/js/js_exn.js");
 var Mkdirp = require("mkdirp");
 var Npmlog = require("npmlog");
@@ -16,9 +17,13 @@ var Js_option = require("bs-platform/lib/js/js_option.js");
 var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
 var Json_encode = require("@glennsl/bs-json/src/Json_encode.bs.js");
+var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
 var BignumberJs = require("bignumber.js");
+var ReactHelmet = require("react-helmet");
 var Caml_exceptions = require("bs-platform/lib/js/caml_exceptions.js");
+var Server = require("react-dom/server");
+var App$ReactTemplate = require("../src/App.js");
 var Env$ReactTemplate = require("../src/Env.js");
 var Request$ReactTemplate = require("../src/Request.js");
 var EosBp_Json$ReactTemplate = require("../src/EosBp_Json.js");
@@ -282,14 +287,24 @@ function bpJson(row) {
 
 var httpEndpoint = "http://node2.liquideos.com";
 
+function producerDir(row) {
+  return Path.join(Env$ReactTemplate.buildDir, row[/* owner */0]);
+}
+
 function writeBpJson(param) {
   var row = param[2];
-  var dirname = Path.join(Env$ReactTemplate.buildDir, row[/* owner */0]);
+  var data = param[1];
+  var response = param[0];
+  var dirname = producerDir(row);
   Mkdirp.sync(dirname);
-  Fs.writeFileSync(Path.join(dirname, "bp-raw.json"), param[0][/* text */5], "utf8");
-  Fs.writeFileSync(Path.join(dirname, "bp.json"), JSON.stringify(param[1][/* json */0], null, 2), "utf8");
+  Fs.writeFileSync(Path.join(dirname, "bp-raw.json"), response[/* text */5], "utf8");
+  Fs.writeFileSync(Path.join(dirname, "bp.json"), JSON.stringify(data[/* json */0], null, 2), "utf8");
   Npmlog.info("write", row[/* owner */0], Path.relative(Process.cwd(), dirname));
-  return Promise.resolve(/* () */0);
+  return Promise.resolve(/* tuple */[
+              response,
+              data,
+              row
+            ]);
 }
 
 function chunks(size, originalArr) {
@@ -366,23 +381,55 @@ function withoutNone(optsArray) {
               }), /* array */[]);
 }
 
+function renderHtml(element) {
+  var content = Server.renderToString(element);
+  var helmet = ReactHelmet.Helmet.renderStatic();
+  var bodyAttributes = Helmet.toString(helmet.bodyAttributes);
+  var htmlAttributes = Helmet.toString(helmet.htmlAttributes);
+  var style = Helmet.toString(helmet.style);
+  var title = Helmet.toString(helmet.title);
+  var meta = Helmet.toString(helmet.meta);
+  var script = Helmet.toString(helmet.script);
+  process.env.STATIC_URL;
+  return "<!DOCTYPE html>\n    <html " + (String(htmlAttributes) + (">\n      <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">\n        " + (String(title) + ("\n        " + (String(meta) + ("\n        " + (String(style) + ("\n      </head>\n    <body " + (String(bodyAttributes) + (">\n      <div id=\"app\">" + (String(content) + ("</div>\n      <script src=\"/index.js\"></script>\n      " + (String(script) + "\n    </body>\n    </html>\n  ")))))))))))));
+}
+
+function generateHtmlFile(row) {
+  var route = /* Producer */[row[/* owner */0]];
+  var element = ReasonReact.element(undefined, undefined, App$ReactTemplate.make(route, /* array */[]));
+  var html = renderHtml(element);
+  var dirname = producerDir(row);
+  Mkdirp.sync(dirname);
+  Fs.writeFileSync(Path.join(dirname, "index.html"), html, "utf8");
+  Npmlog.info("write html", row[/* owner */0], Path.relative(Process.cwd(), dirname));
+  return Promise.resolve(/* () */0);
+}
+
 tableRows(httpEndpoint, undefined, /* () */0).then((function (param) {
-              var table = param[2];
-              Npmlog.info("regproducer", "total", table[/* rows */0].length);
-              return allChunked(table[/* rows */0], fetchBpJson, 25).then((function (responses) {
-                              return Promise.resolve(withoutNone(responses));
-                            })).then((function (responses) {
+                var table = param[2];
+                Npmlog.info("regproducer", "total", table[/* rows */0].length);
+                return allChunked(table[/* rows */0], fetchBpJson, 25).then((function (responses) {
+                                return Promise.resolve(withoutNone(responses));
+                              })).then((function (responses) {
+                              return Promise.resolve(/* tuple */[
+                                          table[/* rows */0],
+                                          responses
+                                        ]);
+                            }));
+              })).then((function (param) {
+              var responses = param[1];
+              var rows = param[0];
+              var numRows = rows.length;
+              var numResponses = responses.length;
+              Npmlog.info("fetch done", "Got " + (String(numResponses) + (" OK responses of " + (String(numRows) + " producers"))), "");
+              return allChunked(responses, writeBpJson, 10).then((function (r) {
                             return Promise.resolve(/* tuple */[
-                                        table[/* rows */0],
-                                        responses
+                                        rows,
+                                        r
                                       ]);
                           }));
             })).then((function (param) {
-            var responses = param[1];
-            var numRows = param[0].length;
-            var numResponses = responses.length;
-            Npmlog.info("fetch done", "Got " + (String(numResponses) + (" OK responses of " + (String(numRows) + " producers"))), "");
-            return allChunked(responses, writeBpJson, 10);
+            return allChunked(param[0], generateHtmlFile, 10);
           })).then((function () {
           Npmlog.info("", "Done", Env$ReactTemplate.buildDir);
           return Promise.resolve(/* () */0);
@@ -410,6 +457,7 @@ exports.tableRows = tableRows;
 exports.bpJsonRaw = bpJsonRaw;
 exports.bpJson = bpJson;
 exports.httpEndpoint = httpEndpoint;
+exports.producerDir = producerDir;
 exports.writeBpJson = writeBpJson;
 exports.chunks = chunks;
 exports.allChunked = allChunked;
@@ -419,4 +467,6 @@ exports.BadStatus = BadStatus;
 exports.handleBpJsonError = handleBpJsonError;
 exports.fetchBpJson = fetchBpJson;
 exports.withoutNone = withoutNone;
+exports.renderHtml = renderHtml;
+exports.generateHtmlFile = generateHtmlFile;
 /*  Not a pure module */

@@ -1,14 +1,12 @@
 type t =
   | Home
   | Producer(string)
-  | ProducerHash(string, string)
   | NotFound;
 
 let fromList = parts =>
   switch (parts) {
   | [] => Home
   | [producer] => Producer(producer)
-  | [producer, hash] => ProducerHash(producer, hash)
   | _ => NotFound
   };
 
@@ -25,7 +23,6 @@ let toString = route =>
   switch (route) {
   | Home => "/"
   | Producer(producer) => "/" ++ producer
-  | ProducerHash(producer, hash) => "/" ++ producer ++ "/" ++ hash
   | NotFound => "/?404"
   };
 

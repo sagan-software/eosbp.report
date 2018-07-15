@@ -16,7 +16,8 @@ function reducer(action, _) {
 
 var component = ReasonReact.reducerComponent("App-ReactTemplate");
 
-function make() {
+function make($staropt$star, _) {
+  var route = $staropt$star !== undefined ? $staropt$star : /* Home */0;
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -29,12 +30,6 @@ function make() {
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function (self) {
               var match = self[/* state */1][/* route */0];
-              var tmp;
-              tmp = typeof match === "number" ? (
-                  match === 0 ? ReasonReact.element(undefined, undefined, Home$ReactTemplate.make(/* array */[])) : "Error: Not found"
-                ) : (
-                  match.tag ? "Producer: " + (String(match[0]) + (", Hash: " + (String(match[1]) + ""))) : "Producer: " + (String(match[0]) + "")
-                );
               return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, Helmet.make(/* array */[
                                   React.createElement("html", {
                                         prefix: "og: http://ogp.me/ns#"
@@ -51,10 +46,12 @@ function make() {
                                         href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500",
                                         rel: "stylesheet"
                                       })
-                                ])), ReasonReact.element(undefined, undefined, MaterialUi_CssBaseline.make(/* array */[])), tmp);
+                                ])), ReasonReact.element(undefined, undefined, MaterialUi_CssBaseline.make(/* array */[])), typeof match === "number" ? (
+                            match !== 0 ? "Error: Not found" : ReasonReact.element(undefined, undefined, Home$ReactTemplate.make(/* array */[]))
+                          ) : "Producer: " + (String(match[0]) + ""));
             }),
           /* initialState */(function () {
-              return /* record */[/* route : Home */0];
+              return /* record */[/* route */route];
             }),
           /* retainedProps */component[/* retainedProps */11],
           /* reducer */reducer,

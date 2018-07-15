@@ -12,10 +12,10 @@ let reducer = (action, state) =>
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
-let make = _children => {
+let make = (~route=Route.Home, _children) => {
   ...component,
   reducer,
-  initialState: () => {route: Route.Home},
+  initialState: () => {route: route},
   subscriptions: self => [
     Sub(
       () =>
@@ -45,8 +45,6 @@ let make = _children => {
         | Route.Home => <Home />
         | Route.Producer(producer) =>
           {j|Producer: $producer|j} |> ReasonReact.string
-        | Route.ProducerHash(producer, hash) =>
-          {j|Producer: $producer, Hash: $hash|j} |> ReasonReact.string
         | Route.NotFound => "Error: Not found" |> ReasonReact.string
         }
       )

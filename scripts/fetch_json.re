@@ -172,8 +172,11 @@ let bpJson = row => row |> bpJsonRaw |> thenDecode(EosBp_Json.decode);
 
 let httpEndpoint = "http://node2.liquideos.com";
 
+let producerDir = (row: EosBp.Table.Row.t) =>
+  Node.Path.join([|Env.buildDir, row.owner|]);
+
 let writeBpJson = ((response, data, row: EosBp.Table.Row.t)) => {
-  let dirname = Node.Path.join([|Env.buildDir, row.owner|]);
+  let dirname = producerDir(row);
   mkdirpSync(dirname);
   Node.Fs.writeFileAsUtf8Sync(
     Node.Path.join([|dirname, "bp-raw.json"|]),
@@ -188,7 +191,7 @@ let writeBpJson = ((response, data, row: EosBp.Table.Row.t)) => {
     row.owner,
     Node.Path.relative(~from=Node.Process.cwd(), ~to_=dirname, ()),
   );
-  Js.Promise.resolve();
+  Js.Promise.resolve((response, data, row));
 };
 
 let chunks = (size, originalArr) => {
@@ -264,15 +267,61 @@ let withoutNone = optsArray =>
     optsArray,
   );
 
+let renderHtml = (~element) => {
+  let content = ReactDOMServerRe.renderToString(element);
+  let helmet = Helmet.renderStatic();
+  let bodyAttributes = helmet |. Helmet.bodyAttributesGet |> Helmet.toString;
+  let htmlAttributes = helmet |. Helmet.htmlAttributesGet |> Helmet.toString;
+  let style = helmet |. Helmet.styleGet |> Helmet.toString;
+  let title = helmet |. Helmet.titleGet |> Helmet.toString;
+  let meta = helmet |. Helmet.metaGet |> Helmet.toString;
+  let script = helmet |. Helmet.scriptGet |> Helmet.toString;
+  let staticUrl = Env.staticUrl;
+  {j|<!DOCTYPE html>
+    <html $htmlAttributes>
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        $title
+        $meta
+        $style
+      </head>
+    <body $bodyAttributes>
+      <div id="app">$content</div>
+      <script src="/index.js"></script>
+      $script
+    </body>
+    </html>
+  |j};
+};
+
+let generateHtmlFile = (row: EosBp.Table.Row.t) => {
+  let route = Route.Producer(row.owner);
+  let element = <App route />;
+  let html = renderHtml(~element);
+  let dirname = producerDir(row);
+  mkdirpSync(dirname);
+  Node.Fs.writeFileAsUtf8Sync(
+    Node.Path.join([|dirname, "index.html"|]),
+    html,
+  );
+  Log.info(
+    "write html",
+    row.owner,
+    Node.Path.relative(~from=Node.Process.cwd(), ~to_=dirname, ()),
+  );
+  Js.Promise.resolve();
+};
+
 Js.Promise.(
   httpEndpoint
   |. tableRows()
-  |> then_(((_response, _data, table: EosBp.Table.t)) =>{
-    Log.info("regproducer", "total", table.rows |> Js.Array.length);
+  |> then_(((_response, _data, table: EosBp.Table.t)) => {
+       Log.info("regproducer", "total", table.rows |> Js.Array.length);
        table.rows
        |. allChunked(fetchBpJson, 25)
        |> then_(responses => responses |> withoutNone |> resolve)
-       |> then_(responses => resolve((table.rows, responses)))
+       |> then_(responses => resolve((table.rows, responses)));
      })
   |> then_(((rows, responses)) => {
        let numRows = rows |> Js.Array.length;
@@ -282,8 +331,11 @@ Js.Promise.(
          {j|Got $numResponses OK responses of $numRows producers|j},
          "",
        );
-       responses |. allChunked(writeBpJson, 10);
+       responses
+       |. allChunked(writeBpJson, 10)
+       |> then_(r => resolve((rows, r)));
      })
+  |> then_(((rows, responses)) => rows |. allChunked(generateHtmlFile, 10))
   |> then_(_results => {
        Log.info("", "Done", Env.buildDir);
        resolve();
