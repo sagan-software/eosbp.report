@@ -9,6 +9,7 @@ var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Home$ReactTemplate = require("./Home.js");
 var Route$ReactTemplate = require("./Route.js");
 var MaterialUi_CssBaseline = require("@jsiebern/bs-material-ui/src/MaterialUi_CssBaseline.bs.js");
+var ProducerPage$ReactTemplate = require("./ProducerPage.js");
 
 function reducer(action, _) {
   return /* Update */Block.__(0, [/* record */[/* route */action[0]]]);
@@ -48,7 +49,7 @@ function make($staropt$star, _) {
                                       })
                                 ])), ReasonReact.element(undefined, undefined, MaterialUi_CssBaseline.make(/* array */[])), typeof match === "number" ? (
                             match !== 0 ? "Error: Not found" : ReasonReact.element(undefined, undefined, Home$ReactTemplate.make(/* array */[]))
-                          ) : "Producer: " + (String(match[0]) + ""));
+                          ) : ReasonReact.element(undefined, undefined, ProducerPage$ReactTemplate.make(match[0], /* array */[])));
             }),
           /* initialState */(function () {
               return /* record */[/* route */route];

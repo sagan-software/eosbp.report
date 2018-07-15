@@ -44,7 +44,7 @@ module Error = {
 };
 
 let make =
-    (~url, ~method_="GET", ~json=true, ~body=?, ~timeout=0, ~headers=?, ()) =>
+    (~url, ~method_="GET", ~json=false, ~body=?, ~timeout=0, ~headers=?, ()) =>
   Options.t(
     ~url,
     ~method_,

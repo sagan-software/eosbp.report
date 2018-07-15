@@ -1,4 +1,4 @@
-ReactDOMRe.renderToElementWithId(<App />, "app");
+ReactDOMRe.hydrateToElementWithId(<App />, "app");
 
 ReasonReact.Router.push("");
 

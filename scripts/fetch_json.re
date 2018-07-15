@@ -175,23 +175,29 @@ let httpEndpoint = "http://node2.liquideos.com";
 let producerDir = (row: EosBp.Table.Row.t) =>
   Node.Path.join([|Env.buildDir, row.owner|]);
 
-let writeBpJson = ((response, data, row: EosBp.Table.Row.t)) => {
+let writeProducerFile = (~row: EosBp.Table.Row.t, ~filename, ~contents) => {
   let dirname = producerDir(row);
+  let fullpath = Node.Path.join([|dirname, filename|]);
   mkdirpSync(dirname);
-  Node.Fs.writeFileAsUtf8Sync(
-    Node.Path.join([|dirname, "bp-raw.json"|]),
-    response.text,
-  );
-  Node.Fs.writeFileAsUtf8Sync(
-    Node.Path.join([|dirname, "bp.json"|]),
-    data.json |. Js.Json.stringifyWithSpace(2),
-  );
+  Node.Fs.writeFileAsUtf8Sync(fullpath, contents);
   Log.info(
     "write",
-    row.owner,
-    Node.Path.relative(~from=Node.Process.cwd(), ~to_=dirname, ()),
+    filename,
+    Node.Path.relative(~from=Node.Process.cwd(), ~to_=fullpath, ()),
   );
-  Js.Promise.resolve((response, data, row));
+  Js.Promise.resolve();
+};
+
+let writeBpJson = ((response, data, row: EosBp.Table.Row.t)) => {
+  let writeBpRawJson =
+    writeProducerFile(~row, ~filename="bp-raw.json", ~contents=response.text);
+  let writeBpJson =
+    writeProducerFile(
+      ~row,
+      ~filename="bp.json",
+      ~contents=data.json |. Js.Json.stringifyWithSpace(2),
+    );
+  Js.Promise.all2((writeBpRawJson, writeBpJson));
 };
 
 let chunks = (size, originalArr) => {
@@ -233,6 +239,7 @@ let handleBpJsonError =
     fun
     | BadUrl(url) => {j|Bad URL: "$url"|j}
     | BadStatus({responseUrl, statusCode, statusText}) => {j|Bad status: $statusCode ($statusText) at $responseUrl|j}
+    | Request.TimedOut(url) => {j|Timed out: $url |j}
   );
 
 let fetchBpJson = row =>
@@ -295,23 +302,88 @@ let renderHtml = (~element) => {
   |j};
 };
 
-let generateHtmlFile = (row: EosBp.Table.Row.t) => {
-  let route = Route.Producer(row.owner);
+let generateHtmlFile = (~route, ~dirname) => {
   let element = <App route />;
   let html = renderHtml(~element);
-  let dirname = producerDir(row);
+  let fullpath = Node.Path.join([|dirname, "index.html"|]);
   mkdirpSync(dirname);
-  Node.Fs.writeFileAsUtf8Sync(
-    Node.Path.join([|dirname, "index.html"|]),
-    html,
-  );
+  Node.Fs.writeFileAsUtf8Sync(fullpath, html);
   Log.info(
-    "write html",
-    row.owner,
-    Node.Path.relative(~from=Node.Process.cwd(), ~to_=dirname, ()),
+    "write",
+    "html",
+    Node.Path.relative(~from=Node.Process.cwd(), ~to_=fullpath, ()),
   );
   Js.Promise.resolve();
 };
+
+let generateProducerHtmlFile = (row: EosBp.Table.Row.t) =>
+  generateHtmlFile(
+    ~route=Route.Producer(row.owner),
+    ~dirname=producerDir(row),
+  );
+
+let imageExtension = contentType =>
+  if (contentType |> Js.String.startsWith("image/svg")) {
+    Some(".svg");
+  } else if (contentType |> Js.String.startsWith("image/png")) {
+    Some(".png");
+  } else if (contentType |> Js.String.startsWith("image/jpeg")) {
+    Some(".jpg");
+  } else {
+    None;
+  };
+
+let fetchImage =
+    (row: EosBp.Table.Row.t, basename: string, url: option(string)) => {
+  let url =
+    url
+    |> Js.Option.getWithDefault("")
+    |> Js.String.trim
+    |> Js.String.replaceByRe([%bs.re "/^[^\\x00-\\x7F]/g"], "")
+    |> Js.String.replaceByRe([%bs.re "/[^\\x00-\\x7F]$/g"], "")
+    |> Js.String.replaceByRe([%bs.re "/\\/$/g"], "");
+
+  if (url |> Js.String.length === 0) {
+    Js.Promise.resolve();
+  } else {
+    /* Add protocol if missing */
+    let url =
+      Js.String.startsWith("http", url) || Js.String.startsWith("https", url) ?
+        url : "http://" ++ url;
+
+    Request.make(~url, ~timeout=15000, ())
+    |> Js.Promise.then_(res => {
+         let contentType =
+           res
+           |. Request.header("content-type")
+           |> Js.Option.getWithDefault("?");
+         switch (imageExtension(contentType)) {
+         | Some(ext) =>
+           let filename = basename ++ ext;
+           writeProducerFile(~row, ~filename, ~contents=res |. Request.body);
+         | None => Js.Promise.resolve()
+         };
+       })
+    |> Js.Promise.catch(error => {
+         switch (handleBpJsonError(error)) {
+         | Some(message) => Log.error("image", row.owner, message)
+         | None => ()
+         };
+         Js.Promise.resolve();
+       });
+  };
+};
+
+let fetchImages = (row: EosBp.Table.Row.t, json: EosBp.Json.t) =>
+  json.org.branding
+  |> Js.Option.map((. branding: EosBp.Json.Org.Branding.t) =>
+       Js.Promise.all([|
+         fetchImage(row, "logo_256", branding.logo256),
+         fetchImage(row, "logo_1024", branding.logo1024),
+         fetchImage(row, "logo", branding.logoSvg),
+       |])
+     )
+  |> Js.Option.getWithDefault(Js.Promise.resolve([||]));
 
 Js.Promise.(
   httpEndpoint
@@ -333,9 +405,24 @@ Js.Promise.(
        );
        responses
        |. allChunked(writeBpJson, 10)
-       |> then_(r => resolve((rows, r)));
+       |> then_(_ => resolve((rows, responses)));
      })
-  |> then_(((rows, responses)) => rows |. allChunked(generateHtmlFile, 10))
+  |> then_(((rows, responses)) =>
+       rows
+       |. allChunked(generateProducerHtmlFile, 10)
+       |> then_(_ => resolve((rows, responses)))
+     )
+  |> then_(((rows, responses)) =>
+       responses
+       |> Js.Array.map(((_response, data, row)) =>
+            switch (data.decoded) {
+            | Belt.Result.Ok(json) => fetchImages(row, json)
+            | _ => Js.Promise.resolve([||])
+            }
+          )
+       |. allChunked(p => p, 10)
+       |> then_(_ => resolve((rows, responses)))
+     )
   |> then_(_results => {
        Log.info("", "Done", Env.buildDir);
        resolve();

@@ -43,8 +43,7 @@ let make = (~route=Route.Home, _children) => {
       (
         switch (self.state.route) {
         | Route.Home => <Home />
-        | Route.Producer(producer) =>
-          {j|Producer: $producer|j} |> ReasonReact.string
+        | Route.Producer(producer) => <ProducerPage producer />
         | Route.NotFound => "Error: Not found" |> ReasonReact.string
         }
       )

@@ -21,7 +21,7 @@ var $$Error = /* module */[];
 
 function make(url, $staropt$star, $staropt$star$1, body, $staropt$star$2, headers, _) {
   var method__ = $staropt$star !== undefined ? $staropt$star : "GET";
-  var json = $staropt$star$1 !== undefined ? $staropt$star$1 : true;
+  var json = $staropt$star$1 !== undefined ? $staropt$star$1 : false;
   var timeout = $staropt$star$2 !== undefined ? $staropt$star$2 : 0;
   return RequestPromise({
                 url: url,
