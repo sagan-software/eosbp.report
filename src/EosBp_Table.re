@@ -62,7 +62,16 @@ module Row = {
   };
 };
 
-let decode = j => Json.Decode.(j |> field("rows", array(Row.decode)));
+type t = {
+  rows: array(Row.t),
+  more: bool,
+};
+
+let decode = j =>
+  Json.Decode.{
+    rows: j |> field("rows", array(Row.decode)),
+    more: j |> field("more", bool),
+  };
 
 let headers =
   Fetch.HeadersInit.make({

@@ -105,9 +105,12 @@ var Row = /* module */[
 ];
 
 function decode$1(j) {
-  return Json_decode.field("rows", (function (param) {
-                return Json_decode.array(decode, param);
-              }), j);
+  return /* record */[
+          /* rows */Json_decode.field("rows", (function (param) {
+                  return Json_decode.array(decode, param);
+                }), j),
+          /* more */Json_decode.field("more", Json_decode.bool, j)
+        ];
 }
 
 var headers = {

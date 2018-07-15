@@ -2,112 +2,370 @@
 'use strict';
 
 var Fs = require("fs");
+var Url = require("url");
 var Path = require("path");
+var Block = require("bs-platform/lib/js/block.js");
+var Curry = require("bs-platform/lib/js/curry.js");
+var Json5 = require("json5");
+var Js_exn = require("bs-platform/lib/js/js_exn.js");
 var Mkdirp = require("mkdirp");
 var Npmlog = require("npmlog");
 var Process = require("process");
-var Js_option = require("bs-platform/lib/js/js_option.js");
+var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
+var Json_encode = require("@glennsl/bs-json/src/Json_encode.bs.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
+var Caml_exceptions = require("bs-platform/lib/js/caml_exceptions.js");
 var Env$ReactTemplate = require("../src/Env.js");
-var EosBp_Fetch$ReactTemplate = require("../src/EosBp_Fetch.js");
-
-((global.XMLHttpRequest = require('xhr2').XMLHttpRequest));
+var Request$ReactTemplate = require("../src/Request.js");
+var EosBp_Json$ReactTemplate = require("../src/EosBp_Json.js");
+var EosBp_Table$ReactTemplate = require("../src/EosBp_Table.js");
 
 ((process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'));
 
-var httpEndpoint = "http://node2.liquideos.com";
+var BadUrl = Caml_exceptions.create("Fetch_json-ReactTemplate.BadUrl");
 
-function writeBpJson(row, xhr, json) {
-  var dirname = Path.join(Env$ReactTemplate.buildDir, row[/* owner */0]);
-  var text = Js_option.getWithDefault("", Js_primitive.nullable_to_opt(xhr.responseText));
-  Mkdirp.sync(dirname);
-  Fs.writeFileSync(Path.join(dirname, "bp-raw.json"), text, "utf8");
-  Fs.writeFileSync(Path.join(dirname, "bp.json"), JSON.stringify(json, null, 2), "utf8");
-  Npmlog.info("write bp.json", "wrote files", Path.relative(Process.cwd(), dirname));
-  return Promise.resolve(/* () */0);
+function fetchWithUrl(url, method__, body, $staropt$star, _) {
+  var timeout = $staropt$star !== undefined ? $staropt$star : 5000;
+  var urlStr = url.toString();
+  return Request$ReactTemplate.make(urlStr, method__, false, body, timeout, undefined, /* () */0).then((function (res) {
+                return Promise.resolve(/* record */[
+                            /* requestUrl */urlStr,
+                            /* responseUrl */res.request.uri.href,
+                            /* statusCode */res.statusCode,
+                            /* statusText */res.statusMessage,
+                            /* contentType */Request$ReactTemplate.header(res, "Content-Type"),
+                            /* text */res.body
+                          ]);
+              }));
 }
 
-function fetchBpJson(row) {
-  return EosBp_Fetch$ReactTemplate.bpJsonRaw(row, undefined, /* () */0).then((function (result) {
-                var label = "fetch bp.json";
-                var metadata = function (url, xhr) {
-                  return {
-                          producer: row[/* owner */0],
-                          row_url: row[/* url */4],
-                          request_url: url,
-                          response_url: Js_primitive.nullable_to_opt(xhr.responseURL),
-                          response_type: Js_primitive.nullable_to_opt(xhr.getResponseHeader("Content-Type"))
-                        };
-                };
-                switch (result.tag | 0) {
-                  case 0 : 
-                      var xhr = result[1];
-                      Npmlog.info(label, "Valid JSON4", metadata(result[0], xhr));
-                      return Promise.resolve(/* tuple */[
-                                  row,
-                                  xhr,
-                                  result[2]
-                                ]);
-                  case 1 : 
-                      var xhr$1 = result[1];
-                      Npmlog.warn(label, "Valid JSON5", metadata(result[0], xhr$1));
-                      return Promise.resolve(/* tuple */[
-                                  row,
-                                  xhr$1,
-                                  result[2]
-                                ]);
-                  case 2 : 
-                      Npmlog.error(label, "Invalid JSON", metadata(result[0], result[1]));
-                      return Promise.resolve(undefined);
-                  case 3 : 
-                      Npmlog.error(label, "Bad response", metadata(result[0], result[1]));
-                      return Promise.resolve(undefined);
-                  case 4 : 
-                      Npmlog.error(label, "Bad URL", {
-                            producer: row[/* owner */0],
-                            url: result[0]
-                          });
-                      return Promise.resolve(undefined);
-                  case 5 : 
-                      Npmlog.error(label, "Timed out", metadata(result[0], result[1]));
-                      return Promise.resolve(undefined);
-                  case 6 : 
-                      Npmlog.error(label, "Unreachable", metadata(result[0], result[1]));
-                      return Promise.resolve(undefined);
-                  case 7 : 
-                      Npmlog.error(label, "Unknown error", {
-                            producer: row[/* owner */0],
-                            url: result[0],
-                            error: result[1]
-                          });
-                      return Promise.resolve(undefined);
-                  
+function fetchWithBase(baseUrl, path, method__, body, timeout, _) {
+  var exit = 0;
+  var url;
+  try {
+    url = new Url.URL(path, baseUrl);
+    exit = 1;
+  }
+  catch (_error){
+    return Promise.reject([
+                BadUrl,
+                baseUrl
+              ]);
+  }
+  if (exit === 1) {
+    return fetchWithUrl(url, method__, body, timeout, /* () */0);
+  }
+  
+}
+
+function fetch(url, method__, body, timeout, _) {
+  var exit = 0;
+  var url$1;
+  try {
+    url$1 = new Url.URL(url);
+    exit = 1;
+  }
+  catch (_error){
+    return Promise.reject([
+                BadUrl,
+                url
+              ]);
+  }
+  if (exit === 1) {
+    return fetchWithUrl(url$1, method__, body, timeout, /* () */0);
+  }
+  
+}
+
+function decodeAsResult(decoder, json) {
+  var exit = 0;
+  var decoded;
+  try {
+    decoded = Curry._1(decoder, json);
+    exit = 1;
+  }
+  catch (raw_exn){
+    var exn = Js_exn.internalToOCamlException(raw_exn);
+    if (exn[0] === Json_decode.DecodeError) {
+      return /* Error */Block.__(1, [exn[1]]);
+    } else {
+      throw exn;
+    }
+  }
+  if (exit === 1) {
+    return /* Ok */Block.__(0, [decoded]);
+  }
+  
+}
+
+function parseData(decoder, text) {
+  var exit = 0;
+  var json;
+  try {
+    json = JSON.parse(text);
+    exit = 1;
+  }
+  catch (_error){
+    var json$1 = Json5.parse(text);
+    return /* record */[
+            /* json */json$1,
+            /* isJson5 */false,
+            /* decoded */decodeAsResult(decoder, json$1)
+          ];
+  }
+  if (exit === 1) {
+    return /* record */[
+            /* json */json,
+            /* isJson5 */false,
+            /* decoded */decodeAsResult(decoder, json)
+          ];
+  }
+  
+}
+
+var InvalidJson = Caml_exceptions.create("Fetch_json-ReactTemplate.InvalidJson");
+
+function thenDecode(decoder, promise) {
+  return promise.then((function (response) {
+                var exit = 0;
+                var data;
+                try {
+                  data = parseData(decoder, response[/* text */5]);
+                  exit = 1;
+                }
+                catch (exn){
+                  return Promise.reject([
+                              InvalidJson,
+                              response
+                            ]);
+                }
+                if (exit === 1) {
+                  return Promise.resolve(/* tuple */[
+                              response,
+                              data
+                            ]);
+                }
+                
+              }));
+}
+
+var DecodeError = Caml_exceptions.create("Fetch_json-ReactTemplate.DecodeError");
+
+function requireDecoded(promise) {
+  return promise.then((function (param) {
+                var data = param[1];
+                var response = param[0];
+                var match = data[/* decoded */2];
+                if (match.tag) {
+                  return Promise.reject([
+                              DecodeError,
+                              response,
+                              match[0]
+                            ]);
+                } else {
+                  return Promise.resolve(/* tuple */[
+                              response,
+                              data,
+                              match[0]
+                            ]);
                 }
               }));
 }
 
-EosBp_Fetch$ReactTemplate.tableRows(httpEndpoint, undefined, /* () */0).then((function (response) {
-            var rows = Js_option.getWithDefault(/* array */[], EosBp_Fetch$ReactTemplate.Response[/* getData */2](response));
-            console.log("got table rows", rows.length);
-            return Promise.all(rows.map(fetchBpJson));
-          })).then((function (results) {
-          return Promise.all(results.map((function (result) {
-                            if (result !== undefined) {
-                              var match = result;
-                              return writeBpJson(match[0], match[1], match[2]);
-                            } else {
-                              return Promise.resolve(/* () */0);
-                            }
-                          })));
-        })).then((function () {
-        Npmlog.info("", "Done", Env$ReactTemplate.buildDir);
+function tableRowsRaw(httpEndpoint) {
+  var body = JSON.stringify(Json_encode.object_(/* :: */[
+            /* tuple */[
+              "scope",
+              "eosio"
+            ],
+            /* :: */[
+              /* tuple */[
+                "code",
+                "eosio"
+              ],
+              /* :: */[
+                /* tuple */[
+                  "table",
+                  "producers"
+                ],
+                /* :: */[
+                  /* tuple */[
+                    "json",
+                    true
+                  ],
+                  /* :: */[
+                    /* tuple */[
+                      "limit",
+                      5000
+                    ],
+                    /* [] */0
+                  ]
+                ]
+              ]
+            ]
+          ]));
+  return fetchWithBase(httpEndpoint, "/v1/chain/get_table_rows", "POST", body, undefined, /* () */0);
+}
+
+function tableRows(httpEndpoint) {
+  return thenDecode(EosBp_Table$ReactTemplate.decode, tableRowsRaw(httpEndpoint));
+}
+
+function bpJsonRaw(row) {
+  var match = row[/* url */4].replace((/\W/g), "").trim().length > 0;
+  if (match) {
+    var url = EosBp_Table$ReactTemplate.Row[/* jsonUrl */2](row);
+    return fetch(url, undefined, undefined, undefined, /* () */0);
+  } else {
+    return Promise.reject([
+                BadUrl,
+                row[/* url */4]
+              ]);
+  }
+}
+
+function bpJson(row) {
+  return thenDecode(EosBp_Json$ReactTemplate.decode, bpJsonRaw(row));
+}
+
+var httpEndpoint = "http://node2.liquideos.com";
+
+function writeBpJson(param) {
+  var row = param[2];
+  var dirname = Path.join(Env$ReactTemplate.buildDir, row[/* owner */0]);
+  Mkdirp.sync(dirname);
+  Fs.writeFileSync(Path.join(dirname, "bp-raw.json"), param[0][/* text */5], "utf8");
+  Fs.writeFileSync(Path.join(dirname, "bp.json"), JSON.stringify(param[1][/* json */0], null, 2), "utf8");
+  Npmlog.info("write", row[/* owner */0], Path.relative(Process.cwd(), dirname));
+  return Promise.resolve(/* () */0);
+}
+
+function chunks(size, originalArr) {
+  var results = /* array */[];
+  var arr = originalArr.slice();
+  while(arr.length > 0) {
+    var chunk = arr.splice(0, size);
+    results.push(chunk);
+  };
+  return results;
+}
+
+function allChunked(arr, fn, chunkSize) {
+  return chunks(chunkSize, arr).reduce((function (promise, chunk) {
+                return promise.then((function (allResults) {
+                              return Promise.all(chunk.map(Curry.__1(fn))).then((function (results) {
+                                            return Promise.resolve(results.concat(allResults));
+                                          }));
+                            }));
+              }), Promise.resolve(/* array */[]));
+}
+
+var Unreachable = Caml_exceptions.create("Fetch_json-ReactTemplate.Unreachable");
+
+var BadResponse = Caml_exceptions.create("Fetch_json-ReactTemplate.BadResponse");
+
+var BadStatus = Caml_exceptions.create("Fetch_json-ReactTemplate.BadStatus");
+
+function handleBpJsonError(match) {
+  if (Caml_exceptions.isCamlExceptionOrOpenVariant(match)) {
+    if (match[0] === BadUrl) {
+      return "Bad URL: \"" + (String(match[1]) + "\"");
+    } else if (match[0] === BadStatus) {
+      var match$1 = match[1];
+      return "Bad status: " + (String(match$1[/* statusCode */2]) + (" (" + (String(match$1[/* statusText */3]) + (") at " + (String(match$1[/* responseUrl */1]) + "")))));
+    } else {
+      return undefined;
+    }
+  }
+  
+}
+
+function fetchBpJson(row) {
+  return thenDecode(EosBp_Json$ReactTemplate.decode, bpJsonRaw(row)).then((function (param) {
+                  var response = param[0];
+                  if (200 <= response[/* statusCode */2] && response[/* statusCode */2] < 400) {
+                    Npmlog.info("fetch", row[/* owner */0], response[/* responseUrl */1]);
+                    return Promise.resolve(/* tuple */[
+                                response,
+                                param[1],
+                                row
+                              ]);
+                  } else {
+                    return Promise.reject([
+                                BadStatus,
+                                response
+                              ]);
+                  }
+                })).catch((function (error) {
+                var match = handleBpJsonError(error);
+                if (match !== undefined) {
+                  Npmlog.error("fetch", row[/* owner */0], match);
+                }
+                return Promise.resolve(undefined);
+              }));
+}
+
+function withoutNone(optsArray) {
+  return optsArray.reduce((function (results, item) {
+                if (item !== undefined) {
+                  results.push(Js_primitive.valFromOption(item));
+                }
+                return results;
+              }), /* array */[]);
+}
+
+requireDecoded(thenDecode(EosBp_Table$ReactTemplate.decode, tableRowsRaw(httpEndpoint))).then((function (param) {
+              var table = param[2];
+              var total = table[/* rows */0].length;
+              var more = table[/* more */1];
+              Npmlog.info("regproducer", "total=" + (String(total) + (" more=" + (String(more) + ""))), "");
+              return allChunked(table[/* rows */0], fetchBpJson, 25).then((function (responses) {
+                              return Promise.resolve(withoutNone(responses));
+                            })).then((function (responses) {
+                            return Promise.resolve(/* tuple */[
+                                        table[/* rows */0],
+                                        responses
+                                      ]);
+                          }));
+            })).then((function (param) {
+            var responses = param[1];
+            var numRows = param[0].length;
+            var numResponses = responses.length;
+            Npmlog.info("fetch done", "Got " + (String(numResponses) + (" OK responses of " + (String(numRows) + " producers"))), "");
+            return allChunked(responses, writeBpJson, 10);
+          })).then((function () {
+          Npmlog.info("", "Done", Env$ReactTemplate.buildDir);
+          return Promise.resolve(/* () */0);
+        })).catch((function (error) {
+        Npmlog.error("err", "", error);
         return Promise.resolve(/* () */0);
       }));
 
 var Log = 0;
 
+exports.BadUrl = BadUrl;
+exports.fetchWithUrl = fetchWithUrl;
+exports.fetchWithBase = fetchWithBase;
+exports.fetch = fetch;
+exports.decodeAsResult = decodeAsResult;
+exports.parseData = parseData;
+exports.InvalidJson = InvalidJson;
+exports.thenDecode = thenDecode;
+exports.DecodeError = DecodeError;
+exports.requireDecoded = requireDecoded;
+exports.tableRowsRaw = tableRowsRaw;
+exports.tableRows = tableRows;
+exports.bpJsonRaw = bpJsonRaw;
+exports.bpJson = bpJson;
 exports.Log = Log;
 exports.httpEndpoint = httpEndpoint;
 exports.writeBpJson = writeBpJson;
+exports.chunks = chunks;
+exports.allChunked = allChunked;
+exports.Unreachable = Unreachable;
+exports.BadResponse = BadResponse;
+exports.BadStatus = BadStatus;
+exports.handleBpJsonError = handleBpJsonError;
 exports.fetchBpJson = fetchBpJson;
+exports.withoutNone = withoutNone;
 /*  Not a pure module */
