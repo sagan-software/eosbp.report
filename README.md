@@ -1,6 +1,6 @@
 TODO
 
-- [ ] Fetch logos
+- [x] Fetch logos
 - [ ] Ping nodes
 - [ ] Generate reports
   - [ ] Validate `bs.json`
