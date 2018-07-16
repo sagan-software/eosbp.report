@@ -5,7 +5,7 @@
 		"candidate_name": "EOS Argentina",
 		"website": "https://www.eosargentina.io",
 		"code_of_conduct": "https://www.eosargentina.io/disclosures.html#codeofconduct",
-                "ownership_disclosure":"https://www.eosargentina.io/disclosures.html",
+		"ownership_disclosure": "https://www.eosargentina.io/disclosures.html#disclosures",
 		"email": "info@eosargentina.io",
 		"branding": {
 			"logo_256": "https://www.eosargentina.io/assets/img/eosar_logo_256.png",
@@ -37,11 +37,9 @@
 			"latitude": -34.61315,
 			"longitude": -58.37723
 		},
-		"node_type": "full",
+		"is_producer": true,
 		"p2p_endpoint": "p2p.eosargentina.io:5222",
 		"api_endpoint": "http://api.eosargentina.io",
-		"ssl_endpoint": "https://api.eosargentina.io",
-             	"bnet_endpoint": "api2.eosargentina.io:8880"
-
+		"ssl_endpoint": "https://api.eosargentina.io"
 	}]
 }
