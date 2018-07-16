@@ -3,9 +3,9 @@
   "producer_public_key": "EOS6SNycMVbKGH6RcNJigoznJ1AGAas34Y5zpyFmTgYbMAwPnSDWT",
   "org": {
     "candidate_name": "EOS Geneva",
-    "website": "http://www.eosgeneva.io",
-    "code_of_conduct":"http://www.eosgeneva.io",
-    "ownership_disclosure":"http://www.eosgeneva.io",
+    "website": "https://www.eosgeneva.io",
+    "code_of_conduct":"https://steemit.com/disclosures/@eosgeneva/code-of-conduct-of-eos-geneva-v1-0",
+    "ownership_disclosure":"https://steemit.com/disclosures/@eosgeneva/eos-geneva-ownership-disclosure",
     "email":"sebastien.armleder@eosgeneva.io",
     "branding": {
       "logo_256":"https://www.eosgeneva.io/images/logo_swiss256.png",
@@ -33,9 +33,9 @@
         "longitude": 6.143158
       },
       "node_type":"full",
-      "is_producer": false,
       "p2p_endpoint": "peer.eosgeneva.io:9876",
-      "api_endpoint": "https://api.eosgeneva.io"
+      "api_endpoint": "http://api.eosgeneva.io",
+      "ssl_endpoint": "https://api.eosgeneva.io"
     },
     {
       "location": {
@@ -45,9 +45,9 @@
         "longitude": 6.143158
       },
       "node_type":"full",
-      "is_producer": false,
       "p2p_endpoint": "peer2.eosgeneva.io:9876",
-      "api_endpoint": "https://api2.eosgeneva.io"
+      "api_endpoint": "http://api2.eosgeneva.io",
+      "ssl_endpoint": "https://api2.eosgeneva.io"
     },
     {
       "location": {
@@ -57,7 +57,6 @@
         "longitude": 6.143158
       },
       "node_type":"producer",
-      "is_producer": true
     }
   ]
 }
