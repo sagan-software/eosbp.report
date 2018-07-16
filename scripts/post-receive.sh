@@ -16,5 +16,5 @@ yarn build-prod
 node ./scripts/fetch_json.js
 
 git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR add .
-git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR commit -am "auto-update"
+git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR commit -am "$(date --iso-8601=minutes --utc)"
 git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR push origin gh-pages

@@ -1,6 +1,11 @@
 open MaterialUi;
+open SimpleMaps;
+
+let world50m = [%bs.raw {|require("./world-50m.json")|}];
 
 let component = ReasonReact.statelessComponent(__MODULE__);
+
+Js.log2("!!!!!!!!!", world50m);
 
 let make = _children => {
   ...component,
@@ -17,20 +22,58 @@ let make = _children => {
               <strong> ("EOS" |> ReasonReact.string) </strong>
               (" BP" |> ReasonReact.string)
               <strong> ("." |> ReasonReact.string) </strong>
-              ("JSON" |> ReasonReact.string)
+              ("Report" |> ReasonReact.string)
             </Typography>
           </Grid>
           <Grid item=true>
             <Tabs value=0>
               <Tab label=("Producers" |> ReasonReact.string) />
+              <Tab label=("Proxies" |> ReasonReact.string) />
               <Tab label=("Nodes" |> ReasonReact.string) />
-              <Tab label=("Peers" |> ReasonReact.string) />
               <Tab label=("Schema" |> ReasonReact.string) />
             </Tabs>
           </Grid>
         </Grid>
       </AppBar>
       <div>
+        <ComposableMap height=600>
+          <ZoomableGroup>
+            <Geographies geography=world50m>
+              (
+                (geographies, projection) =>
+                  geographies
+                  |> Js.Array.mapi((geography, i) =>
+                       <Geography
+                         key=(i |> string_of_int)
+                         geography
+                         projection
+                         style={
+                           "default": {
+                             "fill": "#ECEFF1",
+                             "stroke": "#607D8B",
+                             "strokeWidth": 0.75,
+                             "outline": "none",
+                           },
+                           "hover": {
+                             "fill": "#ECEFF1",
+                             "stroke": "#607D8B",
+                             "strokeWidth": 0.75,
+                             "outline": "none",
+                           },
+                           "pressed": {
+                             "fill": "#ECEFF1",
+                             "stroke": "#607D8B",
+                             "strokeWidth": 0.75,
+                             "outline": "none",
+                           },
+                         }
+                       />
+                     )
+                  |> ReasonReact.array
+              )
+            </Geographies>
+          </ZoomableGroup>
+        </ComposableMap>
         <Grid container=true alignItems=`Flex_End>
           <Grid item=true />
           <Grid item=true>

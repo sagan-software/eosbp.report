@@ -16,9 +16,14 @@ var MaterialUi_TableCell = require("@jsiebern/bs-material-ui/src/MaterialUi_Tabl
 var MaterialUi_TableHead = require("@jsiebern/bs-material-ui/src/MaterialUi_TableHead.bs.js");
 var MaterialUi_TextField = require("@jsiebern/bs-material-ui/src/MaterialUi_TextField.bs.js");
 var MaterialUi_Typography = require("@jsiebern/bs-material-ui/src/MaterialUi_Typography.bs.js");
+var SimpleMaps$ReactTemplate = require("./SimpleMaps.js");
 var MaterialUi_LinearProgress = require("@jsiebern/bs-material-ui/src/MaterialUi_LinearProgress.bs.js");
 
+var world50m = (require("./world-50m.json"));
+
 var component = ReasonReact.statelessComponent("Home-ReactTemplate");
+
+console.log("!!!!!!!!!", world50m);
 
 function make() {
   return /* record */[
@@ -40,15 +45,38 @@ function make() {
                                                                 React.createElement("strong", undefined, "EOS"),
                                                                 " BP",
                                                                 React.createElement("strong", undefined, "."),
-                                                                "JSON"
+                                                                "Report"
                                                               ]))])),
                                             ReasonReact.element(undefined, undefined, MaterialUi_Grid.make(undefined, undefined, undefined, undefined, undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, MaterialUi_Tabs.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, 0, undefined, undefined, /* array */[
                                                                 ReasonReact.element(undefined, undefined, MaterialUi_Tab.make(undefined, undefined, undefined, undefined, undefined, "Producers", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[])),
+                                                                ReasonReact.element(undefined, undefined, MaterialUi_Tab.make(undefined, undefined, undefined, undefined, undefined, "Proxies", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[])),
                                                                 ReasonReact.element(undefined, undefined, MaterialUi_Tab.make(undefined, undefined, undefined, undefined, undefined, "Nodes", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[])),
-                                                                ReasonReact.element(undefined, undefined, MaterialUi_Tab.make(undefined, undefined, undefined, undefined, undefined, "Peers", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[])),
                                                                 ReasonReact.element(undefined, undefined, MaterialUi_Tab.make(undefined, undefined, undefined, undefined, undefined, "Schema", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[]))
                                                               ]))]))
-                                          ]))])), React.createElement("div", undefined, ReasonReact.element(undefined, undefined, MaterialUi_Grid.make(undefined, /* Flex_End */-403022699, undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[
+                                          ]))])), React.createElement("div", undefined, ReasonReact.element(undefined, undefined, SimpleMaps$ReactTemplate.ComposableMap[/* make */0](undefined, 600, /* array */[ReasonReact.element(undefined, undefined, SimpleMaps$ReactTemplate.ZoomableGroup[/* make */0](undefined, /* array */[ReasonReact.element(undefined, undefined, SimpleMaps$ReactTemplate.Geographies[/* make */0](world50m, /* array */[(function (geographies, projection) {
+                                                              return geographies.map((function (geography, i) {
+                                                                            return ReasonReact.element(String(i), undefined, SimpleMaps$ReactTemplate.Geography[/* make */0](geography, projection, undefined, {
+                                                                                            default: {
+                                                                                              fill: "#ECEFF1",
+                                                                                              stroke: "#607D8B",
+                                                                                              strokeWidth: 0.75,
+                                                                                              outline: "none"
+                                                                                            },
+                                                                                            hover: {
+                                                                                              fill: "#ECEFF1",
+                                                                                              stroke: "#607D8B",
+                                                                                              strokeWidth: 0.75,
+                                                                                              outline: "none"
+                                                                                            },
+                                                                                            pressed: {
+                                                                                              fill: "#ECEFF1",
+                                                                                              stroke: "#607D8B",
+                                                                                              strokeWidth: 0.75,
+                                                                                              outline: "none"
+                                                                                            }
+                                                                                          }, /* array */[]));
+                                                                          }));
+                                                            })]))]))])), ReasonReact.element(undefined, undefined, MaterialUi_Grid.make(undefined, /* Flex_End */-403022699, undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[
                                       ReasonReact.element(undefined, undefined, MaterialUi_Grid.make(undefined, undefined, undefined, undefined, undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[])),
                                       ReasonReact.element(undefined, undefined, MaterialUi_Grid.make(undefined, undefined, undefined, undefined, undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, MaterialUi_TextField.make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, "Search", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, "search", undefined, undefined, /* array */[]))]))
                                     ])), ReasonReact.element(undefined, undefined, MaterialUi_Paper.make(undefined, undefined, undefined, undefined, undefined, undefined, /* array */[ReasonReact.element(undefined, undefined, MaterialUi_Table.make(undefined, undefined, undefined, undefined, /* array */[
@@ -98,6 +126,7 @@ function make() {
         ];
 }
 
+exports.world50m = world50m;
 exports.component = component;
 exports.make = make;
-/* component Not a pure module */
+/* world50m Not a pure module */
