@@ -38,9 +38,18 @@
         "latitude": 43.655045,
         "longitude": -79.381306
       },
-      "node_type": "full",
+      "node_type": "peer",
       "p2p_endpoint": "peer.eosn.io:9876",
       "bnet_endpoint": "peer.eosn.io:4321",
+    },
+    {
+      "location": {
+        "name": "Toronto",
+        "country": "CA",
+        "latitude": 43.655045,
+        "longitude": -79.381306
+      },
+      "node_type": "full",
       "api_endpoint": "http://api.eosn.io",
       "ssl_endpoint": "https://api.eosn.io"
     },
