@@ -14,7 +14,7 @@
     },
     "location": {
       "name": "Singapore",
-      "country": "SGP",
+      "country": "SG",
       "latitude": 1.29027,
       "longitude": 103.851959
     },
@@ -34,10 +34,9 @@
         "longitude": 103.8519
       },
       "node_type": "full",
-      "is_producer": false,
       "p2p_endpoint": "p2p.meet.one:9876",
-      "api_endpoint": "",
-      "ssl_endpoint": "https://mainnet.meet.one"
+      "ssl_endpoint": "https://mainnet.meet.one",
+      "bnet_endpoint": "bnet.meet.one:4321"
     }
   ]
 }
