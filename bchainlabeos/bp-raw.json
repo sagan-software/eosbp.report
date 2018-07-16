@@ -1,0 +1,61 @@
+{
+  "producer_account_name": "bchainlabeos",
+  "producer_public_key": "EOS6n6RZi6EXHKBX53HyuXgzMw5sUzWWQomwDLYLc1PcjZY3CCzzE",
+  "org": {
+    "candidate_name": "BlockchainLab EOS",
+    "website": "https://blockchainlab.me",
+    "code_of_conduct":"https://steemit.com/eos/@blockchainlabme/presenting-blockchainlab-as-an-eos-block-producer-candidate",
+    "ownership_disclosure":"https://steemit.com/eos/@blockchainlabme/presenting-blockchainlab-as-an-eos-block-producer-candidate",
+    "email":"info@blockchainlab.me",
+    "branding":{
+      "logo_256":"",
+      "logo_1024":"",
+      "logo_svg":"https://blockchainlab.me/img/logo.svg"
+    },
+    "location": {
+      "name": "Kiev, Ukraine",
+      "country": "UA",
+      "latitude": 50.4501,
+      "longitude": 30.5234
+    },
+    "social": {
+      "steemit": "blockchainlabme",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "BlockchainLab.me",
+      "github":"",
+      "reddit": "",
+      "keybase": "bchainlabeos",
+      "telegram": "BlockchainLabEOS",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Montreal, Canada",
+        "country": "CA",
+        "latitude": 45.5017,
+        "longitude": 73.5673
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "bp.blockchainlab.me:9091",
+      "bnet_endpoint": "",
+      "api_endpoint": "http://bp.blockchainlab.me:9090",
+      "ssl_endpoint": "https://bp.blockchainlab.me:9092"
+    },
+    {
+      "location": {
+        "name": "Montreal, Canada",
+        "country": "CA",
+        "latitude": 45.5017,
+        "longitude": 73.5673
+      },
+      "node_type":"seed",
+      "p2p_endpoint": "bp.blockchainlab.me:9091",
+      "bnet_endpoint": "",
+      "api_endpoint": "http://bp.blockchainlab.me:9090",
+      "ssl_endpoint": "https://bp.blockchainlab.me:9092"
+    }
+  ]
+}
