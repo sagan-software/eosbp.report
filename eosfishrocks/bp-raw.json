@@ -4,7 +4,8 @@
   "org": {
     "candidate_name": "eosfishrocks",
     "website": "https://eos.fish",
-    "code_of_conduct":"",
+    "code_of_conduct": "https://steemit.com/eos/@hibitfish/eos-fish-code-of-conduct",
+    "ownership_disclosure": "https://steemit.com/eos/@hibitfish/equity-split-of-eos-fish",
     "email":"mlong@bit.fish",
     "branding":{
       "logo_256":"",
@@ -13,7 +14,7 @@
     },
     "location": {
       "name": "Hong Kong",
-      "country": "CN",
+      "country": "HK",
       "latitude": 22.3964,
       "longitude": 114.1095
     },
@@ -45,12 +46,12 @@
     {
       "location": {
         "name": "Hong Kong",
-        "country": "Hong Kong",
+        "country": "HK",
         "latitude": 22.3964,
         "longitude": 114.1095
       },
       "is_producer": false,
-      "p2p_endpoint": "p2p.bp.fish:9786",
+      "p2p_endpoint": "",
       "api_endpoint": "http://api.bp.fish",
       "ssl_endpoint": ""
     }
