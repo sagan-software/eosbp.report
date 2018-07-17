@@ -285,7 +285,7 @@ function bpJson(row) {
   return thenDecode(EosBp_Json$ReactTemplate.decode, bpJsonRaw(row));
 }
 
-var httpEndpoint = "http://node2.liquideos.com";
+var httpEndpoint = "http://api.eosnewyork.io/";
 
 function producerDir(row) {
   return Path.join(Env$ReactTemplate.buildDir, row[/* owner */0]);

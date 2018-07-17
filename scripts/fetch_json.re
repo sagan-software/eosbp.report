@@ -170,7 +170,7 @@ let bpJson = row => row |> bpJsonRaw |> thenDecode(EosBp_Json.decode);
 
 [@bs.module "mkdirp"] external mkdirpSync : string => unit = "sync";
 
-let httpEndpoint = "http://node2.liquideos.com";
+let httpEndpoint = "http://api.eosnewyork.io/";
 
 let producerDir = (row: EosBp.Table.Row.t) =>
   Node.Path.join([|Env.buildDir, row.owner|]);
