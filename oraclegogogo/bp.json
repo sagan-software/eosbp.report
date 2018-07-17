@@ -4,12 +4,13 @@
   "org": {
     "candidate_name": "OracleChain",
     "website": "https://oraclechain.io",
-    "code_of_conduct": "",
+    "code_of_conduct": "https://steemit.com/eos/@oraclechain/using-eos-bp-dao-to-ensure-eos-ecology-more-healthy-development-oraclechain-s-proposal-on-eos-bp-block-rewards-distribution-plan",
+    "ownership_disclosure": "https://oraclechain.io/index-en",
     "email": "contact@oraclechain.io",
     "branding": {
       "logo_256": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png",
       "logo_1024": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png",
-      "logo_svg": ""
+      "logo_svg": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.svg"
     },
     "location": {
       "name": "Beijing",
@@ -17,7 +18,7 @@
       "latitude": 39.9497,
       "longitude": 16.2756
     },
-    "social_network": {
+    "social": {
       "steemit": "https://steemit.com/@oraclechain",
       "twitter": "https://twitter.com/Oracle_Chain",
       "github": "https://github.com/OracleChain",
@@ -34,7 +35,7 @@
         "latitude": 39.9497,
         "longitude": 16.2756
       },
-      "is_producer": false,
+      "node_type": "full",
       "p2p_endpoint": "dns1-p2p.oraclechain.io:49876",
       "api_endpoint": "http://dns1-rpc.oraclechain.io:58888",
       "ssl_endpoint": "https://dns1-rpc.oraclechain.io:50443"
@@ -42,11 +43,11 @@
     {
       "location": {
         "name": "Singapore",
-        "country": "SGP",
+        "country": "SG",
         "latitude": 1.3278,
         "longitude": 103.8567
       },
-      "is_producer": true,
+      "node_type": "full",
       "p2p_endpoint": "dns2-p2p.oraclechain.io:49876",
       "api_endpoint": "http://dns2-rpc.oraclechain.io:58888",
       "ssl_endpoint": "https://dns2-rpc.oraclechain.io:50443"
