@@ -40,9 +40,19 @@
 
       },
 	"node_type": "full",
+	"ssl_endpoint": "https://node0.eosblocksmith.io"
+   },
+    {
+      "location": {
+     	"name": "Oklahoma",
+        "country": "US",
+        "latitude": 35.4676,
+        "longitude": 97.5164
+
+      },
+	"node_type": "seed",
 	"p2p_endpoint": "node0.eosblocksmith.io:9876",
-	"ssl_endpoint": "https://node0.eosblocksmith.io",
-	"bnet_endpoint": "rocky.eosblocksmith.io:4321"
+	"bnet_endpoint": "rocky.eosblocksmith.io:4322"
    },
    {
       "location": {
