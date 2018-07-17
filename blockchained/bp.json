@@ -33,13 +33,13 @@
     {
       "location": {
         "name": "EOS BLOCKCHND",
-        "country": "Germany",
+        "country": "DE",
         "latitude": 51.2993,
         "longitude": 9.491
       },
-      "is_producer": true,
-      "p2p_endpoint": "p2p.eos.blckchnd.com:9876",
-      "api_endpoint": "https://api-eos.blckchnd.com",
+      "node_type": "full",
+      "p2p_endpoint": "p2p.eos.blckchnd.com:19876",
+      "api_endpoint": "http://api-eos.blckchnd.com",
       "ssl_endpoint": "https://api-eos.blckchnd.com"
     }
   ]
