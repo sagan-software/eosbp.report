@@ -5,7 +5,7 @@
     "candidate_name": "MEET.ONE",
     "website": "https://meet.one",
     "ownership_disclosure":"https://steemit.com/eos/@meetone/introducing-meetone-an-eos-io-block-producer-candidate",
-    "code_of_conduct":"https://steemit.com/eos/@meetone/revenue-distribution-of-meet-one",
+    "code_of_conduct":"https://meet.one",
     "email": "hello@meet.one",
     "branding": {
       "logo_256": "https://meet.one/meetone-256.png",
@@ -34,9 +34,10 @@
         "longitude": 103.8519
       },
       "node_type": "full",
+      "is_producer": false,
       "p2p_endpoint": "p2p.meet.one:9876",
-      "ssl_endpoint": "https://mainnet.meet.one",
-      "bnet_endpoint": "bnet.meet.one:4321"
+      "api_endpoint": "",
+      "ssl_endpoint": "https://mainnet.meet.one"
     }
   ]
 }
