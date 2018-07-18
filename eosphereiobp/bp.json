@@ -41,6 +41,7 @@
       "node_type": "full",
       "p2p_endpoint": "peer1.eosphere.io:9876",
       "api_endpoint": "http://node1.eosphere.io",
+      "bnet_endpoint": "peer1.eosphere.io:4321",
       "ssl_endpoint": "https://node1.eosphere.io"
     },
     {
@@ -53,6 +54,7 @@
       "node_type": "full",
       "p2p_endpoint": "peer2.eosphere.io:9876",
       "api_endpoint": "http://node2.eosphere.io",
+      "bnet_endpoint": "peer2.eosphere.io:4321",
       "ssl_endpoint": "https://node2.eosphere.io"
     }
   ]
