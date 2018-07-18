@@ -12,6 +12,8 @@ git worktree add $BUILD_WORK_DIR gh-pages
 
 cd $WORK_DIR
 yarn install
+yarn upgrade @sagan-software/bs-bignumber
+yarn upgrade @sagan-software/bs-eos
 yarn build-prod
 node ./scripts/fetch_json.js
 
