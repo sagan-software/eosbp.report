@@ -2,6 +2,7 @@
 'use strict';
 
 var Fs = require("fs");
+var Eos = require("@sagan-software/bs-eos/src/Eos.js");
 var Url = require("url");
 var Path = require("path");
 var Block = require("bs-platform/lib/js/block.js");
@@ -13,11 +14,12 @@ var Js_exn = require("bs-platform/lib/js/js_exn.js");
 var Mkdirp = require("mkdirp");
 var Npmlog = require("npmlog");
 var Process = require("process");
+var Eos_Types = require("@sagan-software/bs-eos/src/Eos_Types.js");
 var Js_option = require("bs-platform/lib/js/js_option.js");
 var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
-var Json_encode = require("@glennsl/bs-json/src/Json_encode.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var Eosio_System = require("@sagan-software/bs-eos/src/Eosio_System.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
 var BignumberJs = require("bignumber.js");
 var ReactHelmet = require("react-helmet");
@@ -27,7 +29,6 @@ var App$ReactTemplate = require("../src/App.js");
 var Env$ReactTemplate = require("../src/Env.js");
 var Request$ReactTemplate = require("../src/Request.js");
 var EosBp_Json$ReactTemplate = require("../src/EosBp_Json.js");
-var EosBp_Table$ReactTemplate = require("../src/EosBp_Table.js");
 
 ((process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'));
 
@@ -181,54 +182,12 @@ function requireDecoded(promise) {
               }));
 }
 
-var BigNumber = /* module */[];
+var httpEndpoint = "http://api.eosnewyork.io";
 
-function tableRowsRaw(httpEndpoint, lowerBound, _) {
-  var body = JSON.stringify(Json_encode.object_(/* :: */[
-            /* tuple */[
-              "scope",
-              "eosio"
-            ],
-            /* :: */[
-              /* tuple */[
-                "code",
-                "eosio"
-              ],
-              /* :: */[
-                /* tuple */[
-                  "table",
-                  "producers"
-                ],
-                /* :: */[
-                  /* tuple */[
-                    "json",
-                    true
-                  ],
-                  /* :: */[
-                    /* tuple */[
-                      "limit",
-                      100
-                    ],
-                    /* :: */[
-                      /* tuple */[
-                        "lower_bound",
-                        Js_option.getWithDefault("", lowerBound)
-                      ],
-                      /* [] */0
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]));
-  return fetchWithBase(httpEndpoint, "/v1/chain/get_table_rows", "POST", body, undefined, /* () */0);
-}
+var eos = Eos.make(httpEndpoint, undefined, undefined, undefined, undefined, undefined, undefined, /* () */0);
 
-function tableRows(httpEndpoint, lowerBound, _) {
-  return requireDecoded(thenDecode(EosBp_Table$ReactTemplate.decode, tableRowsRaw(httpEndpoint, lowerBound, /* () */0))).then((function (param) {
-                var table = param[2];
-                var data = param[1];
-                var response = param[0];
+function tableRows(lowerBound, _) {
+  return Curry._6(Eosio_System.getProducers(eos), undefined, undefined, lowerBound, undefined, 100, /* () */0).then((function (table) {
                 var total = table[/* rows */0].length;
                 var more = table[/* more */1];
                 Npmlog.info("regproducer", "total=" + (String(total) + (" more=" + (String(more) + ""))), "");
@@ -236,34 +195,18 @@ function tableRows(httpEndpoint, lowerBound, _) {
                   var lastIndex = table[/* rows */0].length - 1 | 0;
                   var lastRow = Belt_Array.get(table[/* rows */0], lastIndex);
                   if (lastRow !== undefined) {
-                    var nextLowerBound = new BignumberJs(Eosjs.modules.format.encodeName(lastRow[/* owner */0], false)).plus(1).toString();
-                    return tableRows(httpEndpoint, nextLowerBound, /* () */0).then((function (param) {
-                                  var t2 = param[2];
-                                  var newTable_000 = /* rows */t2[/* rows */0].concat(table[/* rows */0]);
-                                  var newTable_001 = /* more */t2[/* more */1];
-                                  var newTable = /* record */[
-                                    newTable_000,
-                                    newTable_001
-                                  ];
-                                  return Promise.resolve(/* tuple */[
-                                              param[0],
-                                              param[1],
-                                              newTable
+                    var nextLowerBound = new BignumberJs(Eosjs.modules.format.encodeName(Eos_Types.AccountName[/* toString */4](lastRow[/* owner */0]), false)).plus(1).toString();
+                    return tableRows(nextLowerBound, /* () */0).then((function (t2) {
+                                  return Promise.resolve(/* record */[
+                                              /* rows */t2[/* rows */0].concat(table[/* rows */0]),
+                                              /* more */t2[/* more */1]
                                             ]);
                                 }));
                   } else {
-                    return Promise.resolve(/* tuple */[
-                                response,
-                                data,
-                                table
-                              ]);
+                    return Promise.resolve(table);
                   }
                 } else {
-                  return Promise.resolve(/* tuple */[
-                              response,
-                              data,
-                              table
-                            ]);
+                  return Promise.resolve(table);
                 }
               }));
 }
@@ -271,7 +214,7 @@ function tableRows(httpEndpoint, lowerBound, _) {
 function bpJsonRaw(row) {
   var match = row[/* url */4].replace((/\W/g), "").trim().length > 0;
   if (match) {
-    var url = EosBp_Table$ReactTemplate.Row[/* jsonUrl */2](row);
+    var url = EosBp_Json$ReactTemplate.getUrl(row[/* url */4]);
     return fetch(url, undefined, undefined, undefined, /* () */0);
   } else {
     return Promise.reject([
@@ -285,10 +228,8 @@ function bpJson(row) {
   return thenDecode(EosBp_Json$ReactTemplate.decode, bpJsonRaw(row));
 }
 
-var httpEndpoint = "http://api.eosnewyork.io";
-
 function producerDir(row) {
-  return Path.join(Env$ReactTemplate.buildDir, row[/* owner */0]);
+  return Path.join(Env$ReactTemplate.buildDir, Eos_Types.AccountName[/* toString */4](row[/* owner */0]));
 }
 
 function writeProducerFile(row, filename, contents, mode) {
@@ -378,7 +319,7 @@ function fetchBpJson(row) {
   return thenDecode(EosBp_Json$ReactTemplate.decode, bpJsonRaw(row)).then((function (param) {
                   var response = param[0];
                   if (200 <= response[/* statusCode */2] && response[/* statusCode */2] < 400) {
-                    Npmlog.info("bp.json", row[/* owner */0], response[/* responseUrl */1]);
+                    Npmlog.info("bp.json", Eos_Types.AccountName[/* toString */4](row[/* owner */0]), response[/* responseUrl */1]);
                     return Promise.resolve(/* tuple */[
                                 response,
                                 param[1],
@@ -393,7 +334,7 @@ function fetchBpJson(row) {
                 })).catch((function (error) {
                 var match = handleBpJsonError(error);
                 if (match !== undefined) {
-                  Npmlog.error("bp.json", row[/* owner */0], match);
+                  Npmlog.error("bp.json", Eos_Types.AccountName[/* toString */4](row[/* owner */0]), match);
                 }
                 return Promise.resolve(undefined);
               }));
@@ -432,7 +373,7 @@ function generateHtmlFile(route, dirname) {
 }
 
 function generateProducerHtmlFile(row) {
-  return generateHtmlFile(/* Producer */[row[/* owner */0]], producerDir(row));
+  return generateHtmlFile(/* Producer */[Eos_Types.AccountName[/* toString */4](row[/* owner */0])], producerDir(row));
 }
 
 function imageExtension(contentType) {
@@ -466,7 +407,7 @@ function fetchImage(row, basename, url) {
                   })).catch((function (error) {
                   var match = handleBpJsonError(error);
                   if (match !== undefined) {
-                    Npmlog.error("image", row[/* owner */0], match);
+                    Npmlog.error("image", Eos_Types.AccountName[/* toString */4](row[/* owner */0]), match);
                   }
                   return Promise.resolve(/* () */0);
                 }));
@@ -483,8 +424,7 @@ function fetchImages(row, json) {
                   }), json[/* org */2][/* branding */6]));
 }
 
-tableRows(httpEndpoint, undefined, /* () */0).then((function (param) {
-                  var table = param[2];
+tableRows(undefined, /* () */0).then((function (table) {
                   Npmlog.info("regproducer", "total", table[/* rows */0].length);
                   return allChunked(table[/* rows */0], fetchBpJson, 25).then((function (responses) {
                                   return Promise.resolve(withoutNone(responses));
@@ -554,12 +494,11 @@ exports.InvalidJson = InvalidJson;
 exports.thenDecode = thenDecode;
 exports.DecodeError = DecodeError;
 exports.requireDecoded = requireDecoded;
-exports.BigNumber = BigNumber;
-exports.tableRowsRaw = tableRowsRaw;
+exports.httpEndpoint = httpEndpoint;
+exports.eos = eos;
 exports.tableRows = tableRows;
 exports.bpJsonRaw = bpJsonRaw;
 exports.bpJson = bpJson;
-exports.httpEndpoint = httpEndpoint;
 exports.producerDir = producerDir;
 exports.writeProducerFile = writeProducerFile;
 exports.writeBpJson = writeBpJson;

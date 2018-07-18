@@ -229,3 +229,20 @@ let validate = json => {
   ajv |. Ajv.validate(schema, json) |> ignore;
   ajv |. Ajv.errors;
 };
+
+let getUrl = baseUrl => {
+  /* Remove invalid unicode characters from beginning and end */
+  let url =
+    baseUrl
+    |> Js.String.replaceByRe([%bs.re "/^[^\\x00-\\x7F]/g"], "")
+    |> Js.String.replaceByRe([%bs.re "/[^\\x00-\\x7F]$/g"], "")
+    |> Js.String.replaceByRe([%bs.re "/\\/$/g"], "");
+
+  /* Add protocol if missing */
+  let url =
+    Js.String.startsWith("http", url) || Js.String.startsWith("https", url) ?
+      url : "http://" ++ url;
+  /* Add /bp.json if necessary */
+  let url = Js.String.endsWith(".json", url) ? url : url ++ "/bp.json";
+  url;
+};

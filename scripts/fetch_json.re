@@ -91,41 +91,13 @@ let requireDecoded = promise =>
 [@bs.module "eosjs"] [@bs.scope ("modules", "format")]
 external encodeName : (string, bool) => string = "";
 
-module BigNumber = {
-  type t;
-  [@bs.module] [@bs.new] external fromString : string => t = "bignumber.js";
-  [@bs.send] external plusInt : (t, int) => t = "plus";
-  [@bs.send] external toString : t => string = "";
-};
+let httpEndpoint = "http://api.eosnewyork.io";
+let eos = Eos.make(~httpEndpoint, ());
 
-let tableRowsRaw = (httpEndpoint, ~lowerBound=?, ()) => {
-  let method_ = "POST";
-  let baseUrl = httpEndpoint;
-  let path = "/v1/chain/get_table_rows";
-  let body =
-    Json.Encode.(
-      [
-        ("scope", string("eosio")),
-        ("code", string("eosio")),
-        ("table", string("producers")),
-        ("json", bool(true)),
-        ("limit", int(100)),
-        (
-          "lower_bound",
-          lowerBound |> Js.Option.getWithDefault("") |> string,
-        ),
-      ]
-      |> object_
-      |> Js.Json.stringify
-    );
-  fetchWithBase(~baseUrl, ~path, ~method_, ~body, ());
-};
-
-let rec tableRows = (httpEndpoint, ~lowerBound=?, ()) =>
-  tableRowsRaw(httpEndpoint, ~lowerBound?, ())
-  |> thenDecode(EosBp_Table.decode)
-  |> requireDecoded
-  |> Js.Promise.then_(((response, data, table: EosBp.Table.t)) => {
+let rec tableRows = (~lowerBound=?, ()) =>
+  eos
+  |. Eosio.System.getProducers(~lowerBound?, ~limit=100, ())
+  |> Js.Promise.then_((table: Eos.TableRows.t(Eosio.System.ProducerInfo.t)) => {
        let total = table.rows |> Js.Array.length;
        let more = table.more;
        Log.info("regproducer", {j|total=$total more=$more|j}, "");
@@ -137,31 +109,33 @@ let rec tableRows = (httpEndpoint, ~lowerBound=?, ()) =>
            | Some(row) =>
              let nextLowerBound =
                row.owner
+               |. Eos.AccountName.toString
                |. encodeName(false)
                |> BigNumber.fromString
                |. BigNumber.plusInt(1)
                |> BigNumber.toString;
-             tableRows(httpEndpoint, ~lowerBound=nextLowerBound, ())
-             |> Js.Promise.then_(((r2, d2, t2: EosBp.Table.t)) => {
-                  let newTable: EosBp.Table.t = {
+             tableRows(~lowerBound=nextLowerBound, ())
+             |> Js.Promise.then_(
+                  (t2: Eos.TableRows.t(Eosio.System.ProducerInfo.t)) => {
+                  let newTable: Eos.TableRows.t(Eosio.System.ProducerInfo.t) = {
                     rows: Js.Array.concat(table.rows, t2.rows),
                     more: t2.more,
                   };
-                  Js.Promise.resolve((r2, d2, newTable));
+                  Js.Promise.resolve(newTable);
                 });
-           | None => Js.Promise.resolve((response, data, table))
+           | None => Js.Promise.resolve(table)
            };
          } :
-         Js.Promise.resolve((response, data, table));
+         Js.Promise.resolve(table);
      });
 
-let bpJsonRaw = (row: EosBp_Table.Row.t) =>
+let bpJsonRaw = (row: Eosio.System.ProducerInfo.t) =>
   row.url
   |> Js.String.replaceByRe([%bs.re "/\\W/g"], "")
   |> Js.String.trim
   |> Js.String.length > 0 ?
     {
-      let url = row |> EosBp_Table.Row.jsonUrl;
+      let url = row.url |> EosBp_Json.getUrl;
       fetch(~url, ());
     } :
     Js.Promise.reject(BadUrl(row.url));
@@ -170,12 +144,11 @@ let bpJson = row => row |> bpJsonRaw |> thenDecode(EosBp_Json.decode);
 
 [@bs.module "mkdirp"] external mkdirpSync : string => unit = "sync";
 
-let httpEndpoint = "http://api.eosnewyork.io";
+let producerDir = (row: Eosio.System.ProducerInfo.t) =>
+  Node.Path.join([|Env.buildDir, row.owner |. Eos.AccountName.toString|]);
 
-let producerDir = (row: EosBp.Table.Row.t) =>
-  Node.Path.join([|Env.buildDir, row.owner|]);
-
-let writeProducerFile = (~row: EosBp.Table.Row.t, ~filename, ~contents, ~mode) => {
+let writeProducerFile =
+    (~row: Eosio.System.ProducerInfo.t, ~filename, ~contents, ~mode) => {
   let dirname = producerDir(row);
   let fullpath = Node.Path.join([|dirname, filename|]);
   mkdirpSync(dirname);
@@ -188,7 +161,7 @@ let writeProducerFile = (~row: EosBp.Table.Row.t, ~filename, ~contents, ~mode) =
   Js.Promise.resolve();
 };
 
-let writeBpJson = ((response, data, row: EosBp.Table.Row.t)) => {
+let writeBpJson = ((response, data, row: Eosio.System.ProducerInfo.t)) => {
   let writeBpRawJson =
     writeProducerFile(
       ~row,
@@ -253,7 +226,11 @@ let fetchBpJson = row =>
   |> bpJson
   |> Js.Promise.then_(((response, data)) =>
        if (200 <= response.statusCode && response.statusCode < 400) {
-         Log.info("bp.json", row.owner, response.responseUrl);
+         Log.info(
+           "bp.json",
+           row.owner |. Eos.AccountName.toString,
+           response.responseUrl,
+         );
          Js.Promise.resolve(Some((response, data, row)));
        } else {
          Js.Promise.reject(BadStatus(response));
@@ -261,7 +238,8 @@ let fetchBpJson = row =>
      )
   |> Js.Promise.catch(error => {
        switch (handleBpJsonError(error)) {
-       | Some(message) => Log.error("bp.json", row.owner, message)
+       | Some(message) =>
+         Log.error("bp.json", row.owner |. Eos.AccountName.toString, message)
        | None => ()
        };
        Js.Promise.resolve(None);
@@ -322,9 +300,9 @@ let generateHtmlFile = (~route, ~dirname) => {
   Js.Promise.resolve();
 };
 
-let generateProducerHtmlFile = (row: EosBp.Table.Row.t) =>
+let generateProducerHtmlFile = (row: Eosio.System.ProducerInfo.t) =>
   generateHtmlFile(
-    ~route=Route.Producer(row.owner),
+    ~route=Route.Producer(row.owner |. Eos.AccountName.toString),
     ~dirname=producerDir(row),
   );
 
@@ -340,7 +318,7 @@ let imageExtension = contentType =>
   };
 
 let fetchImage =
-    (row: EosBp.Table.Row.t, basename: string, url: option(string)) => {
+    (row: Eosio.System.ProducerInfo.t, basename: string, url: option(string)) => {
   let url =
     url
     |> Js.Option.getWithDefault("")
@@ -377,7 +355,8 @@ let fetchImage =
        })
     |> Js.Promise.catch(error => {
          switch (handleBpJsonError(error)) {
-         | Some(message) => Log.error("image", row.owner, message)
+         | Some(message) =>
+           Log.error("image", row.owner |. Eos.AccountName.toString, message)
          | None => ()
          };
          Js.Promise.resolve();
@@ -385,7 +364,7 @@ let fetchImage =
   };
 };
 
-let fetchImages = (row: EosBp.Table.Row.t, json: EosBp.Json.t) =>
+let fetchImages = (row: Eosio.System.ProducerInfo.t, json: EosBp.Json.t) =>
   json.org.branding
   |> Js.Option.map((. branding: EosBp.Json.Org.Branding.t) =>
        Js.Promise.all([|
@@ -397,9 +376,8 @@ let fetchImages = (row: EosBp.Table.Row.t, json: EosBp.Json.t) =>
   |> Js.Option.getWithDefault(Js.Promise.resolve([||]));
 
 Js.Promise.(
-  httpEndpoint
-  |. tableRows()
-  |> then_(((_response, _data, table: EosBp.Table.t)) => {
+  tableRows()
+  |> then_((table: Eos.TableRows.t(Eosio.System.ProducerInfo.t)) => {
        Log.info("regproducer", "total", table.rows |> Js.Array.length);
        table.rows
        |. allChunked(fetchBpJson, 25)
