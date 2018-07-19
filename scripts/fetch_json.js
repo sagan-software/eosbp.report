@@ -7,6 +7,7 @@ var Url = require("url");
 var Path = require("path");
 var Block = require("bs-platform/lib/js/block.js");
 var Curry = require("bs-platform/lib/js/curry.js");
+var Eosio = require("@sagan-software/bs-eos/src/Eosio.js");
 var Eosjs = require("eosjs");
 var Json5 = require("json5");
 var Helmet = require("@sagan-software/bs-react-helmet/src/Helmet.js");
@@ -187,7 +188,7 @@ var httpEndpoint = "http://api.eosnewyork.io";
 var eos = Eos.make(httpEndpoint, undefined, undefined, undefined, undefined, undefined, undefined, /* () */0);
 
 function tableRows(lowerBound, _) {
-  return Curry._6(Eosio_System.getProducers(eos), undefined, undefined, lowerBound, undefined, 100, /* () */0).then((function (table) {
+  return Curry._6(Eosio.getProducers(eos), undefined, undefined, lowerBound, undefined, 100, /* () */0).then((function (table) {
                 var total = table[/* rows */0].length;
                 var more = table[/* more */1];
                 Npmlog.info("regproducer", "total=" + (String(total) + (" more=" + (String(more) + ""))), "");
@@ -349,6 +350,32 @@ function withoutNone(optsArray) {
               }), /* array */[]);
 }
 
+function fetchBpJsonFiles(table) {
+  Npmlog.info("regproducer", "total", table[/* rows */0].length);
+  return allChunked(table[/* rows */0], fetchBpJson, 25).then((function (responses) {
+                  return Promise.resolve(withoutNone(responses));
+                })).then((function (responses) {
+                return Promise.resolve(/* tuple */[
+                            table[/* rows */0],
+                            responses
+                          ]);
+              }));
+}
+
+function writeBpJsonFiles(param) {
+  var responses = param[1];
+  var rows = param[0];
+  var numRows = rows.length;
+  var numResponses = responses.length;
+  Npmlog.info("fetch done", "Got " + (String(numResponses) + (" OK responses of " + (String(numRows) + " producers"))), "");
+  return allChunked(responses, writeBpJson, 10).then((function () {
+                return Promise.resolve(/* tuple */[
+                            rows,
+                            responses
+                          ]);
+              }));
+}
+
 function renderHtml(element) {
   var content = Server.renderToString(element);
   var helmet = ReactHelmet.Helmet.renderStatic();
@@ -358,22 +385,7 @@ function renderHtml(element) {
   var title = Helmet.toString(helmet.title);
   var meta = Helmet.toString(helmet.meta);
   var script = Helmet.toString(helmet.script);
-  process.env.STATIC_URL;
   return "<!DOCTYPE html>\n    <html " + (String(htmlAttributes) + (">\n      <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">\n        " + (String(title) + ("\n        " + (String(meta) + ("\n        " + (String(style) + ("\n      </head>\n    <body " + (String(bodyAttributes) + (">\n      <div id=\"app\">" + (String(content) + ("</div>\n      <script src=\"/index.js\"></script>\n      " + (String(script) + "\n    </body>\n    </html>\n  ")))))))))))));
-}
-
-function generateHtmlFile(route, dirname) {
-  var element = ReasonReact.element(undefined, undefined, App$ReactTemplate.make(route, /* array */[]));
-  var html = renderHtml(element);
-  var fullpath = Path.join(dirname, "index.html");
-  Mkdirp.sync(dirname);
-  Fs.writeFileSync(fullpath, html, "utf8");
-  Npmlog.info("write", "html", Path.relative(Process.cwd(), fullpath));
-  return Promise.resolve(/* () */0);
-}
-
-function generateProducerHtmlFile(row) {
-  return generateHtmlFile(/* Producer */[Eos_Types.AccountName[/* toString */4](row[/* owner */0])], producerDir(row));
 }
 
 function imageExtension(contentType) {
@@ -424,56 +436,93 @@ function fetchImages(row, json) {
                   }), json[/* org */2][/* branding */6]));
 }
 
-tableRows(undefined, /* () */0).then((function (table) {
-                  Npmlog.info("regproducer", "total", table[/* rows */0].length);
-                  return allChunked(table[/* rows */0], fetchBpJson, 25).then((function (responses) {
-                                  return Promise.resolve(withoutNone(responses));
-                                })).then((function (responses) {
-                                return Promise.resolve(/* tuple */[
-                                            table[/* rows */0],
-                                            responses
-                                          ]);
-                              }));
-                })).then((function (param) {
-                var responses = param[1];
-                var rows = param[0];
-                var numRows = rows.length;
-                var numResponses = responses.length;
-                Npmlog.info("fetch done", "Got " + (String(numResponses) + (" OK responses of " + (String(numRows) + " producers"))), "");
-                return allChunked(responses, writeBpJson, 10).then((function () {
-                              return Promise.resolve(/* tuple */[
-                                          rows,
-                                          responses
-                                        ]);
-                            }));
-              })).then((function (param) {
-              var responses = param[1];
-              var rows = param[0];
-              return allChunked(rows, generateProducerHtmlFile, 10).then((function () {
-                            return Promise.resolve(/* tuple */[
-                                        rows,
-                                        responses
-                                      ]);
-                          }));
-            })).then((function (param) {
-            var responses = param[1];
-            var rows = param[0];
-            return allChunked(responses.map((function (param) {
-                                var match = param[1][/* decoded */2];
-                                if (match.tag) {
-                                  return Promise.resolve(/* array */[]);
-                                } else {
-                                  return fetchImages(param[2], match[0]);
-                                }
-                              })), (function (p) {
-                            return p;
-                          }), 5).then((function () {
-                          return Promise.resolve(/* tuple */[
-                                      rows,
-                                      responses
-                                    ]);
-                        }));
-          })).then((function () {
+function fetchAllImages(param) {
+  var responses = param[1];
+  var rows = param[0];
+  return allChunked(responses.map((function (param) {
+                      var match = param[1][/* decoded */2];
+                      if (match.tag) {
+                        return Promise.resolve(/* array */[]);
+                      } else {
+                        return fetchImages(param[2], match[0]);
+                      }
+                    })), (function (p) {
+                  return p;
+                }), 5).then((function () {
+                return Promise.resolve(/* tuple */[
+                            rows,
+                            responses
+                          ]);
+              }));
+}
+
+function generateHtmlFile(route, dirname) {
+  var element = ReasonReact.element(undefined, undefined, App$ReactTemplate.make(route, /* array */[]));
+  var html = renderHtml(element);
+  var fullpath = Path.join(dirname, "index.html");
+  Mkdirp.sync(dirname);
+  Fs.writeFileSync(fullpath, html, "utf8");
+  Npmlog.info("write", "html", Path.relative(Process.cwd(), fullpath));
+  return Promise.resolve(/* () */0);
+}
+
+function generateProducerHtmlFile(row) {
+  return generateHtmlFile(/* Producer */[Eos_Types.AccountName[/* toString */4](row[/* owner */0])], producerDir(row));
+}
+
+function generateProducerHtmlFiles(param) {
+  var responses = param[1];
+  var rows = param[0];
+  return allChunked(rows, generateProducerHtmlFile, 10).then((function () {
+                return Promise.resolve(/* tuple */[
+                            rows,
+                            responses
+                          ]);
+              }));
+}
+
+function generateProducerReport(producer, globalState) {
+  var estimatedRewards = Eosio_System.estimateProducerPay(producer, globalState);
+  return Promise.resolve(/* tuple */[
+              producer,
+              estimatedRewards
+            ]);
+}
+
+function generateProducerReports(param) {
+  var responses = param[1];
+  var rows = param[0];
+  return Curry._2(Eosio.getGlobalState(eos), undefined, /* () */0).then((function (globalState) {
+                  if (globalState !== undefined) {
+                    var globalState$1 = globalState;
+                    return Promise.all(Belt_Array.map(rows, (function (r) {
+                                        return generateProducerReport(r, globalState$1);
+                                      }))).then((function (results) {
+                                  return Promise.resolve(Belt_Array.forEach(results.sort((function (param, param$1) {
+                                                        var match = param[1].gt(param$1[1]);
+                                                        if (match) {
+                                                          return 1;
+                                                        } else {
+                                                          return -1;
+                                                        }
+                                                      })), (function (param) {
+                                                    Npmlog.info("rewards", Eos_Types.AccountName[/* toString */4](param[0][/* owner */0]), Eosjs.modules.format.printAsset(Eos_Types.Asset[/* fromBigNumber */0](param[1], 4, "EOS")));
+                                                    return /* () */0;
+                                                  })));
+                                }));
+                  } else {
+                    Npmlog.error("reports", "No global state found in the eosio.system contract", "");
+                    return Promise.resolve(/* () */0);
+                  }
+                })).then((function () {
+                return Promise.resolve(/* tuple */[
+                            rows,
+                            responses
+                          ]);
+              }));
+}
+
+tableRows(undefined, /* () */0).then(fetchBpJsonFiles).then(generateProducerReports).then((function () {
           Npmlog.info("", "Done", Env$ReactTemplate.buildDir);
           return Promise.resolve(/* () */0);
         })).catch((function (error) {
@@ -510,10 +559,16 @@ exports.BadStatus = BadStatus;
 exports.handleBpJsonError = handleBpJsonError;
 exports.fetchBpJson = fetchBpJson;
 exports.withoutNone = withoutNone;
+exports.fetchBpJsonFiles = fetchBpJsonFiles;
+exports.writeBpJsonFiles = writeBpJsonFiles;
 exports.renderHtml = renderHtml;
-exports.generateHtmlFile = generateHtmlFile;
-exports.generateProducerHtmlFile = generateProducerHtmlFile;
 exports.imageExtension = imageExtension;
 exports.fetchImage = fetchImage;
 exports.fetchImages = fetchImages;
+exports.fetchAllImages = fetchAllImages;
+exports.generateHtmlFile = generateHtmlFile;
+exports.generateProducerHtmlFile = generateProducerHtmlFile;
+exports.generateProducerHtmlFiles = generateProducerHtmlFiles;
+exports.generateProducerReport = generateProducerReport;
+exports.generateProducerReports = generateProducerReports;
 /*  Not a pure module */

@@ -6,9 +6,6 @@ var Fetch = 0;
 
 var Json = 0;
 
-var Table = 0;
-
 exports.Fetch = Fetch;
 exports.Json = Json;
-exports.Table = Table;
 /* No side effect */

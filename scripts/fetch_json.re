@@ -96,7 +96,7 @@ let eos = Eos.make(~httpEndpoint, ());
 
 let rec tableRows = (~lowerBound=?, ()) =>
   eos
-  |. Eosio.System.getProducers(~lowerBound?, ~limit=100, ())
+  |. Eosio.getProducers(~lowerBound?, ~limit=100, ())
   |> Js.Promise.then_((table: Eos.TableRows.t(Eosio.System.ProducerInfo.t)) => {
        let total = table.rows |> Js.Array.length;
        let more = table.more;
@@ -258,6 +258,31 @@ let withoutNone = optsArray =>
     optsArray,
   );
 
+let fetchBpJsonFiles = (table: Eos.TableRows.t(Eosio.System.ProducerInfo.t)) => {
+  Log.info("regproducer", "total", table.rows |> Js.Array.length);
+  table.rows
+  |. allChunked(fetchBpJson, 25)
+  |> Js.Promise.then_(responses =>
+       responses |> withoutNone |> Js.Promise.resolve
+     )
+  |> Js.Promise.then_(responses =>
+       Js.Promise.resolve((table.rows, responses))
+     );
+};
+
+let writeBpJsonFiles = ((rows, responses)) => {
+  let numRows = rows |> Js.Array.length;
+  let numResponses = responses |> Js.Array.length;
+  Log.info(
+    "fetch done",
+    {j|Got $numResponses OK responses of $numRows producers|j},
+    "",
+  );
+  responses
+  |. allChunked(writeBpJson, 10)
+  |> Js.Promise.then_(_ => Js.Promise.resolve((rows, responses)));
+};
+
 let renderHtml = (~element) => {
   let content = ReactDOMServerRe.renderToString(element);
   let helmet = Helmet.renderStatic();
@@ -267,7 +292,6 @@ let renderHtml = (~element) => {
   let title = helmet |. Helmet.titleGet |> Helmet.toString;
   let meta = helmet |. Helmet.metaGet |> Helmet.toString;
   let script = helmet |. Helmet.scriptGet |> Helmet.toString;
-  let staticUrl = Env.staticUrl;
   {j|<!DOCTYPE html>
     <html $htmlAttributes>
       <head>
@@ -285,26 +309,6 @@ let renderHtml = (~element) => {
     </html>
   |j};
 };
-
-let generateHtmlFile = (~route, ~dirname) => {
-  let element = <App route />;
-  let html = renderHtml(~element);
-  let fullpath = Node.Path.join([|dirname, "index.html"|]);
-  mkdirpSync(dirname);
-  Node.Fs.writeFileAsUtf8Sync(fullpath, html);
-  Log.info(
-    "write",
-    "html",
-    Node.Path.relative(~from=Node.Process.cwd(), ~to_=fullpath, ()),
-  );
-  Js.Promise.resolve();
-};
-
-let generateProducerHtmlFile = (row: Eosio.System.ProducerInfo.t) =>
-  generateHtmlFile(
-    ~route=Route.Producer(row.owner |. Eos.AccountName.toString),
-    ~dirname=producerDir(row),
-  );
 
 let imageExtension = contentType =>
   if (contentType |> Js.String.startsWith("image/svg")) {
@@ -375,43 +379,103 @@ let fetchImages = (row: Eosio.System.ProducerInfo.t, json: EosBp.Json.t) =>
      )
   |> Js.Option.getWithDefault(Js.Promise.resolve([||]));
 
+let fetchAllImages = ((rows, responses)) =>
+  responses
+  |> Js.Array.map(((_response, data, row)) =>
+       switch (data.decoded) {
+       | Belt.Result.Ok(json) => fetchImages(row, json)
+       | _ => Js.Promise.resolve([||])
+       }
+     )
+  |. allChunked(p => p, 5)
+  |> Js.Promise.then_(_ => Js.Promise.resolve((rows, responses)));
+
+let generateHtmlFile = (~route, ~dirname) => {
+  let element = <App route />;
+  let html = renderHtml(~element);
+  let fullpath = Node.Path.join([|dirname, "index.html"|]);
+  mkdirpSync(dirname);
+  Node.Fs.writeFileAsUtf8Sync(fullpath, html);
+  Log.info(
+    "write",
+    "html",
+    Node.Path.relative(~from=Node.Process.cwd(), ~to_=fullpath, ()),
+  );
+  Js.Promise.resolve();
+};
+
+let generateProducerHtmlFile = (row: Eosio.System.ProducerInfo.t) =>
+  generateHtmlFile(
+    ~route=Route.Producer(row.owner |. Eos.AccountName.toString),
+    ~dirname=producerDir(row),
+  );
+
+let generateProducerHtmlFiles = ((rows, responses)) =>
+  rows
+  |. allChunked(generateProducerHtmlFile, 10)
+  |> Js.Promise.then_(_ => Js.Promise.resolve((rows, responses)));
+
+let generateProducerReport =
+    (
+      producer: Eosio.System.ProducerInfo.t,
+      globalState: Eosio.System.GlobalState.t,
+    ) => {
+  let estimatedRewards =
+    Eosio.System.estimateProducerPay(producer, globalState);
+  Js.Promise.resolve((producer, estimatedRewards));
+};
+
+let generateProducerReports = ((rows, responses)) =>
+  eos
+  |. Eosio.getGlobalState()
+  |> Js.Promise.then_((globalState: option(Eosio.System.GlobalState.t)) =>
+       switch (globalState) {
+       | Some(globalState) =>
+         rows
+         |. Belt.Array.map((r: Eosio.System.ProducerInfo.t) =>
+              generateProducerReport(r, globalState)
+            )
+         |. Js.Promise.all
+         |> Js.Promise.then_(results =>
+              results
+              |> Js.Array.sortInPlaceWith(((_, a), (_, b)) =>
+                   a |. BigNumber.gt(b) ? 1 : (-1)
+                 )
+              |. Belt.Array.forEach(
+                   (
+                     (
+                       producer: Eosio.System.ProducerInfo.t,
+                       estimatedRewards: BigNumber.t,
+                     ),
+                   ) =>
+                   Log.info(
+                     "rewards",
+                     producer.owner |. Eos.AccountName.toString,
+                     estimatedRewards
+                     |. Eos.Asset.fromBigNumber(~precision=4, ~symbol="EOS")
+                     |. Eos.Asset.toString,
+                   )
+                 )
+              |. Js.Promise.resolve
+            )
+       | None =>
+         Log.error(
+           "reports",
+           "No global state found in the eosio.system contract",
+           "",
+         );
+         Js.Promise.resolve();
+       }
+     )
+  |> Js.Promise.then_(_results => Js.Promise.resolve((rows, responses)));
+
 Js.Promise.(
   tableRows()
-  |> then_((table: Eos.TableRows.t(Eosio.System.ProducerInfo.t)) => {
-       Log.info("regproducer", "total", table.rows |> Js.Array.length);
-       table.rows
-       |. allChunked(fetchBpJson, 25)
-       |> then_(responses => responses |> withoutNone |> resolve)
-       |> then_(responses => resolve((table.rows, responses)));
-     })
-  |> then_(((rows, responses)) => {
-       let numRows = rows |> Js.Array.length;
-       let numResponses = responses |> Js.Array.length;
-       Log.info(
-         "fetch done",
-         {j|Got $numResponses OK responses of $numRows producers|j},
-         "",
-       );
-       responses
-       |. allChunked(writeBpJson, 10)
-       |> then_(_ => resolve((rows, responses)));
-     })
-  |> then_(((rows, responses)) =>
-       rows
-       |. allChunked(generateProducerHtmlFile, 10)
-       |> then_(_ => resolve((rows, responses)))
-     )
-  |> then_(((rows, responses)) =>
-       responses
-       |> Js.Array.map(((_response, data, row)) =>
-            switch (data.decoded) {
-            | Belt.Result.Ok(json) => fetchImages(row, json)
-            | _ => Js.Promise.resolve([||])
-            }
-          )
-       |. allChunked(p => p, 5)
-       |> then_(_ => resolve((rows, responses)))
-     )
+  |> then_(fetchBpJsonFiles)
+  /* |> then_(writeBpJsonFiles)
+     |> then_(generateProducerHtmlFiles)
+     |> then_(fetchAllImages) */
+  |> then_(generateProducerReports)
   |> then_(_results => {
        Log.info("", "Done", Env.buildDir);
        resolve();
