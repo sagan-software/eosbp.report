@@ -4,7 +4,8 @@
   "org": {
     "candidate_name": "JEDA",
     "website": "http://www.eosjapan.org",
-    "code_of_conduct":"https://steemit.com/eos/@eosjapan/introducing-jeda-an-eos-io-block-producer-candidate",
+    "code_of_conduct": "https://steemit.com/eos/@eosjapan/jeda-statement-of-ownership-disclosure-and-code-of-conduct",
+    "ownership_disclosure": "https://steemit.com/eos/@eosjapan/jeda-statement-of-ownership-disclosure-and-code-of-conduct#owner",
     "email":"info@eosjapan.org",
     "branding":{
       "logo_256":"http://www.eosjapan.org/jeda-logo-256.jpg",
@@ -33,8 +34,8 @@
         "latitude": 35.679105,
         "longitude": 139.779609
       },
-      "is_producer": false,
-      "p2p_endpoint": "b.jeda.one:3322",
+      "node_type": "full",
+      "p2p_endpoint": "m.jeda.one:3322",
       "api_endpoint": "http://api.jeda.one:8888",
       "ssl_endpoint": ""
     }
