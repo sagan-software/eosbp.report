@@ -469,6 +469,73 @@ let generateProducerReports = ((rows, responses)) =>
      )
   |> Js.Promise.then_(_results => Js.Promise.resolve((rows, responses)));
 
+let generateNodesJson = ((rows, responses)) =>
+  responses
+  |. Belt.Array.reduce([||], (result, (_, data, _)) =>
+       switch (data.decoded) {
+       | Ok((bpJson: EosBp_Json.t)) =>
+         bpJson.nodes
+         |. Belt.Array.reduce(
+              [||],
+              (result, node) => {
+                result
+                |> Js.Array.pushMany([|node.apiEndpoint, node.sslEndpoint|])
+                |> ignore;
+                result;
+              },
+            )
+         |. Belt.Array.reduce([||], (result, endpoint) =>
+              switch (endpoint) {
+              | Some(endpoint) =>
+                switch (URL.make(endpoint)) {
+                | _url => result |> Js.Array.push(endpoint) |> ignore
+                | exception _error => ()
+                };
+                result;
+              | None => result
+              }
+            )
+         |. Belt.Set.String.fromArray
+         |. Belt.Set.String.toArray
+         |. Belt.Array.map(endpoint =>
+              Request.make(
+                ~url={j|$endpoint/v1/chain/get_info|j},
+                ~json=true,
+                ~timeout=5000,
+                (),
+              )
+              |> Js.Promise.then_(_info =>
+                   Js.Promise.resolve(Some(endpoint))
+                 )
+              |> Js.Promise.catch(_error => Js.Promise.resolve(None))
+            )
+         |. Belt.Array.concat(result)
+       | Error(_error) => result
+       }
+     )
+  |> Js.Promise.all
+  |> Js.Promise.then_(endpoints =>
+       endpoints |> withoutNone |> Js.Promise.resolve
+     )
+  |> Js.Promise.then_(endpoints => {
+       let dirname = Env.buildDir;
+       let fullpath = Node.Path.join([|dirname, "nodes.json"|]);
+       let contents =
+         endpoints
+         |. Js.Array.sortInPlace
+         |. Json.Encode.stringArray
+         |. Js.Json.stringifyWithSpace(2);
+       let mode = `utf8;
+       Node.Fs.writeFileSync(fullpath, contents, mode);
+       Log.info(
+         "write",
+         "nodes.json",
+         Node.Path.relative(~from=Node.Process.cwd(), ~to_=fullpath, ()),
+       );
+       Js.Promise.resolve();
+     })
+  |> Js.Promise.then_(_results => Js.Promise.resolve((rows, responses)));
+
 Js.Promise.(
   tableRows()
   |> then_(fetchBpJsonFiles)
@@ -476,6 +543,7 @@ Js.Promise.(
   |> then_(generateProducerHtmlFiles)
   |> then_(fetchAllImages)
   |> then_(generateProducerReports)
+  |> then_(generateNodesJson)
   |> then_(_results => {
        Log.info("", "Done", Env.buildDir);
        resolve();

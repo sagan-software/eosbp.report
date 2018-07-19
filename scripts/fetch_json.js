@@ -23,6 +23,7 @@ var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Eosio_System = require("@sagan-software/bs-eos/src/Eosio_System.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
 var ReactHelmet = require("react-helmet");
+var Belt_SetString = require("bs-platform/lib/js/belt_SetString.js");
 var Caml_exceptions = require("bs-platform/lib/js/caml_exceptions.js");
 var Server = require("react-dom/server");
 var App$ReactTemplate = require("../src/App.js");
@@ -522,7 +523,61 @@ function generateProducerReports(param) {
               }));
 }
 
-tableRows(undefined, /* () */0).then(fetchBpJsonFiles).then(writeBpJsonFiles).then(generateProducerHtmlFiles).then(fetchAllImages).then(generateProducerReports).then((function () {
+function generateNodesJson(param) {
+  var responses = param[1];
+  var rows = param[0];
+  return Promise.all(Belt_Array.reduce(responses, /* array */[], (function (result, param) {
+                          var match = param[1][/* decoded */2];
+                          if (match.tag) {
+                            return result;
+                          } else {
+                            return Belt_Array.concat(Belt_Array.map(Belt_SetString.toArray(Belt_SetString.fromArray(Belt_Array.reduce(Belt_Array.reduce(match[0][/* nodes */3], /* array */[], (function (result, node) {
+                                                              result.push(node[/* apiEndpoint */5], node[/* sslEndpoint */6]);
+                                                              return result;
+                                                            })), /* array */[], (function (result, endpoint) {
+                                                          if (endpoint !== undefined) {
+                                                            var endpoint$1 = endpoint;
+                                                            var exit = 0;
+                                                            var _url;
+                                                            try {
+                                                              _url = new Url.URL(endpoint$1);
+                                                              exit = 1;
+                                                            }
+                                                            catch (_error){
+                                                              
+                                                            }
+                                                            if (exit === 1) {
+                                                              result.push(endpoint$1);
+                                                            }
+                                                            return result;
+                                                          } else {
+                                                            return result;
+                                                          }
+                                                        })))), (function (endpoint) {
+                                              return Request$ReactTemplate.make("" + (String(endpoint) + "/v1/chain/get_info"), undefined, true, undefined, 5000, undefined, undefined, /* () */0).then((function () {
+                                                              return Promise.resolve(endpoint);
+                                                            })).catch((function () {
+                                                            return Promise.resolve(undefined);
+                                                          }));
+                                            })), result);
+                          }
+                        }))).then((function (endpoints) {
+                    return Promise.resolve(withoutNone(endpoints));
+                  })).then((function (endpoints) {
+                  var fullpath = Path.join(Env$ReactTemplate.buildDir, "nodes.json");
+                  var contents = JSON.stringify(endpoints.sort(), null, 2);
+                  Fs.writeFileSync(fullpath, contents, "utf8");
+                  Npmlog.info("write", "nodes.json", Path.relative(Process.cwd(), fullpath));
+                  return Promise.resolve(/* () */0);
+                })).then((function () {
+                return Promise.resolve(/* tuple */[
+                            rows,
+                            responses
+                          ]);
+              }));
+}
+
+tableRows(undefined, /* () */0).then(fetchBpJsonFiles).then(writeBpJsonFiles).then(generateProducerHtmlFiles).then(fetchAllImages).then(generateProducerReports).then(generateNodesJson).then((function () {
           Npmlog.info("", "Done", Env$ReactTemplate.buildDir);
           return Promise.resolve(/* () */0);
         })).catch((function (error) {
@@ -571,4 +626,5 @@ exports.generateProducerHtmlFile = generateProducerHtmlFile;
 exports.generateProducerHtmlFiles = generateProducerHtmlFiles;
 exports.generateProducerReport = generateProducerReport;
 exports.generateProducerReports = generateProducerReports;
+exports.generateNodesJson = generateNodesJson;
 /*  Not a pure module */
