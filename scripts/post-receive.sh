@@ -11,6 +11,7 @@ git worktree remove $BUILD_TREE
 git worktree add $BUILD_WORK_DIR gh-pages
 
 cd $WORK_DIR
+yarn cache clean
 yarn install
 yarn upgrade @sagan-software/bs-bignumber
 yarn upgrade @sagan-software/bs-eos
