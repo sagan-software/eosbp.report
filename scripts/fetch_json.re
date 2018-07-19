@@ -472,9 +472,9 @@ let generateProducerReports = ((rows, responses)) =>
 Js.Promise.(
   tableRows()
   |> then_(fetchBpJsonFiles)
-  /* |> then_(writeBpJsonFiles)
-     |> then_(generateProducerHtmlFiles)
-     |> then_(fetchAllImages) */
+  |> then_(writeBpJsonFiles)
+  |> then_(generateProducerHtmlFiles)
+  |> then_(fetchAllImages)
   |> then_(generateProducerReports)
   |> then_(_results => {
        Log.info("", "Done", Env.buildDir);
