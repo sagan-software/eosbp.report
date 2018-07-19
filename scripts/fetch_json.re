@@ -495,8 +495,6 @@ let generateNodesJson = ((rows, responses)) =>
               | None => result
               }
             )
-         |. Belt.Set.String.fromArray
-         |. Belt.Set.String.toArray
          |. Belt.Array.map(endpoint =>
               Request.make(
                 ~url={j|$endpoint/v1/chain/get_info|j},
@@ -504,9 +502,38 @@ let generateNodesJson = ((rows, responses)) =>
                 ~timeout=5000,
                 (),
               )
-              |> Js.Promise.then_(_info =>
-                   Js.Promise.resolve(Some(endpoint))
-                 )
+              |> Js.Promise.then_(response => {
+                   let statusCode = response |. Request.statusCode;
+                   let contentType =
+                     response
+                     |. Request.header("content-type")
+                     |. Belt.Option.getWithDefault("")
+                     |. Js.String.toLowerCase;
+                   let isOk = 200 <= statusCode && statusCode < 400;
+                   let isJson = contentType |> Js.String.includes("json");
+
+                   if (isOk && isJson) {
+                     Log.info(
+                       "nodes.json",
+                       "Good response from endpoint:",
+                       endpoint,
+                     );
+                     Js.Promise.resolve(Some(endpoint));
+                   } else {
+                     Log.warn(
+                       "nodes.json",
+                       "Bad response from endpoint:",
+                       {
+                         "endpoint": endpoint,
+                         "statusCode": statusCode,
+                         "contentType": contentType,
+                         "isOk": isOk,
+                         "isJson": isJson,
+                       },
+                     );
+                     Js.Promise.resolve(None);
+                   };
+                 })
               |> Js.Promise.catch(_error => Js.Promise.resolve(None))
             )
          |. Belt.Array.concat(result)
@@ -515,7 +542,11 @@ let generateNodesJson = ((rows, responses)) =>
      )
   |> Js.Promise.all
   |> Js.Promise.then_(endpoints =>
-       endpoints |> withoutNone |> Js.Promise.resolve
+       endpoints
+       |> withoutNone
+       |. Belt.Set.String.fromArray
+       |. Belt.Set.String.toArray
+       |> Js.Promise.resolve
      )
   |> Js.Promise.then_(endpoints => {
        let dirname = Env.buildDir;

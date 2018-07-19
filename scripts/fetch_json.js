@@ -18,6 +18,7 @@ var Process = require("process");
 var Eos_Types = require("@sagan-software/bs-eos/src/Eos_Types.js");
 var Js_option = require("bs-platform/lib/js/js_option.js");
 var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
+var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
 var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Eosio_System = require("@sagan-software/bs-eos/src/Eosio_System.js");
@@ -531,38 +532,54 @@ function generateNodesJson(param) {
                           if (match.tag) {
                             return result;
                           } else {
-                            return Belt_Array.concat(Belt_Array.map(Belt_SetString.toArray(Belt_SetString.fromArray(Belt_Array.reduce(Belt_Array.reduce(match[0][/* nodes */3], /* array */[], (function (result, node) {
-                                                              result.push(node[/* apiEndpoint */5], node[/* sslEndpoint */6]);
-                                                              return result;
-                                                            })), /* array */[], (function (result, endpoint) {
-                                                          if (endpoint !== undefined) {
-                                                            var endpoint$1 = endpoint;
-                                                            var exit = 0;
-                                                            var _url;
-                                                            try {
-                                                              _url = new Url.URL(endpoint$1);
-                                                              exit = 1;
-                                                            }
-                                                            catch (_error){
-                                                              
-                                                            }
-                                                            if (exit === 1) {
-                                                              result.push(endpoint$1);
-                                                            }
-                                                            return result;
-                                                          } else {
-                                                            return result;
-                                                          }
-                                                        })))), (function (endpoint) {
-                                              return Request$ReactTemplate.make("" + (String(endpoint) + "/v1/chain/get_info"), undefined, true, undefined, 5000, undefined, undefined, /* () */0).then((function () {
-                                                              return Promise.resolve(endpoint);
+                            return Belt_Array.concat(Belt_Array.map(Belt_Array.reduce(Belt_Array.reduce(match[0][/* nodes */3], /* array */[], (function (result, node) {
+                                                      result.push(node[/* apiEndpoint */5], node[/* sslEndpoint */6]);
+                                                      return result;
+                                                    })), /* array */[], (function (result, endpoint) {
+                                                  if (endpoint !== undefined) {
+                                                    var endpoint$1 = endpoint;
+                                                    var exit = 0;
+                                                    var _url;
+                                                    try {
+                                                      _url = new Url.URL(endpoint$1);
+                                                      exit = 1;
+                                                    }
+                                                    catch (_error){
+                                                      
+                                                    }
+                                                    if (exit === 1) {
+                                                      result.push(endpoint$1);
+                                                    }
+                                                    return result;
+                                                  } else {
+                                                    return result;
+                                                  }
+                                                })), (function (endpoint) {
+                                              return Request$ReactTemplate.make("" + (String(endpoint) + "/v1/chain/get_info"), undefined, true, undefined, 5000, undefined, undefined, /* () */0).then((function (response) {
+                                                              var statusCode = response.statusCode;
+                                                              var contentType = Belt_Option.getWithDefault(Request$ReactTemplate.header(response, "content-type"), "").toLowerCase();
+                                                              var isOk = 200 <= statusCode && statusCode < 400;
+                                                              var isJson = contentType.includes("json");
+                                                              if (isOk && isJson) {
+                                                                Npmlog.info("nodes.json", "Good response from endpoint:", endpoint);
+                                                                return Promise.resolve(endpoint);
+                                                              } else {
+                                                                Npmlog.warn("nodes.json", "Bad response from endpoint:", {
+                                                                      endpoint: endpoint,
+                                                                      statusCode: statusCode,
+                                                                      contentType: contentType,
+                                                                      isOk: isOk,
+                                                                      isJson: isJson
+                                                                    });
+                                                                return Promise.resolve(undefined);
+                                                              }
                                                             })).catch((function () {
                                                             return Promise.resolve(undefined);
                                                           }));
                                             })), result);
                           }
                         }))).then((function (endpoints) {
-                    return Promise.resolve(withoutNone(endpoints));
+                    return Promise.resolve(Belt_SetString.toArray(Belt_SetString.fromArray(withoutNone(endpoints))));
                   })).then((function (endpoints) {
                   var fullpath = Path.join(Env$ReactTemplate.buildDir, "nodes.json");
                   var contents = JSON.stringify(endpoints.sort(), null, 2);
