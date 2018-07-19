@@ -10,7 +10,8 @@ rm -Rf $BUILD_WORK_DIR
 git worktree remove $BUILD_TREE
 git worktree add $BUILD_WORK_DIR gh-pages
 
-node ./scripts/fetch_json.bundle.js
+cd $WORK_DIR
+node ./scripts/fetch_json.js
 
 git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR add .
 git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR commit -am "$(date --iso-8601=minutes --utc)"
