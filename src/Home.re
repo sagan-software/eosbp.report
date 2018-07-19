@@ -5,8 +5,6 @@ let world50m = [%bs.raw {|require("./world-50m.json")|}];
 
 let component = ReasonReact.statelessComponent(__MODULE__);
 
-Js.log2("!!!!!!!!!", world50m);
-
 let make = _children => {
   ...component,
   render: _self =>

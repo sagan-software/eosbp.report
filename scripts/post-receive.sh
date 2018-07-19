@@ -10,14 +10,7 @@ rm -Rf $BUILD_WORK_DIR
 git worktree remove $BUILD_TREE
 git worktree add $BUILD_WORK_DIR gh-pages
 
-cd $WORK_DIR
-rm -f yarn.lock
-yarn cache clean
-yarn install
-yarn upgrade @sagan-software/bs-bignumber
-yarn upgrade @sagan-software/bs-eos
-yarn build-prod
-node ./scripts/fetch_json.js
+node ./scripts/fetch_json.bundle.js
 
 git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR add .
 git --git-dir=$BUILD_GIT_DIR --work-tree=$BUILD_WORK_DIR commit -am "$(date --iso-8601=minutes --utc)"

@@ -10,7 +10,7 @@
 		"build-webpack": "webpack",
 		"build-prod": "yarn build-bsb && NODE_ENV=production yarn build-webpack",
 		"start-bsb": "yarn clean-bsb && bsb -make-world -w",
-		"start-webpack": "NODE_ENV=development webpack-dev-server --hot --inline --progress",
+		"start-webpack": "NODE_ENV=development TARGET=web webpack-dev-server --hot --inline --progress",
 		"start": "yarn build-bsb && concurrently --raw --kill-others \"yarn start-bsb\" \"yarn start-webpack\"",
 		"clean-bsb": "bsb -clean-world",
 		"test": "echo \"Error: no test specified\" && exit 1"

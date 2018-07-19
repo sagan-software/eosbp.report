@@ -23,8 +23,6 @@ var world50m = (require("./world-50m.json"));
 
 var component = ReasonReact.statelessComponent("Home-ReactTemplate");
 
-console.log("!!!!!!!!!", world50m);
-
 function make() {
   return /* record */[
           /* debugName */component[/* debugName */0],
