@@ -230,7 +230,7 @@ let validate = json => {
   ajv |. Ajv.errors;
 };
 
-let getUrl = baseUrl => {
+let normalizeUrl = baseUrl => {
   /* Remove invalid unicode characters from beginning and end */
   let url =
     baseUrl
@@ -242,7 +242,11 @@ let getUrl = baseUrl => {
   let url =
     Js.String.startsWith("http", url) || Js.String.startsWith("https", url) ?
       url : "http://" ++ url;
-  /* Add /bp.json if necessary */
+  url;
+};
+
+let normalizeBpJsonUrl = baseUrl => {
+  let url = baseUrl |. normalizeUrl;
   let url = Js.String.endsWith(".json", url) ? url : url ++ "/bp.json";
   url;
 };

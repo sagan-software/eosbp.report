@@ -455,15 +455,23 @@ function validate(json) {
   return ajv.errors;
 }
 
-function getUrl(baseUrl) {
+function normalizeUrl(baseUrl) {
   var url = baseUrl.replace((/^[^\x00-\x7F]/g), "").replace((/[^\x00-\x7F]$/g), "").replace((/\/$/g), "");
   var match = url.startsWith("http") || url.startsWith("https");
-  var url$1 = match ? url : "http://" + url;
-  var match$1 = url$1.endsWith(".json");
-  if (match$1) {
-    return url$1;
+  if (match) {
+    return url;
   } else {
-    return url$1 + "/bp.json";
+    return "http://" + url;
+  }
+}
+
+function normalizeBpJsonUrl(baseUrl) {
+  var url = normalizeUrl(baseUrl);
+  var match = url.endsWith(".json");
+  if (match) {
+    return url;
+  } else {
+    return url + "/bp.json";
   }
 }
 
@@ -475,5 +483,6 @@ exports.decode = decode$5;
 exports.encode = encode$5;
 exports.Ajv = Ajv$1;
 exports.validate = validate;
-exports.getUrl = getUrl;
+exports.normalizeUrl = normalizeUrl;
+exports.normalizeBpJsonUrl = normalizeBpJsonUrl;
 /* ajv Not a pure module */

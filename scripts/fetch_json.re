@@ -135,7 +135,7 @@ let bpJsonRaw = (row: Eosio.System.ProducerInfo.t) =>
   |> Js.String.trim
   |> Js.String.length > 0 ?
     {
-      let url = row.url |> EosBp_Json.getUrl;
+      let url = row.url |> EosBp_Json.normalizeBpJsonUrl;
       fetch(~url, ());
     } :
     Js.Promise.reject(BadUrl(row.url));
@@ -471,90 +471,126 @@ let generateProducerReports = ((rows, responses)) =>
 
 let generateNodesJson = ((rows, responses)) =>
   responses
-  |. Belt.Array.reduce([||], (result, (_, data, _)) =>
+  |. Belt.Array.reduce(
+       [||], (result, (_, data, row: Eosio.System.ProducerInfo.t)) =>
        switch (data.decoded) {
        | Ok((bpJson: EosBp_Json.t)) =>
          bpJson.nodes
          |. Belt.Array.reduce(
               [||],
               (result, node) => {
-                result
-                |> Js.Array.pushMany([|node.apiEndpoint, node.sslEndpoint|])
-                |> ignore;
+                let apiEndpoint =
+                  node.apiEndpoint
+                  |. Belt.Option.getWithDefault("")
+                  |. String.trim;
+                if (apiEndpoint |. String.length > 0) {
+                  result
+                  |> Js.Array.push((
+                       row.owner,
+                       node,
+                       apiEndpoint |. EosBp_Json.normalizeUrl,
+                     ))
+                  |> ignore;
+                };
+                let sslEndpoint =
+                  node.sslEndpoint
+                  |. Belt.Option.getWithDefault("")
+                  |. String.trim;
+                if (sslEndpoint |. String.length > 0) {
+                  result
+                  |> Js.Array.push((
+                       row.owner,
+                       node,
+                       sslEndpoint |. EosBp_Json.normalizeUrl,
+                     ))
+                  |> ignore;
+                };
                 result;
               },
             )
-         |. Belt.Array.reduce([||], (result, endpoint) =>
-              switch (endpoint) {
-              | Some(endpoint) =>
-                switch (URL.make(endpoint)) {
-                | _url => result |> Js.Array.push(endpoint) |> ignore
+         |. Belt.Array.reduce(
+              [||],
+              (result, (producer, node: EosBp_Json.Node.t, url)) => {
+                switch (URL.make(url)) {
+                | url =>
+                  let report: EosBp_Report.Node.t = {
+                    producer,
+                    url,
+                    latitude: node.location.latitude,
+                    longitude: node.location.longitude,
+                    nodeType:
+                      node.nodeType |. Belt.Option.getWithDefault([||]),
+                    infoStatus: (-1),
+                    serverVersion: None,
+                    chainId: None,
+                    headBlockNum: None,
+                    headBlockTime: None,
+                    lastIrreversibleBlockNum: None,
+                  };
+                  result |> Js.Array.push(report) |> ignore;
                 | exception _error => ()
                 };
                 result;
-              | None => result
-              }
+              },
             )
-         |. Belt.Array.map(endpoint =>
+         |. Belt.Array.map((report: EosBp_Report.Node.t) =>
               Request.make(
-                ~url={j|$endpoint/v1/chain/get_info|j},
-                ~json=true,
-                ~timeout=5000,
+                ~url=
+                  URL.makeWithBase(
+                    "/v1/chain/get_info",
+                    report.url |. URL.origin,
+                  )
+                  |. URL.toString,
+                ~json=false,
+                ~timeout=10000,
                 (),
               )
-              |> Js.Promise.then_(response => {
-                   let statusCode = response |. Request.statusCode;
-                   let contentType =
-                     response
-                     |. Request.header("content-type")
-                     |. Belt.Option.getWithDefault("")
-                     |. Js.String.toLowerCase;
-                   let isOk = 200 <= statusCode && statusCode < 400;
-                   let isJson = contentType |> Js.String.includes("json");
-
-                   if (isOk && isJson) {
-                     Log.info(
-                       "nodes.json",
-                       "Good response from endpoint:",
-                       endpoint,
-                     );
-                     Js.Promise.resolve(Some(endpoint));
-                   } else {
-                     Log.warn(
-                       "nodes.json",
-                       "Bad response from endpoint:",
-                       {
-                         "endpoint": endpoint,
-                         "statusCode": statusCode,
-                         "contentType": contentType,
-                         "isOk": isOk,
-                         "isJson": isJson,
-                       },
-                     );
-                     Js.Promise.resolve(None);
-                   };
-                 })
-              |> Js.Promise.catch(_error => Js.Promise.resolve(None))
+              |> Js.Promise.then_(response =>
+                   response
+                   |. Request.body
+                   |> Util.parseAndDecodeAsPromise(Eos.Info.decode)
+                   |> Js.Promise.then_((info: Eos.Info.t) =>
+                        {
+                          ...report,
+                          infoStatus: response |. Request.statusCode,
+                          serverVersion: Some(info.serverVersion),
+                          chainId: Some(info.chainId),
+                          headBlockNum: Some(info.headBlockNum),
+                          headBlockTime: Some(info.headBlockTime),
+                          lastIrreversibleBlockNum:
+                            Some(info.lastIrreversibleBlockNum),
+                        }
+                        |. Js.Promise.resolve
+                      )
+                   |> Js.Promise.catch(_ =>
+                        {
+                          ...report,
+                          infoStatus: response |. Request.statusCode,
+                        }
+                        |. Js.Promise.resolve
+                      )
+                 )
+              |> Js.Promise.catch(_ => Js.Promise.resolve(report))
             )
          |. Belt.Array.concat(result)
        | Error(_error) => result
        }
      )
   |> Js.Promise.all
-  |> Js.Promise.then_(endpoints =>
-       endpoints
-       |> withoutNone
-       |. Belt.Set.String.fromArray
-       |. Belt.Set.String.toArray
-       |> Js.Promise.resolve
-     )
-  |> Js.Promise.then_(endpoints => {
+  |> Js.Promise.then_(reports => {
        let dirname = Env.buildDir;
        let fullpath = Node.Path.join([|dirname, "nodes.json"|]);
        let contents =
-         endpoints
-         |. Js.Array.sortInPlace
-         |. Json.Encode.stringArray
+         reports
+         |> Js.Array.sortInPlaceWith(
+              (a: EosBp_Report.Node.t, b: EosBp_Report.Node.t) =>
+              compare(
+                a.producer |. Eos.AccountName.toString,
+                b.producer |. Eos.AccountName.toString,
+              )
+            )
+         |. Belt.Array.map(EosBp_Report.Node.encode)
+         |. Json.Encode.jsonArray
          |. Js.Json.stringifyWithSpace(2);
        let mode = `utf8;
        Node.Fs.writeFileSync(fullpath, contents, mode);
