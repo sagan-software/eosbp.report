@@ -6,7 +6,7 @@
       "website": "https://wizz.network/",
       "ownership_disclosure": "https://wizz.network/eos/disclosures",
       "code_of_conduct":"https://wizz.network/eos/code",
-      "email":"EOS@wizz.network",
+      "email":"info@wizz.network",
       "branding":{
         "logo_256":"https://wizz.network/256.jpg",
         "logo_1024":"https://wizz.network/1024.jpg",
@@ -28,22 +28,15 @@
         "keybase": "",
         "telegram": "wizznetwork",
         "wechat":"wizznetwork"
-      }
+     },
+     "support": {
+     "name": "Wyatt Glyn-Williams",
+     "email": "wyatt@wizz.network",
+     "contact": "1-407-738-3467"
+    }
     },
     "nodes": [
       {
-      "location": {
-        "name": "TAMPA, FL",
-        "country": "US",
-        "latitude": 28.019860,
-        "longitude": -82.524756
-      },
-      "node_type": "producer",
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
-    },
-    {
       "location": {
         "name": "TAMPA, FL",
         "country": "US",
@@ -55,6 +48,15 @@
       "bnet_endpoint": "104.156.59.166:4321",
       "api_endpoint": "http://104.156.59.166:8888",
       "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "TAMPA, FL",
+        "country": "US",
+        "latitude": 28.019860,
+        "longitude": -82.524756
+      },
+      "node_type": "producer"
     }
   ]
 }
