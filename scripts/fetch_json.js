@@ -577,7 +577,7 @@ function generateNodesJson(param) {
                                                     report_002,
                                                     report_003,
                                                     report_004,
-                                                    /* infoStatus */-1,
+                                                    /* infoStatus */undefined,
                                                     /* serverVersion */undefined,
                                                     /* chainId */undefined,
                                                     /* headBlockNum */undefined,

@@ -33,7 +33,9 @@ function encode(t) {
                       /* :: */[
                         /* tuple */[
                           "info_status",
-                          t[/* infoStatus */5]
+                          Json_encode.nullable((function (prim) {
+                                  return prim;
+                                }), t[/* infoStatus */5])
                         ],
                         /* :: */[
                           /* tuple */[

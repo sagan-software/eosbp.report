@@ -520,7 +520,7 @@ let generateNodesJson = ((rows, responses)) =>
                     longitude: node.location.longitude,
                     nodeType:
                       node.nodeType |. Belt.Option.getWithDefault([||]),
-                    infoStatus: (-1),
+                    infoStatus: None,
                     serverVersion: None,
                     chainId: None,
                     headBlockNum: None,
@@ -552,7 +552,7 @@ let generateNodesJson = ((rows, responses)) =>
                    |> Js.Promise.then_((info: Eos.Info.t) =>
                         {
                           ...report,
-                          infoStatus: response |. Request.statusCode,
+                          infoStatus: Some(response |. Request.statusCode),
                           serverVersion: Some(info.serverVersion),
                           chainId: Some(info.chainId),
                           headBlockNum: Some(info.headBlockNum),
@@ -565,7 +565,7 @@ let generateNodesJson = ((rows, responses)) =>
                    |> Js.Promise.catch(_ =>
                         {
                           ...report,
-                          infoStatus: response |. Request.statusCode,
+                          infoStatus: Some(response |. Request.statusCode),
                         }
                         |. Js.Promise.resolve
                       )
