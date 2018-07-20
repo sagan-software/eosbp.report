@@ -13,7 +13,7 @@
     },
     "location": {
       "name": "Chengdu",
-      "country": "China",
+      "country": "CN",
       "latitude": 104.076026,
       "longitude": 30.59109
     },
@@ -34,9 +34,10 @@
       "location": {
         "name": "Ohio",
         "country": "US",
-        "latitude": 0,
-        "longitude": 0
+        "latitude": 82.9072,
+        "longitude": 40.4273
       },
+      "node_type": "full",
       "is_producer": false,
       "p2p_endpoint": "node1.starteos.io:9876",
       "api_endpoint": "http://api-mainnet.starteos.io",
@@ -44,23 +45,12 @@
     },
     {
       "location": {
-        "name": "Singapore Node",
-        "country": "Singapore",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "is_producer": true,
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
-    },
-    {
-      "location": {
         "name": "Tokyo",
-        "country": "Japan",
-        "latitude": 35.4984,
-        "longitude": 139.4972
+        "country": "JP",
+        "latitude": 139.4972,
+        "longitude": 35.4984
       },
+      "node_type": "full",
       "is_producer": false,
       "p2p_endpoint": "node2.starteos.io:9876",
       "api_endpoint": "http://api-mainnet1.starteos.io",
