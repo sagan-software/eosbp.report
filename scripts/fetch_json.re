@@ -585,8 +585,10 @@ let generateNodesJson = ((rows, responses)) =>
          |> Js.Array.sortInPlaceWith(
               (a: EosBp_Report.Node.t, b: EosBp_Report.Node.t) =>
               compare(
-                a.producer |. Eos.AccountName.toString,
-                b.producer |. Eos.AccountName.toString,
+                (a.producer |. Eos.AccountName.toString)
+                ++ (a.url |. URL.toString),
+                (b.producer |. Eos.AccountName.toString)
+                ++ (b.url |. URL.toString),
               )
             )
          |. Belt.Array.map(EosBp_Report.Node.encode)

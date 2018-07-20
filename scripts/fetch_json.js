@@ -626,7 +626,7 @@ function generateNodesJson(param) {
                       }))).then((function (reports) {
                   var fullpath = Path.join(Env$ReactTemplate.buildDir, "nodes.json");
                   var contents = JSON.stringify(Belt_Array.map(reports.sort((function (a, b) {
-                                  return Caml_primitive.caml_string_compare(Eos_Types.AccountName[/* toString */4](a[/* producer */0]), Eos_Types.AccountName[/* toString */4](b[/* producer */0]));
+                                  return Caml_primitive.caml_string_compare(Eos_Types.AccountName[/* toString */4](a[/* producer */0]) + a[/* url */1].toString(), Eos_Types.AccountName[/* toString */4](b[/* producer */0]) + b[/* url */1].toString());
                                 })), EosBp_Report$ReactTemplate.Node[/* encode */0]), null, 2);
                   Fs.writeFileSync(fullpath, contents, "utf8");
                   Npmlog.info("write", "nodes.json", Path.relative(Process.cwd(), fullpath));
