@@ -38,10 +38,10 @@
         "longitude": 40.4273
       },
       "node_type": "full",
-      "is_producer": false,
       "p2p_endpoint": "node1.starteos.io:9876",
       "api_endpoint": "http://api-mainnet.starteos.io",
-      "ssl_endpoint": ""
+      "ssl_endpoint": "",
+      "bnet_endpoint": ""
     },
     {
       "location": {
@@ -51,10 +51,10 @@
         "longitude": 35.4984
       },
       "node_type": "full",
-      "is_producer": false,
       "p2p_endpoint": "node2.starteos.io:9876",
       "api_endpoint": "http://api-mainnet1.starteos.io",
-      "ssl_endpoint": ""
+      "ssl_endpoint": "",
+      "bnet_endpoint": ""
     }
   ]
 }
