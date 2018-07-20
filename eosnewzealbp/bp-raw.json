@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eosnewzealbp",
+  "producer_public_key": "EOS5t4hArzAFoA1LVkg4ynffSz9W15a2BYjoF1vDLo7PukwWbhs8B",
+  "org": {
+    "candidate_name": "EOSNewZealand",
+    "website": "https://eosnewzealand.com/",
+    "code_of_conduct":"",
+    "email":"info@eosnewzealand.com",
+    "branding":{
+      "logo_256":"",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "AUCKLAND",
+      "country": "NewZealand",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "https://steemit.com/@eosnz.com",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "https://www.facebook.com/eosnewzealand",
+      "github":"",
+      "reddit": "https://www.reddit.com/user/EOSNz",
+      "keybase": "",
+      "telegram": "https://t.me/eosnz",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+      "name": "AUCKLAND",
+      "country": "NewZealand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "p2p.eosnewzealand.com:9876",
+      "api_endpoint": "http://nodes.eosnewzealand.com:8888",
+      "ssl_endpoint": "https://nodes.eosnewzealand.com:443"
+    },
+    {
+      "location": {
+      "name": "AUCKLAND",
+      "country": "NewZealand",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "p2p.eosnewzealand.com:9876",
+      "api_endpoint": "http://nodes.eosnewzealand.com:8888",
+      "ssl_endpoint": "https://nodes.eosnewzealand.com:443"
+    }
+  ]
+}

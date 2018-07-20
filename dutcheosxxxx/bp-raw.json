@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "dutcheosxxxx",
+  "producer_public_key": "EOS7zv7RMS5SuSRDfBzv7DUbS9ovf3MRvDyAkBum6AitpDs5NtMmT",
+  "org": {
+    "candidate_name": "DutchEOS",
+    "website": "https://dutcheos.io",
+    "code_of_conduct":"https://dutcheos.io/code-of-conduct/",
+	"ownership_disclosure": "https://dutcheos.io/ownership-disclosure/",
+    "email":"info@dutcheos.io",
+    "branding":{
+      "logo_256":"https://dutcheos.io/assets/dutcheos_256.png",
+      "logo_1024":"https://dutcheos.io/assets/dutcheos_1024.png",
+      "logo_svg":"https://dutcheos.io/assets/dutcheos.svg"
+    },
+    "location": {
+      "name": "Amsterdam",
+      "country": "NL",
+      "latitude": 52.3702,
+      "longitude": 4.8952
+    },
+    "social": {
+      "steemit": "eos-nl",
+      "twitter": "dutcheos",
+      "youtube": "UCxKIv72tH0eBKqQJfe51_2w",
+      "facebook": "",
+      "github": "",
+      "reddit": "DutchEOS",
+      "keybase": "dutcheos",
+      "telegram": "dutcheos",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Eemshaven",
+        "country": "NL",
+        "latitude": 53.4250,
+        "longitude": 6.8601
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Eemshaven",
+        "country": "NL",
+        "latitude": 53.4250,
+        "longitude": 6.8601
+      },
+      "node_type": "full",
+      "p2p_endpoint": "peering.dutcheos.io:9876",
+      "api_endpoint": "http://api.dutcheos.io",
+      "ssl_endpoint": "https://api.dutcheos.io"
+    }
+  ]
+}

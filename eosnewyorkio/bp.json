@@ -1,0 +1,47 @@
+{
+  "producer_account_name": "eosnewyorkio",
+  "producer_public_key": "EOS6GVX8eUqC1gN1293B3ivCNbifbr1BT6gzTFaQBXzWH9QNKVM4X",
+  "org": {
+    "candidate_name": "EOS New York",
+    "website": "https://www.eosnewyork.io",
+    "code_of_conduct": "https://steemit.com/eos/@eosnewyork/eos-new-york-code-of-conduct",
+    "ownership_disclosure": "https://steemit.com/eos/@eosnewyork/eos-new-york-ownership-disclosure-and-corporate-structure",
+    "email": "community@eosnewyork.io",
+    "branding": {
+      "logo_256": "https://bp.eosnewyork.io/Logo_256.jpg",
+      "logo_1024": "https://bp.eosnewyork.io/Logo_1024.jpg",
+      "logo_svg": "https://bp.eosnewyork.io/eosnewyorkio.svg"
+    },
+    "location": {
+      "name": "Cook Islands",
+      "country": "CK",
+      "latitude": -18.857952,
+      "longitude": -159.785278
+    },
+    "social": {
+      "steemit": "eosnewyork",
+      "twitter": "eosnewyork",
+      "youtube": "UCg7aeCSXUTP49w_elxgYIXA",
+      "facebook": "eosnewyorkBP",
+      "github": "eosnewyork",
+      "reddit": "eosnewyork",
+      "keybase": "d3ck",
+      "telegram": "eosnewyorkchat",
+      "wechat": "kevineosnewyork"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "primary",
+        "country": "BR",
+        "latitude": -23.5505,
+        "longitude": -46.6333
+      },
+      "node_type": "full",
+      "p2p_endpoint": "node1.eosnewyork.io:6987",
+      "api_endpoint": "http://api.eosnewyork.io",
+      "ssl_endpoint": "https://api.eosnewyork.io"
+    }
+  ]
+}

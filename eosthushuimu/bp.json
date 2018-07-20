@@ -1,0 +1,68 @@
+{
+  "producer_account_name": "eosthushuimu",
+  "producer_public_key": "EOS7mawmWYTjzjt2riNSHKQhA8E86r3L8eXhcotuskGPJU6RNzUZs",
+  "org": {
+    "candidate_name": "EOSTHU",
+    "website": "http://www.eosthu.com",
+    "code_of_conduct": "",
+    "email": "kf@flian.com",
+    "branding": {
+      "logo_256": "http://eosthu.com/assets/eosthu-logo-256.png",
+      "logo_1024": "http://eosthu.com/assets/eosthu-logo-1024.png",
+      "logo_svg": "http://eosthu.com/assets/eosthu-logo.svg"
+    },
+    "location": {
+      "name": "Beijing",
+      "country": "China",
+      "latitude": 39.99054,
+      "longitude": 116.313292
+    },
+    "social": {
+      "steemit": "eosthu",
+      "twitter": "eosthu",
+      "youtube": "",
+      "facebook": "eosthu2",
+      "reddit": "",
+      "keybase": "eosthu",
+      "telegram": "eosthu"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "Japan",
+        "latitude": 35.42,
+        "longitude": 139.46
+      },
+      "is_producer": false,
+      "p2p_endpoint": "peer1.eosthu.com:8080",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "Japan",
+        "latitude": 35.42,
+        "longitude": 139.46
+      },
+      "is_producer": false,
+      "p2p_endpoint": "peer2.eosthu.com:8080",
+      "api_endpoint": "http://peer2.eosthu.com:8082",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "Japan",
+        "latitude": 35.42,
+        "longitude": 139.46
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

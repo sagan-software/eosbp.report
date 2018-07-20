@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eosgreeniobp",
+  "producer_public_key": "EOS6gBhD9Dm7qcJuR5WFuxNo6aH15csHP8uss8esejuNoEUmRZUR9",
+  "org": {
+    "candidate_name": "EOSGREEN",
+    "website": "https://www.eosgreen.io",
+    "code_of_conduct": "https://busy.org/@sukeshtedla/eosgreen-block-producer-code-of-conduct",
+    "email": "contact@eosgreen.io",
+    "branding": {
+      "logo_256": "",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "Poland",
+      "country": "PL",
+      "latitude": 52.14785,
+      "longitude": 19.37776
+    },
+    "social": {
+      "steemit": "marcinsteem",
+      "twitter": "eosgreen_io",
+      "youtube": "",
+      "facebook": "",
+      "github": "https://github.com/eosgreen",
+      "reddit": "",
+      "keybase": "marcinchilik",
+      "telegram": "marcin_eosgreen",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "London",
+        "country": "UK",
+        "latitude": 51.51118829,
+        "longitude": -0.09617353
+      },
+      "is_producer": false,
+      "p2p_endpoint": "p2p-1.eosgreen.io:9876",
+      "api_endpoint": "http://api-1.eosgreen.io:8888",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Poland",
+        "country": "PL",
+        "latitude": 52.2297,
+        "longitude": 21.0122
+      },
+      "is_producer": false,
+      "p2p_endpoint": "p2p-2.eosgreen.io:9876",
+      "api_endpoint": "http://api-2.eosgreen.io:8888",
+      "ssl_endpoint": ""
+    }
+  ]
+}

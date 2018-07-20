@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eosfutureldn",
+  "producer_public_key": "EOS72rHyQowVgP6EaT9ebnfdbKFvwgSHJsmuv8Nhi8KMWiJ5kRv2h",
+  "org": {
+    "candidate_name": "EOSfuture",
+    "website": "http://eosfuture.io",
+    "code_of_conduct":"http://eosfuture.io/about/code-of-conduct/",
+    "email":"hello@eosfuture.io",
+    "branding":{
+      "logo_256":"http://eosfuture.io/eosf_std.png",
+      "logo_1024":"http://eosfuture.io/eosf_large.png",
+      "logo_svg":"http://eosfuture.io/image2vector.svg"
+    },
+    "location": {
+      "name": "London",
+      "country": "UK",
+      "latitude": 51.555110,
+      "longitude": -3.037972
+    },
+    "social": {
+      "steemit": "eosfuture",
+      "twitter": "EOSfutureio",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "EOSfuture",
+      "keybase": "",
+      "telegram": "EOSfuturenews",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "London",
+        "country": "UK",
+        "latitude": 51.555110,
+        "longitude": -3.037972
+      },
+      "is_producer": false,
+      "p2p_endpoint": "p2p.eosfuture.io:9876",
+      "api_endpoint": "http://nodes.eosfuture.io:8888",
+      "ssl_endpoint": "https://nodes.eosfuture.io:443"
+    },
+    {
+      "location": {
+        "name": "London",
+        "country": "UK",
+        "latitude": 51.555110,
+        "longitude": -3.037972
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

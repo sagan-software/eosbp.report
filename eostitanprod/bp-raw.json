@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "eostitanprod",
+  "producer_public_key": "EOS5z4JJRLvNasG4VRWYLRNC5TeLquNM8k5oBWWpRhpf9mgJH9e9K",
+  "org": {
+    "candidate_name": "EOS Titan",
+    "website": "https://eostitan.com",
+    "code_of_conduct":"https://en.wikipedia.org/wiki/Golden_Rule",
+    "ownership_disclosure":"https://eostitan.com/ownership_disclosure.html",
+    "email":"info@eostitan.com",
+    "branding":{
+      "logo_256":"https://eostitan.com/assets/images/logo_256.jpg",
+      "logo_1024":"https://eostitan.com/assets/images/logo_1024.jpg",
+      "logo_svg":"https://eostitan.com/assets/images/logo.svg"
+    },
+    "location": {
+      "name": "Montreal",
+      "country": "CA",
+      "latitude": 45.5017,
+      "longitude": 73.5673
+    },
+    "social": {
+      "steemit": "eostitan",
+      "twitter": "eostitanBP",
+      "youtube": "",
+      "facebook": "eostitanBP",
+      "github":"eostitan",
+      "reddit": "eostitan",
+      "keybase": "eostitan",
+      "telegram": "eostitanBP",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Toronto",
+        "country": "CA",
+        "latitude": 43.6532,
+        "longitude": 79.3832
+      },
+      "is_producer": false,
+      "p2p_endpoint": "boot.eostitan.com:9876",
+      "api_endpoint": "http://api.eostitan.com",
+      "ssl_endpoint": "https://api.eostitan.com"
+    },
+    {
+      "location": {
+        "name": "Sofia",
+        "country": "BG",
+        "latitude": 42.6977,
+        "longitude": 23.3219
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

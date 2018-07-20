@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "eosmedinodes",
+  "producer_public_key": "EOS8A9cAMw29gr23Wk7FkmPZA1DAhdwFfpiNrKSWrgFn5y6CderFD",
+  "org": {
+    "candidate_name": "EOS Mediterranean",
+    "website": "https://eosmedi.com",
+    "code_of_conduct":"https://steemit.com/blockproducer/@eosmediterranean/eos-mediterranean-code-of-conduct-and-stance-on-vote-buying",
+	"ownership_disclosure": "https://steemit.com/eos/@eosmediterranean/eos-mediterranean-ownership-disclosure",
+    "email":"admin@eosmedi.com",
+    "branding":{
+      "logo_256":"https://eosmedi.com/wp-content/uploads/2018/06/256.png",
+      "logo_1024":"https://eosmedi.com/wp-content/uploads/2018/06/1024.png",
+      "logo_svg":"https://eosmedi.com/wp-content/uploads/2018/06/1024.png"
+    },
+    "location": {
+      "name": "Madrid",
+      "country": "ES",
+      "latitude": 40.416775,
+      "longitude": -3.703790
+    },
+    "social": {
+      "steemit": "eosmediterranean",
+      "twitter": "eosmedi",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "eosmedi",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Paris",
+        "country": "FR",
+        "latitude": 33.66094,
+        "longitude": -95.55551
+      },
+      "is_producer": false,
+	  	 "node_type": "full",
+      "p2p_endpoint": "bp.eosmedi.com:9877",
+      "api_endpoint": "http://api.eosmedi.com",
+      "ssl_endpoint": "https://api.eosmedi.com"
+    }
+  ]
+}

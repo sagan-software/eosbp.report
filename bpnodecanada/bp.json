@@ -1,0 +1,37 @@
+{
+  "producer_account_name": "bpnodecanada",
+  "producer_public_key": "EOS81vVefM4uuLT21zKZjvjkb6qa1e3Ka8uMyn66aLQ8PhZfPaJxv",
+  "org": {
+    "candidate_name": "BPNode",
+    "website": "https://bpnode.com",
+    "location": {
+      "name": "Montreal",
+      "country": "CA",
+      "latitude": 45.501689,
+      "longitude": -73.567256
+    },
+    "social": {
+      "steemit": "bpnode",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "",
+      "keybase": "bpnode",
+      "telegram": "ssekhon"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Montreal",
+        "country": "CA",
+        "latitude": 45.501689,
+        "longitude": -73.567256
+      },
+      "is_producer": false,
+      "p2p_endpoint": "35.182.46.236:9876",
+      "api_endpoint": "http://mainnet.bpnode.com:8888",
+      "ssl_endpoint": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "eosswedenorg",
+  "producer_public_key": "EOS7SGSBsWhSob6TEric6u3TGodcc1uXFcqSrquJ3Etuqcbb3VnNY",
+  "org": {
+    "candidate_name": "Sw/eden",
+    "website": "https://eossweden.se",
+    "code_of_conduct":"https://eossweden.se/code-of-conduct/",
+	"ownership_disclosure":"https://eossweden.se/code-of-conduct/#Ownership",
+    "email":"community@eossweden.se",
+    "branding":{
+      "logo_256":"https://eossweden.se/wp-content/uploads/2018/06/Square-Leaf-Banner-Wt-bkg-256.png",
+      "logo_1024":"https://eossweden.se/wp-content/uploads/2018/06/Square-Leaf-Banner-Wt-bkg-1024.png",
+      "logo_svg":"https://eossweden.se/wp-content/uploads/2018/06/Square-Leaf-Banner-01.svg"
+    },
+    "location": {
+      "name": "Sweden",
+      "country": "SE",
+      "latitude": 59.6268,
+      "longitude": 16.5440
+    },
+    "social": {
+      "steemit": "eos.sw-eden",
+      "twitter": "eossweden",
+      "youtube": "",
+      "facebook": "EOS-sweden-554084258304426",
+      "github":"xebb82",
+      "reddit": "",
+      "keybase": "xebb",
+      "telegram": "eossweden",
+      "wechat":"xebb82"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Sweden",
+        "country": "SE",
+        "latitude": 59.6268,
+        "longitude": 16.5440
+      },
+      "node_type": "full",
+      "p2p_endpoint": "p2p.eossweden.se:9876",
+      "api_endpoint": "http://api.eossweden.se",
+      "ssl_endpoint": "https://api.eossweden.se",
+      "bnet_endpoint": "bnet.eossweden.se:4321"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "blockmatrix1",
+  "producer_public_key": "EOS6oNSm6QKnMBzJDHiA32KsEjSgKKt1nGdPYfc2wZU34HA9GjP9q",
+  "org": {
+    "candidate_name": "Block Matrix",
+    "website": "https://blockmatrix.network",
+    "code_of_conduct": "https://blockmatrix.network#conduct",
+    "ownership_disclosure": "https://blockmatrix.network#ownership",
+    "location": {
+      "name": "Newcastle",
+      "country": "GB",
+      "latitude": 54.9783,
+      "longitude": -1.6194
+    },
+    "social": {
+      "steemit": "blockmatrix",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "blockmatrixnetwork",
+      "keybase": "blockmatrix",
+      "telegram": "blockmatrixpete"
+    },
+    "email": "bp@blockmatrix.network",
+    "branding": {
+      "logo_256": "https://blockmatrix.network/assets/img/block_matrix_logo_white_250.jpg",
+      "logo_1024": "https://blockmatrix.network/assets/img/block_matrix_logo_white_1024.jpg",
+      "logo_svg": "https://blockmatrix.network/assets/img/block_matrix_full_colour.svg"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "N. Virginia",
+        "country": "US",
+        "latitude": 37.926868,
+        "longitude": -78.024902
+      },
+      "node_type": "full",
+      "p2p_endpoint": "eosapi.blockmatrix.network:13546",
+      "api_endpoint": "",
+      "ssl_endpoint": "https://eosapi.blockmatrix.network",
+      "bnet_endpoint": "eosapi.blockmatrix.network:16453"
+    }
+  ]
+}

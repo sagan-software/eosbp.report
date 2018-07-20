@@ -1,0 +1,64 @@
+{
+  "producer_account_name": "switzerlanda",
+  "producer_public_key": "EOS7eZQYHQYCoh3uMJyGVrnHgDBxgfp93QAmwLV7nWoQLkeaM7HUs",
+  "org": {
+    "candidate_name": "EOS Geneva",
+    "website": "https://eosgeneva.io",
+    "code_of_conduct": "https://steemit.com/disclosures/@eosgeneva/code-of-conduct-of-eos-geneva-v1-0",
+    "ownership_disclosure": "https://steemit.com/disclosures/@eosgeneva/eos-geneva-ownership-disclosure",
+    "email": "sebastien.armleder@eosgeneva.io",
+    "branding": {
+      "logo_256": "https://eosgeneva.io/images/logo_swiss256.png",
+      "logo_1024": "https://eosgeneva.io/images/logo_swiss1024.png",
+      "logo_svg": "https://eosgeneva.io/images/logo_swiss_svg.svg"
+    },
+    "location": {
+      "name": "Geneva",
+      "country": "CH",
+      "latitude": 46.204391,
+      "longitude": 6.143158
+    },
+    "social": {
+      "steemit": "eosgeneva",
+      "keybase": "eosgeneva",
+      "github": "sebarmled",
+      "telegram": "eosgeneva"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Geneva",
+        "country": "CH",
+        "latitude": 46.204391,
+        "longitude": 6.143158
+      },
+      "node_type": "full",
+      "p2p_endpoint": "peer.eosgeneva.io:9876",
+      "bnet_endpoint": "peer.eosgeneva.io:9877",
+      "api_endpoint": "http://api.eosgeneva.io",
+      "ssl_endpoint": "https://api.eosgeneva.io"
+    },
+    {
+      "location": {
+        "name": "Geneva",
+        "country": "CH",
+        "latitude": 46.204391,
+        "longitude": 6.143158
+      },
+      "node_type": "full",
+      "p2p_endpoint": "peer2.eosgeneva.io:9876",
+      "api_endpoint": "http://api2.eosgeneva.io",
+      "ssl_endpoint": "https://api2.eosgeneva.io"
+    },
+    {
+      "location": {
+        "name": "Geneva",
+        "country": "CH",
+        "latitude": 46.204391,
+        "longitude": 6.143158
+      },
+      "node_type": "producer"
+    }
+  ]
+}

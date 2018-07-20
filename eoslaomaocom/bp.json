@@ -1,0 +1,54 @@
+{
+  "producer_account_name": "eoslaomaocom",
+  "producer_public_key": "EOS8QgURqo875qu3a8vgZ58qBeu2cTehe9zAWRfpdCXAQipicu1Fi",
+  "org": {
+    "candidate_name": "EOSLaoMao",
+    "website": "https://eoslaomao.com",
+    "code_of_conduct": "https://steemit.com/blockchain/@eoslaomao/eoslaomao-block-producer-announcement",
+    "ownership_disclosure": "https://eoslaomao.com/disclosure/",
+    "email": "zhaoyu@docodemo.com",
+    "branding": {
+      "logo_256": "https://eoslaomao.com/static/img/eoslaomaologo_256.png",
+      "logo_1024": "https://eoslaomao.com/static/img/eoslaomaologo_1024.png",
+      "logo_svg": "https://eoslaomao.com/static/img/eoslaomaologo_svg.svg"
+    },
+    "location": {
+      "name": "Tokyo",
+      "country": "JP",
+      "latitude": 35.6585805,
+      "longitude": 139.7454329
+    },
+    "social": {
+      "steemit": "eoslaomao",
+      "twitter": "eoslaomao",
+      "keybase": "eoslaomao",
+      "telegram": "eoslaomao"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.6585805,
+        "longitude": 139.7454329
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "New York",
+        "country": "US",
+        "latitude": 40.68942,
+        "longitude": -74.044511
+      },
+      "node_type": "full",
+      "p2p_endpoint": "fullnode.eoslaomao.com:443",
+      "api_endpoint": "",
+      "ssl_endpoint": "https://api.eoslaomao.com"
+    }
+  ]
+}

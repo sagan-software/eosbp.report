@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eospacificbp",
+  "producer_public_key": "EOS5RVMEH23hYRjhW2VoKNQCM1ooLhVgFpC38e8bWV2YzefyGZbMY",
+  "org": {
+    "candidate_name": "EOS Pacific",
+    "website": "https://www.nodepacific.com",
+    "code_of_conduct":"",
+    "email":"eos.pacific@nodepacific.com",
+    "branding":{
+      "logo_256":"https://www.nodepacific.com/logo256.png",
+      "logo_1024":"https://www.nodepacific.com/logo1024.png",
+      "logo_svg":"https://www.nodepacific.com/logoSVG.svg"
+    },
+    "location": {
+      "name": "HONG KONG",
+      "country": "HK",
+      "latitude": 22.3170523900,
+      "longitude": 114.1702099700
+    },
+    "social": {
+      "steemit": "https://steemit.com/@eos.pacific",
+      "twitter": "https://twitter.com/eos_pacific",
+      "youtube": "",
+      "facebook": "",
+      "github":"https://github.com/NodePacific/eos.pacific",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "https://t.me/EOSpacifc",
+      "wechat":"eospacific"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Amazon AWS",
+        "country": "Japan",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "eos.nodepacific.com:9876",
+      "api_endpoint": "http://eosapi.nodepacific.com:8888",
+      "ssl_endpoint": "https://eosapi.nodepacific.com:443"
+    },
+    {
+      "location": {
+        "name": "Amazon AWS",
+        "country": "Japan",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

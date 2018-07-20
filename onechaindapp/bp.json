@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eosgroupdapp",
+  "producer_public_key": "EOS68hRfmjQTwJmmoPrKA4gYWvdvhUm31PNXCnaez2rY3ZDP83heR",
+  "org": {
+    "candidate_name": "onechain",
+    "website": "www.onechain.one",
+    "code_of_conduct": "",
+    "email": "one@onechain.one",
+    "branding": {
+      "logo_256": "https://cdn1.haoduobi.cn/offcial_assets/logo.png",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "beijing",
+      "country": "china",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "https://steemit.com/@onechain001",
+      "twitter": "@onechainone",
+      "youtube": "",
+      "facebook": "@OneChainOfficial",
+      "github": "",
+      "reddit": "OneChainOfficial",
+      "keybase": "",
+      "telegram": "https://t.me/onechain1",
+      "wechat": "onechain?Ѷ"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Chongqing",
+        "country": "china",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "10.0.2.7:9000",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "chongqing",
+        "country": "china",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "eosdapp.oneeos.org:9000",
+      "api_endpoint": "eosdapp.oneeos.org:8000",
+      "ssl_endpoint": ""
+    }
+  ]
+}

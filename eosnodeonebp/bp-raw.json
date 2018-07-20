@@ -1,0 +1,71 @@
+{
+  "producer_account_name": "eosnodeonebp",
+  "producer_public_key": "EOS6xcmB3LnUwcjFu55hKFQwX8EHWWerwbHyAs3VpaJmbBFp4bmDs",
+  "org": {
+    "candidate_name": "EOS NodeOne",
+    "website": "https://eosnodeone.io",
+    "code_of_conduct":"https://steemit.com/eos/@eosnodeone/eos-nodeone-roadmap-and-stance-on-vote-buying",
+    "ownership_disclosure":"https://steemit.com/nodeone/@eosnodeone/eosnodeone-ownership-disclosure",
+    "email":"contact@eosnodeone.io",
+    "branding":{
+      "logo_256":"https://eosnodeone.io/resources/images/eosnodeone_logo_256.png",
+      "logo_1024":"https://eosnodeone.io/resources/images/eosnodeone_logo_1024.png",
+      "logo_svg":"https://eosnodeone.io/resources/images/eosnodeone_logo.svg"
+    },
+    "location": {
+      "name": "Seoul",
+      "country": "KR",
+      "latitude": 37.532600,
+      "longitude": 127.024612
+    },
+    "social": {
+      "steemit": "eosnodeone",
+      "twitter": "eosnodeone",
+      "youtube": "",
+      "facebook": "",
+      "github":"eosnodeone",
+      "reddit": "",
+      "keybase": "kamsa",
+      "telegram": "eosnodeone_kr",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Seoul",
+        "country": "KR",
+        "latitude": 37.532600,
+        "longitude": 127.024612
+      },
+      "node_type": "full",
+      "p2p_endpoint": "",
+      "api_endpoint": "http://api.main-net.eosnodeone.io",
+      "ssl_endpoint": "https://api.main-net.eosnodeone.io"
+    },
+    {
+      "location": {
+        "name": "Seoul",
+        "country": "KR",
+        "latitude": 37.532600,
+        "longitude": 127.024612
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "807534da.eosnodeone.io:19872",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Seoul",
+        "country": "KR",
+        "latitude": 37.532600,
+        "longitude": 127.024612
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

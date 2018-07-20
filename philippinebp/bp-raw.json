@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "philippinebp",
+  "producer_public_key": "EOS76UAdwK6qUcYH7BkxczdQn1KykW6ujKkF6dmJw6HiCx8Sp3sMb",
+  "org": {
+    "candidate_name": "EOS PH",
+    "website": "https://eosph.io/",
+    "code_of_conduct":"https://www.eosph.io/#roadmap",
+    "ownership_disclosure":"https://www.eosph.io/ownership",
+    "email":"info@eosph.io",
+    "branding":{
+      "logo_256":"https://www.eosph.io/eos256x256PNG.png",
+      "logo_1024":"https://www.eosph.io/eos1024x1024PNG.png",
+      "logo_svg":"https://www.eosph.io/eos_SVG.svg"
+    },
+    "location": {
+      "name": "Makati City, Philippines",
+      "country": "PH",
+      "latitude": 14.5608919,
+      "longitude": 121.0167559
+    },
+    "social": {
+      "steemit": "eosph",
+      "twitter": "eos_ph",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "",
+      "keybase": "eosph",
+      "telegram": "eos_ph",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Makati City",
+        "country": "PH",
+        "latitude": 14.5608919,
+        "longitude": 121.0167559
+      },
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Makati City",
+        "country": "PH",
+        "latitude": 14.5608919,
+        "longitude": 121.0167559
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

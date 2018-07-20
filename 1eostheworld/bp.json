@@ -1,0 +1,53 @@
+{
+  "producer_account_name": "1eostheworld",
+  "producer_public_key": "EOS7DtVzfmr1c5ACb7usAwyn4f39V7urk6kBWswUWCtg3H8H6CFAr",
+  "org": {
+    "candidate_name": "EOS the World, LLC",
+    "website": "https://eostheworld.io",
+    "ownership_disclosure": "https://eostheworld.io/#team",
+    "code_of_conduct": "https://eostheworld.io/our-core-values",
+    "email": "info@EOStheWorld.io",
+    "branding": {
+      "logo_256": "https://eostheworld.io/eostwlogo256.jpg",
+      "logo_1024": "https://eostheworld.io/eostwlogo1024.jpg",
+      "logo_svg": "https://eostheworld.io/eostwlogo.svg"
+    },
+    "location": {
+      "name": "San Juan",
+      "country": "PR",
+      "latitude": 18.4560735,
+      "longitude": -66.0716319
+    },
+    "social": {
+      "steemit": "MayadaJeffery",
+      "twitter": "eostheworld",
+      "facebook": "groups/133403804160918",
+      "github": "EOStheWorld",
+      "keybase": "hartparr",
+      "telegram": "hartparr"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Texas",
+        "country": "US",
+        "latitude": 31.554993,
+        "longitude": -97.133469
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Texas",
+        "country": "US",
+        "latitude": 31.554993,
+        "longitude": -97.133469
+      },
+      "node_type": "full",
+      "p2p_endpoint": "pub1.eostheworld.io:9876",
+      "api_endpoint": "http://api1.eostheworld.io:4865",
+      "ssl_endpoint": "https://api1.eostheworld.io"
+    }
+  ]
+}

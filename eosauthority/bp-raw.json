@@ -1,0 +1,57 @@
+{
+    "producer_account_name": "eosauthority",
+    "producer_public_key": "EOS4va3CTmAcAAXsT26T3EBWqYHgQLshyxsozYRgxWm9tjmy17pVV",
+    "org": {
+      "candidate_name": "EOS Authority",
+      "website": "https://eosauthority.com",
+      "ownership_disclosure": "https://eosauthority.com/disclosures",
+      "code_of_conduct":"https://steemit.com/eos/@eosauthority/eos-authority-roadmap-and-position-on-dividends",
+      "email":"hello@eosauthority.com",
+      "branding":{
+        "logo_256":"https://eosauthority.com/common/bp-standard-info/EOS-AUTHORITY-256.jpg",
+        "logo_1024":"https://eosauthority.com/common/bp-standard-info/EOS-AUTHORITY-1024.jpg",
+        "logo_svg":"https://eosauthority.com/common/bp-standard-info/eosauthority.svg"
+      },
+      "location": {
+        "name": "London",
+        "country": "GB",
+        "latitude": 51.512838,
+        "longitude": -0.087177
+      },
+      "social": {
+        "steemit": "eosauthority",
+        "twitter": "eosauthority",
+        "youtube": "eosauthority",
+        "facebook": "",
+        "github":"eosauthority",
+        "reddit": "eosauthority",
+        "keybase": "eosauthority",
+        "telegram": "eosauthority",
+        "wechat":"eosauthority"
+      }
+    },
+    "nodes": [
+      {
+        "location": {
+          "name": "London",
+          "country": "GB",
+          "latitude": 51.512838,
+          "longitude": -0.087177
+        },
+        "node_type": "full",
+        "p2p_endpoint": "node869-mainnet.eosauthority.com:9393",
+        "bnet_endpoint": "nodebnet-mainnet.eosauthority.com:19393",
+        "api_endpoint": "http://publicapi-mainnet.eosauthority.com",
+        "ssl_endpoint": "https://publicapi-mainnet.eosauthority.com"
+      },
+      {
+        "location": {
+          "name": "London",
+          "country": "GB",
+          "latitude": 51.512838,
+          "longitude": -0.087177
+        },
+        "node_type": "producer"
+      }
+    ]
+  }

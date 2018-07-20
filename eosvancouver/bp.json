@@ -1,0 +1,49 @@
+{
+  "producer_account_name": "eosvancouver",
+  "producer_public_key": "EOS7iENfXSAhKVxbi4cjviazqKYM58vpsPYEkkJHJxabsPiYk1aHs",
+  "org": {
+    "candidate_name": "EOS Vancouver",
+    "website": "http://eosvan.io",
+    "code_of_conduct": "http://eosvan.io/coc/",
+    "ownership_disclosure": "https://medium.com/@eosvancouver/eos-vancouver-ownership-disclosure-f6a0934e8dbb",
+    "email": "contact@eosvan.io",
+    "branding": {
+      "logo_256": "http://eosvan.io/images/eosvan-logo-256px.png",
+      "logo_1024": "http://eosvan.io/images/eosvan-logo-1024px.png",
+      "logo_svg": "http://eosvan.io/images/eosvan-logo-01.svg"
+    },
+    "location": {
+      "name": "Vancouver",
+      "country": "CA",
+      "latitude": 49.284735,
+      "longitude": -123.111907
+    },
+    "social": {
+      "steemit": "eosvancouver",
+      "twitter": "EOS_Van",
+      "github": "EOSVancouver"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Vancouver",
+        "country": "CA",
+        "latitude": 49.284735,
+        "longitude": -123.111907
+      },
+      "is_producer": false,
+      "p2p_endpoint": "eno.eosvan.io:19866",
+      "api_endpoint": "http://eno.eosvan.io:18866"
+    },
+    {
+      "location": {
+        "name": "Vancouver",
+        "country": "CA",
+        "latitude": 49.284735,
+        "longitude": -123.111907
+      },
+      "is_producer": true
+    }
+  ]
+}

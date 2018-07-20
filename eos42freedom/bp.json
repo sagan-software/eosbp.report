@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "eos42freedom",
+  "producer_public_key": "EOS4tw7vH62TcVtMgm2tjXzn9hTuHEBbGPUK2eos42ssY7ip4LTzu",
+  "org": {
+    "candidate_name": "EOS42",
+    "website": "https://www.eos42.io",
+    "code_of_conduct": "https://steemit.com/eos/@eos42/eos42-statement-of-ownership-and-code-of-conduct-v1-0",
+    "ownership_disclosure": "https://steemit.com/eos/@eos42/eos42-statement-of-ownership",
+    "email": "community@eos42.io",
+    "branding": {
+      "logo_256": "https://www.eos42.io/static/img/eos42_logo_bp.png",
+      "logo_1024": "https://www.eos42.io/static/img/eos42_logo_bp_1024.png",
+      "logo_svg": "https://www.eos42.io/static/img/eos42_logo_bp.svg"
+    },
+    "location": {
+      "name": "Cayman Islands",
+      "country": "KY",
+      "latitude": 19.313299,
+      "longitude": -81.254601
+    },
+    "social": {
+      "steemit": "eos42",
+      "twitter": "eos42io",
+      "youtube": "UC8ZDYr5Qi-N_eTZIvo61dFw",
+      "facebook": "",
+      "reddit": "",
+      "keybase": "ankh2054",
+      "telegram": "EOS42"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "London",
+        "country": "GB",
+        "latitude": 51.51118829,
+        "longitude": -0.09617353
+      },
+      "is_producer": false,
+      "node_type": "full",
+      "p2p_endpoint": "p2p.eos42.io:9876",
+      "api_endpoint": "http://nodes.eos42.io",
+      "ssl_endpoint": "https://nodes.eos42.io"
+    }
+  ]
+}

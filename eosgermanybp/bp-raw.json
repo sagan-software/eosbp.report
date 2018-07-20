@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "eosgermanybp",
+  "producer_public_key": "EOS6KTbE5ktt6snuTGoQYFibvC3w86T7NVpYLhUFamNNPNJxgUSZ8",
+  "org": {
+    "candidate_name": "EOS Germany",
+    "website": "https://eosgermany.one",
+    "code_of_conduct":"https://steemit.com/eosgermany/@eosgermany/code-of-conduct-eos-germany",
+    "ownership_disclosure":"https://eosgermany.one",
+    "email":"contact@eosgermany.one",
+    "branding":{
+      "logo_256":"https://eosgermanybp.keybase.pub/branding/logo_256.png",
+      "logo_1024":"https://eosgermanybp.keybase.pub/branding/logo_1024.png",
+      "logo_svg":"https://eosgermanybp.keybase.pub/branding/logo_svg.svg"
+    },
+    "location": {
+      "name": "Muenster",
+      "country": "DE",
+      "latitude": 51.9607,
+      "longitude": 7.6261
+    },
+
+    "social": {
+      "steemit": "eosgermany",
+      "twitter": "EOSGermany1",
+      "youtube": "channel/UCkFoi_TPPEJ23KkZxfIrO7g",
+      "facebook": "",
+      "github":"eosgermany",
+      "reddit": "user/EOSGermanybp/",
+      "keybase": "eosgermany",
+      "telegram": "ERVWyhCpHEv5MvUXZRKB_w",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Falkenstein",
+        "country": "DE",
+        "latitude": 51.7315,
+        "longitude": 11.3454
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "p2p.eosgermany.online:9876",
+      "api_endpoint": "http://api.eosgermany.online",
+      "ssl_endpoint": "https://api.eosgermany.online"
+    }
+  ]
+}

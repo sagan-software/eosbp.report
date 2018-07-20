@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "eosrealbpcsg",
+  "producer_public_key": "EOS6fcpQu16GAASdLwK6BbTQTMK5EZSh1ecci2oKQJdioQvxp8DRs",
+  "org": {
+    "candidate_name": "EOSREAL",
+    "website": "http://eosreal.com",
+    "code_of_conduct":"http://eosreal.com/news/?id=464",
+    "ownership_disclosure":"http://eosreal.com/news/?id=425",
+    "email":"eos@eosreal.com",
+    "branding":{
+      "logo_256":"http://www.eosreal.com/logo_256.png",
+      "logo_1024":"http://www.eosreal.com/logo_1024.png",
+      "logo_svg":"http://www.eosreal.com/EOSREAL.svg"
+    },
+    "location": {
+      "name": "Singapore",
+      "country": "SGP",
+      "latitude": 1.290270,
+      "longitude": 103.851959
+    },
+    "social": {
+      "steemit": "eosreal-io",
+      "twitter": "EOSREAL_IO",
+      "youtube": "UCDa2gIsEQway1DPNjMYar8g",
+      "facebook": "",
+      "github":"EOSREAL",
+      "reddit": "",
+      "keybase": "maoyifeng",
+      "telegram": "EOSREAL",
+      "wechat":"EOSREAL"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Mumbai",
+        "country": "IND",
+        "latitude": 18.56,
+        "longitude": 72.49
+      },
+      "is_producer": false,
+      "p2p_endpoint": "9876",
+      "api_endpoint": "8888",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SGP",
+        "latitude": 1.290270,
+        "longitude": 103.851959
+      },
+      "is_producer": true,
+      "p2p_endpoint": "192.168.100.88:9886",
+      "api_endpoint": "192.168.100.88:8868",
+      "ssl_endpoint": ""
+    }
+  ]
+}

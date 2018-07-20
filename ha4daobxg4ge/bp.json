@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "ha4daobxg4ge",
+  "producer_public_key": "EOS5ewbBCj3ZrAy5yJnCqBM6Y6X9nCLzJ4DR8rphbqMhapeT3S5e",
+  "org": {
+    "candidate_name": "EOS.MediShares",
+    "website": "http://eos.medishares.org/",
+    "code_of_conduct": "",
+    "email": "hello@medishares.org",
+    "branding": {
+      "logo_256": "http://eos.medishares.org/images/logo256.png",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "Singapore",
+      "country": "Singapore",
+      "latitude": 1.19,
+      "longitude": 103.55
+    },
+    "social": {
+      "steemit": "https://steemit.com/@ericfish",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github": "https://github.com/MediShares",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "https://t.me/eosmedishares",
+      "wechat": "MediShares03"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "Singapore",
+        "latitude": 1.19,
+        "longitude": 103.55
+      },
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "Singapore",
+        "latitude": 1.19,
+        "longitude": 103.55
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}
