@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "bpeosindexio",
+  "producer_public_key": "EOS8JFEstrtvbgM9SHhxQY66H27vVtQG3dxo16vLnaWt88GzAKLRf",
+  "org": {
+    "candidate_name": "EOSindex.io",
+    "website": "https://bp.eosindex.io",
+    "code_of_conduct":"",
+    "ownership_disclosure":"",
+    "email":"bp@eosindex.io",
+    "branding":{
+      "logo_256":"https://bp.eosindex.io/logos/eosindex_logo_square_256.png",
+      "logo_1024":"https://bp.eosindex.io/logos/eosindex_logo_square_1024.png",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Toronto",
+      "country": "Canada",
+      "latitude": 43.653908,
+      "longitude": -79.384293
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "https://twitter.com/eosindex",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "https://t.me/eosindex",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Falkenstein",
+        "country": "Germany",
+        "latitude": 50.47788,
+        "longitude": 12.37129
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "node1.bp.eosindex.io:9876",
+      "bnet_endpoint": "node1.bp.eosindex.io:9875",
+      "api_endpoint": "http://api.bp.eosindex.io",
+      "ssl_endpoint": "https://api.bp.eosindex.io"
+    }
+  ]
+}
