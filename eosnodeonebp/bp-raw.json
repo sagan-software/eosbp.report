@@ -21,13 +21,9 @@
     "social": {
       "steemit": "eosnodeone",
       "twitter": "eosnodeone",
-      "youtube": "",
-      "facebook": "",
       "github":"eosnodeone",
-      "reddit": "",
       "keybase": "kamsa",
-      "telegram": "eosnodeone_kr",
-      "wechat":""
+      "telegram": "eosnodeone_kr"
     }
   },
   "nodes": [
@@ -39,7 +35,6 @@
         "longitude": 127.024612
       },
       "node_type": "full",
-      "p2p_endpoint": "",
       "api_endpoint": "http://api.main-net.eosnodeone.io",
       "ssl_endpoint": "https://api.main-net.eosnodeone.io"
     },
@@ -52,8 +47,6 @@
       },
       "node_type": "seed",
       "p2p_endpoint": "807534da.eosnodeone.io:19872",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
     },
     {
       "location": {
@@ -62,10 +55,7 @@
         "latitude": 37.532600,
         "longitude": 127.024612
       },
-      "node_type": "producer",
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "node_type": "producer"
     }
   ]
 }
