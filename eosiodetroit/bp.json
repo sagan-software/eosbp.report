@@ -4,6 +4,7 @@
   "org": {
     "candidate_name": "EOS Detroit",
     "website": "https://eosdetroit.io",
+    "ownership_disclosure": "https://eosdetroit.io",
     "code_of_conduct": "https://steemit.com/eos/@eos.detroit/eos-detroit-membership-guidelines",
     "email": "ask@eosdetroit.io",
     "branding": {
@@ -20,12 +21,12 @@
     "social": {
       "steemit": "eos.detroit",
       "twitter": "eosiodetroit",
-      "youtube": "UCnbdh6f2U54_18YEe89xpnA",
+      "youtube": "eosdetroit",
       "facebook": "eosiodetroit",
       "github": "eosdetroit",
       "reddit": "eosdetroit",
       "keybase": "eosiodetroit",
-      "telegram": "robrigo",
+      "telegram": "eos_detroit",
       "wechat": "EOS_Detroit"
     }
   },
@@ -37,10 +38,10 @@
         "latitude": 39.9612,
         "longitude": 82.9988
       },
-      "is_producer": false,
+      "node_type": "full",
       "p2p_endpoint": "",
       "api_endpoint": "",
-      "ssl_endpoint": "https://api.eosdetroit.io:443"
+      "ssl_endpoint": "https://api.eosdetroit.io"
     },
     {
       "location": {
@@ -49,10 +50,11 @@
         "latitude": 39.9612,
         "longitude": 82.9988
       },
-      "is_producer": false,
+      "node_type": "seed",
       "p2p_endpoint": "p2p.eosdetroit.io:3018",
       "api_endpoint": "",
-      "ssl_endpoint": ""
+      "ssl_endpoint": "",
+      "bnet_endpoint": "p2p.eosdetroit.io:3019"
     },
     {
       "location": {
@@ -61,7 +63,7 @@
         "latitude": 39.9612,
         "longitude": 82.9988
       },
-      "is_producer": true,
+      "node_type": "producer",
       "p2p_endpoint": "",
       "api_endpoint": "",
       "ssl_endpoint": ""
