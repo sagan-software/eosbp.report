@@ -1,0 +1,55 @@
+{
+  "producer_account_name": "eoswinwinwin",
+  "producer_public_key": "EOS5oPnhMKL6bBCWn5CFqDBrd3Wnhezeny4pctwyeXBXWwv2hASmQ",
+  "org": {
+    "candidate_name": "EOS WIN",
+    "website": "https://eos.win",
+    "email": "",
+    "branding": {
+        "logo_256": "",
+        "logo_1024": "",
+        "logo_svg": ""
+    },
+    "location": {
+      "name": "Korea",
+      "country": "ROK",
+      "latitude": 37.3,
+      "longitude": 126.38
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "reddit": "",
+      "keybase": "",
+      "telegram": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.6585805,
+        "longitude": 139.7454329
+      },
+      "is_producer": false,
+      "p2p_endpoint": "http://peer.eos.win:9876",
+      "api_endpoint": "http://api.eos.win",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.6585805,
+        "longitude": 139.7454329
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}
