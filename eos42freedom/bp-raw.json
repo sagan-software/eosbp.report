@@ -36,10 +36,8 @@
         "latitude": 51.51118829,
         "longitude": -0.09617353 
       },
-      "node_type": "full",
-      "p2p_endpoint": "p2p.eos42.io:9876",
-      "api_endpoint": "http://nodes.eos42.io",
-      "ssl_endpoint": "https://nodes.eos42.io"  
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.eos42.io:9876"
     },
     {
       "location": {
@@ -49,7 +47,6 @@
         "longitude": -0.09617353 
       },
       "node_type": "full",
-      "p2p_endpoint": "p2p.eos42.io:9876",
       "api_endpoint": "http://nodes.eos42.io",
       "ssl_endpoint": "https://nodes.eos42.io"  
     },
