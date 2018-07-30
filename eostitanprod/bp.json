@@ -1,6 +1,6 @@
 {
   "producer_account_name": "eostitanprod",
-  "producer_public_key": "EOS5z4JJRLvNasG4VRWYLRNC5TeLquNM8k5oBWWpRhpf9mgJH9e9K",
+  "producer_public_key": "EOS5Vr9kVHQmqRzqU72yrBeeoqjgjndsJyh26q2UEZfoYoFGPVbUC",
   "org": {
     "candidate_name": "EOS Titan",
     "website": "https://eostitan.com",
@@ -13,10 +13,10 @@
       "logo_svg": "https://eostitan.com/assets/images/logo.svg"
     },
     "location": {
-      "name": "Montreal",
-      "country": "CA",
-      "latitude": 45.5017,
-      "longitude": 73.5673
+      "name": "Sofia",
+      "country": "BG",
+      "latitude": 42.6977,
+      "longitude": 23.3219
     },
     "social": {
       "steemit": "eostitan",
@@ -38,6 +38,7 @@
         "latitude": 43.6532,
         "longitude": 79.3832
       },
+      "node_type": "full",
       "is_producer": false,
       "p2p_endpoint": "boot.eostitan.com:9876",
       "api_endpoint": "http://api.eostitan.com",
@@ -50,6 +51,7 @@
         "latitude": 42.6977,
         "longitude": 23.3219
       },
+      "node_type": "producer",
       "is_producer": true,
       "p2p_endpoint": "",
       "api_endpoint": "",
