@@ -1,7 +1,6 @@
 {
  "producer_account_name": "teamgreymass",
-  "producer_public_key": 
-"EOS4xurP5oZk4WvMUp9neKkw94DJ2iq48GtMD5Dff3GKe6krh2ctR",
+  "producer_public_key": "EOS4xurP5oZk4WvMUp9neKkw94DJ2iq48GtMD5Dff3GKe6krh2ctR",
   "org": {
     "candidate_name": "Greymass",
     "website": "https://greymass.com",
@@ -17,7 +16,7 @@
       "name": "Michigan",
       "country": "US",
       "latitude": 44.3148,
-      "longitude": 85.6024
+      "longitude": -85.6024
     },
     "social": {
       "steemit": "greymass",
@@ -51,8 +50,7 @@
         "longitude": -0.0931
       },
       "node_type": "seed",
-      "p2p_endpoint": "seed1.greymass.com:9876",
-      "bnet_endpoint": "seed1.greymass.com:4321"
+      "p2p_endpoint": "seed1.greymass.com:9876"
     },
     {
       "location": {
@@ -62,8 +60,7 @@
         "longitude": -96.8207
       },
       "node_type": "seed",
-      "p2p_endpoint": "seed2.greymass.com:9876",
-      "bnet_endpoint": "seed2.greymass.com:4321"
+      "p2p_endpoint": "seed2.greymass.com:9876"
     }
   ]
 }
