@@ -37,9 +37,9 @@
          },
          "node_type":"producer",
          "is_producer":false,
-         "p2p_endpoint":"peer2.eosnairobi.io:9999",
-         "api_endpoint":"http://api2.eosnairobi.io:8898",
-         "ssl_endpoint":"https://api2.eosnairobi.io:8899"
+         "p2p_endpoint":"peer.mainnet.eosnairobi.io:9999",
+         "api_endpoint":"http://api.mainnet.eosnairobi.io:8898",
+         "ssl_endpoint":"https://api.mainnet.eosnairobi.io:8899"
       },
       {
          "location":{
@@ -50,9 +50,9 @@
          },
          "node_type":"seed",
          "is_producer":false,
-         "p2p_endpoint":"peer1.eosnairobi.io:9999",
-         "api_endpoint":"http://api1.eosnairobi.io:8898",
-         "ssl_endpoint":"https://api1.eosnairobi.io:8899"
+         "p2p_endpoint":"peer.mainnet.eosnairobi.io:9999",
+         "api_endpoint":"http://api.mainnet.eosnairobi.io:8898",
+         "ssl_endpoint":"https://api.mainnet.eosnairobi.io:8899"
       }
    ]
 }
