@@ -31,6 +31,17 @@
     }
   },
   "nodes": [
+    {
+      "location": {
+        "name": "Hong Kong",
+        "country": "HK",
+        "latitude": 22.3964,
+        "longitude": 114.1095
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.bp.fish:9786",
+      "bnet_endpoint": "bnet.bp.fish:7756"
+    },
      {
       "location": {
      	"name": "Hong Kong",
@@ -49,18 +60,8 @@
         "latitude": 22.3964,
         "longitude": 114.1095
       },
-      "node_type": "seed",
-      "p2p_endpoint": "p2p.bp.fish:9786",
-      "bnet_endpoint": "bnet.bp.fish:7756"
-    },
-    {
-      "location": {
-        "name": "Hong Kong",
-        "country": "HK",
-        "latitude": 22.3964,
-        "longitude": 114.1095
-      },
         "node_type": "producer"
    }
   ]
 }
+
