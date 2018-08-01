@@ -8,9 +8,9 @@
     "ownership_disclosure": "https://steemit.com/eos/@hibitfish/equity-split-of-eos-fish",
     "email": "mlong@bit.fish",
     "branding": {
-      "logo_256": "https://eos.fish/eosfish256.jpg",
-      "logo_1024": "https://eos.fish/eosfish1024.jpg",
-      "logo_svg": "https://eos.fish/eosfish.svg"
+      "logo_256": "",
+      "logo_1024": "",
+      "logo_svg": ""
     },
     "location": {
       "name": "Hong Kong",
@@ -38,20 +38,10 @@
         "latitude": 22.3964,
         "longitude": 114.1095
       },
-      "node_type": "seed",
+      "is_producer": false,
       "p2p_endpoint": "p2p.bp.fish:9786",
-      "bnet_endpoint": "bnet.bp.fish:7756"
-    },
-    {
-      "location": {
-        "name": "Hong Kong",
-        "country": "HK",
-        "latitude": 22.3964,
-        "longitude": 114.1095
-      },
-      "node_type": "full",
       "api_endpoint": "http://api.bp.fish",
-      "ssl_endpoint": "https://api.bp.fish"
+      "ssl_endpoint": ""
     },
     {
       "location": {
@@ -60,7 +50,10 @@
         "latitude": 22.3964,
         "longitude": 114.1095
       },
-      "node_type": "producer"
+      "is_producer": false,
+      "p2p_endpoint": "",
+      "api_endpoint": "http://api.bp.fish",
+      "ssl_endpoint": ""
     }
   ]
 }
