@@ -1,44 +1,44 @@
 {
-    "producer_account_name": "oraclegogogo",
-    "producer_public_key": "EOS67BuVBFqC9wWw8NaDg7JZ3FseSg55Rvwh6NJQUehBhmEsHfmLh",
-    "org": {
-        "candidate_name": "OracleChain",
-        "website": "https://oraclechain.io",
-        "code_of_conduct": "https://steemit.com/eos/@oraclechain/using-eos-bp-dao-to-ensure-eos-ecology-more-healthy-development-oraclechain-s-proposal-on-eos-bp-block-rewards-distribution-plan",
-        "ownership_disclosure": "https://oraclechain.io/index-en",
-        "email": "contact@oraclechain.io",
-        "branding": {
-            "logo_256": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png",
-            "logo_1024": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png",
-            "logo_svg": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.svg"
-        },
-        "location": {
-            "name": "Singapore",
-            "country": "SG",
-            "latitude": 1.3278,
-            "longitude": 103.8567
-        },
-        "social": {
-            "steemit": "oraclechain",
-            "twitter": "Oracle_Chain",
-            "github": "OracleChain",
-            "telegram": "OracleChainChat",
-            "facebook": "oraclechain",
-            "reddit": "",
-            "keybase": "",
-            "wechat": ""
-        }
-    },
-    "nodes": [{
-        "location": {
-            "name": "Singapore",
-            "country": "SG",
-            "latitude": 1.3278,
-            "longitude": 103.8567
-        },
-        "node_type": "full",
-        "p2p_endpoint": "peer.oraclechain.io:19876",
-        "api_endpoint": "http://api.oraclechain.io",
-        "ssl_endpoint": "https://api.oraclechain.io"
-    }]
+	"producer_account_name": "oraclegogogo",
+	"producer_public_key": "EOS67BuVBFqC9wWw8NaDg7JZ3FseSg55Rvwh6NJQUehBhmEsHfmLh",
+	"org": {
+		"candidate_name": "OracleChain",
+		"website": "https://oraclechain.io",
+		"code_of_conduct": "https://steemit.com/eos/@oraclechain/using-eos-bp-dao-to-ensure-eos-ecology-more-healthy-development-oraclechain-s-proposal-on-eos-bp-block-rewards-distribution-plan",
+		"ownership_disclosure": "https://oraclechain.io/index-en",
+		"email": "contact@oraclechain.io",
+		"branding": {
+			"logo_256": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png",
+			"logo_1024": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png",
+			"logo_svg": "https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.svg"
+		},
+		"location": {
+			"name": "China",
+			"country": "CN",
+			"latitude": 39.9497,
+			"longitude": 16.2756
+		},
+		"social": {
+			"steemit": "oraclechain",
+			"twitter": "Oracle_Chain",
+			"github": "OracleChain",
+			"telegram": "OracleChainChat",
+			"facebook": "oraclechain",
+			"reddit": "",
+			"keybase": "",
+			"wechat": ""
+		}
+	},
+	"nodes": [{
+		"location": {
+			"name": "China",
+			"country": "CN",
+			"latitude": 39.9497,
+			"longitude": 16.2756
+		},
+		"node_type": "full",
+		"p2p_endpoint": "peer.oraclechain.io:19876",
+		"api_endpoint": "http://api.oraclechain.io",
+		"ssl_endpoint": "https://api.oraclechain.io"
+	}]
 }
