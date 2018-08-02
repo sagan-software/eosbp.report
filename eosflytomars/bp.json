@@ -5,14 +5,18 @@
     "candidate_name": "BitMars",
     "website": "http://www.bitmars.one",
     "email": "eosflytomars@sohu.com",
+    "ownership_disclosure": "https://medium.com/@bitmars/ownership-disclosure-1ec8f36d329e",
+    "code_of_conduct": "https://medium.com/@bitmars/code-of-conduct-48b06093ff4c",
     "branding": {
-      "logo_256": "http://www.bitmars.one/EosflytoMars180x180-2.png"
+      "logo_256": "https://api.bitmars.one:8000/logo-256.png",
+      "logo_1024": "https://api.bitmars.one:8000/logo-1024.png",
+      "logo_svg": "https://api.bitmars.one:8000/logo.svg"
     },
     "location": {
       "name": "Beijing",
       "country": "CN",
-      "latitude": 120.14568,
-      "longitude": 116.30817
+      "latitude": 39.91667,
+      "longitude": 116.41667
     },
     "social": {
       "steemit": "",
@@ -26,21 +30,23 @@
       "location": {
         "name": "Tokyo",
         "country": "JP",
-        "latitude": 139.6932,
-        "longitude": 35.6898
+        "latitude": 35.7090259,
+        "longitude": 139.7319925
       },
-      "is_producer": true,
-      "p2p_endpoint": "p2p.bitmars.one:8080"
+      "node_type": "full",
+      "api_endpoint": "https://api.bitmars.one",
+      "ssl_endpoint": "https://api.bitmars.one",
+      "p2p_endpoint": "bp.bitmars.one:8080",
+      "bnet_endpoint": "bp.bitmars.one:8881"
     },
     {
       "location": {
         "name": "Tokyo",
         "country": "JP",
-        "latitude": 139.6932,
-        "longitude": 35.6898
+        "latitude": 35.7090259,
+        "longitude": 139.7319925
       },
-      "is_producer": false,
-      "api_endpoint": "http://api.bitmars.one"
+      "node_type": "producer"
     }
   ]
 }
