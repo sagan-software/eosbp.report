@@ -40,8 +40,8 @@
 
       },
 	"node_type": "full",
-	"api_endpoint": "http://node0.eosblocksmith.io",
-	"ssl_endpoint": "https://node0.eosblocksmith.io"
+	"api_endpoint": "http://anvil.eosblocksmith.io:8888",
+	"ssl_endpoint": "https://anvil.eosblocksmith.io:8888"
    },
     {
       "location": {
@@ -52,7 +52,7 @@
 
       },
 	"node_type": "seed",
-	"p2p_endpoint": "node0.eosblocksmith.io:9876",
+	"p2p_endpoint": "anvil.eosblocksmith.io:9876",
 	"bnet_endpoint": "rocky.eosblocksmith.io:4322"
    },
    {
