@@ -3,13 +3,14 @@
   "producer_public_key": "EOS64imhc1mStfLdkK6Po3juwwyiiSD9RsevSoSWx8vBqP3opUx2L",
   "org": {
     "candidate_name": "BP Squared",
-    "website": "https://bp2.io",
-    "code_of_conduct": "https://bp2.io/best-practices",
+    "website": "https://bp2.io/",
+    "code_of_conduct": "https://bp2.io/best-practices/",
+    "ownership_disclosure": "https://bp2.io/principles/",
     "email": "hello@bp2.io",
     "branding": {
-      "logo_256": "https://bpsquared.bp2.io/img/bpsquared-256.png",
-      "logo_1024": "https://bpsquared.bp2.io/img/bpsquared-1024.png",
-      "logo_svg": "https://bpsquared.bp2.io/img/bpsquared.svg"
+      "logo_256": "https://bp2.io/s/bpsquared-256.png",
+      "logo_1024": "https://bp2.io/s/bpsquared-1024.png",
+      "logo_svg": ""
     },
     "location": {
       "name": "Puerto Rico",
@@ -20,9 +21,13 @@
     "social": {
       "steemit": "bp2",
       "twitter": "eosbp2",
+      "youtube": "",
+      "facebook": "",
       "github": "bpsquared",
+      "reddit": "",
       "keybase": "bp2a",
-      "telegram": "bpsquared"
+      "telegram": "bpsquared",
+      "wechat": ""
     }
   },
   "nodes": [
@@ -33,7 +38,7 @@
         "latitude": 34.0522,
         "longitude": -118.2437
       },
-      "is_producer": true,
+      "is_producer": false,
       "p2p_endpoint": "",
       "api_endpoint": "",
       "ssl_endpoint": ""
@@ -46,9 +51,9 @@
         "longitude": 123.9238
       },
       "is_producer": false,
-      "p2p_endpoint": "p2p1.bp2.io:4444",
-      "api_endpoint": "http://node1.bp2.io",
-      "ssl_endpoint": "https://node1.bp2.io"
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
     }
   ]
 }
