@@ -38,7 +38,7 @@
         "latitude": 35.681936,
         "longitude": 139.724209
       },
-      "is_producer": false,
+      "node_type": "full",
       "p2p_endpoint": "",
       "api_endpoint": "",
       "ssl_endpoint": "https://rpc.eosys.io:443"
@@ -50,7 +50,7 @@
         "latitude": 35.681936,
         "longitude": 139.724209
       },
-      "is_producer": false,
+      "node_type": "seed",
       "p2p_endpoint": "pub0.eosys.io:6637",
       "api_endpoint": "",
       "ssl_endpoint": ""
@@ -62,20 +62,8 @@
         "latitude": 35.681936,
         "longitude": 139.724209
       },
-      "is_producer": false,
+      "node_type": "seed",
       "p2p_endpoint": "pub1.eosys.io:6637",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
-    },
-    {
-      "location": {
-        "name": "Tokyo",
-        "country": "JP",
-        "latitude": 35.681936,
-        "longitude": 139.724209
-      },
-      "is_producer": true,
-      "p2p_endpoint": "",
       "api_endpoint": "",
       "ssl_endpoint": ""
     }
