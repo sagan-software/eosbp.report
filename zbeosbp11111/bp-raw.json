@@ -3,12 +3,12 @@
   "producer_public_key": "EOS7rhgVPWWyfMqjSbNdndtCK8Gkza3xnDbUupsPLMZ6gjfQ4nX81",
   "org": {
     "candidate_name": "zb eos",
-    "website": "http://www.zbeos.com",
+    "website": "https://www.zbeos.com",
     "code_of_conduct":"",
-    "email":"",
+    "email":"zbeos@zb.com",
     "branding":{
-      "logo_256":"http://www.zbeos.com/img/zbeos-256.png",
-      "logo_1024":"http://www.zbeos.com/img/zbeos-1024.png",
+      "logo_256":"https://www.zbeos.com/img/zbeos-256.png",
+      "logo_1024":"https://www.zbeos.com/img/zbeos-1024.png",
       "logo_svg":""
     },
     "location": {
@@ -51,8 +51,8 @@
       },
       "is_producer": false,
       "p2p_endpoint": "node2.zbeos.com:9876",
-      "api_endpoint": "https://node1.zbeos.com",
-      "ssl_endpoint": "https://node1.zbeos.com"
+      "api_endpoint": "https://node2.zbeos.com",
+      "ssl_endpoint": "https://node2.zbeos.com"
     }
   ]
 }
