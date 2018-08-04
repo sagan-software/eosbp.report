@@ -39,8 +39,8 @@
       },
       "is_producer": true,
       "p2p_endpoint": "node1.zbeos.com:9876",
-      "api_endpoint": "http://node1.zbeos.com:8888",
-      "ssl_endpoint": ""
+      "api_endpoint": "https://node1.zbeos.com",
+      "ssl_endpoint": "https://node1.zbeos.com"
     },
     {
       "location": {
@@ -51,8 +51,8 @@
       },
       "is_producer": false,
       "p2p_endpoint": "node2.zbeos.com:9876",
-      "api_endpoint": "http://node2.zbeos.com:8888",
-      "ssl_endpoint": ""
+      "api_endpoint": "https://node1.zbeos.com",
+      "ssl_endpoint": "https://node1.zbeos.com"
     }
   ]
 }
