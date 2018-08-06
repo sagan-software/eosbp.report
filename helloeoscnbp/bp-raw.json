@@ -4,7 +4,8 @@
   "org": {
     "candidate_name": "HelloEOS",
     "website": "https://www.helloeos.com.cn",
-    "code_of_conduct":"",
+    "code_of_conduct":"https://steemit.com/eos/@helloeos/helloeos-code-of-conduct",
+    "ownership_disclosure": "https://steemit.com/eos/@helloeos/helloeos-ownership-disclosure-and-corporate-structure",
     "email":"contact@helloeos.com.cn",
     "branding":{
       "logo_256":"",
@@ -36,8 +37,8 @@
         "latitude": 82.9071,
         "longitude": 40.4173
       },
-      "node_type": "full",
-      "is_producer": false,
+      "node_type": "producer",
+      "is_producer": true,
       "p2p_endpoint": "peer1.mainnet.helloeos.com.cn:80",
       "api_endpoint": "http://api.helloeos.com.cn",
       "ssl_endpoint": "https://api.helloeos.com.cn"
@@ -49,8 +50,8 @@
         "latitude": 139.6917,
         "longitude": 35.6895
       },
-      "node_type": "producer",
-      "is_producer": true,
+      "node_type": "full",
+      "is_producer": false,
       "p2p_endpoint": "peer2.mainnet.helloeos.com.cn:80",
       "api_endpoint": "",
       "ssl_endpoint": ""
