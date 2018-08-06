@@ -15,8 +15,8 @@
     "location": {
       "name": "Hangzhou, Zhejiang",
       "country": "CN",
-      "latitude": 120.1551,
-      "longitude": 30.2741
+      "latitude": 30.2741,
+      "longitude": 120.1551
     },
     "social": {
       "steemit": "helloeos",
@@ -34,25 +34,25 @@
       "location": {
         "name": "Ohio",
         "country": "US",
-        "latitude": 82.9071,
-        "longitude": 40.4173
+        "latitude": 40.4173,
+        "longitude": 82.9071
       },
       "node_type": "producer",
       "p2p_endpoint": "peer1.mainnet.helloeos.com.cn:80",
-      "api_endpoint": "http://api.helloeos.com.cn",
-      "ssl_endpoint": "https://api.helloeos.com.cn"
+      "api_endpoint": "",
+      "ssl_endpoint": ""
     },
     {
       "location": {
         "name": "Tokyo",
         "country": "JP",
-        "latitude": 139.6917,
-        "longitude": 35.6895
+        "latitude": 35.6895,
+        "longitude": 139.6917
       },
       "node_type": "full",
       "p2p_endpoint": "peer2.mainnet.helloeos.com.cn:80",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://api.helloeos.com.cn",
+      "ssl_endpoint": "https://api.helloeos.com.cn"
     }
   ]
 }
