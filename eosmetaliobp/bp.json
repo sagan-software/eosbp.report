@@ -34,7 +34,6 @@
         "longitude": 2.349014
       },
       "node_type": "full",
-      "p2p_endpoint": "p2p.eosmetal.io:19877",
       "api_endpoint": "http://api.eosmetal.io",
       "ssl_endpoint": "https://api.eosmetal.io"
     },
@@ -45,10 +44,17 @@
         "latitude": 53.34399,
         "longitude": -6.26719
       },
-      "node_type": "full",
-      "p2p_endpoint": "api3.eosmetal.io:19877",
-      "api_endpoint": "http://api3.eosmetal.io",
-      "ssl_endpoint": "https://api3.eosmetal.io"
+      "node_type": "seed",
+      "p2p_endpoint": "api3.eosmetal.io:19877"
+    },
+    {
+      "location": {
+        "name": "Iceland",
+        "country": "IS",
+        "latitude": 64.9631,
+        "longitude": -19.0208
+      },
+      "node_type": "producer"
     }
   ]
 }
