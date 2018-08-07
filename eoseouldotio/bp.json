@@ -1,6 +1,5 @@
 {
   "producer_account_name": "eoseouldotio",
-  "producer_public_key": "EOS6SSA4gYCSZ3q9NWpxGsYDv5MWjSwKseyq25RRZexwj8EM6YHDa",
   "org": {
     "candidate_name": "EOSeoul",
     "website": "https://eoseoul.io",
@@ -33,15 +32,34 @@
   "nodes": [
     {
       "location": {
-        "name": "AWS Seoul",
+        "name": "AWS Seoul API",
         "country": "KR",
         "latitude": 37.400226,
         "longitude": 127.104194
       },
       "node_type": "full",
-      "p2p_endpoint": "api-full2.eoseoul.io:9876",
       "api_endpoint": "http://user-api.eoseoul.io",
       "ssl_endpoint": "https://user-api.eoseoul.io"
+    },
+    {
+      "location": {
+        "name": "AWS Seoul seed1",
+        "country": "KR",
+        "latitude": 37.400226,
+        "longitude": 127.104194
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "api-full1.eoseoul.io:9876"
+    },
+    {
+      "location": {
+        "name": "AWS Seoul seed2",
+        "country": "KR",
+        "latitude": 37.400226,
+        "longitude": 127.104194
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "api-full2.eoseoul.io:9876"
     },
     {
       "location": {
