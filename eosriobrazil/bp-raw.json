@@ -1,6 +1,5 @@
 {
   "producer_account_name": "eosriobrazil",
-  "producer_public_key": "EOS7RioGoHQnhv2fJEiciP9Q7J8JgfJYFcyofVkmCqMop8Q1PzgqP",
   "org": {
     "candidate_name": "EOS Rio",
     "website": "https://eosrio.io",
@@ -39,7 +38,6 @@
         "longitude": -77.3968
       },
       "node_type": "full",
-      "p2p_endpoint": "hapi.eosrio.io:9876",
       "ssl_endpoint": "https://hapi.eosrio.io"
     },
     {
@@ -50,7 +48,6 @@
         "longitude": -46.6333
       },
       "node_type": "full",
-      "p2p_endpoint": "api.eosrio.io:9876",
       "api_endpoint": "http://api.eosrio.io",
       "ssl_endpoint": "https://api.eosrio.io"
     },
@@ -61,10 +58,8 @@
         "latitude": -22.9096,
         "longitude": -43.1729
       },
-      "node_type": "full",
-      "p2p_endpoint": "br.eosrio.io:9876",
-      "api_endpoint": "http://br.eosrio.io",
-      "ssl_endpoint": "https://br.eosrio.io"
+      "node_type": "seed",
+      "p2p_endpoint": "br.eosrio.io:9876"
     }
   ]
 }
