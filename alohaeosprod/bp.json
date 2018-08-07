@@ -47,9 +47,18 @@
         "longitude": -0.118092
       },
       "node_type": "full",
-      "p2p_endpoint": "peer.main.alohaeos.com:9876",
       "api_endpoint": "http://api.main.alohaeos.com",
-      "ssl_endpoint": "https://api.main.alohaeos.com",
+      "ssl_endpoint": "https://api.main.alohaeos.com"
+    },
+    {
+      "location": {
+        "name": "London",
+        "country": "GB",
+        "latitude": 51.509865,
+        "longitude": -0.118092
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "peer.main.alohaeos.com:9876",
       "bnet_endpoint": "peer.main.alohaeos.com:4321"
     }
   ]
