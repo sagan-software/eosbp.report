@@ -39,9 +39,7 @@
         "longitude": 151.2099
       },
       "node_type": "full",
-      "p2p_endpoint": "peer1.eosphere.io:9876",
       "api_endpoint": "http://node1.eosphere.io",
-      "bnet_endpoint": "peer1.eosphere.io:4321",
       "ssl_endpoint": "https://node1.eosphere.io"
     },
     {
@@ -51,11 +49,40 @@
         "latitude": -33.865143,
         "longitude": 151.2099
       },
+      "node_type": "seed",
+      "p2p_endpoint": "peer1.eosphere.io:9876",
+      "bnet_endpoint": "peer1.eosphere.io:4321"
+    },
+    {
+      "location": {
+        "name": "Sydney, Australia",
+        "country": "AU",
+        "latitude": -33.865143,
+        "longitude": 151.2099
+      },
       "node_type": "full",
-      "p2p_endpoint": "peer2.eosphere.io:9876",
       "api_endpoint": "http://node2.eosphere.io",
-      "bnet_endpoint": "peer2.eosphere.io:4321",
       "ssl_endpoint": "https://node2.eosphere.io"
+    },
+    {
+      "location": {
+        "name": "Sydney, Australia",
+        "country": "AU",
+        "latitude": -33.865143,
+        "longitude": 151.2099
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "peer2.eosphere.io:9876",
+      "bnet_endpoint": "peer2.eosphere.io:4321"
+    },
+    {
+      "location": {
+        "name": "Sydney, Australia",
+        "country": "AU",
+        "latitude": -33.865143,
+        "longitude": 151.2099
+      },
+      "node_type": "producer"
     }
   ]
 }
