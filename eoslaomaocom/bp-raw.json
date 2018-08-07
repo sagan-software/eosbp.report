@@ -47,7 +47,16 @@
       },
       "node_type": "full",
       "api_endpoint": "https://api.eoslaomao.com",
-      "ssl_endpoint": "https://api.eoslaomao.com",
+      "ssl_endpoint": "https://api.eoslaomao.com"
+    },
+    {
+      "location": {
+        "name": "New York",
+        "country": "US",
+        "latitude": 40.689420,
+        "longitude": -74.044511
+      },
+      "node_type": "seed",
       "p2p_endpoint": "fullnode.eoslaomao.com:443",
       "bnet_endpoint": ""
     }
