@@ -6,11 +6,11 @@
     "website": "https://www.eosjapan.org",
     "code_of_conduct": "https://steemit.com/eos/@eosjapan/jeda-statement-of-ownership-disclosure-and-code-of-conduct",
     "ownership_disclosure": "https://steemit.com/eos/@eosjapan/jeda-statement-of-ownership-disclosure-and-code-of-conduct#owner",
-    "email":"info@eosjapan.org",
-    "branding":{
-      "logo_256":"https://www.eosjapan.org/jeda-logo-256.jpg",
-      "logo_1024":"https://www.eosjapan.org/jeda-logo-1024.jpg",
-      "logo_svg":"https://www.eosjapan.org/jeda-logo.svg"
+    "email": "info@eosjapan.org",
+    "branding": {
+      "logo_256": "https://www.eosjapan.org/jeda-logo-256.jpg",
+      "logo_1024": "https://www.eosjapan.org/jeda-logo-1024.jpg",
+      "logo_svg": "https://www.eosjapan.org/jeda-logo.svg"
     },
     "location": {
       "name": "Tokyo",
@@ -26,8 +26,7 @@
       "telegram": "eosjapan"
     }
   },
-  "nodes": [
-    {
+  "nodes": [{
       "location": {
         "name": "Tokyo",
         "country": "JP",
@@ -35,9 +34,27 @@
         "longitude": 139.779609
       },
       "node_type": "full",
-      "p2p_endpoint": "m.jeda.one:3322",
       "api_endpoint": "http://api.jeda.one",
       "ssl_endpoint": "https://api.jeda.one"
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.679105,
+        "longitude": 139.779609
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "m.jeda.one:3322"
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.679105,
+        "longitude": 139.779609
+      },
+      "node_type": "producer"
     }
   ]
 }
