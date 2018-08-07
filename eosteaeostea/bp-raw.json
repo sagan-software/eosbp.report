@@ -1,0 +1,50 @@
+{
+    "producer_account_name": "eosteaeostea",
+    "org": {
+        "candidate_name": "EOSTEA",
+        "website": "https://eostea.io",
+        "code_of_conduct": "https://steemit.com/eosgo/@eostea/eostea-block-producer-candidate-information",
+        "ownership_disclosure": "https://eostea.io/disclosure.html",
+        "email": "support@tclabs.tech",
+        "branding": {
+            "logo_1024": "https://eostea.io/eostea_1024.png"
+        },
+        "location": {
+            "name": "Hangzhou",
+            "country": "China",
+            "latitude": 30.291609,
+            "longitude": 120.112377
+        },
+        "social": {
+            "steemit": "eostea",
+            "twitter": "eostea_io",
+            "keybase": "eostea",
+            "telegram": "eosfanscn"
+        }
+    },
+    "nodes": [
+        {
+            "location": {
+                "name": "Hongkong",
+                "country": "China",
+                "latitude": 22.354443,
+                "longitude": 114.159161
+            },
+            "node_type": "producer",
+            "p2p_endpoint": "",
+            "api_endpoint": "",
+            "ssl_endpoint": ""
+        },
+        {
+            "location": {
+                "name": "Hongkong",
+                "country": "China",
+                "latitude": 22.354443,
+                "longitude": 114.159161
+            },
+            "node_type": "full",
+            "api_endpoint": "http://eos-rpc.tc.ink",
+            "ssl_endpoint": "https://eos-rpc.tc.ink"
+        }
+    ]
+}
