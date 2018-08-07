@@ -2,14 +2,16 @@
   "producer_account_name": "eosantpoolbp",
   "producer_public_key": "EOS6F9hDeGD3unoq67N9pmLVXKvsLTqi7wx3Ly9kxq4fZB3qLTjcs",
   "org": {
+    "candidate_name": "EOS AntPool",
+    "website": "https://eosantpool.com",
+    "code_of_conduct": "",
+    "ownership_disclosure": "",
+    "email": "antpool@bitmain.com",
     "branding": {
       "logo_1024": "",
       "logo_256": "https://antpool.com/images/antpool/logo@2x.png",
       "logo_svg": ""
     },
-    "candidate_name": "EOS AntPool",
-    "code_of_conduct": "",
-    "email": "antpool@bitmain.com",
     "location": {
       "country": "CN",
       "latitude": 39.9,
@@ -17,32 +19,47 @@
       "name": "Beijing"
     },
     "social": {
-      "facebook": "AntPoolBITMAIN",
-      "github": "",
-      "keybase": "",
-      "reddit": "",
       "steemit": "antpool",
-      "telegram": "AntPoolEOSUS",
       "twitter": "AntPoolofficial",
-      "wechat": "icupertino",
-      "youtube": ""
-    },
-    "website": "https://eosantpool.com"
+      "youtube": "",
+      "facebook": "AntPoolBITMAIN",
+      "github": "antpool",
+      "reddit": "",
+      "keybase": "antpool",
+      "telegram": "AntPoolEOSUS",
+      "wechat": "icupertino"
+    }
   },
   "nodes": [
     {
-      "api_endpoint": "http://api.bp.antpool.com",
-      "is_producer": false,
       "location": {
+        "name": "Beijing",
         "country": "CN",
         "latitude": 39.9,
-        "longitude": 116.3,
-        "name": "Beijing"
+        "longitude": 116.3
       },
       "node_type": "full",
-      "p2p_endpoint": "bp.antpoool.com:443",
+      "api_endpoint": "http://api.bp.antpool.com",
       "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Beijing",
+        "country": "CN",
+        "latitude": 39.9,
+        "longitude": 116.3
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "bp.antpoool.com:443"
+    },
+    {
+      "location": {
+        "name": "Beijing",
+        "country": "CN",
+        "latitude": 39.9,
+        "longitude": 116.3
+      },
+      "node_type": "producer"
     }
   ]
 }
-
