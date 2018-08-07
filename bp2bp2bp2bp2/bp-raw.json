@@ -37,8 +37,8 @@
         "latitude": 34.0522,
         "longitude": -118.2437
       },
-      "is_producer": true,
-      "p2p_endpoint": "",
+      "node_type": "seed",
+      "p2p_endpoint": "p2p1.bp2.io:4444",
       "api_endpoint": "",
       "ssl_endpoint": ""
     },
@@ -49,8 +49,8 @@
         "latitude": 46.1651,
         "longitude": 123.9238
       },
-      "is_producer": false,
-      "p2p_endpoint": "p2p1.bp2.io:4444",
+      "node_type": "full",
+      "p2p_endpoint": "",
       "api_endpoint": "http://node1.bp2.io",
       "ssl_endpoint": "https://node1.bp2.io"
     }
