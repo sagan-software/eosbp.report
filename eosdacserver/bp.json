@@ -1,6 +1,5 @@
 {
   "producer_account_name": "eosdacserver",
-  "producer_public_key": "EOS7aBPDACAn1SpJDjmaZHSEUgqfNWdUaNawVZhVuEWUx5aoepJf6",
   "org": {
     "candidate_name": "eosDAC",
     "website": "https://eosdac.io",
@@ -39,9 +38,27 @@
         "longitude": 26.1025
       },
       "node_type": "full",
-      "p2p_endpoint": "eu.eosdac.io:49876",
       "api_endpoint": "http://eu.eosdac.io",
       "ssl_endpoint": "https://eu.eosdac.io"
+    },
+    {
+      "location": {
+        "name": "Bucharest",
+        "country": "RO",
+        "latitude": 44.4268,
+        "longitude": 26.1025
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "eu1.eosdac.io:49876"
+    },
+    {
+      "location": {
+        "name": "United Kingdom",
+        "country": "UK",
+        "latitude": 51.5085,
+        "longitude": -0.1257
+      },
+      "node_type": "producer"
     }
   ]
 }
