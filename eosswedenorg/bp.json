@@ -34,12 +34,28 @@
     {
       "location": {
         "name": "Sweden",
+        "country": "SE"
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Sweden",
         "country": "SE",
         "latitude": 59.6268,
         "longitude": 16.544
       },
-      "node_type": "full",
-      "p2p_endpoint": "p2p.eossweden.se:9876",
+      "node_type": "peer",
+      "p2p_endpoint": "p2p.eossweden.se:9876"
+    },
+    {
+      "location": {
+        "name": "Sweden",
+        "country": "SE",
+        "latitude": 59.3322,
+        "longitude": 18.0707
+      },
+      "node_type": "api",
       "api_endpoint": "http://api.eossweden.se",
       "ssl_endpoint": "https://api.eossweden.se"
     }
