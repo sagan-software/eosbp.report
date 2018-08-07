@@ -1,0 +1,42 @@
+{
+	"producer_account_name": "eosdotwikibp",
+	"producer_public_key": "EOS7RsdDs8k8GDAdZrETnTjoGwiqAwwdNyxeH8q6fmHgpHjPPnyco",
+	"org": {
+		"candidate_name": "EOS WIKI",
+		"website": "https://eos.wiki",
+		"email": "bp@eos.wiki",
+		"location": {
+			"name": "Hong Kong",
+			 "country": "CN",
+			"latitude": 22.396428,
+			"longitude": 114.109497
+		 },
+		"social": {
+			"steemit": "eos.wiki"
+		 }
+	},
+	"nodes": [
+		{
+			 "location": {
+				"name": "Singapore",
+				 "country": "SG",
+				"latitude": 1.352083,
+				"longitude": 103.819836
+			 },
+			"node_type": "full",
+			"api_endpoint": "http://api.eos.wiki:38888",
+			"p2p_endpoint": "api.eos.wiki:39876",
+			"ssl_endpoint": "",
+			"bnet_endpoint": ""
+		},
+		 {
+			 "location": {
+				"name": "Singapore",
+				 "country": "SG",
+				"latitude": 1.352083,
+				"longitude": 103.819836
+			},
+			 "node_type": "producer"
+		 }
+    ]
+}
