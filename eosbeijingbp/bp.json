@@ -36,7 +36,16 @@
       },
       "node_type": "full",
       "api_endpoint": "http://api.eosbeijing.one",
-      "ssl_endpoint": "https://api.eosbeijing.one",
+      "ssl_endpoint": "https://api.eosbeijing.one"
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.7090259,
+        "longitude": 139.7319925
+      },
+      "node_type": "seed",
       "p2p_endpoint": "bp.eosbeijing.one:8080",
       "bnet_endpoint": "bp.eosbeijing.one:8081"
     },
