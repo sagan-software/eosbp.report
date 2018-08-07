@@ -1,6 +1,5 @@
 {
   "producer_account_name": "swedencornet",
-  "producer_public_key": "EOS55RGDuvrXjDaijB7ixYtJ1U7EnWDe16X9aWxAPQ64jrYCrsbCQ",
   "org": {
     "candidate_name": "EOS Sweden (swedencornet)",
     "website": "https://eossweden.eu",
@@ -33,10 +32,10 @@
   "nodes": [
     {
       "location": {
-        "name": "Sweden",
-        "country": "SE",
-        "latitude": 59.6268,
-        "longitude": 17.9442475
+        "name": "Amsterdam",
+        "country": "NL",
+        "latitude": 52.379189,
+        "longitude": 4.899431
       },
       "node_type": "full",
       "api_endpoint": "http://api2.eossweden.eu",
@@ -44,10 +43,10 @@
     },
     {
       "location": {
-        "name": "Sweden",
-        "country": "SE",
-        "latitude": 59.6268,
-        "longitude": 17.9442475
+        "name": "Amsterdam",
+        "country": "NL",
+        "latitude": 52.379189,
+        "longitude": 4.899431
       },
       "node_type": "seed",
       "p2p_endpoint": "p2p2.eossweden.eu:9966",
@@ -55,10 +54,10 @@
     },
     {
       "location": {
-        "name": "Sweden",
-        "country": "SE",
-        "latitude": 59.6268,
-        "longitude": 17.9442475
+        "name": "Amsterdam",
+        "country": "NL",
+        "latitude": 52.379189,
+        "longitude": 4.899431
       },
       "node_type": "producer"
     }
