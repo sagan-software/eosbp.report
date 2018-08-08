@@ -1,6 +1,5 @@
 {
   "producer_account_name": "eospaceioeos",
-  "producer_public_key": "EOS7dZPHgFJXwHz84JWf5QgybxLpp95cxYE5c4yngsrSqgVFczaPs",
   "org": {
     "candidate_name": "EOSpace",
     "website": "https://eospace.io",
@@ -33,16 +32,43 @@
   "nodes": [
     {
       "location": {
-        "name": "Los Angeles",
+        "name": "Los Angeles API1",
         "country": "US",
         "latitude": -22.9096,
         "longitude": -43.1729
       },
-      "is_producer": false,
       "node_type": "full",
-      "p2p_endpoint": "p2p.mainnet.eospace.io:88",
       "api_endpoint": "http://api.mainnet.eospace.io",
       "ssl_endpoint": "https://api.mainnet.eospace.io"
+    },
+    {
+      "location": {
+        "name": "Los Angeles Seed1",
+        "country": "US",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.mainnet.eospace.io:88"
+    },
+    {
+      "location": {
+        "name": "Los Angeles Seed2",
+        "country": "US",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p-us.mainnet.eospace.io:88"
+    },
+    {
+      "location": {
+        "name": "Los Angeles Producer",
+        "country": "US",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "node_type": "producer"
     }
   ]
 }
