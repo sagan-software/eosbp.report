@@ -36,10 +36,7 @@
         "longitude": -78.024902
       },
       "node_type": "full",
-      "p2p_endpoint": "eosapi.blockmatrix.network:13546",
-      "api_endpoint": "",
-      "ssl_endpoint": "https://eosapi.blockmatrix.network",
-      "bnet_endpoint": "eosapi.blockmatrix.network:16453"
+      "ssl_endpoint": "https://eosapi.blockmatrix.network"
     },
     {
       "location": {
@@ -48,7 +45,8 @@
         "latitude": 37.926868,
         "longitude": -78.024902
       },
-      "node_type": "seed"
+      "node_type": "seed",
+      "p2p_endpoint": "eosapi.blockmatrix.network:13546"
     },
     {
       "location": {
