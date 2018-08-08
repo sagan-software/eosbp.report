@@ -12,7 +12,7 @@
       "logo_svg": "https://www.helloeos.com.cn/images/helloeos.svg"
     },
     "location": {
-      "name": "Hangzhou,Zhejiang",
+      "name": "Hangzhou, Zhejiang",
       "country": "CN",
       "latitude": 30.2741,
       "longitude": 120.1551
@@ -36,10 +36,17 @@
         "latitude": 40.4173,
         "longitude": -82.9071
       },
-      "node_type": "producer",
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Ohio",
+        "country": "US",
+        "latitude": 40.4173,
+        "longitude": -82.9071
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "peer1.mainnet.helloeos.com.cn:80"
     },
     {
       "location": {
