@@ -8,8 +8,8 @@
 	"ownership_disclosure":"https://www.eosdublin.com/disclosures/#ownership",
     "email":"hello@eosdublin.com",
     "branding":{
-      "logo_256":"https://cdn.rawgit.com/eosdublin/eosdublin/master/images/eosdublin-icon-256.png",
-      "logo_1024":"https://cdn.rawgit.com/eosdublin/eosdublin/master/images/eosdublin-icon-1024.png",
+      "logo_256":"https://raw.githubusercontent.com/eosdublin/eosdublin/master/images/eosdublin-icon-256.png",
+      "logo_1024":"https://raw.githubusercontent.com/eosdublin/eosdublin/master/images/eosdublin-icon-1024.png",
       "logo_svg":"https://cdn.rawgit.com/eosdublin/eosdublin/master/images/icon.svg"
     },
     "location": {
@@ -28,6 +28,15 @@
     }
   },
   "nodes": [
+    {
+        "location": {
+          "name": "Dublin",
+          "country": "IE",
+          "latitude": 53.3498,
+          "longitude": -6.2603
+        },
+        "node_type": "producer"
+    },
     {
       "location": {
         "name": "Dublin",
