@@ -4,7 +4,8 @@
   "org": {
     "candidate_name": "EOS Store",
     "website": "https://www.eos.store",
-    "code_of_conduct":"",
+    "ownership_disclosure":"",
+    "code_of_conduct":"https://steemit.com/roadmap/@eos.store/eos-store-block-producer-report-roadmap-and-views-on-dividends",
     "email":"market@eos.store",
     "branding":{
       "logo_256":"https://images.eos.store/eosstore-256.png",
@@ -18,14 +19,14 @@
       "longitude": 116.4722
     },
     "social": {
-      "steemit": "https://steemit.com/@eos.store",
-      "twitter": "https://twitter.com/StoreEos",
+      "steemit": "eos.store",
+      "twitter": "StoreEos",
       "youtube": "",
-      "facebook": "https://www.facebook.com/StoreEos",
-      "github":"https://github.com/eosstore",
-      "reddit": "",
-      "keybase": "",
-      "telegram": "https://t.me/StoreEos",
+      "facebook": "StoreEos",
+      "github":"eosstore",
+      "reddit": "EosStore",
+      "keybase": "eosstore",
+      "telegram": "StoreEos",
       "wechat":"EosStore"
     }
   },
@@ -38,7 +39,7 @@
         "longitude": 139.4952
       },
       "is_producer": true,
-      "p2p_endpoint": "peer1.mainnet.eos.store:80",
+      "p2p_endpoint": "peer1.mainnet.eos.store:8080",
       "api_endpoint": "http://api.eos.store",
       "ssl_endpoint": "https://api.eos.store"
     },
