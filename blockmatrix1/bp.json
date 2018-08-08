@@ -1,6 +1,5 @@
 {
   "producer_account_name": "blockmatrix1",
-  "producer_public_key": "EOS6oNSm6QKnMBzJDHiA32KsEjSgKKt1nGdPYfc2wZU34HA9GjP9q",
   "org": {
     "candidate_name": "Block Matrix",
     "website": "https://blockmatrix.network",
@@ -41,6 +40,24 @@
       "api_endpoint": "",
       "ssl_endpoint": "https://eosapi.blockmatrix.network",
       "bnet_endpoint": "eosapi.blockmatrix.network:16453"
+    },
+    {
+      "location": {
+        "name": "N. Virginia",
+        "country": "US",
+        "latitude": 37.926868,
+        "longitude": -78.024902
+      },
+      "node_type": "seed"
+    },
+    {
+      "location": {
+        "name": "N. Virginia",
+        "country": "US",
+        "latitude": 37.926868,
+        "longitude": -78.024902
+      },
+      "node_type": "producer"
     }
   ]
 }
