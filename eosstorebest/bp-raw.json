@@ -4,7 +4,7 @@
   "org": {
     "candidate_name": "EOS Store",
     "website": "https://www.eos.store",
-    "ownership_disclosure":"",
+    "ownership_disclosure":"https://steemit.com/statement/@eos.store/eosstore-statement-of-ownership",
     "code_of_conduct":"https://steemit.com/roadmap/@eos.store/eos-store-block-producer-report-roadmap-and-views-on-dividends",
     "email":"market@eos.store",
     "branding":{
@@ -38,7 +38,7 @@
         "latitude": 35.4981,
         "longitude": 139.4952
       },
-      "is_producer": false,
+      "node_type": "full",
       "p2p_endpoint": "peer1.mainnet.eos.store:8080",
       "api_endpoint": "http://api.eos.store",
       "ssl_endpoint": "https://api.eos.store"
@@ -46,14 +46,11 @@
     {
       "location": {
         "name": "Tokyo public node 2",
-        "country": "Japan",
+        "country": "JP",
         "latitude": 35.4981,
         "longitude": 139.4952
       },
-      "is_producer": false,
-      "p2p_endpoint": "peer2.mainnet.eos.store:80",
-      "api_endpoint": "http://api.eos.store",
-      "ssl_endpoint": "https://api.eos.store"
+      "node_type": "producer"
     }
   ]
 }
