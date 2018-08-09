@@ -1,21 +1,21 @@
 {
   "producer_account_name": "eosbixinboot",
-  "producer_public_key": "EOS7QC1XfAtkYeLjbHQjcDWVqUsxuSJ3YRhNyG93VAv2u3uHopGVp",
   "org": {
-    "website": "http://en.eosbixin.com",
+    "website": "https://en.eosbixin.com",
     "email": "eos@bixin.com",
     "candidate_name": "EOSBIXIN",
     "ownership_disclosure": "https://steemit.com/eos/@tuitui/ownership-disclosure-of-eosbixin",
     "code_of_conduct": "https://steemit.com/eos/@tuitui/eosbixin-code-of-conduct",
     "location": {
       "name": "Bangkok",
-      "country": "Thailand",
+      "country": "TH",
       "latitude": 13.736717,
       "longitude": 100.523186
     },
     "branding": {
-      "logo": "https://raw.githubusercontent.com/consenlabs/eos-bp-profile/master/images/logo-eosbixin.png",
-      "cover": "https://raw.githubusercontent.com/consenlabs/eos-bp-profile/master/images/cover-eosbixin.png"
+      "logo_256": "https://raw.githubusercontent.com/EOSBIXIN/eostoolkit/master/logo/eosbixinlogo_256.png",
+      "logo_1024": "https://raw.githubusercontent.com/EOSBIXIN/eostoolkit/master/logo/eosbixinlogo_1024.png",
+      "logo_svg": "https://raw.githubusercontent.com/EOSBIXIN/eostoolkit/master/logo/eosbixinlogo.svg"
     },
     "social": {
       "steemit": "tuitui",
@@ -34,16 +34,34 @@
   "nodes": [
     {
       "location": {
-        "name": "HK",
+        "name": "HongKong",
+        "country": "CN",
+        "latitude": 22.28552,
+        "longitude": 114.15769
+      },
+      "node_type": "full",
+      "is_producer": false,
+      "api_endpoint": "http://mars.fn.eosbixin.com",
+      "ssl_endpoint": "https://mars.fn.eosbixin.com"
+    },
+    {
+      "location": {
+        "name": "HongKong",
         "country": "CN",
         "latitude": 22.28552,
         "longitude": 114.15769
       },
       "node_type": "seed",
-      "is_producer": false,
-      "p2p_endpoint": "http://mars.fnp2p.eosbixin.com:443",
-      "api_endpoint": "http://mars.fn.eosbixin.com",
-      "ssl_endpoint": "https://mars.fn.eosbixin.com"
+      "p2p_endpoint": "mars.fnp2p.eosbixin.com:443"
+    },
+    {
+      "location": {
+        "name": "HongKong",
+        "country": "CN",
+        "latitude": 22.28552,
+        "longitude": 114.15769
+      },
+      "node_type": "producer"
     }
   ]
 }
