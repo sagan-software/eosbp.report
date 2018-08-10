@@ -1,10 +1,10 @@
 {
   "producer_account_name": "eosflareiobp",
-  "producer_public_key": "EOS6FLARENUBrQSqSRWk4BZG6oyUcepnTb1T6j3LgrExpJaL4gk89",
   "org": {
     "candidate_name": "EOS Flare",
     "website": "https://eosflare.io",
-    "code_of_conduct": "https://node.eosflare.io/eosflare-code-of-conduct.txt",
+    "code_of_conduct": "https://node.eosflare.io/eosflare-code-of-conduct.html",
+    "ownership_disclosure": "https://node.eosflare.io/eosflare-ownership-disclosure.html",
     "email": "contact@eosflare.io",
     "branding": {
       "logo_256": "",
@@ -12,7 +12,7 @@
       "logo_svg": ""
     },
     "location": {
-      "name": "Global",
+      "name": "Global DAC",
       "country": "US",
       "latitude": 41.22,
       "longitude": -95.86
@@ -22,7 +22,7 @@
       "twitter": "",
       "youtube": "",
       "facebook": "",
-      "github": "",
+      "github": "eosflare",
       "reddit": "",
       "keybase": "",
       "telegram": "",
@@ -32,15 +32,25 @@
   "nodes": [
     {
       "location": {
-        "name": "Global",
+        "name": "Global DAC",
         "country": "US",
         "latitude": 41.22,
         "longitude": -95.86
       },
-      "is_producer": true,
-      "p2p_endpoint": "node.eosflare.io:1883",
+      "node_type": "full",
       "api_endpoint": "http://node.eosflare.io",
       "ssl_endpoint": "https://node.eosflare.io"
+    },
+    {
+      "location": {
+        "name": "Global DAC",
+        "country": "US",
+        "latitude": 41.22,
+        "longitude": -95.86
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "node.eosflare.io:1883",
+      "bnet_endpoint": "node.eosflare.io:5222"
     }
   ]
 }
