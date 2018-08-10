@@ -38,8 +38,27 @@
         "latitude": 24.0518,
         "longitude": 120.5161
       },
-      "node_type": "full",      
+      "node_type": "seed",      
       "p2p_endpoint": "peering1.mainnet.eosasia.one:80",
+    },
+    {
+      "location": {
+        "name": "Changhua",
+        "country": "TW",
+        "latitude": 24.0518,
+        "longitude": 120.5161
+      },
+      "node_type": "seed",      
+      "p2p_endpoint": "peering2.mainnet.eosasia.one:80",
+    },
+    {
+      "location": {
+        "name": "Changhua",
+        "country": "TW",
+        "latitude": 24.0518,
+        "longitude": 120.5161
+      },
+      "node_type": "api",      
       "api_endpoint": "http://api1.eosasia.one",
       "ssl_endpoint": "https://api1.eosasia.one"
     },
