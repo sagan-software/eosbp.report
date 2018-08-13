@@ -1,0 +1,33 @@
+{
+  "producer_account_name": "foodtokeneos",
+  "producer_public_key": "EOS6aaVtZhb9Yx3vWLm1EQ9XMnvuZs22cmu2xKg3WJNnF7mHSoRyW",
+  "org": {
+    "candidate_name": "FOODtoken, LLC",
+    "website": "https://foodtoken.io",
+    "email":"hello@foodtoken.io",
+    "location": {
+      "name": "Arlington, Virginia",
+      "country": "US",
+      "latitude": 38.892906,
+      "longitude": -77.079535
+    },
+    "social": {
+      "steemit": "foodtoken",
+      "twitter": "foodtokenio"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Montreal, Canada",
+        "country": "CA",
+        "latitude": 45.291075, 
+        "longitude": -73.890043
+      },
+      "node_type": "full",
+      "p2p_endpoint": "mainnet.eos.foodtoken.io:9876",
+      "bnet_endpoint": "mainnet.eos.foodtoken.io:9875",
+      "api_endpoint": "http://mainnet.eos.foodtoken.io:8888"
+    }
+  ]
+}
