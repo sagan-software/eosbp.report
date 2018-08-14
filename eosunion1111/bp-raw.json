@@ -30,8 +30,8 @@
       },
       "is_producer": false,
       "p2p_endpoint": "mainnet.eos.ren:9376",
-      "api_endpoint": "http://api2.eos.ren:8883",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://api.eos.ren:8883",
+      "ssl_endpoint": "https://api.eos.ren:443"
     },
     {
       "location": {
@@ -42,8 +42,8 @@
       },
       "is_producer": true,
       "p2p_endpoint": "mainnet1.eos.ren:9376",
-      "api_endpoint": "http://api2.eos.ren:8883",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://api1.eos.ren:8883",
+      "ssl_endpoint": "https://api1.eos.ren:443"
     }
   ]
 }
