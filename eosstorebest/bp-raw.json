@@ -33,19 +33,28 @@
   "nodes": [
     {
       "location": {
-        "name": "Tokyo public node 1",
+        "name": "Tokyo",
         "country": "JP",
         "latitude": 35.4981,
         "longitude": 139.4952
       },
       "node_type": "full",
-      "p2p_endpoint": "peer2.eosstore.link:12819",
-      "api_endpoint": "http://api.eos.store",
-      "ssl_endpoint": "https://api.eos.store"
+      "api_endpoint": "http://api.eosstore.co",
+      "ssl_endpoint": "https://api.eosstore.co"
     },
     {
       "location": {
-        "name": "Tokyo public node 2",
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.4981,
+        "longitude": 139.4952
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "peer2.eosstore.link:12819"
+    },
+    {
+      "location": {
+        "name": "Toky",
         "country": "JP",
         "latitude": 35.4981,
         "longitude": 139.4952
