@@ -1,0 +1,46 @@
+{
+  "producer_account_name": "eoswondersbp",
+  "producer_public_key": "",
+  "org": {
+    "candidate_name": "eoswonders",
+    "website": "www.eoswonders.com",
+    "code_of_conduct":"",
+    "email":"support@eoswonders.com",
+    "branding":{
+      "logo_256":"",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Shanghai,China",
+      "country": "CN",
+      "latitude": 31.22,
+      "longitude": 121.44
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Shanghai China",
+        "country": "CN",
+        "latitude": 31.07,
+        "longitude": 121.51
+      },
+      "is_producer": true,
+      "p2p_endpoint": "bp1.eoswonders.com:9876",
+      "api_endpoint": "peer1.eoswonders.com:54321",
+      "ssl_endpoint": "peer1.eoswonders.com:54321"
+    }
+  ]
+}
