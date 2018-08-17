@@ -10,7 +10,7 @@
     "branding": {
       "logo_1024": "https://bridgepool.lambda.im/Lambda-Bridge-Pool-1024x1024.png",
       "logo_256": "https://bridgepool.lambda.im/Lambda-Pool-256x256.png",
-      "logo_svg": "https://bridgepool.lambda.im/Lambda-Pool.svg",
+      "logo_svg": "https://bridgepool.lambda.im/Lambda-Pool.svg"
     },
     "location": {
       "country": "CN",
@@ -39,7 +39,7 @@
         "longitude": 116.3
       },
       "node_type": "full",
-      "api_endpoint": "",
+      "api_endpoint": "http://api.bp.lambda.im",
       "ssl_endpoint": ""
     },
     {
@@ -50,7 +50,7 @@
         "longitude": 116.3
       },
       "node_type": "seed",
-      "p2p_endpoint": ""
+      "p2p_endpoint": "fullnode.bp.lambda.im:9876"
     },
     {
       "location": {
