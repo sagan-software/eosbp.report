@@ -1,0 +1,64 @@
+{
+  "producer_account_name": "unlimitedeos",
+  "org": {
+    "candidate_name": "UnlimitedEOS",
+    "website": "http://www.unlimitedeos.com",
+    "code_of_conduct": "https://steemit.com/eos/@uipofficial/two-new-criteria-for-bp",
+    "ownership_disclosure": "https://steemit.com/eos/@uipofficial/unlimitedip-is-running-for-eos-bp",
+    "email": "open@lianyu.io",
+    "branding": {
+      "logo_256": "http://www.unlimitedeos.com/logo/logo_256.png",
+      "logo_1024": "http://www.unlimitedeos.com/logo/logo_1024.png",
+      "logo_svg": "http://www.unlimitedeos.com/logo/logo.svg"
+    },
+    "location": {
+      "name": "Beijing",
+      "country": "CN",
+      "latitude": 39.921112,
+      "longitude": 116.503078
+    },
+    "social": {
+      "steemit": "uipofficial",
+      "twitter": "UIP_Official",
+      "youtube": "",
+      "github": "",
+      "telegram": "https://t.me/UIPworld",
+      "facebook": "https://www.facebook.com/Unlimitedip-282278292298208/",
+      "reddit": "",
+      "keybase": "",
+      "wechat": "UnlimitedIP1"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.4984,
+        "longitude": 139.4972
+      },
+      "node_type": "full",
+      "api_endpoint": "http://eos.unlimitedeos.com:7777",
+      "ssl_endpoint": "https://eos.unlimitedeos.com:9999",
+      "p2p_endpoint": "eos.unlimitedeos.com:15555"
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.4984,
+        "longitude": 139.4972
+      },
+      "node_type": "full"
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.4984,
+        "longitude": 139.4972
+      },
+      "node_type": "producer"
+    }
+  ]
+}
