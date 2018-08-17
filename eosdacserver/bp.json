@@ -39,7 +39,8 @@
       },
       "node_type": "full",
       "api_endpoint": "http://eu.eosdac.io",
-      "ssl_endpoint": "https://eu.eosdac.io"
+      "ssl_endpoint": "https://eu.eosdac.io",
+      "p2p_endpoint": "eu.eosdac.io:49876"
     },
     {
       "location": {
@@ -50,16 +51,6 @@
       },
       "node_type": "seed",
       "p2p_endpoint": "as1.eosdac.io:49876"
-    },
-    {
-      "location": {
-        "name": "Bucharest",
-        "country": "RO",
-        "latitude": 44.4268,
-        "longitude": 26.1025
-      },
-      "node_type": "seed",
-      "p2p_endpoint": "eu.eosdac.io:49876"
     },
     {
       "location": {
