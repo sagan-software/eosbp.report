@@ -1,0 +1,65 @@
+{
+  "producer_account_name": "eoslambdacom",
+  "producer_public_key": "5JMEwpGHJN7dQ7Ek1svf93kWg2fXJziMuybmCmq5rQEhRqrV6jK",
+  "org": {
+    "candidate_name": "EOS Lambda",
+    "website": "https://bridgepool.lambda.im",
+    "code_of_conduct": "https://blog.lambda.im/2018/08/17/lambda-bridge-pool-block-producer-candidate-introduction",
+    "ownership_disclosure": "https://blog.lambda.im/2018/08/17/lambda-bridge-pool-block-producer-candidate-introduction",
+    "email": "info@lambda.im",
+    "branding": {
+      "logo_1024": "https://bridgepool.lambda.im/Lambda-Bridge-Pool-1024x1024.png",
+      "logo_256": "https://bridgepool.lambda.im/Lambda-Pool-256x256.png",
+      "logo_svg": "https://bridgepool.lambda.im/Lambda-Pool.svg"
+    },
+    "location": {
+      "country": "CN",
+      "latitude": 39.9,
+      "longitude": 116.3,
+      "name": "Beijing"
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "Lambdaim",
+      "youtube": "",
+      "facebook": "Lambdaim",
+      "github": "LambdaIM",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "HelloLambda",
+      "wechat": "Lambda"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Beijing",
+        "country": "CN",
+        "latitude": 39.9,
+        "longitude": 116.3
+      },
+      "node_type": "full",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Beijing",
+        "country": "CN",
+        "latitude": 39.9,
+        "longitude": 116.3
+      },
+      "node_type": "seed",
+      "p2p_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Beijing",
+        "country": "CN",
+        "latitude": 39.9,
+        "longitude": 116.3
+      },
+      "node_type": "producer"
+    }
+  ]
+}
