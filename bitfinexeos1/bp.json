@@ -6,6 +6,7 @@
     "website": "https://www.bitfinex.com",
     "email": "admin@bitfinex.com",
     "code_of_conduct": "https://www.bitfinex.com/eos",
+    "ownership_disclosure": "https://www.bitfinex.com/eos",
     "location": {
       "name": "British Virgin Islands",
       "country": "VG",
@@ -34,7 +35,7 @@
         "latitude": 51.509865,
         "longitude": -0.118092
       },
-      "is_producer": false,
+      "node_type": "full",
       "p2p_endpoint": "eos-bp.bitfinex.com:9876",
       "api_endpoint": "http://eos-bp.bitfinex.com:8888",
       "ssl_endpoint": ""
@@ -46,7 +47,7 @@
         "latitude": 51.509865,
         "longitude": -0.118092
       },
-      "is_producer": true,
+      "node_type": "producer",
       "p2p_endpoint": "",
       "api_endpoint": "",
       "ssl_endpoint": ""
