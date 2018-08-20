@@ -27,16 +27,24 @@
   "nodes": [
     {
       "location": {
-        "name": "GEOS",
-        "country": "JPN",
+        "name": "Tokyo",
+        "country": "JP",
         "latitude": 35.793,
         "longitude": 139.175
       },
-      "is_producer": false,
-      "p2p_endpoint": "bp.geos.one:80",
       "api_endpoint": "http://bp.geos.one",
       "ssl_endpoint": "https://bp.geos.one",
-      "node_type": "query"
+      "node_type": "full"
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude": 35.793,
+        "longitude": 139.175
+      },
+      "p2p_endpoint": "bp.geos.one:80",
+      "node_type": "seed"
     }
   ]
 }
