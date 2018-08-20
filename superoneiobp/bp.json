@@ -1,6 +1,5 @@
 {
   "producer_account_name": "superoneiobp",
-  "producer_public_key": "EOS6jtExp2sGpxMY8jFP1aBhDkdyHvuMS7EAVgDWQ7kaeMtdLH34U",
   "org": {
     "candidate_name": "SuperONE",
     "website": "https://superone.io",
@@ -38,7 +37,7 @@
         "latitude": 22.543096,
         "longitude": 114.057865
       },
-      "is_producer": false,
+      "node_type": "seed",
       "p2p_endpoint": "bp.superone.io:57576",
       "api_endpoint": "http://api.superone.io",
       "ssl_endpoint": "https://api.superone.io"
@@ -50,10 +49,10 @@
         "latitude": 40.7830603,
         "longitude": -73.9712488
       },
-      "is_producer": true,
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "node_type": "full",
+      "p2p_endpoint": "bp.superone.io:57576",
+      "api_endpoint": "http://api.superone.io",
+      "ssl_endpoint": "https://api.superone.io"
     },
     {
       "location": {
@@ -62,10 +61,10 @@
         "latitude": 35.7090259,
         "longitude": 139.7319925
       },
-      "is_producer": false,
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "node_type": "full",
+      "p2p_endpoint": "bp.superone.io:57576",
+      "api_endpoint": "http://api.superone.io",
+      "ssl_endpoint": "https://api.superone.io"
     }
   ]
 }
