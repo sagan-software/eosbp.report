@@ -1,75 +1,64 @@
 {
   "producer_account_name": "eoswondersbp",
-  "producer_public_key": "",
   "org": {
-    "candidate_name": "eosWonders",
-    "website": "www.eoswonders.com",
+    "candidate_name": "eoswonders",
+    "website": "https://eoswonders.com",
     "code_of_conduct":"",
     "ownership_disclosure":"",
     "email":"support@eoswonders.com",
     "branding":{
-      "logo_256":"http://www.eoswonders.com/logo_256.png",
-      "logo_1024":"http://www.eoswonders.com/logo_1024.png",
-      "logo_svg":"http://www.eoswonders.com/logo_svg.png"
+      "logo_256":"https://www.eoswonders.com/logo_256.png",
+      "logo_1024":"https://www.eoswonders.com/logo_1024.png",
+      "logo_svg":"https://www.eoswonders.com/logo_svg.png"
     },
     "location": {
       "name": "Shanghai",
       "country": "CN",
-      "latitude": 31.22,
-      "longitude": 121.44
+      "latitude": 121.528165,
+      "longitude": 31.084247
     },
     "social": {
       "steemit": "",
       "twitter": "",
       "youtube": "",
       "facebook": "",
-      "github":"",
+      "github": "discha",
       "reddit": "",
       "keybase": "",
-      "telegram": "",
-      "wechat":""
+      "telegram": "discha",
+      "wechat": ""
     }
   },
   "nodes": [
     {
       "location": {
-        "name": "Shanghai",
-        "country": "CN",
-        "latitude": 31.07,
-        "longitude": 121.51
-      },
-      "node_type": "seed",
-      "p2p_endpoint": "node1.eoswonders.com:59876",
-    },
-    {
-      "location": {
-        "name": "Shanghai",
-        "country": "CN",
-        "latitude": 31.07,
-        "longitude": 121.51
-      },
-      "node_type": "full",
-      "p2p_endpoint": "node2.eoswonders.com:59876",
-    },
-    {
-      "location": {
-        "name": "Shanghai",
-        "country": "CN",
-        "latitude": 31.07,
-        "longitude": 121.51
-      },
-      "node_type": "query",
-	"api_endpoint": "http://api.eoswonders.com",
-	"ssl_endpoint": "https://api.eoswonders.com"
-    },
-    {
-      "location": {
-        "name": "Shanghai",
-        "country": "CN",
-        "latitude": 31.07,
-        "longitude": 121.51
+       "name": "Shanghai",
+       "country": "CN",
+       "latitude": 121.528165,
+       "longitude": 31.084247
       },
       "node_type": "producer"
     },
+    {
+      "location": {
+        "name": "Shanghai",
+        "country": "CN",
+        "latitude": 121.528165,
+        "longitude": 31.084247
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "node1.eoswonders.com:59876"
+    },
+    {
+      "location": {
+        "name": "Shanghai",
+        "country": "CN",
+        "latitude": 121.528165,
+        "longitude": 31.084247
+      },
+      "node_type": "full",
+      "api_endpoint": "http://api.eoswonders.com",
+      "ssl_endpoint": "https://api.eoswonders.com"
+    }
   ]
 }
