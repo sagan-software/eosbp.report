@@ -38,11 +38,20 @@
         "latitude": 35.4981,
         "longitude": 139.4952
       },
-      "is_producer": false,
       "node_type": "full",
-      "p2p_endpoint": "18.179.100.214:19876",
       "api_endpoint": "http://api.eoscleaner.com",
       "ssl_endpoint": "https://api.eoscleaner.com"
+    },
+    {
+      "location": {
+        "name": "okyo Node A-seed",
+        "country": "JP",
+        "latitude": 35.4981,
+        "longitude": 139.4952
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "18.179.100.214:19876",
+      "bnet_endpoint": ""
     },
     {
       "location": {
@@ -51,7 +60,6 @@
         "latitude": 35.4981,
         "longitude": 139.4952
       },
-      "is_producer": true,
       "node_type": "producer"
     }
   ]

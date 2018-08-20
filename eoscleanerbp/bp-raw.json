@@ -4,13 +4,13 @@
   "org": {
     "candidate_name": "EOSCleaner",
     "website": "https://eoscleaner.com",
-    "code_of_conduct":"",
+    "code_of_conduct": "",
     "ownership_disclosure": "https://eoscleaner.com/en/ownership.html",
-    "email":"contact@eoscleaner.com",
-    "branding":{
-      "logo_256":"https://eoscleaner.com/images/eoscleaner-256.jpg",
-      "logo_1024":"https://eoscleaner.com/images/eoscleaner-1024.jpg",
-      "logo_svg":"https://eoscleaner.com/images/eoscleaner.svg"
+    "email": "contact@eoscleaner.com",
+    "branding": {
+      "logo_256": "https://eoscleaner.com/images/eoscleaner-256.jpg",
+      "logo_1024": "https://eoscleaner.com/images/eoscleaner-1024.jpg",
+      "logo_svg": "https://eoscleaner.com/images/eoscleaner.svg"
     },
     "location": {
       "name": "HongKong",
@@ -23,11 +23,11 @@
       "twitter": "eoscleaner",
       "youtube": "",
       "facebook": "",
-      "github":"eoscleaner",
+      "github": "eoscleaner",
       "reddit": "",
       "keybase": "were",
       "telegram": "eoscleaner",
-      "wechat":""
+      "wechat": ""
     }
   },
   "nodes": [
@@ -38,11 +38,20 @@
         "latitude": 35.4981,
         "longitude": 139.4952
       },
-      "is_producer": false,
       "node_type": "full",
-      "p2p_endpoint": "18.179.100.214:19876",
       "api_endpoint": "http://api.eoscleaner.com",
       "ssl_endpoint": "https://api.eoscleaner.com"
+    },
+    {
+      "location": {
+        "name": "okyo Node A-seed",
+        "country": "JP",
+        "latitude": 35.4981,
+        "longitude": 139.4952
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "18.179.100.214:19876",
+      "bnet_endpoint": ""
     },
     {
       "location": {
@@ -51,7 +60,6 @@
         "latitude": 35.4981,
         "longitude": 139.4952
       },
-      "is_producer": true,
       "node_type": "producer"
     }
   ]
