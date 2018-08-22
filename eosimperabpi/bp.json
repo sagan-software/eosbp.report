@@ -1,16 +1,10 @@
 {
   "producer_account_name": "eosimperabpi",
   "org": {
-    "candidate_name": "EOS Impera",
+    "candidate_name": "EOS IMPERA",
     "website": "https://eosimpera.io",
-    "ownership_disclosure": "https://steemit.com/eos/@eosimperabpi/eos-impera-ownership-disclosure",
     "code_of_conduct": "https://steemit.com/eos/@eosimperabpi/eos-impera-code-of-conduct",
-    "email": "info@eosimpera.io",
-    "branding": {
-      "logo_256": "https://eosimpera.io/LogoI_256.jpg",
-      "logo_1024": "https://eosimpera.io/LogoI_1024.jpg",
-      "logo_svg": "https://eosimpera.io/LogoI_svg.svg"
-    },
+    "ownership_disclosure": "https://steemit.com/eos/@eosimperabpi/eos-impera-ownership-disclosure",
     "location": {
       "name": "Italy",
       "country": "IT",
@@ -20,13 +14,18 @@
     "social": {
       "steemit": "eosimperabpi",
       "twitter": "EOS_Italy",
+      "github": "eosimpera",
       "youtube": "",
       "facebook": "",
-      "github": "eosimpera",
       "reddit": "",
       "keybase": "",
-      "telegram": "Imperabp",
-      "wechat": ""
+      "telegram": "Imperabp"
+    },
+    "email": "info@eosimpera.io",
+    "branding": {
+      "logo_256": "https://eosimpera.io/LogoI_256.jpg",
+      "logo_1024": "https://eosimpera.io/LogoI_1024.jpg",
+      "logo_svg": "https://eosimpera.io/LogoI_svg.svg"
     }
   },
   "nodes": [
@@ -38,8 +37,6 @@
         "longitude": 12.496365500000024
       },
       "node_type": "full",
-      "p2p_endpoint": "",
-      "api_endpoint": "",
       "ssl_endpoint": "https://mainnet.eosimpera.com"
     },
     {
@@ -50,10 +47,7 @@
         "longitude": 12.496365500000024
       },
       "node_type": "seed",
-      "p2p_endpoint": "mainnet.eosimpera.com:9876",
-      "api_endpoint": "",
-      "ssl_endpoint": "",
-      "bnet_endpoint": ""
+      "p2p_endpoint": "mainnet.eosimpera.com:9876"
     },
     {
       "location": {
@@ -62,10 +56,7 @@
         "latitude": 41.9027835,
         "longitude": 12.496365500000024
       },
-      "node_type": "producer",
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "node_type": "producer"
     }
   ]
 }
