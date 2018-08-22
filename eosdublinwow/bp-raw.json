@@ -44,7 +44,6 @@
         "longitude": -6.2603
       },
       "node_type": "full",
-      "p2p_endpoint": "p2p.one.eosdublin.io:9876",
       "api_endpoint": "http://api1.eosdublin.io",
       "ssl_endpoint": "https://api1.eosdublin.io"
     },
@@ -55,11 +54,8 @@
         "latitude": 53.3498,
         "longitude": -6.2603
       },
-      "node_type": "full",
-      "p2p_endpoint": "p2p.two.eosdublin.io:9876",
-      "bnet_endpoint": "p2p.two.eosdublin.io:4321",
-      "api_endpoint": "http://api2.eosdublin.io",
-      "ssl_endpoint": "https://api2.eosdublin.io"
+      "node_type": "seed",
+      "p2p_endpoint": "eos-seed.eosdublin.io:9876",
     }
   ]
 }
