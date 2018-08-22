@@ -1,15 +1,15 @@
 {
-  "producer_account_name": "eosimperabpi",
+  "producer_account_name": "eosimperbpi",
   "org": {
-    "candidate_name": "EOS IMPERA",
+    "candidate_name": "EOS Impera",
     "website": "https://eosimpera.io",
-    "email": "info@eosimpera.io",
     "ownership_disclosure": "https://steemit.com/eos/@eosimperabpi/eos-impera-ownership-disclosure",
     "code_of_conduct": "https://steemit.com/eos/@eosimperabpi/eos-impera-code-of-conduct",
-    "branding":{
-      "logo_256":"https://eosimpera.io/LogoI_256.jpg",
-      "logo_1024":"https://eosimpera.io/LogoI_1024.jpg",
-      "logo_svg":"https://eosimpera.io/LogoI_svg.svg"
+    "email": "info@eosimpera.io",
+    "branding": {
+      "logo_256": "https://eosimpera.io/LogoI_256.jpg",
+      "logo_1024": "https://eosimpera.io/LogoI_1024.jpg",
+      "logo_svg": "https://eosimpera.io/LogoI_svg.svg"
     },
     "location": {
       "name": "Italy",
@@ -19,12 +19,18 @@
     },
     "social": {
       "steemit": "eosimperabpi",
-      "twitter": "@EOS_Italy",
+      "twitter": "EOS_Italy",
+      "youtube": "",
+      "facebook": "",
       "github": "eosimpera",
-      "telegram": "Imperiabp"
+      "reddit": "",
+      "keybase": "",
+      "telegram": "Imperabp",
+      "wechat": ""
     }
   },
-  "nodes": [{
+  "nodes": [
+    {
       "location": {
         "name": "Italy",
         "country": "IT",
@@ -32,7 +38,8 @@
         "longitude": 12.496365500000024
       },
       "node_type": "full",
-      "api_endpoint": "http://mainnet.eosimpera.com",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
       "ssl_endpoint": "https://mainnet.eosimpera.com"
     },
     {
@@ -43,7 +50,10 @@
         "longitude": 12.496365500000024
       },
       "node_type": "seed",
-      "p2p_endpoint": "mainnet.eosimpera.com:9876"
+      "p2p_endpoint": "mainnet.eosimpera.com:9876",
+      "api_endpoint": "",
+      "ssl_endpoint": "",
+      "bnet_endpoint": ""
     },
     {
       "location": {
@@ -52,7 +62,10 @@
         "latitude": 41.9027835,
         "longitude": 12.496365500000024
       },
-      "node_type": "producer"
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
     }
   ]
 }
