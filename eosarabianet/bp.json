@@ -4,9 +4,9 @@
   "org": {
     "candidate_name": "EOS Arabia",
     "website": "https://www.eosarabia.net",
-    "code_of_conduct": "https://eosarabia.net/code-of-conduct",
+    "code_of_conduct": "https://eosarabia.net/code-of-conduct/",
     "ownership_disclosure": "https://eosarabia.net/ownership-disclosure",
-    "email": "info@eosarabia.org",
+    "email": "info@eosarabia.net",
     "branding": {
       "logo_256": "https://www.eosarabia.net/images/EOSArabia-Logo256.png",
       "logo_1024": "https://www.eosarabia.net/images/EOSArabia-Logo1024.png",
@@ -14,7 +14,7 @@
     },
     "location": {
       "name": "Dubai",
-      "country": "AE",
+      "country": "ARE",
       "latitude": 25.102951,
       "longitude": 55.20845
     },
@@ -28,11 +28,19 @@
     {
       "location": {
         "name": "eosarabianet",
-        "country": "DE",
+        "country": "DEU",
         "latitude": 11.5976072,
         "longitude": 48.1040971
       },
-      "is_producer": true,
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "eosarabianet",
+        "country": "DEU",
+        "latitude": 11.5976072,
+        "longitude": 48.1040971
+      },
       "node_type": "full",
       "p2p_endpoint": "mainnet.eosarabia.net:3571",
       "api_endpoint": "http://mainnet.eosarabia.net:2052",
