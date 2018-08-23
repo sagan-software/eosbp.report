@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "sheleaders21",
+  "producer_public_key": "EOS7LGK4aCwe69AB9f796fdTaiz4zCQPCUV1mLU8Qwm4voAgWbQ96",
+  "org": {
+    "candidate_name": "SheLeaders",
+    "website": "http://www.sheleaders.one",
+    "code_of_conduct":"https://steemit.com/eos/@eosmatrix/sheleaders-sheleaders21-code-of-conduct",
+    "ownership_disclosure":"https://steemit.com/eos/@eosmatrix/sheleaders-ownership-disclosure",
+    "email":"contact@sheleaders.one",
+    "branding":{
+      "logo_256":"http://www.sheleaders.one/logos/sheleaders_logo_256.jpg",
+      "logo_1024":"http://www.sheleaders.one/logos/sheleaders_logo_1024.jpg",
+      "logo_svg":"http://www.sheleaders.one/logos/sheleaders_logo_256.svg"
+    },
+    "location": {
+      "name": "Hong Kong",
+      "country": "HK",
+      "latitude":22.30,
+      "longitude":114.20
+    },
+    "social": {
+      "steemit": "https://steemit.com/@eosmatrix",
+      "twitter": "SheLeaders_",
+      "facebook": "SheLeaders",
+      "keybase":"sheleaders",
+      "reddit": "SheLeaders",
+      "telegram": "sheleaders",
+      "wechat":"sheleaders"
+    },
+    "support":{
+      "name": "musika",
+      "email":"musika@sheleaders.one"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "snode1",
+        "country": "Australia",
+        "latitude": -33.8679,
+        "longitude":151.2073
+      },
+      "node_type":"full",
+      "p2p_endpoint": "http://publicapi-mainnet.sheleaders.one:6789",
+      "api_endpoint": "http://publicapi-mainnet.sheleaders.one"
+    },
+{
+      "location": {
+        "name": "snode1",
+        "country": "Australia",
+        "latitude": -33.8679,
+        "longitude":151.2073
+      },
+      "node_type": "producer"
+    }
+  ]
+}
+
