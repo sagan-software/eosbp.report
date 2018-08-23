@@ -23,7 +23,7 @@
       "twitter": "eosjrr",
       "github": "eosjrr",
       "telegram": "eosjrr",
-      "weChat": "eosjrr"
+      "wechat": "eosjrr"
     }
   },
   "nodes": [
@@ -34,10 +34,11 @@
         "latitude": 35.689,
         "longitude": 139.691
       },
-      "is_producer": true,
-      "p2p_endpoint": "peering.eosjrr.io:9876",
+      "node_type": "full",
+      "p2p_endpoint": "peer.eosjrr.io:9876",
       "api_endpoint": "http://api.eosjrr.io",
-      "ssl_endpoint": "https://api.eosjrr.io"
+      "ssl_endpoint": "",
+      "bnet_endpoint": ""
     }
   ]
 }
