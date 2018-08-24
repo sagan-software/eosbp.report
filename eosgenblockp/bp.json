@@ -1,11 +1,11 @@
 {
   "producer_account_name": "eosgenblockp",
-  "producer_public_key": "EOS6y277mUAuj1Pn3uUiqmDTME2ujhRCVQtw6pCQ8q3uFfwEVjoJ1",
   "org": {
     "candidate_name": "EOSGen",
     "website": "https://www.genesis-mining.com/eos",
     "email": "admin@genesis-mining.com",
-    "code_of_conduct": "https://www.genesis-mining.com/eos",
+    "code_of_conduct": "https://www.genesis-mining.com/eos/code-of-conduct",
+    "ownership_disclosure": "https://blog.genesis-mining.com/eosgen-ownership-disclosure",
     "location": {
       "name": "Hong Kong",
       "country": "HK",
@@ -30,9 +30,18 @@
         "latitude": 64.9631,
         "longitude": 19.0208
       },
-      "node_type": "full",
+      "node_type": "query",
       "api_endpoint": "http://eos.genesis-mining.com",
       "ssl_endpoint": "https://eos.genesis-mining.com"
+    },
+    {
+      "location": {
+        "name": "Iceland",
+        "country": "IS",
+        "latitude": 64.9631,
+        "longitude": 19.0208
+      },
+      "node_type": "full"
     },
     {
       "location": {
