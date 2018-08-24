@@ -1,50 +1,58 @@
 {
-  "producer_account_name": "eosarabianet",
-  "producer_public_key": "EOS6JuwKSkEiYNR88bV9wz7uQGjMiSabMzFearb6UmuEE4uK3rSR6",
-  "org": {
-    "candidate_name": "EOS Arabia",
-    "website": "https://www.eosarabia.net",
-    "code_of_conduct": "https://eosarabia.net/code-of-conduct/",
-    "ownership_disclosure":"https://eosarabia.net/ownership-disclosure",
-    "email":"info@eosarabia.net",
-    "branding":{
-      "logo_256":"https://www.eosarabia.net/images/EOSArabia-Logo256.png",
-      "logo_1024":"https://www.eosarabia.net/images/EOSArabia-Logo1024.png",
-      "logo_svg":"https://www.eosarabia.net/images/EOSArabia-LogoSVG.SVG"
-    },
-    "location": {
-      "name": "Dubai",
-      "country": "ARE",
-      "latitude": 25.102951,
-      "longitude": 55.208450
-    },
-    "social": {
-      "steemit": "eos.arabia",
-      "twitter": "eos_arabia",
-      "telegram": "EOS_Arabia"
-    }
-  },
-  "nodes": [
-    {
-      "location": {
-        "name": "eosarabianet",
-        "country": "DEU",
-        "latitude": 11.5976072,
-        "longitude": 48.1040971
-      },
-      "node_type": "producer"
-    },
-    {
-      "location": {
-        "name": "eosarabianet",
-        "country": "DEU",
-        "latitude": 11.5976072,
-        "longitude": 48.1040971
-      },
-	  "node_type": "full",
-      "p2p_endpoint": "mainnet.eosarabia.net:3571",
-      "api_endpoint": "http://mainnet.eosarabia.net:2052",
-      "ssl_endpoint": ""
-    }
-  ]
+	"producer_account_name": "eosarabianet",
+	"org": {
+		"candidate_name": "eosarabianet",
+		"website": "https://eosarabia.net",
+		"code_of_conduct": "https://eosarabia.net/code-of-conduct",
+		"ownership_disclosure": "https://eosarabia.net/ownership-disclosure",
+		"email": "info@eosarabia.net",
+		"branding": {
+			"logo_256": "https://eosarabia.net/images/EOSArabia-Logo256.png",
+			"logo_1024": "https://eosarabia.net/images/EOSArabia-Logo1024.png",
+			"logo_svg": "https://eosarabia.net/images/EOSArabia-LogoSVG.svg"
+		},
+		"location": {
+			"name": "United Arab Emirates",
+			"country": "784",
+			"latitude": 25.102951,
+			"longitude": 55.208450
+		},
+		"social": {
+			"steemit": "eos.arabia",
+			"twitter": "eos_arabia",
+			"youtube": "",
+			"facebook": "",
+			"telegram": "EOS_Arabia"
+		}
+	},
+	"nodes": [{
+			"location": {
+				"name": "Munich",
+				"country": "DE",
+				"latitude": 11.5976072,
+				"longitude": 48.1040971
+			},
+			"node_type": "producer"
+		},
+		{
+			"location": {
+				"name": "Munich",
+				"country": "DE",
+				"latitude": 11.5976072,
+				"longitude": 48.1040971
+			},
+			"node_type": "seed",
+			"p2p_endpoint": "mainnet.eosarabia.net:3571"
+		},
+		{
+			"location": {
+				"name": "Munich",
+				"country": "DE",
+				"latitude": 11.5976072,
+				"longitude": 48.1040971
+			},
+			"node_type": "full",
+			"ssl_endpoint": "https://mainnet.eosarabia.net"
+		}
+	]
 }
