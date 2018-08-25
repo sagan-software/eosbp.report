@@ -19,14 +19,10 @@
       "longitude": 114.17020997
     },
     "social": {
-      "steemit": "https://steemit.com/@eos.pacific",
-      "twitter": "https://twitter.com/eos_pacific",
-      "youtube": "",
-      "facebook": "",
-      "github": "https://github.com/NodePacific/eos.pacific",
-      "reddit": "",
-      "keybase": "",
-      "telegram": "https://t.me/EOSpacifc",
+      "steemit": "eos.pacific",
+      "twitter": "eos_pacific",
+      "github": "NodePacific",
+      "telegram": "EOSpacifc",
       "wechat": "eospacific"
     }
   },
@@ -41,7 +37,7 @@
       "node_type": "full",
       "is_producer": false,
       "api_endpoint": "http://eosapi.nodepacific.com:8888",
-      "ssl_endpoint": "https://eosapi.nodepacific.com:443"
+      "ssl_endpoint": "https://eosapi.nodepacific.com"
     },
     {
       "location": {
@@ -61,8 +57,7 @@
         "latitude": 35.615463,
         "longitude": 139.404243
       },
-      "node_type": "producer",
-      "is_producer": true
+      "node_type": "producer"
     }
   ]
 }
