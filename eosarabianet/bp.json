@@ -9,11 +9,11 @@
     "branding": {
       "logo_256": "https://eosarabia.net/images/EOSArabia-Logo256.png",
       "logo_1024": "https://eosarabia.net/images/EOSArabia-Logo1024.png",
-      "logo_svg": "https://eosarabia.net/images/EOSArabia-LogoSVG.svg"
+      "logo_svg": "https://eosarabia.net/images/EOSArabia-LogoSVG.SVG"
     },
     "location": {
-      "name": "United Arab Emirates",
-      "country": "784",
+      "name": "AE",
+      "country": "AE",
       "latitude": 25.102951,
       "longitude": 55.20845
     },
@@ -44,16 +44,6 @@
       },
       "node_type": "seed",
       "p2p_endpoint": "mainnet.eosarabia.net:3571"
-    },
-    {
-      "location": {
-        "name": "Munich",
-        "country": "DE",
-        "latitude": 11.5976072,
-        "longitude": 48.1040971
-      },
-      "node_type": "full",
-      "ssl_endpoint": "https://mainnet.eosarabia.net"
     }
   ]
 }
