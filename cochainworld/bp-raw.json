@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "cochainworld",
+  "producer_public_key": "EOS7P6qfV45t6odSNbcbPMMVnavP8gBP1NnJ5UYmRf4qcT3FWeukV",
+  "org": {
+    "candidate_name": "EOS Cochain",
+    "website": "https://eoscochain.io",
+    "code_of_conduct": "",
+    "ownership_disclosure": "",
+    "email": "bp@cochain.io",
+    "branding": {
+      "logo_256": "https://eoscochain.io/images/eoscochain-logo-256x256.png",
+      "logo_1024": "https://eoscochain.io/images/eoscochain-logo.png",
+      "logo_svg": "https://eoscochain.io/images/eoscochain-logo-256x256.svg"
+    },
+    "location": {
+      "name": "Shenzhen",
+      "country": "CN",
+      "latitude": 40.060599,
+      "longitude": 116.32371
+    },
+    "social": {
+      "steemit": "eoscochain",
+      "twitter": "eoscochain",
+      "youtube": "eoscochain",
+      "facebook": "eoscochain",
+      "github": "eoscochain",
+      "reddit": "eoscochain",
+      "keybase": "eoscochain",
+      "telegram": "eoscochain",
+      "wechat": "eoscochain"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Shenzhen",
+        "country": "CN",
+        "latitude": 40.060599,
+        "longitude": 116.32371
+      },
+      "node_type": "full",
+      "p2p_endpoint": "peer.eoscochain.io:9978",
+      "api_endpoint": "http://mainnet.eoscochain.io",
+      "ssl_endpoint": "https://mainnet.eoscochain.io"
+    }
+  ]
+}
+
