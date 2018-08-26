@@ -1,0 +1,65 @@
+{
+  "producer_account_name": "eosnigeriago",
+  "producer_public_key": "EOS8jakrpvyuCEaSeoH8u7hrf8nMGygF7sQUqL6y8e953DWKL7pG1",
+  "org": {
+    "candidate_name": "EOS Nigeria",
+    "website": "https://eosnigeria.io",
+    "code_of_conduct":"https://eosnigeria.io/code-of-conduct/",
+    "ownership_disclosure":"https://eosnigeria.io/owners-disclosure/",
+    "email":"hello@eosnigeria.io",
+    "branding":{
+      "logo_256":"https://eosnigeria.io/wp-content/uploads/2018/07/cropped-eoslogo-01.png",
+      "logo_1024":"https://eosnigeria.io/wp-content/uploads/2018/07/eos-ng-logo.png",
+      "logo_svg":"https://eosnigeria.io/eoslogo-01-2/"
+    },
+    "location": {
+      "name": "Nigeria",
+      "country": "NG",
+      "latitude": 6.465422,
+      "longitude": 3.406448
+    },
+    "social": {
+      "steemit": "eosnigeriago",
+      "twitter": "eosnigeria",
+      "facebook": "eosnigeria",
+      "youtube": "",
+      "github":"",
+      "keybase": "",
+      "telegram": "eosnigeria"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Nigeria",
+        "country": "NG",
+        "latitude": 6.465422,
+        "longitude": 3.406448
+      },
+      "node_type":"full",
+      "api_endpoint": "http://bp.eosnigeria.io:8898",
+      "ssl_endpoint": "https://bp.eosnigeria.io:8899"
+      },
+      {
+         "location": {
+            "name": "Nigeria",
+            "country": "NG",
+            "latitude": 6.465422,
+            "longitude": 3.406448
+         },
+       "node_type": "seed",
+       "p2p_endpoint": "bp.eosnigeria.io:9876",
+       "bnet_endpoint": "bp.eosnigeria.io:9875"
+      },
+      {
+         "location": {
+            "name": "Nigeria",
+            "country": "NG",
+            "latitude": 6.465422,
+            "longitude": 3.406448
+      },
+      "node_type": "producer"
+    }
+    
+  ]
+}
