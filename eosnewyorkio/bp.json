@@ -38,7 +38,6 @@
         "longitude": -46.6333
       },
       "node_type": "full",
-      "p2p_endpoint": "node1.eosnewyork.io:6987",
       "api_endpoint": "http://api.eosnewyork.io",
       "ssl_endpoint": "https://api.eosnewyork.io"
     },
@@ -51,6 +50,15 @@
       },
       "node_type": "seed",
       "p2p_endpoint": "node1.eosnewyork.io:6987"
+    },
+    {
+      "location": {
+        "name": "primary",
+        "country": "BR",
+        "latitude": -23.5505,
+        "longitude": -46.6333
+      },
+      "node_type": "producer"
     }
   ]
 }
