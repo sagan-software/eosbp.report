@@ -43,6 +43,25 @@
       "api_endpoint": "http://node.eosmeso.io",
       "ssl_endpoint": "",
       "bnet_endpoint": "node.eosmeso.io:4321"
+    },
+    {
+      "location": {
+        "name": "Guatemala City",
+        "country": "GT",
+        "latitude": 14.573179,
+        "longitude": -90.48136
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Guatemala City",
+        "country": "GT",
+        "latitude": 14.573179,
+        "longitude": -90.48136
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "node.eosmeso.io:9876"
     }
   ]
 }
