@@ -39,10 +39,8 @@
         "longitude": -90.48136
       },
       "node_type": "full",
-      "p2p_endpoint": "node.eosmeso.io:9876",
       "api_endpoint": "http://node.eosmeso.io",
-      "ssl_endpoint": "",
-      "bnet_endpoint": "node.eosmeso.io:4321"
+      "ssl_endpoint": ""
     },
     {
       "location": {
@@ -61,7 +59,8 @@
         "longitude": -90.48136
       },
       "node_type": "seed",
-      "p2p_endpoint": "node.eosmeso.io:9876"
+      "p2p_endpoint": "node.eosmeso.io:9876",
+      "bnet_endpoint": "node.eosmeso.io:4321"
     }
   ]
 }
