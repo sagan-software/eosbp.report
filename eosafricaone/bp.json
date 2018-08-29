@@ -3,9 +3,9 @@
   "producer_public_key": "EOS5HG6pV9FXK64uJSr2GPXfiBEk8GRRedZDcRVXw8mZNuQ51QdMW",
   "org": {
     "candidate_name": "eosAfrica",
-    "website": "https://www.eosafrica.io",
-    "code_of_conduct": "https://www.eosafrica.io/code-of-conduct",
-    "ownership_disclosure": "https://www.eosafrica.io/ownership-disclosure",
+    "website": "https://eosafrica.io",
+    "code_of_conduct": "https://eosafrica.io/code-of-conduct",
+    "ownership_disclosure": "https://eosafrica.io/ownership-disclosure",
     "email": "khosi@eosio.africa",
     "branding": {
       "logo_256": "https://bp.eosio.africa/assets/256.png",
@@ -15,33 +15,51 @@
     "location": {
       "name": "South Africa",
       "country": "ZA",
-      "latitude": -26.204444,
-      "longitude": 28.045556
+      "latitude": -30.5595,
+      "longitude": 22.9375
     },
     "social": {
       "steemit": "@eosafrica",
       "twitter": "@eosofafrica",
-      "youtube": "",
+      "youtube": "@eosAfrica",
       "facebook": "",
       "github": "eosioafrica",
       "reddit": "",
       "keybase": "khosimorafo",
-      "telegram": "khosimorafo",
+      "telegram": "@khosimorafo",
       "wechat": ""
     }
   },
   "nodes": [
     {
       "location": {
+        "name": "Cape Town",
+        "country": "ZA",
+        "latitude": -33.9249,
+        "longitude": 18.4241
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Cape Town",
+        "country": "ZA",
+        "latitude": -33.9249,
+        "longitude": 18.4241
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "peer.dpos.africa:9876"
+    },
+    {
+      "location": {
         "name": "Johannesburg",
         "country": "ZA",
-        "latitude": -26.204444,
-        "longitude": 28.045556
+        "latitude": -26.195246,
+        "longitude": 28.034088
       },
       "node_type": "full",
-      "p2p_endpoint": "cpt.eosio.africa:9876",
-      "api_endpoint": "http://cpt.eosio.africa",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://api.dpos.africa",
+      "ssl_endpoint": "https://api.dpos.africa"
     }
   ]
 }
