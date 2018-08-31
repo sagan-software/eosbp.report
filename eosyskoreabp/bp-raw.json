@@ -32,37 +32,49 @@
   },
   "nodes": [
     {
+      "location": {
+        "name": "Seoul",
+        "country": "KR",
+        "latitude": 37.5665,
+        "longitude": 126.9780
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
         "location": {
-          "name": "Tokyo",
-          "country": "JP",
-          "latitude": 35.681936,
-          "longitude": 139.724209
+          "name": "Seoul",
+          "country": "KR",
+          "latitude": 37.5665,
+          "longitude": 126.9780
         },
-        "node_type": "full",
+        "node_type": "query",
         "p2p_endpoint": "",
         "api_endpoint": "https://rpc.eosys.io",
         "ssl_endpoint": "https://rpc.eosys.io"
     },
     {
       "location": {
-        "name": "Tokyo",
-        "country": "JP",
-        "latitude": 35.681936,
-        "longitude": 139.724209
+        "name": "Seoul",
+        "country": "KR",
+        "latitude": 37.5665,
+        "longitude": 126.9780
       },
-      "node_type": "seed",
+      "node_type": "full",
       "p2p_endpoint": "pub0.eosys.io:6637",
       "api_endpoint": "",
       "ssl_endpoint": ""
     },
     {
       "location": {
-        "name": "Tokyo",
-        "country": "JP",
-        "latitude": 35.681936,
-        "longitude": 139.724209
+        "name": "Seoul",
+        "country": "KR",
+        "latitude": 37.5665,
+        "longitude": 126.9780
       },
-      "node_type": "seed",
+      "node_type": "full",
       "p2p_endpoint": "pub1.eosys.io:6637",
       "api_endpoint": "",
       "ssl_endpoint": ""
