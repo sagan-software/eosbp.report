@@ -34,24 +34,24 @@
     {
       "location": {
         "name": "Singapore",
-        "country": "",
+        "country": "SG",
         "latitude": 0,
         "longitude": 0
       },
-      "is_producer": false,
-      "p2p_endpoint": "p2p-mainnet.eosgravity.com:8001",
-      "api_endpoint": "https://api-mainnet.eosgravity.com",
+      "node_type": "full",
+      "p2p_endpoint": "",
+      "api_endpoint": "http://api-mainnet.eosgravity.com",
       "ssl_endpoint": "https://api-mainnet.eosgravity.com"
     },
     {
       "location": {
-        "name": "Canada",
-        "country": "",
+        "name": "Singapore",
+        "country": "SG",
         "latitude": 0,
         "longitude": 0
       },
-      "is_producer": false,
-      "p2p_endpoint": "",
+      "node_type": "seed",
+      "p2p_endpoint": "p2p-mainnet.eosgravity.com:8001",
       "api_endpoint": "",
       "ssl_endpoint": ""
     },
