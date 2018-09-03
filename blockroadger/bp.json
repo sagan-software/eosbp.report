@@ -1,0 +1,62 @@
+{
+  "producer_account_name": "blockroadger",
+  "org": {
+    "candidate_name": "BlockRoad GmbH",
+    "website": "https://eos.blockroad.co",
+    "code_of_conduct": "https://eos.blockroad.co",
+    "ownership_disclosure": "",
+    "email": "official@blockroad.co",
+    "branding": {
+      "logo_256": "https://eos.blockroad.co/logo_256.png",
+      "logo_1024": "https://eos.blockroad.co/logo_1024.png",
+      "logo_svg": "https://eos.blockroad.co/logo.svg"
+    },
+    "location": {
+      "name": "Berlin, Berlin",
+      "country": "DE",
+      "latitude": 52.5222,
+      "longitude": 13.2607
+    },
+    "social": {
+      "steemit": "blockroad",
+      "twitter": "BlockRoad_offical",
+      "github": "blockroad",
+      "youtube": "UCZcFPxRllXHwhjvdvXmafAg",
+      "facebook": "BlockRoad-2072059939770883",
+      "reddit": "blockroad_official",
+      "instagram": "BlockRoad_official"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Berlin, Berlin",
+        "country": "DE",
+        "latitude": 52.520008,
+        "longitude": 13.404954
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Berlin, Berlin",
+        "country": "DE",
+        "latitude": 52.520008,
+        "longitude": 13.404954
+      },
+      "node_type": "full",
+      "ssl_endpoint": "https://node01.blockroad.co:30210"
+    },
+    {
+      "location": {
+        "name": "Berlin, Berlin",
+        "country": "DE",
+        "latitude": 52.520008,
+        "longitude": 13.404954
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "85.214.207.118:9876",
+      "bnet_endpoint": "85.214.207.118:9875"
+    }
+  ]
+}
