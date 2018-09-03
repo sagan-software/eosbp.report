@@ -8,8 +8,8 @@
     "ownership_disclosure":"https://www.eosorangeeos.com",
     "email":"support@eosorangeeos.com",
     "branding":{
-      "logo_256":"https://www.eosorangeeos.com/logo/log_256.png",
-      "logo_1024":"https://www.eosorangeeos.com/logo/log_1024.png",
+      "logo_256":"https://www.eosorangeeos.com/logo/logo_256.jpg",
+      "logo_1024":"https://www.eosorangeeos.com/logo/logo_1024.jpg",
       "logo_svg":""
     },
     "location": {
@@ -32,27 +32,15 @@
   "nodes": [
     {
       "location": {
-        "name": "eosorangeoes_node1",
+        "name": "eosorangeoes",
         "country": "CN",
         "latitude": 39.54,
         "longitude": 116.23
       },
       "is_producer": true,
-      "p2p_endpoint": "peer1.eoshuobipool.com:18181",
-      "api_endpoint": "http://peer1.eoshuobipool.com:8181",
-      "ssl_endpoint": ""
-    },
-    {
-      "location": {
-        "name": "HuobiNode2",
-        "country": "CN",
-        "latitude": 40.060599,
-        "longitude": 116.32371
-      },
-      "is_producer": false,
-      "p2p_endpoint": "peer2.eoshuobipool.com:18181",
-      "api_endpoint": "http://peer2.eoshuobipool.com:8181",
-      "ssl_endpoint": ""
+      "p2p_endpoint": "eosorangeeos.com:9876",
+      "api_endpoint": "http://api.eosorangeeos.com",
+      "ssl_endpoint": "https://api.eosorangeeos.com"
     }
   ]
 }
