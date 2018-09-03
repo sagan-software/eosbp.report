@@ -5,37 +5,39 @@
     "candidate_name": "eosorangeeos",
     "website": "https://www.eosorangeeos.com",
     "code_of_conduct":"",
+    "ownership_disclosure":"https://www.eosorangeeos.com",
     "email":"support@eosorangeeos.com",
     "branding":{
       "logo_256":"https://www.eosorangeeos.com/logo/log_256.png",
-      "logo_1024":"http://www.eoshuobipool.com/logo/EOS-1024.png",
+      "logo_1024":"https://www.eosorangeeos.com/logo/log_1024.png",
+      "logo_svg":""
     },
     "location": {
       "name": "Beijing",
       "country": "CN",
-      "latitude": 40.060599,
-      "longitude": 116.32371
+      "latitude": 39.54,
+      "longitude": 116.23
     },
     "social": {
-      "steemit": "eoshuobipool",
-      "twitter": "EOS_huobipool",
+      "steemit": "",
+      "twitter": "",
       "youtube": "",
       "facebook": "",
       "github":"",
       "reddit": "",
-      "keybase": "orcoder",
-      "telegram": "https://t.me/eoshuobipool"
+      "keybase": "",
+      "telegram": ""
     }
   },
   "nodes": [
     {
       "location": {
-        "name": "HuobiNode1",
+        "name": "eosorangeoes_node1",
         "country": "CN",
-        "latitude": 40.060599,
-        "longitude": 116.32371
+        "latitude": 39.54,
+        "longitude": 116.23
       },
-      "is_producer": false,
+      "is_producer": true,
       "p2p_endpoint": "peer1.eoshuobipool.com:18181",
       "api_endpoint": "http://peer1.eoshuobipool.com:8181",
       "ssl_endpoint": ""
