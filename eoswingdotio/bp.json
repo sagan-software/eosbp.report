@@ -1,0 +1,48 @@
+{
+  "producer_account_name": "eoswingdotio",
+  "producer_public_key": "EOS5o4BNMCy6Sh3BvstKytJS5TnXrxEW5oF7Wh3wBJTnaoQbLpwFh",
+  "org": {
+    "candidate_name": "EOSWing",
+    "website": "https://eoswing.io",
+    "code_of_conduct": "",
+    "ownership_disclosure": "",
+    "email": "bp@eoswing.io",
+    "branding": {
+      "logo_256": "https://eoswing.io/images/eoswing-logo-256.png",
+      "logo_1024": "https://eoswing.io/images/eoswing-logo-1024.png",
+      "logo_svg": "https://eoswing.io/images/eoswing-logo.svg"
+    },
+    "location": {
+      "name": "Kunming",
+      "country": "CN",
+      "latitude": 25.0211,
+      "longitude": 102.4231
+    },
+    "social": {
+      "steemit": "eoswing",
+      "twitter": "eoswing",
+      "youtube": "",
+      "facebook": "",
+      "github": "eoswing",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Kunming",
+        "country": "CN",
+        "latitude": 25.0211,
+        "longitude": 102.4231
+      },
+      "node_type": "full",
+      "p2p_endpoint": "node.eoswing.io:9876",
+      "api_endpoint": "http://api.eoswing.io",
+      "ssl_endpoint": "https://api.eoswing.io",
+      "bnet_endpoint": ""
+    }
+  ]
+}
