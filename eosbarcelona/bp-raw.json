@@ -15,16 +15,16 @@
     "location": {
       "name": "Barcelona",
       "country": "Spain",
-      "latitude": 0,
-      "longitude": 0
+      "latitude": 41.3667,
+      "longitude": 2.0667
     },
     "social": {
       "steemit": "jrosich",
       "twitter": "eosbarcelona",
       "youtube": "",
       "facebook": "",
-      "github":"",
-      "reddit": "",
+      "github":"jrosich",
+      "reddit": "eosbarcelona",
       "keybase": "eosbarcelona",
       "telegram": "eosbarcelona",
       "wechat":""
@@ -33,15 +33,13 @@
   "nodes": [
     {
       "location": {
-        "name": "UK",
-        "country": "UK",
-        "latitude": 0,
-        "longitude": 0
+        "name": "Germany",
+        "country": "DE",
+        "latitude": 52.520008,
+        "longitude": 13.404954
       },
-      "is_producer": false,
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "node_type": "seed",
+      "p2p_endpoint": "mainnet.eosbcn.com:2095"
     },
     {
       "location": {
