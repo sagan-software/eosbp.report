@@ -6,7 +6,9 @@
     "website": "https://eosio.sg",
     "email":"deadlock@eosio.sg",
     "branding":{
-      "logo":"https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png"
+      "logo_256":"https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png",
+      "logo_1024": "https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png",
+      "logo_svg": "https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png"
     },
     "location": {
       "name": "Singapore",
@@ -15,11 +17,11 @@
       "longitude": 103.851959
     },
     "social": {
-      "steemit": "https://steemit.com/@eosiosg",
-      "twitter": "https://twitter.com/eosiosg",
-      "facebook": "https://www.facebook.com/eosiosg-168790343770758/",
-      "github":"https://github.com/eosiosg",
-      "telegram": "https://t.me/eosiosg"
+      "steemit": "eosiosg",
+      "twitter": "heosiosg",
+      "facebook": "eosiosg-168790343770758",
+      "github":"eosiosg",
+      "telegram": "eosiosg"
     }
   },
   "nodes": [
@@ -31,8 +33,17 @@
         "longitude": 121.597366
       },
       "node_type": "full",
-      "p2p_endpoint": "peer.eosio.sg:9876",
       "api_endpoint": "http://mainnet.eosio.sg"
+    },
+    {
+      "location": {
+        "name": "Taiwan",
+        "country": "TW",
+        "latitude": 25.105497,
+        "longitude": 121.597366
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "peer.eosio.sg:9876",
     },
     {
       "location": {
