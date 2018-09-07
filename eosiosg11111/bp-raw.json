@@ -1,1 +1,47 @@
-{"test":"test"}
+{
+  "producer_account_name": "eosiosg11111",
+  "producer_public_key": "EOS7zVBQMhV7dZ5zRQwBgDmmbFCHA6YcmwW6Dq5CePGpqLR1ZsVAc",
+  "org": {
+    "candidate_name": "EOSIO.SG",
+    "website": "https://eosio.sg",
+    "email":"deadlock@eosio.sg",
+    "branding":{
+      "logo":"https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png"
+    },
+    "location": {
+      "name": "Singapore",
+      "country": "SG",
+      "latitude": 1.290270,
+      "longitude": 103.851959
+    },
+    "social": {
+      "steemit": "https://steemit.com/@eosiosg",
+      "twitter": "https://twitter.com/eosiosg",
+      "facebook": "https://www.facebook.com/eosiosg-168790343770758/",
+      "github":"https://github.com/eosiosg",
+      "telegram": "https://t.me/eosiosg"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Taiwan",
+        "country": "TW",
+        "latitude": 25.105497,
+        "longitude": 121.597366
+      },
+      "node_type": "full",
+      "p2p_endpoint": "peer.eosio.sg:9876",
+      "api_endpoint": "http://mainnet.eosio.sg"
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 1.290270,
+        "longitude": 103.851959
+      },
+      "node_type": "producer"
+    }
+  ]
+}
