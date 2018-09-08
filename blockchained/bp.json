@@ -38,9 +38,28 @@
         "longitude": 9.491
       },
       "node_type": "full",
-      "p2p_endpoint": "p2p.eos.blckchnd.com:19876",
       "api_endpoint": "http://api-eos.blckchnd.com",
       "ssl_endpoint": "https://api-eos.blckchnd.com"
+    },
+    {
+      "location": {
+        "name": "EOSBLCKCHND",
+        "country": "DE",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p-eos.blckchnd.com:19876",
+      "bnet_endpoint": "bnet-eos.blckchnd.com:4321"
+    },
+    {
+      "location": {
+        "name": "EOSBLCKCHND",
+        "country": "DE",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "node_type": "producer"
     }
   ]
 }

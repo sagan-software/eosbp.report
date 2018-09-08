@@ -4,12 +4,12 @@
   "org": {
     "candidate_name": "BLCKCHND",
     "website": "https://eos.blckchnd.com",
-    "code_of_conduct":"https://steemit.com/eos/@blockchained/blckchnd-and-graphene-lab-join-forces-to-enter-the-competition-as-a-candidate-for-eos-bp",
-    "email":"eos@blckchnd.com",
-    "branding":{
-      "logo_256":"https://eos.blckchnd.com/blckchnd-256.png",
-      "logo_1024":"https://eos.blckchnd.com/blckchnd-1024.png",
-      "logo_svg":""
+    "code_of_conduct": "https://steemit.com/eos/@blockchained/blckchnd-and-graphene-lab-join-forces-to-enter-the-competition-as-a-candidate-for-eos-bp",
+    "email": "eos@blckchnd.com",
+    "branding": {
+      "logo_256": "https://eos.blckchnd.com/blckchnd-256.png",
+      "logo_1024": "https://eos.blckchnd.com/blckchnd-1024.png",
+      "logo_svg": ""
     },
     "location": {
       "name": "St.Petersburg",
@@ -22,11 +22,11 @@
       "twitter": "BLCKCHND",
       "youtube": "",
       "facebook": "",
-      "github":"blckchnd",
+      "github": "blckchnd",
       "reddit": "",
       "keybase": "team/eos_blockchained",
       "telegram": "blckchnd_EOS",
-      "wechat":""
+      "wechat": ""
     }
   },
   "nodes": [
@@ -38,9 +38,28 @@
         "longitude": 9.491
       },
       "node_type": "full",
-      "p2p_endpoint": "p2p.eos.blckchnd.com:19876",
       "api_endpoint": "http://api-eos.blckchnd.com",
       "ssl_endpoint": "https://api-eos.blckchnd.com"
+    },
+    {
+      "location": {
+        "name": "EOSBLCKCHND",
+        "country": "DE",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p-eos.blckchnd.com:19876",
+      "bnet_endpoint": "bnet-eos.blckchnd.com:4321"
+    },
+    {
+      "location": {
+        "name": "EOSBLCKCHND",
+        "country": "DE",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "node_type": "producer"
     }
   ]
 }
