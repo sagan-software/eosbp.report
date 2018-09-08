@@ -1,14 +1,13 @@
 {
   "producer_account_name": "eosiosg11111",
-  "producer_public_key": "EOS7zVBQMhV7dZ5zRQwBgDmmbFCHA6YcmwW6Dq5CePGpqLR1ZsVAc",
   "org": {
     "candidate_name": "EOSIO.SG",
     "website": "https://eosio.sg",
     "email": "deadlock@eosio.sg",
     "branding": {
-      "logo_256": "https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png",
-      "logo_1024": "https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png",
-      "logo_svg": "https://github.com/eosiosg/eos-bp-profile/blob/eosio.sg/images/logo-eosiosg.png"
+      "logo_256": "https://github.com/eosiosg/bp-info/blob/master/eosiosg_256.png",
+      "logo_1024": "",
+      "logo_svg": ""
     },
     "location": {
       "name": "Singapore",
@@ -33,7 +32,7 @@
         "longitude": 121.597366
       },
       "node_type": "full",
-      "api_endpoint": "http://mainnet.eosio.sg"
+      "api_endpoint": "mainnet.eosio.sg:8888"
     },
     {
       "location": {
