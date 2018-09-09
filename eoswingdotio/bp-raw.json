@@ -32,15 +32,36 @@
   "nodes": [
     {
       "location": {
-        "name": "Kunming",
+        "name": "HK",
         "country": "CN",
-        "latitude": 25.0211,
-        "longitude": 102.4231
+        "latitude": 22.28193,
+        "longitude": 114.137487
       },
-      "node_type":"full",
+      "node_type": "producer",
       "p2p_endpoint": "",
       "api_endpoint": "",
-      "ssl_endpoint": "https://api.eoswing.io",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Kunming",
+		"country": "CN",
+		"latitude": 25.0211,
+		"longitude": 102.4231
+      },
+      "node_type": "full",
+      "api_endpoint": "http://api.eoswing.io",
+      "ssl_endpoint": "https://api.eoswing.io"
+    },
+    {
+      "location": {
+        "name": "Kunming",
+		"country": "CN",
+		"latitude": 25.0211,
+		"longitude": 102.4231
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "node.eoswing.io:9876",
       "bnet_endpoint": ""
     }
   ]
