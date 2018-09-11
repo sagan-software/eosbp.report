@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "auroraeoscom",
+  "producer_public_key": "EOS6X466LVdah7AFF29iprhPRi3o6TZccf17KdmsD2HZKFuL23e2r",
+  "org": {
+    "candidate_name": "Aurora EOS",
+    "website": "https://auroraeos.com",
+    "code_of_conduct": "https://auroraeos.com/ethicsandcompliance",
+    "email": "bp@auroraeos.com",
+    "branding": {
+      "logo_256": "https://github.com/auroraeosbp/bp.json/blob/master/aurora-256.png",
+      "logo_1024": "https://github.com/auroraeosbp/bp.json/blob/master/aurora-1024.png",
+      "logo_svg": "https://github.com/auroraeosbp/bp.json/blob/master/aurora-1024.svg"
+    },
+    "location": {
+      "name": "Boston, MA",
+      "country": "US",
+      "latitude": 42.3601,
+      "longitude": 71.0589
+    },
+    "social": {
+      "steemit": "auroraeos",
+      "twitter": "auroraeosbp",
+      "youtube": "Aurora EOS",
+      "facebook": "",
+      "github": "auroraeosbp",
+      "reddit": "auroraeos",
+      "keybase": "",
+      "telegram": "aurora_eos",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Virginia",
+        "country": "US",
+        "latitude": 39.020812,
+        "longitude": -77.433357
+      },
+      "is_producer": false,
+      "p2p_endpoint": "mainnet.auroraeos.com:9870",
+      "api_endpoint": "http://mainnet.auroraeos.com:8081",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Virginia",
+        "country": "US",
+        "latitude": 39.020812,
+        "longitude": -77.433357
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}
