@@ -1,0 +1,66 @@
+{
+  "producer_account_name": "syndicateos",
+  "producer_public_key": "EOS6qsU2AEjWvyx9Ah7qmTd4AMzFVTrPdjeM3MVf28txouDp5HDDh",
+  "org": {
+    "candidate_name": "syndicateos",
+    "website": "http://syndicateos.com/",
+    "code_of_conduct": "http://syndicateos.com/code-of-conduct/",
+    "ownership_disclosure": "http://syndicateos.com/#ourteam",
+    "email": "nicusz1@yandex.com",
+    "branding": {
+      "logo_256": "http://syndicateos.com/syndicateos256.jpg",
+      "logo_1024": "http://syndicateos.com/syndicateos1024.jpg",
+      "logo_svg": "http://syndicateos.com/syndicateos.svg"
+    },
+    "location": {
+      "name": "Bucharest",
+      "country": "RO",
+      "latitude": 44.4396,
+      "longitude": 26.0963
+    },
+    "social": {
+      "steemit": "syndicateos",
+      "twitter": "syndicateos1",
+      "youtube": "",
+      "facebook": "",
+      "github": "syndicateos",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "syndicateos",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Bucharest",
+        "country": "RO",
+        "latitude": 44.4396,
+        "longitude": 26.0963
+      },
+      "node_type": "full",
+      "api_endpoint": "http://api.syndicateos.com",
+      "ssl_endpoint": "https://api.syndicateos.com"
+    },
+    {
+      "location": {
+        "name": "Bucharest",
+        "country": "RO",
+        "latitude": 44.4396,
+        "longitude": 26.0963
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "p2p.syndicateos.com:9876",
+      "bnet_endpoint": "bnet.syndicateos.com:7575"
+    },
+    {
+      "location": {
+        "name": "Bucharest",
+        "country": "RO",
+        "latitude": 44.4396,
+        "longitude": 26.0963
+      },
+      "node_type": "producer"
+    }
+  ]
+}
