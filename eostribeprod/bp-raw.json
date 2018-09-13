@@ -43,7 +43,6 @@
         "longitude": -104.820244
       },
       "node_type": "full",
-      "p2p_endpoint": "api2.eostribe.io:9115",
       "api_endpoint": "http://api2.eostribe.io",
       "ssl_endpoint": "https://api2.eostribe.io"
     },
@@ -54,7 +53,22 @@
         "latitude": 41.139980,
         "longitude": -104.820244
       },
-      "node_type": "producer"
+      "node_type": "seed",
+      "p2p_endpoint": "api2.eostribe.io:9115",
+      "bnet_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Cheyenne, WY",
+        "country": "US",
+        "latitude": 41.139980,
+        "longitude": -104.820244
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "bnet_endpoint": "",
+      "ssl_endpoint": ""
     }
   ]
 }
