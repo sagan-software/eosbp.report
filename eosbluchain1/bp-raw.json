@@ -30,12 +30,22 @@
    }
  },
  "nodes": [
+    {
+      "location": {
+        "name": "S�o Paulo",
+        "country": "BR",
+        "latitude": -23.6815315,
+        "longitude": -46.8754881
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "eos.bluchain.tech:9876"
+    },
      {
      "location": {
-       "name": "Campinas",
+       "name": "S�o Paulo",
        "country": "BR",
-"latitude": -22.8457367,
-       "longitude": -47.041867
+	"latitude": -23.6815315,
+       "longitude": -46.8754881
      },
      "node_type": "producer"
    }
