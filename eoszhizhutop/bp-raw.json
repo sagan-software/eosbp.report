@@ -1,1 +1,56 @@
-{    "producer_account_name": "eoszhizhutop",    "org": {        "candidate_name": "EOS ZhizhuTop",        "website": "https://eos.zhizhu.top",        "email": "service-eos@zhizhu.top",        "ownership_disclosure": "https://eos.zhizhu.top/eos-zhizhu-pool-ownership-disclosure.html",        "code_of_conduct": "https://eos.zhizhu.top/eos-zhizhu-pool-block-producer-candidate-introduction.html",        "branding": {            "logo_256": "https://eos.zhizhu.top/images/logo_256.png",            "logo_1024": "https://eos.zhizhu.top/images/logo_1024.png",            "logo_svg": "https://eos.zhizhu.top/images/logo.svg"        },        "location": {            "name": "Hangzhou",            "country": "CN",            "latitude": 30.28,            "longitude": 120.15        },        "social": {            "steemit": "eoszhizhutop",            "twitter": "eoszhizhutop",            "telegram": "eoszhizhutop"        }    },    "nodes": [        {            "location": {                "name": "Hangzhou",                "country": "CN",                "latitude": 30.28,                "longitude": 120.15            },            "node_type": "full",            "api_endpoint": "http://api.eos.zhizhu.top",            "ssl_endpoint": "https://api.eos.zhizhu.top"        }, {            "location": {                "name": "Hangzhou",                "country": "CN",                "latitude": 30.28,                "longitude": 120.15            },            "node_type": "seed",            "p2p_endpoint": "bp.eos.zhizhu.top:9876"        }, {            "location": {                "name": "Hangzhou",                "country": "CN",                "latitude": 30.28,                "longitude": 120.15            },            "node_type": "producer"        }    ]}
+{
+    "producer_account_name": "eoszhizhutop",
+    "org": {
+        "candidate_name": "EOS ZhizhuTop",
+        "website": "https://eos.zhizhu.top",
+        "email": "service-eos@zhizhu.top",
+         "ownership_disclosure": "https://eos.zhizhu.top/eos-zhizhu-pool-ownership-disclosure.html",       
+	 "code_of_conduct": "https://eos.zhizhu.top/eos-zhizhu-pool-block-producer-candidate-introduction.html", 
+        "branding": {
+            "logo_256": "https://eos.zhizhu.top/logo_256.png",
+            "logo_1024": "https://eos.zhizhu.top/logo_1024.png",
+            "logo_svg": "https://eos.zhizhu.top/logo.svg"
+        },
+        "location": {
+            "name": "Hangzhou",
+            "country": "CN",
+            "latitude": 30.28,
+            "longitude": 120.15
+        },
+        "social": {
+            "steemit": "eoszhizhutop",
+            "twitter": "eoszhizhutop",
+            "telegram": "eoszhizhutop"
+        }
+    },
+    "nodes": [
+        {
+            "location": {
+                "name": "Hangzhou",
+                "country": "CN",
+                "latitude": 30.28,
+                "longitude": 120.15
+            },
+            "node_type": "full",
+            "api_endpoint": "http://api.eos.zhizhu.top",
+            "ssl_endpoint": "https://api.eos.zhizhu.top"
+        }, {
+            "location": {
+                "name": "Hangzhou",
+                "country": "CN",
+                "latitude": 30.28,
+                "longitude": 120.15
+            },
+            "node_type": "seed",
+            "p2p_endpoint": "bp.eos.zhizhu.top:9876"
+        }, {
+            "location": {
+                "name": "Hangzhou",
+                "country": "CN",
+                "latitude": 30.28,
+                "longitude": 120.15
+            },
+            "node_type": "producer"
+        }
+    ]
+}
