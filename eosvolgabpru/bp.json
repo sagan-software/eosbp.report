@@ -1,0 +1,69 @@
+{
+  "producer_account_name": "",
+  "producer_public_key": "",
+  "org": {
+    "candidate_name": "",
+    "website": "",
+    "code_of_conduct": "",
+    "ownership_disclosure": "",
+    "email": "russiaeos@gmail.com",
+    "branding": {
+      "logo_256": "",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "Moscow",
+      "country": "RU",
+      "latitude": 55.534934,
+      "longitude": 37.254688
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github": "eosvolga",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Moscow",
+        "country": "RU",
+        "latitude": 55.534934,
+        "longitude": 37.254688
+      },
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Moscow",
+        "country": "RU",
+        "latitude": 55.534934,
+        "longitude": 37.254688
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "bp.eosvolga.one:9876",
+      "bnet_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Moscow",
+        "country": "RU",
+        "latitude": 55.534934,
+        "longitude": 37.254688
+      },
+      "node_type": "full",
+      "api_endpoint": "http://bpapi.eosvolga.one",
+      "ssl_endpoint": "https://bp.eosvolga.one"
+    }
+  ]
+}
