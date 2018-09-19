@@ -1,0 +1,57 @@
+{
+  "producer_account_name": "btccpooleos1",
+  "producer_public_key": "EOS7V63JPHTT7fxqECgdxcUySEvr3Gjwt376kUe2kQkocBwqfPShQ",
+  "org": {
+    "candidate_name": "EOSBTCCPool",
+    "website": "http://www.btccpooleos.com",
+    "code_of_conduct":"",
+    "email":"eos@btccpool.com",
+    "branding":{
+      "logo_256":"http://www.btccpooleos.com/EOS-256.png",
+      "logo_1024":"http://www.btccpooleos.com/EOS-1024.png",
+      "logo_svg":"http://www.btccpooleos.com/EOS-logo.svg"
+    },
+    "location": {
+      "name": "Shanghai",
+      "country": "CN",
+      "latitude": 31.2304,
+      "longitude": 121.4737
+    },
+    "social": {
+      "steemit": "btccpool",
+      "twitter": "BtccPoolEos",
+      "youtube": "",
+      "facebook": "eos.btccpool",
+      "github":"btccpooleos",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "https://t.me/BTCCPoolEOS"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "BTCCPoolNode1",
+        "country": "CN",
+        "latitude": 31.2304,
+        "longitude": 121.4737
+      },
+      "is_producer": false,
+      "p2p_endpoint": "peer1.btccpooleos.com:18181",
+      "api_endpoint": "http://peer1.btccpooleos.com:8181",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "BTCCPoolNode2",
+        "country": "CN",
+        "latitude": 31.2304,
+        "longitude": 121.4737 
+      },
+      "is_producer": false,
+      "p2p_endpoint": "peer2.btccpooleos.com:18181",
+      "api_endpoint": "http://peer2.btccpooleos.com:8181",
+      "ssl_endpoint": ""
+    }
+  ]
+}
