@@ -51,7 +51,7 @@
        "longitude": 37.254688
      },
      "node_type": "seed",
-     "p2p_endpoint": "bp.eosvolga.one:9876",
+     "p2p_endpoint": "bpapi.eosvolga.one:9876",
      "bnet_endpoint": ""
    },
    {
@@ -63,6 +63,7 @@
      },
      "node_type": "full",
      "api_endpoint": "http://bpapi.eosvolga.one",
+     "p2p_endpoint": "bpapi.eosvolga.one:9876",
      "ssl_endpoint": "https://bp.eosvolga.one"
    }
  ]
