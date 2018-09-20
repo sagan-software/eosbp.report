@@ -31,26 +31,26 @@
   "nodes": [
     {
       "location": {
-        "name": "BTCCPoolNode1",
+        "name": "jp1",
         "country": "CN",
         "latitude": 31.2304,
         "longitude": 121.4737
       },
       "is_producer": false,
-      "p2p_endpoint": "peer1.btccpooleos.com:18181",
-      "api_endpoint": "http://peer1.btccpooleos.com:8181",
+      "p2p_endpoint": "jp1.btccpooleos.com:8333",
+      "api_endpoint": "http://peer1.btccpooleos.com",
       "ssl_endpoint": ""
     },
     {
       "location": {
-        "name": "BTCCPoolNode2",
+        "name": "jp1",
         "country": "CN",
         "latitude": 31.2304,
         "longitude": 121.4737
       },
       "is_producer": false,
-      "p2p_endpoint": "peer2.btccpooleos.com:18181",
-      "api_endpoint": "http://peer2.btccpooleos.com:8181",
+      "p2p_endpoint": "jp2.btccpooleos.com:8333",
+      "api_endpoint": "http://peer2.btccpooleos.com",
       "ssl_endpoint": ""
     }
   ]
