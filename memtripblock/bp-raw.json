@@ -1,0 +1,60 @@
+{
+	"producer_account_name": "memtripblock",
+	"org": {
+		"candidate_name": "memtrip",
+		"website": "https://www.memtrip.com",
+		"code_of_conduct": "https://www.memtrip.com/code_of_conduct.html",
+		"ownership_disclosure": "https://www.memtrip.com/disclosure.html",
+		"email": "sam@memtrip.com",
+		"branding": {
+			"logo_256": "",
+			"logo_1024": "",
+			"logo_svg": ""
+		},
+		"location": {
+			"name": "London",
+			"country": "GB",
+			"latitude": 51.509865,
+			"longitude": -0.118092
+		},
+		"social": {
+			"steemit": "memtrip",
+			"twitter": "memtrip",
+			"facebook": "memtrip",
+			"github": "memtrip",
+			"reddit": "memtrip",
+			"telegram": "memtrip"
+		}
+	},
+	"nodes": [{
+			"location": {
+				"name": "primary",
+				"country": "GB",
+				"latitude": 51.509865,
+				"longitude": -0.118092
+			},
+			"node_type": "full",
+			"api_endpoint": "http://eos.memtrip.com",
+			"ssl_endpoint": "https://eos.memtrip.com"
+		},
+		{
+			"location": {
+				"name": "primary",
+				"country": "GB",
+				"latitude": 51.509865,
+				"longitude": -0.118092
+			},
+			"node_type": "seed",
+			"p2p_endpoint": "seed1.memtrip.com:9876"
+		},
+		{
+			"location": {
+				"name": "primary",
+				"country": "GB",
+				"latitude": 51.509865,
+				"longitude": -0.118092
+			},
+			"node_type": "producer"
+		}
+	]
+}
