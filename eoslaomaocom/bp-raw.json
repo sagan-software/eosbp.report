@@ -4,12 +4,12 @@
     "candidate_name": "EOSLaoMao",
     "website": "https://eoslaomao.com",
     "code_of_conduct": "https://steemit.com/blockchain/@eoslaomao/eoslaomao-block-producer-announcement",
-    "ownership_disclosure": "https://eoslaomao.com/disclosure.html",
+    "ownership_disclosure": "https://eoslaomao.com/disclosure",
     "email": "contact@eoslaomao.com",
     "branding": {
-        "logo_256": "https://eoslaomao.com/static/img/eoslaomaologo_256.png",
-        "logo_1024": "https://eoslaomao.com/static/img/eoslaomaologo_1024.png",
-        "logo_svg": "https://eoslaomao.com/static/img/eoslaomaologo_svg.svg"
+        "logo_256": "https://eoslaomao.com/static/media/img/eoslaomaologo_256.png",
+        "logo_1024": "https://eoslaomao.com/static/media/img/eoslaomaologo_1024.png",
+        "logo_svg": "https://eoslaomao.com/static/media/img/eoslaomaologo_svg.svg"
     },
     "location": {
       "name": "Tokyo",
@@ -32,10 +32,9 @@
         "latitude": 35.6585805,
         "longitude": 139.7454329
       },
-      "node_type": "producer",
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "node_type": "full",
+      "api_endpoint": "http://api.eoslaomao.com",
+      "ssl_endpoint": "https://api.eoslaomao.com"
     },
     {
       "location": {
@@ -44,9 +43,10 @@
         "latitude": 40.689420,
         "longitude": -74.044511
       },
-      "node_type": "full",
-      "api_endpoint": "http://api.eoslaomao.com",
-      "ssl_endpoint": "https://api.eoslaomao.com"
+      "node_type": "producer",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
     },
     {
       "location": {
