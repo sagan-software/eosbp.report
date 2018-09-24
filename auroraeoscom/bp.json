@@ -4,7 +4,8 @@
   "org": {
     "candidate_name": "Aurora EOS",
     "website": "https://auroraeos.com",
-    "code_of_conduct": "https://auroraeos.com/ethicsandcompliance",
+    "code_of_conduct": "https://auroraeos.com/ethics-and-compliance/",
+    "ownership_disclosure": "https://auroraeos.com/ethics-and-compliance/",
     "email": "bp@auroraeos.com",
     "branding": {
       "logo_256": "https://www.auroraeos.com/aurora-256.png",
@@ -12,10 +13,10 @@
       "logo_svg": "https://www.auroraeos.com/aurora-1024.svg"
     },
     "location": {
-      "name": "Boston, MA",
+      "name": "Austin, TX",
       "country": "US",
-      "latitude": 42.3601,
-      "longitude": 71.0589
+      "latitude": 30.2672,
+      "longitude": 97.7431
     },
     "social": {
       "steemit": "auroraeos",
@@ -37,7 +38,7 @@
         "latitude": 39.020812,
         "longitude": -77.433357
       },
-      "is_producer": false,
+      "node_type": "full",
       "p2p_endpoint": "mainnet.auroraeos.com:9870",
       "api_endpoint": "http://mainnet.auroraeos.com:8081",
       "ssl_endpoint": ""
@@ -49,7 +50,7 @@
         "latitude": 39.020812,
         "longitude": -77.433357
       },
-      "is_producer": true,
+      "node_type": "producer",
       "p2p_endpoint": "",
       "api_endpoint": "",
       "ssl_endpoint": ""
