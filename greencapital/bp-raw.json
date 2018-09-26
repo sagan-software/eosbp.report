@@ -1,0 +1,47 @@
+{
+  "producer_account_name": "greencapital",
+  "producer_public_key": "EOS8SXsZDjSUsNEUg5vUkvZa1mGjfV4752EKn55aCpfpFiQdtvWYy",
+  "org": {
+    "candidate_name": "greencapital",
+    "website": "http://greencapital.top/",
+    "code_of_conduct":"",
+    "ownership_disclosure":"http://greencapital.top/",
+    "email":"support@greencapital.net",
+    "branding":{
+      "logo_256":"http://greencapital.top/logo/256.jpg",
+      "logo_1024":"http://greencapital.top/logo/1024.jpg",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Hangzhou",
+      "country": "CN",
+      "latitude": 118.21,
+      "longitude": 29.11
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github":"https://github.com/lansheng228/eoschaintech",
+      "reddit": "",
+      "keybase": "",
+      "telegram": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "greencapital",
+        "country": "CN",
+        "latitude": 118.21,
+        "longitude": 29.11
+      },
+      "is_producer": true,
+      "p2p_endpoint": "greencapital.top:19876",
+      "api_endpoint": "http://api.greencapital.top",
+      "ssl_endpoint": "https://api.greencapital.top"
+    }
+  ]
+}
+
