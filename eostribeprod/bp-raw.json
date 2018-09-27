@@ -13,10 +13,10 @@
       "logo_svg":"https://eostribe.io/images/logo.svg"
     },
     "location": {
-      "name": "Cheyenne, WY",
+      "name": "Bluffdale, UT",
       "country": "US",
-      "latitude": 41.139980,
-      "longitude": -104.820244
+      "latitude": 40.458973,
+      "longitude": -111.918542
     },
     "social": {
       "steemit": "eostribe",
@@ -43,8 +43,8 @@
         "longitude": -111.918542
       },
       "node_type": "full",
-      "api_endpoint": "http://api.eostribe.io",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://api1.eostribe.io",
+      "ssl_endpoint": "https://api1.eostribe.io"
     },
     {
       "location": {
@@ -54,7 +54,7 @@
         "longitude": -111.918542
       },
       "node_type": "seed",
-      "p2p_endpoint": "api.eostribe.io:9115",
+      "p2p_endpoint": "api1.eostribe.io:9115",
       "bnet_endpoint": ""
     },
     {
