@@ -1,0 +1,56 @@
+{
+  "producer_account_name": "eosplayworld",
+  "org": {
+    "candidate_name": "EOSPLAY",
+    "website": "http://eosplay.world",
+    "email": "admin@eosplay.world",
+    "branding": {
+      "logo_256": "",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "Singapore",
+      "country": "SG",
+      "latitude": 22.318796,
+      "longitude": 114.170187
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "facebook": "",
+      "github": "",
+      "telegram": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Taiwan",
+        "country": "TW",
+        "latitude": 23.997312,
+        "longitude": 121.600584
+      },
+      "node_type": "full",
+      "api_endpoint": "http://eosplay.world:8888",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Taiwan",
+        "country": "TW"
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "eosplay.world:9876"
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 22.318796,
+        "longitude": 114.170187
+      },
+      "node_type": "producer"
+    }
+  ]
+}
