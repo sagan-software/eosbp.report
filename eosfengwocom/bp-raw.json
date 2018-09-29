@@ -1,0 +1,55 @@
+{
+    "producer_account_name": "eosfengwocom",
+    "org": {
+        "candidate_name": "EOS Fengwo",
+        "website": "https://eosfengwo.com",
+        "email": "service@eosfengwo.com",
+        "code_of_conduct": "",
+        "branding": {
+            "logo_256": "https://eosfengwo.com/logo_256.png",
+            "logo_1024": "https://eosfengwo.com/logo_1024.png",
+            "logo_svg": "https://eosfengwo.com/logo.svg"
+        },
+        "location": {
+            "name": "Beijing",
+            "country": "CN",
+            "latitude": 39.91667,
+            "longitude": 116.41667
+        },
+        "social": {
+            "twitter": "eosfengwocom",
+            "telegram": "eosfengwocom",
+            "github": ""
+        }
+    },
+    "nodes": [
+        {
+            "location": {
+                "name": "Tokyo",
+                "country": "JP",
+                "latitude": 35.7090259,
+                "longitude": 139.7319925
+            },
+            "node_type": "full",
+            "api_endpoint": "http://api.eosfengwo.com",
+            "ssl_endpoint": "https://api.eosfengwo.com"
+        }, {
+            "location": {
+                "name": "Tokyo",
+                "country": "JP",
+                "latitude": 35.7090259,
+                "longitude": 139.7319925
+            },
+            "node_type": "seed",
+            "p2p_endpoint": "peer.eosfengwo.com:8080"
+        }, {
+            "location": {
+                "name": "Tokyo",
+                "country": "JP",
+                "latitude": 35.7090259,
+                "longitude": 139.7319925
+            },
+            "node_type": "producer"
+        }
+    ]
+}
