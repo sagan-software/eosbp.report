@@ -14,21 +14,6 @@
   },
   {
     "producer": "1eostheworld",
-    "url": "http://api1.eostheworld.io:4865/",
-    "latitude": 31.554993,
-    "longitude": -97.133469,
-    "node_type": [
-      "full"
-    ],
-    "info_status": 200,
-    "server_version": "b8c1b2c2",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
-  },
-  {
-    "producer": "1eostheworld",
     "url": "https://api1.eostheworld.io/",
     "latitude": 31.554993,
     "longitude": -97.133469,
@@ -41,6 +26,21 @@
     "head_block_num": null,
     "head_block_time": null,
     "last_irreversible_block_num": null
+  },
+  {
+    "producer": "1eostheworld",
+    "url": "http://api1.eostheworld.io:4865/",
+    "latitude": 31.554993,
+    "longitude": -97.133469,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "b8c1b2c2",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "activeeoscom",
@@ -79,9 +79,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "argentinaeos",
@@ -94,24 +94,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
-  },
-  {
-    "producer": "atticlabeosb",
-    "url": "https://eosbp.atticlab.net/",
-    "latitude": 50.418493,
-    "longitude": 30.517631,
-    "node_type": [
-      "full"
-    ],
-    "info_status": 200,
-    "server_version": "c71d2245",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "atticlabeosb",
@@ -124,13 +109,13 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
-    "producer": "atticlabeosp",
-    "url": "http://eosbp-0.atticlab.net/",
+    "producer": "atticlabeosb",
+    "url": "https://eosbp.atticlab.net/",
     "latitude": 50.418493,
     "longitude": 30.517631,
     "node_type": [
@@ -139,9 +124,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "atticlabeosp",
@@ -154,9 +139,24 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
+  },
+  {
+    "producer": "atticlabeosp",
+    "url": "http://eosbp-0.atticlab.net/",
+    "latitude": 50.418493,
+    "longitude": 30.517631,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "c71d2245",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "auroraeoscom",
@@ -169,9 +169,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "aus1genereos",
@@ -184,9 +184,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "aus1genereos",
@@ -199,9 +199,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "bchainlabeos",
@@ -224,7 +224,7 @@
     "latitude": 45.5017,
     "longitude": 73.5673,
     "node_type": [
-      "producer"
+      "seed"
     ],
     "info_status": null,
     "server_version": null,
@@ -254,7 +254,7 @@
     "latitude": 45.5017,
     "longitude": 73.5673,
     "node_type": [
-      "seed"
+      "producer"
     ],
     "info_status": null,
     "server_version": null,
@@ -274,9 +274,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "bitspacenode",
@@ -289,9 +289,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "blockchained",
@@ -304,9 +304,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "blockchained",
@@ -319,15 +319,28 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "blockgenicbp",
     "url": "http://api.blockgenicbp.com:8888/",
     "latitude": 47.6062,
     "longitude": 122.3321,
+    "node_type": [],
+    "info_status": null,
+    "server_version": null,
+    "chain_id": null,
+    "head_block_num": null,
+    "head_block_time": null,
+    "last_irreversible_block_num": null
+  },
+  {
+    "producer": "blockpro1eos",
+    "url": "http://blockpro.one:8888/",
+    "latitude": 51.51118829,
+    "longitude": -0.09617353,
     "node_type": [],
     "info_status": null,
     "server_version": null,
@@ -350,11 +363,13 @@
     "last_irreversible_block_num": null
   },
   {
-    "producer": "blockpro1eos",
-    "url": "http://blockpro.one:8888/",
-    "latitude": 51.51118829,
-    "longitude": -0.09617353,
-    "node_type": [],
+    "producer": "bp2bp2bp2bp2",
+    "url": "https://node1.bp2.io/",
+    "latitude": 46.1651,
+    "longitude": 123.9238,
+    "node_type": [
+      "full"
+    ],
     "info_status": null,
     "server_version": null,
     "chain_id": null,
@@ -378,21 +393,6 @@
     "last_irreversible_block_num": null
   },
   {
-    "producer": "bp2bp2bp2bp2",
-    "url": "https://node1.bp2.io/",
-    "latitude": 46.1651,
-    "longitude": 123.9238,
-    "node_type": [
-      "full"
-    ],
-    "info_status": null,
-    "server_version": null,
-    "chain_id": null,
-    "head_block_num": null,
-    "head_block_time": null,
-    "last_irreversible_block_num": null
-  },
-  {
     "producer": "bpeosindexio",
     "url": "http://api.bp.eosindex.io/",
     "latitude": 50.47788,
@@ -403,9 +403,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 14846383,
-    "head_block_time": "2018-09-05T11:30:47.000",
-    "last_irreversible_block_num": 14846048
+    "head_block_num": 14848524,
+    "head_block_time": "2018-09-05T11:48:42.500",
+    "last_irreversible_block_num": 14848198
   },
   {
     "producer": "bpeosindexio",
@@ -418,9 +418,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 14846383,
-    "head_block_time": "2018-09-05T11:30:47.000",
-    "last_irreversible_block_num": 14846048
+    "head_block_num": 14848524,
+    "head_block_time": "2018-09-05T11:48:42.500",
+    "last_irreversible_block_num": 14848198
   },
   {
     "producer": "bpnodecanada",
@@ -457,9 +457,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "cochainworld",
@@ -472,9 +472,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448587,
+    "head_block_time": "2018-10-02T08:11:14.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "cochainworld",
@@ -487,9 +487,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "cochainworld",
@@ -502,9 +502,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "cochainworld",
@@ -514,12 +514,12 @@
     "node_type": [
       "full"
     ],
-    "info_status": 200,
-    "server_version": "78708df4",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447990,
-    "head_block_time": "2018-10-02T08:06:16.000",
-    "last_irreversible_block_num": 19447657
+    "info_status": null,
+    "server_version": null,
+    "chain_id": null,
+    "head_block_num": null,
+    "head_block_time": null,
+    "last_irreversible_block_num": null
   },
   {
     "producer": "cryptolions1",
@@ -532,9 +532,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "cryptolions1",
@@ -547,22 +547,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
-  },
-  {
-    "producer": "csxcommunity",
-    "url": "http://api.csx.io/",
-    "latitude": 0,
-    "longitude": 0,
-    "node_type": [],
-    "info_status": null,
-    "server_version": null,
-    "chain_id": null,
-    "head_block_num": null,
-    "head_block_time": null,
-    "last_irreversible_block_num": null
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "csxcommunity",
@@ -578,19 +565,17 @@
     "last_irreversible_block_num": null
   },
   {
-    "producer": "cypherglasss",
-    "url": "http://api.cypherglass.com/",
-    "latitude": 44.989618,
-    "longitude": -93.269376,
-    "node_type": [
-      "full"
-    ],
-    "info_status": 200,
-    "server_version": "78708df4",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "producer": "csxcommunity",
+    "url": "http://api.csx.io/",
+    "latitude": 0,
+    "longitude": 0,
+    "node_type": [],
+    "info_status": null,
+    "server_version": null,
+    "chain_id": null,
+    "head_block_num": null,
+    "head_block_time": null,
+    "last_irreversible_block_num": null
   },
   {
     "producer": "cypherglasss",
@@ -601,11 +586,26 @@
       "full"
     ],
     "info_status": 200,
-    "server_version": "78708df4",
+    "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
+  },
+  {
+    "producer": "cypherglasss",
+    "url": "http://api.cypherglass.com/",
+    "latitude": 44.989618,
+    "longitude": -93.269376,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "c71d2245",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "disfundbpeos",
@@ -694,32 +694,6 @@
     "last_irreversible_block_num": null
   },
   {
-    "producer": "eosamericas2",
-    "url": "http://node1.eosamericas.com/",
-    "latitude": 47.597,
-    "longitude": -122.369,
-    "node_type": [],
-    "info_status": null,
-    "server_version": null,
-    "chain_id": null,
-    "head_block_num": null,
-    "head_block_time": null,
-    "last_irreversible_block_num": null
-  },
-  {
-    "producer": "eosamericas2",
-    "url": "http://node1.eosamericas.com:8888/",
-    "latitude": 47.597,
-    "longitude": -122.369,
-    "node_type": [],
-    "info_status": null,
-    "server_version": null,
-    "chain_id": null,
-    "head_block_num": null,
-    "head_block_time": null,
-    "last_irreversible_block_num": null
-  },
-  {
     "producer": "eosamsterdam",
     "url": "https://mainnet.eosamsterdam.net/",
     "latitude": 49.2333,
@@ -730,9 +704,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosamsterdam",
@@ -745,24 +719,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
-  },
-  {
-    "producer": "eosasia11111",
-    "url": "https://api1.eosasia.one/",
-    "latitude": 24.0518,
-    "longitude": 120.5161,
-    "node_type": [
-      "full"
-    ],
-    "info_status": 200,
-    "server_version": "0f6695cb",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosasia11111",
@@ -775,24 +734,24 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
-    "producer": "eosauthority",
-    "url": "http://publicapi-mainnet.eosauthority.com/",
-    "latitude": 51.512838,
-    "longitude": -0.087177,
+    "producer": "eosasia11111",
+    "url": "https://api1.eosasia.one/",
+    "latitude": 24.0518,
+    "longitude": 120.5161,
     "node_type": [
       "full"
     ],
     "info_status": 200,
-    "server_version": "c71d2245",
+    "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosauthority",
@@ -805,24 +764,24 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
-    "producer": "eoscafeblock",
-    "url": "https://mainnet.eoscalgary.io/",
-    "latitude": 51.0486,
-    "longitude": -114.0708,
+    "producer": "eosauthority",
+    "url": "http://publicapi-mainnet.eosauthority.com/",
+    "latitude": 51.512838,
+    "longitude": -0.087177,
     "node_type": [
       "full"
     ],
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447984,
-    "head_block_time": "2018-10-02T08:06:13.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscafeblock",
@@ -835,9 +794,24 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447984,
-    "head_block_time": "2018-10-02T08:06:13.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
+  },
+  {
+    "producer": "eoscafeblock",
+    "url": "https://mainnet.eoscalgary.io/",
+    "latitude": 51.0486,
+    "longitude": -114.0708,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "c71d2245",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscanadacom",
@@ -850,9 +824,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447984,
-    "head_block_time": "2018-10-02T08:06:13.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscanadacom",
@@ -865,9 +839,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447984,
-    "head_block_time": "2018-10-02T08:06:13.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscandyone1",
@@ -876,11 +850,11 @@
     "longitude": 0,
     "node_type": [],
     "info_status": 200,
-    "server_version": "bbc8ff76",
+    "server_version": "f2cb2722",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscandyone1",
@@ -889,26 +863,11 @@
     "longitude": 0,
     "node_type": [],
     "info_status": 200,
-    "server_version": "f2cb2722",
+    "server_version": "bbc8ff76",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
-  },
-  {
-    "producer": "eoscannonchn",
-    "url": "http://mainnet.eoscannon.io/",
-    "latitude": 22.3964,
-    "longitude": 114.1095,
-    "node_type": [
-      "full"
-    ],
-    "info_status": 200,
-    "server_version": "c71d2245",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscannonchn",
@@ -921,15 +880,43 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
+  },
+  {
+    "producer": "eoscannonchn",
+    "url": "http://mainnet.eoscannon.io/",
+    "latitude": 22.3964,
+    "longitude": 114.1095,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "c71d2245",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoschainbmok",
     "url": "http://103.211.167.110:8888/",
     "latitude": 22.3964,
     "longitude": 114.1095,
+    "node_type": [],
+    "info_status": null,
+    "server_version": null,
+    "chain_id": null,
+    "head_block_num": null,
+    "head_block_time": null,
+    "last_irreversible_block_num": null
+  },
+  {
+    "producer": "eoschaintech",
+    "url": "https://api.eoschaintech.net/",
+    "latitude": 112.61,
+    "longitude": 26.89,
     "node_type": [],
     "info_status": null,
     "server_version": null,
@@ -947,37 +934,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
-  },
-  {
-    "producer": "eoschaintech",
-    "url": "https://api.eoschaintech.net/",
-    "latitude": 112.61,
-    "longitude": 26.89,
-    "node_type": [],
-    "info_status": null,
-    "server_version": null,
-    "chain_id": null,
-    "head_block_num": null,
-    "head_block_time": null,
-    "last_irreversible_block_num": null
-  },
-  {
-    "producer": "eoscleanerbp",
-    "url": "http://api.eoscleaner.com/",
-    "latitude": 35.4981,
-    "longitude": 139.4952,
-    "node_type": [
-      "full"
-    ],
-    "info_status": 200,
-    "server_version": "78708df4",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscleanerbp",
@@ -990,9 +949,24 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
+  },
+  {
+    "producer": "eoscleanerbp",
+    "url": "http://api.eoscleaner.com/",
+    "latitude": 35.4981,
+    "longitude": 139.4952,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "78708df4",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoscybexiobp",
@@ -1005,9 +979,9 @@
     "info_status": 200,
     "server_version": "cb3645ae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosdotwikibp",
@@ -1020,24 +994,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
-  },
-  {
-    "producer": "eosfishrocks",
-    "url": "http://api.bp.fish/",
-    "latitude": 22.3964,
-    "longitude": 114.1095,
-    "node_type": [
-      "full"
-    ],
-    "info_status": 200,
-    "server_version": "c71d2245",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosfishrocks",
@@ -1050,9 +1009,24 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
+  },
+  {
+    "producer": "eosfishrocks",
+    "url": "http://api.bp.fish/",
+    "latitude": 22.3964,
+    "longitude": 114.1095,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "c71d2245",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosfutureldn",
@@ -1112,9 +1086,9 @@
   },
   {
     "producer": "eosgreeniobp",
-    "url": "http://api-2.eosgreen.io:8888/",
-    "latitude": 52.2297,
-    "longitude": 21.0122,
+    "url": "http://api-1.eosgreen.io:8888/",
+    "latitude": 51.51118829,
+    "longitude": -0.09617353,
     "node_type": [],
     "info_status": null,
     "server_version": null,
@@ -1125,9 +1099,9 @@
   },
   {
     "producer": "eosgreeniobp",
-    "url": "http://api-1.eosgreen.io:8888/",
-    "latitude": 51.51118829,
-    "longitude": -0.09617353,
+    "url": "http://api-2.eosgreen.io:8888/",
+    "latitude": 52.2297,
+    "longitude": 21.0122,
     "node_type": [],
     "info_status": null,
     "server_version": null,
@@ -1145,9 +1119,9 @@
     "info_status": 200,
     "server_version": "af3dbe90",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoshuobipool",
@@ -1158,9 +1132,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosisgravity",
@@ -1173,9 +1147,9 @@
     "info_status": 200,
     "server_version": "3e6d766a",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosisgravity",
@@ -1188,9 +1162,9 @@
     "info_status": 200,
     "server_version": "3e6d766a",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoslambdacom",
@@ -1203,9 +1177,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eoslawyereos",
@@ -1231,9 +1205,9 @@
     "info_status": 200,
     "server_version": "bbc8ff76",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosliquideos",
@@ -1246,9 +1220,9 @@
     "info_status": 200,
     "server_version": "bbc8ff76",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eoslithuania",
@@ -1265,22 +1239,9 @@
   },
   {
     "producer": "eoslithuania",
-    "url": "https://api.eosio.lt/",
-    "latitude": 54.6560291,
-    "longitude": 25.2267303,
-    "node_type": [],
-    "info_status": null,
-    "server_version": null,
-    "chain_id": null,
-    "head_block_num": null,
-    "head_block_time": null,
-    "last_irreversible_block_num": null
-  },
-  {
-    "producer": "eoslithuania",
     "url": "http://api.eosio.lt/",
-    "latitude": 54.6560291,
-    "longitude": 25.2267303,
+    "latitude": 54.7240811,
+    "longitude": 25.2952333,
     "node_type": [],
     "info_status": 400,
     "server_version": null,
@@ -1291,9 +1252,22 @@
   },
   {
     "producer": "eoslithuania",
+    "url": "https://api.eosio.lt/",
+    "latitude": 54.6560291,
+    "longitude": 25.2267303,
+    "node_type": [],
+    "info_status": null,
+    "server_version": null,
+    "chain_id": null,
+    "head_block_num": null,
+    "head_block_time": null,
+    "last_irreversible_block_num": null
+  },
+  {
+    "producer": "eoslithuania",
     "url": "http://api.eosio.lt/",
-    "latitude": 54.7240811,
-    "longitude": 25.2952333,
+    "latitude": 54.6560291,
+    "longitude": 25.2267303,
     "node_type": [],
     "info_status": 400,
     "server_version": null,
@@ -1339,9 +1313,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosmedinodes",
@@ -1354,9 +1328,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosmesodotio",
@@ -1369,9 +1343,9 @@
     "info_status": 200,
     "server_version": "cb3645ae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosnairobike",
@@ -1384,9 +1358,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosnairobike",
@@ -1399,13 +1373,13 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosnigeriago",
-    "url": "https://bp.eosnigeria.io:8899/",
+    "url": "http://bp.eosnigeria.io:8898/",
     "latitude": 6.465422,
     "longitude": 3.406448,
     "node_type": [
@@ -1420,7 +1394,7 @@
   },
   {
     "producer": "eosnigeriago",
-    "url": "http://bp.eosnigeria.io:8898/",
+    "url": "https://bp.eosnigeria.io:8899/",
     "latitude": 6.465422,
     "longitude": 3.406448,
     "node_type": [
@@ -1444,9 +1418,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosnodeonebp",
@@ -1459,9 +1433,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosonoeosono",
@@ -1472,9 +1446,9 @@
     "info_status": 200,
     "server_version": "f2cb2722",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosonoeosono",
@@ -1483,11 +1457,11 @@
     "longitude": 139.7454329,
     "node_type": [],
     "info_status": 200,
-    "server_version": "f2cb2722",
+    "server_version": "bbc8ff76",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosorangeeos",
@@ -1498,9 +1472,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosorangeeos",
@@ -1511,9 +1485,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447989,
-    "head_block_time": "2018-10-02T08:06:15.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eospacificbp",
@@ -1526,9 +1500,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eospacificbp",
@@ -1541,9 +1515,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eospalliumss",
@@ -1599,21 +1573,6 @@
   },
   {
     "producer": "eossocalprod",
-    "url": "http://api.eossocal.io/",
-    "latitude": 37.342631,
-    "longitude": -119.28084,
-    "node_type": [
-      "full"
-    ],
-    "info_status": null,
-    "server_version": null,
-    "chain_id": null,
-    "head_block_num": null,
-    "head_block_time": null,
-    "last_irreversible_block_num": null
-  },
-  {
-    "producer": "eossocalprod",
     "url": "https://api.eossocal.io/",
     "latitude": 37.342631,
     "longitude": -119.28084,
@@ -1628,19 +1587,19 @@
     "last_irreversible_block_num": null
   },
   {
-    "producer": "eosstorebest",
-    "url": "http://api.eosstore.co/",
-    "latitude": 35.4981,
-    "longitude": 139.4952,
+    "producer": "eossocalprod",
+    "url": "http://api.eossocal.io/",
+    "latitude": 37.342631,
+    "longitude": -119.28084,
     "node_type": [
       "full"
     ],
-    "info_status": 200,
-    "server_version": "c71d2245",
-    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447985,
-    "head_block_time": "2018-10-02T08:06:13.500",
-    "last_irreversible_block_num": 19447657
+    "info_status": null,
+    "server_version": null,
+    "chain_id": null,
+    "head_block_num": null,
+    "head_block_time": null,
+    "last_irreversible_block_num": null
   },
   {
     "producer": "eosstorebest",
@@ -1653,9 +1612,24 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447986,
-    "head_block_time": "2018-10-02T08:06:14.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
+  },
+  {
+    "producer": "eosstorebest",
+    "url": "http://api.eosstore.co/",
+    "latitude": 35.4981,
+    "longitude": 139.4952,
+    "node_type": [
+      "full"
+    ],
+    "info_status": 200,
+    "server_version": "c71d2245",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 19448580,
+    "head_block_time": "2018-10-02T08:11:11.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eossv12eossv",
@@ -1666,9 +1640,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eossv12eossv",
@@ -1679,9 +1653,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosthushuimu",
@@ -1707,9 +1681,9 @@
     "info_status": 200,
     "server_version": "bbc8ff76",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eostitanprod",
@@ -1720,11 +1694,11 @@
       "full"
     ],
     "info_status": 200,
-    "server_version": "bbc8ff76",
+    "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19448001,
-    "head_block_time": "2018-10-02T08:06:21.500",
-    "last_irreversible_block_num": 19447669
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eostribeprod",
@@ -1737,9 +1711,9 @@
     "info_status": 200,
     "server_version": "bbc8ff76",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosunion1111",
@@ -1750,9 +1724,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosunion1111",
@@ -1763,9 +1737,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosvancouver",
@@ -1789,9 +1763,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosvibesbloc",
@@ -1804,9 +1778,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosvibesbloc",
@@ -1819,9 +1793,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447989,
-    "head_block_time": "2018-10-02T08:06:15.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosvolgabpru",
@@ -1834,9 +1808,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosvolgabpru",
@@ -1888,9 +1862,9 @@
     "info_status": 200,
     "server_version": "bbc8ff76",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "eosyskoreabp",
@@ -1903,9 +1877,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eosyskoreabp",
@@ -1918,9 +1892,9 @@
     "info_status": 200,
     "server_version": "78708df4",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "eoszonrussia",
@@ -1946,9 +1920,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447984,
-    "head_block_time": "2018-10-02T08:06:13.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "ge4dqojvgmge",
@@ -1976,9 +1950,9 @@
     "info_status": 200,
     "server_version": "2d3bb003",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "geosoneforbp",
@@ -2004,9 +1978,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448581,
+    "head_block_time": "2018-10-02T08:11:11.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "greencapital",
@@ -2084,9 +2058,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "hkeoshkeosbp",
@@ -2099,9 +2073,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447989,
-    "head_block_time": "2018-10-02T08:06:15.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "icekkkkkkkkk",
@@ -2129,9 +2103,9 @@
     "info_status": 200,
     "server_version": "cb3645ae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "kunablockprd",
@@ -2144,9 +2118,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "kunablockprd",
@@ -2159,9 +2133,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "libertyblock",
@@ -2174,9 +2148,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448575,
+    "head_block_time": "2018-10-02T08:11:08.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "libertyblock",
@@ -2189,9 +2163,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448576,
+    "head_block_time": "2018-10-02T08:11:09.000",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "moreisfuture",
@@ -2202,9 +2176,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447989,
-    "head_block_time": "2018-10-02T08:06:15.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448585,
+    "head_block_time": "2018-10-02T08:11:13.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "moreisfuture",
@@ -2215,9 +2189,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447989,
-    "head_block_time": "2018-10-02T08:06:15.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448584,
+    "head_block_time": "2018-10-02T08:11:13.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "oasisproduce",
@@ -2241,9 +2215,9 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "privexinceos",
@@ -2323,9 +2297,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447989,
-    "head_block_time": "2018-10-02T08:06:15.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "starteosiobp",
@@ -2338,9 +2312,9 @@
     "info_status": 200,
     "server_version": "0f6695cb",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447990,
-    "head_block_time": "2018-10-02T08:06:16.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "starteosiobp",
@@ -2366,9 +2340,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447993,
-    "head_block_time": "2018-10-02T08:06:17.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448591,
+    "head_block_time": "2018-10-02T08:11:16.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "superoneiobp",
@@ -2379,9 +2353,9 @@
     "info_status": 200,
     "server_version": "b8c1b2c2",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447993,
-    "head_block_time": "2018-10-02T08:06:17.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448587,
+    "head_block_time": "2018-10-02T08:11:14.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "syndicateoss",
@@ -2394,9 +2368,9 @@
     "info_status": 200,
     "server_version": "cb3645ae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "syndicateoss",
@@ -2409,9 +2383,9 @@
     "info_status": 200,
     "server_version": "cb3645ae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "taxreliefeos",
@@ -2476,9 +2450,9 @@
     "info_status": 200,
     "server_version": "0acef24b",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "teamgreymass",
@@ -2491,9 +2465,9 @@
     "info_status": 200,
     "server_version": "0acef24b",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447987,
-    "head_block_time": "2018-10-02T08:06:14.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "tokenika4eos",
@@ -2506,9 +2480,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "tokenika4eos",
@@ -2521,9 +2495,9 @@
     "info_status": 200,
     "server_version": "08819aae",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447988,
-    "head_block_time": "2018-10-02T08:06:15.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448582,
+    "head_block_time": "2018-10-02T08:11:12.000",
+    "last_irreversible_block_num": 19448257
   },
   {
     "producer": "wizznetwork1",
@@ -2536,9 +2510,9 @@
     "info_status": 200,
     "server_version": "e87d245d",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447984,
-    "head_block_time": "2018-10-02T08:06:13.000",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448579,
+    "head_block_time": "2018-10-02T08:11:10.500",
+    "last_irreversible_block_num": 19448245
   },
   {
     "producer": "zbeosbp11111",
@@ -2551,8 +2525,8 @@
     "info_status": 200,
     "server_version": "c71d2245",
     "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
-    "head_block_num": 19447989,
-    "head_block_time": "2018-10-02T08:06:15.500",
-    "last_irreversible_block_num": 19447657
+    "head_block_num": 19448583,
+    "head_block_time": "2018-10-02T08:11:12.500",
+    "last_irreversible_block_num": 19448257
   }
 ]
