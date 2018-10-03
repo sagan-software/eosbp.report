@@ -1,0 +1,64 @@
+{
+  "producer_account_name": "exmotraderes",
+  "org": {
+    "candidate_name": "Go EOS Lottery",
+    "website": "http://www.goeoslottry.cn",
+    "code_of_conduct": "https://www.facebook.com/groups/exmotraderes",
+    "ownership_disclosure": "https://thehost.ua/ua/hosting/premium",
+    "email": "cn.goeos@gmail.com",
+    "branding": {
+      "logo_256": "http://",
+      "logo_1024": "http://",
+      "logo_svg": "http://"
+    },
+    "location": {
+      "name": "Kiev",
+      "country": "UA",
+      "latitude": 50.438283,
+      "longitude": 30.569161
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "Max Ptihkin",
+      "github": "Drug0j",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "primary",
+        "country": "BR",
+        "latitude": 50.438283,
+        "longitude": 30.569161
+      },
+      "node_type": "full",
+      "api_endpoint": "http://176.114.8.156:8888",
+      "ssl_endpoint": "https://"
+    },
+    {
+      "location": {
+        "name": "primary",
+        "country": "BR",
+        "latitude": 50.438283,
+        "longitude": 30.569161
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "176.114.8.156:9876"
+    },
+    {
+      "location": {
+        "name": "primary",
+        "country": "BR",
+        "latitude": 50.438283,
+        "longitude": 30.569161
+      },
+      "node_type": "producer"
+    }
+  ]
+}
