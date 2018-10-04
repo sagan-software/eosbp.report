@@ -32,14 +32,14 @@
   "nodes": [
     {
        "location": {
-        "name": "EOSSeoulAPI",
+        "name": "EOSSeoul-API",
         "country": "KR",
         "latitude": 37.400226,
         "longitude": 127.104194
       },
       "node_type": "full",
-      "api_endpoint": "http://user-api.eoseoul.io",
-      "ssl_endpoint": "https://user-api.eoseoul.io"
+      "api_endpoint": "http://api.eoseoul.io",
+      "ssl_endpoint": "https://api.eoseoul.io"
     },
     {
       "location": {
@@ -49,17 +49,7 @@
        "longitude": 127.104194
      },
      "node_type": "seed",
-     "p2p_endpoint": "api-full1.eoseoul.io:9876"
-    },
-    {
-      "location": {
-       "name": "EOSSeoul-seed2",
-       "country": "KR",
-       "latitude": 37.400226,
-       "longitude": 127.104194
-     },
-     "node_type": "seed",
-     "p2p_endpoint": "api-full2.eoseoul.io:9876"
+     "p2p_endpoint": "p2p.eoseoul.io:9876"
     },
     {
        "location": {
