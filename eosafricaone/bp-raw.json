@@ -1,18 +1,19 @@
 {
   "producer_account_name": "eosafricaone",
+  "producer_public_key": "EOS5HG6pV9FXK64uJSr2GPXfiBEk8GRRedZDcRVXw8mZNuQ51QdMW",
   "org": {
     "candidate_name": "eosAfrica",
-    "website": "https://www.eosafrica.io",
-    "code_of_conduct":"https://www.eosafrica.io/code-of-conduct",
-    "ownership_disclosure":"https://www.eosafrica.io/ownership-disclosure",
-    "email":"khosi@eosio.africa",
+    "website": "https://www.eosio.africa",
+    "code_of_conduct":"https://www.eosio.africa/code-of-conduct",
+    "ownership_disclosure":"https://www.eosio.africa/ownership-disclosure",
+    "email":"contact@eosio.africa",
     "branding":{
-      "logo_256":"https://bp.eosio.africa/assets/256.png",
-      "logo_1024":"https://bp.eosio.africa/assets/1024.png",
-      "logo_svg" : "https://bp.eosio.africa/assets/eosAfrica.svg"
+      "logo_256":"https://www.eosio.africa/assets/256.png",
+      "logo_1024":"https://www.eosio.africa/assets/1024.png",
+      "logo_svg" : "https://www.eosio.africa/assets/eosAfrica.svg"
     },
     "location": {
-      "name": "SouthAfrica",
+      "name": "South Africa",
       "country": "ZA",
       "latitude": -30.5595,
       "longitude": 22.9375
@@ -25,14 +26,14 @@
       "github":"eosioafrica",
       "reddit": "",
       "keybase": "khosimorafo",
-      "telegram": "@khosimorafo",
+      "telegram": "@eosAfrica",
       "wechat":""
     }
   },
   "nodes": [
     {
       "location": {
-        "name": "CPT",
+        "name": "Cape Town",
         "country": "ZA",
         "latitude": -33.9249,
         "longitude": 18.4241
@@ -41,7 +42,7 @@
     },
     {
       "location": {
-        "name": "CPT",
+        "name": "Cape Town",
         "country": "ZA",
         "latitude": -33.9249,
         "longitude": 18.4241
@@ -62,3 +63,4 @@
     }
   ]
 }
+
