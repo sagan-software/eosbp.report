@@ -1,0 +1,89 @@
+{
+  "producer_account_name": "eosoceaniabp",
+  "producer_public_key": "EOS8BbufK9i7wTYp7QhUyxwvn4Rne9MBtLCJ1rfbUgc5CnF1Y6Udn",
+  "org": {
+    "candidate_name":"EOS Oceania",
+    "website":"https://www.eosoceania.io",
+    "code_of_conduct":"https://www.eosoceania.io/code-of-conduct",
+    "ownership_disclosure":"https://www.eosoceania.io/code-of-conduct#ownership",
+    "email":"info@eosoceania.io",
+    "branding":{
+"logo_256":"https://cdn.steemitimages.com/DQmQ8JCcBm68wpZovR4bKP5FmDXgXnTgSeNfMRdXhJeEG3N/eosoceaniabp-256x256.png",
+"logo_1024":"https://cdn.steemitimages.com/DQmeFVm88tKkXymSx5W7iSsQnRcf5GkD82pZhazWQ7Adc16/eosoceaniabp-1024x1024.png",
+"logo_svg":"https://cdn.steemitimages.com/DQmdHz6rZvcYmKkPu5ra7tJUaS8zgChb3fb3eourhschdxN/eosoceanaia-1024x1024.svg"
+    },
+    "location": {
+      "name": "Auckland, AKL",
+      "country": "NZ",
+      "latitude": -36.770905,
+      "longitude": 174.740050
+    },
+    "social": {
+      "steemit": "eosoceania",
+      "twitter": "eosoceania",
+      "reddit": "eosoceania",
+      "keybase": "eosoceania",
+      "telegram": "eosoceania",
+      "medium": "eosoceania",
+      "github": "eosoceania"
+    }
+},
+  "nodes": [
+    {
+    "location": {
+      "name": "Wellington, WLG",
+      "country": "NZ",
+      "latitude": -41.3003776,
+      "longitude": 174.7801197
+    },
+    "node_type": "seed",
+    "p2p_endpoint": "p2p.eosoceania.io:19876",
+	"bnet_endpoint": "bnet.eosoceania.io:19875"
+    },
+    {
+    "location": {
+      "name": "Wellington, WLG",
+      "country": "NZ",
+      "latitude": -41.3003776,
+      "longitude": 174.7801197
+    },
+    "node_type": "seed",
+    "p2p_endpoint": "p2p.eosoceania.io:29876",
+	"bnet_endpoint": "bnet.eosoceania.io:29875"
+    },
+    {
+    "location": {
+      "name": "Wellington, WLG",
+      "country": "NZ",
+      "latitude": -41.3003776,
+      "longitude": 174.7801197
+    },
+    "node_type": "query",
+    "api_endpoint": "http://api.eosoceania.io:31888",
+    "ssl_endpoint": "https://api.eosoceania.io:34443"
+    },
+    {
+    "location": {
+      "name": "Wellington, WLG",
+      "country": "NZ",
+      "latitude": -41.3003776,
+      "longitude": 174.7801197
+    },
+    "node_type": "query",
+    "api_endpoint": "http://api.eosoceania.io:41888",
+    "ssl_endpoint": "https://api.eosoceania.io:44443"
+    },
+    {
+    "location": {
+      "name": "Wellington, WLG",
+      "country": "NZ",
+      "latitude": -41.3003776,
+      "longitude": 174.7801197
+    },
+    "node_type": "producer",
+    "p2p_endpoint": "",
+    "api_endpoint": "",
+    "ssl_endpoint": ""
+    }
+  ]
+}
