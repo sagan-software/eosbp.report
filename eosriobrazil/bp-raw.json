@@ -1,69 +1,75 @@
 {
-    "producer_account_name": "eosriobrazil",
-    "org": {
-        "candidate_name": "EOS Rio",
-        "website": "https://eosrio.io",
-        "code_of_conduct": "https://eosrio.io/code-of-conduct/",
-        "ownership_disclosure": "https://eosrio.io/ownership/",
-        "email": "contact@eosrio.io",
-        "branding": {
-            "logo_256": "https://eosrio.io/wp-content/uploads/2018/06/logo-eosrio-square-bgblack-1.jpg",
-            "logo_1024": "https://eosrio.io/logo-eosrio1024.png",
-            "logo_svg": "https://eosrio.io/logo-eosrio-black-square-01.svg"
-        },
-        "location": {
-            "name": "Rio de Janeiro",
-            "country": "BR",
-            "latitude": -22.9068,
-            "longitude": -43.1729
-        },
-        "social": {
-            "steemit": "eosrio",
-            "twitter": "eosriobrazil",
-            "youtube": "UC5aslySB2QP_v8dyMMBcTxw",
-            "facebook": "",
-            "github": "eosrio",
-            "reddit": "eosrio",
-            "keybase": "igorls",
-            "telegram": "eosrio",
-            "wechat": "eosrio"
-        }
+  "producer_account_name": "eosriobrazil",
+  "org": {
+    "candidate_name": "EOS Rio",
+    "website": "https://eosrio.io",
+    "code_of_conduct":"https://eosrio.io/code-of-conduct/",
+    "ownership_disclosure":"https://eosrio.io/ownership/",
+    "email":"contact@eosrio.io",
+    "branding":{
+      "logo_256":"https://eosrio.io/wp-content/uploads/2018/06/logo-eosrio-square-bgblack-1.jpg",
+      "logo_1024":"https://eosrio.io/logo-eosrio1024.png",
+      "logo_svg":"https://eosrio.io/logo-eosrio-black-square-01.svg"
     },
-    "nodes": [{
-        "location": {
-            "name": "North Virginia",
-            "country": "US",
-            "latitude": 38.9573,
-            "longitude": -77.3968
-        },
-        "node_type": "full",
-        "ssl_endpoint": "https://hapi.eosrio.io"
-    }, {
-        "location": {
-            "name": "Sao Paulo",
-            "country": "BR",
-            "latitude": -23.5505,
-            "longitude": -46.6333
-        },
-        "node_type": "full",
-        "api_endpoint": "http://api.eosrio.io",
-        "ssl_endpoint": "https://api.eosrio.io"
-    }, {
-        "location": {
-            "name": "Rio de Janeiro",
-            "country": "BR",
-            "latitude": -22.9096,
-            "longitude": -43.1729
-        },
-        "node_type": "seed",
-        "p2p_endpoint": "br.eosrio.io:9876"
-    }, {
-        "location": {
-            "name": "Rio de Janeiro",
-            "country": "BR",
-            "latitude": -22.9096,
-            "longitude": -43.1729
-        },
-        "node_type": "producer"
-    }]
+    "location": {
+      "name": "Rio de Janeiro",
+      "country": "BR",
+      "latitude": -22.9068,
+      "longitude": -43.1729
+    },
+    "social": {
+      "steemit": "eosrio",
+      "twitter": "eosriobrazil",
+      "youtube": "UC5aslySB2QP_v8dyMMBcTxw",
+      "facebook": "",
+      "github":"eosrio",
+      "reddit": "eosrio",
+      "keybase": "igorls",
+      "telegram": "eosrio",
+      "wechat":"eosrio"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "North Virginia",
+        "country": "US",
+        "latitude": 38.9573,
+        "longitude": -77.3968
+      },
+      "node_type": "full",
+      "ssl_endpoint": "https://hapi.eosrio.io"
+    },
+    {
+      "location": {
+        "name": "Sao Paulo",
+        "country": "BR",
+        "latitude": -23.5505,
+        "longitude": -46.6333
+      },
+      "node_type": "full",
+      "api_endpoint": "http://api.eosrio.io",
+      "ssl_endpoint": "https://api.eosrio.io"
+    },
+    {
+      "location": {
+        "name": "Rio de Janeiro",
+        "country": "BR",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "br.eosrio.io:9876"
+    },
+    {
+      "location": {
+        "name": "Rio de Janeiro",
+        "country": "BR",
+        "latitude": -22.9096,
+        "longitude": -43.1729
+      },
+      "node_type": "producer"
+    }
+  ]
 }
+
