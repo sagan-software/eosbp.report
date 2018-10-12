@@ -1,0 +1,61 @@
+{
+  "producer_account_name": "starteosiobp",
+  "producer_public_key": "EOS4wZZXm994byKANLuwHD6tV3R3Mu3ktc41aSVXCBaGnXJZJ4pwF",
+  "org": {
+    "candidate_name": "Starteos",
+    "website": "https://www.starteos.io",
+	"ownership_disclosure":"https://steemit.com/block/@starteos/statement-of-ownership",
+    "code_of_conduct": "https://steemit.com/starteos/@starteos/starteos-roadmap-and-position-on-dividends",
+    "email": "bp@starteos.io",
+    "branding": {
+      "logo_256": "https://www.starteos.io/logo/starteos-logo-256.png",
+      "logo_1024": "https://www.starteos.io/logo/starteos-logo-1024.png",
+      "logo_svg": "https://www.starteos.io/logo/starteos-logo.svg"
+    },
+    "location": {
+      "name": "Chengdu",
+      "country": "CN",
+      "latitude": 30.5911,
+      "longitude": 104.0761
+    },
+    "social": {
+      "steemit": "starteos",
+      "twitter": "StarteosIO",
+      "youtube": "channel/UCcg3-HVMXU-inC7lZqHem-w",
+      "facebook": "eos.start",
+      "github": "",
+      "reddit": "user/starteos",
+      "keybase": "",
+      "telegram": "joinchat/IENskg_cRniy5tuix7GW9w",
+      "wechat": "Starteos"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Ohio",
+        "country": "US",
+        "latitude": 82.9072,
+        "longitude": 40.4273
+      },
+      "node_type":"full",
+      "p2p_endpoint": "node1.starteos.io:9876",
+      "api_endpoint": "http://api-mainnet.starteos.io",
+      "ssl_endpoint": "",
+	  "bnet_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "Tokyo",
+        "country": "JP",
+        "latitude":35.4984,
+        "longitude":139.4972
+      },
+      "node_type":"full",
+      "p2p_endpoint": "node2.starteos.io:9876",
+      "api_endpoint": "http://api-mainnet1.starteos.io",
+      "ssl_endpoint": "",
+	  "bnet_endpoint": ""
+    }
+  ]
+}
