@@ -1,0 +1,63 @@
+{
+  "producer_account_name": "eossandiego1",
+  "org": {
+    "candidate_name": "EOS Sandiego",
+    "website": "https://eossandeigo.com",
+    "code_of_conduct": "",
+    "ownership_disclosure": "",
+    "email": "",
+    "branding": {
+      "logo_256": "",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "San Diego",
+      "country": "USA",
+      "latitude": 32.774799,
+      "longitude": -117.071869
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github": "",
+      "reddit": "",
+      "keybase": "adkandari",
+      "telegram": "adkandari",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "San Francisco",
+        "country": "USA",
+        "latitude": 37.781555,
+        "longitude": -122.39399
+      },
+      "node_type": "full",
+      "api_endpoint": "atlas.eossandiego.com"
+    },
+    {
+      "location": {
+        "name": "San Francisco",
+        "country": "USA",
+        "latitude": 37.781555,
+        "longitude": -122.39399
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "atlas.eossandiego.com:9876"
+    },
+    {
+      "location": {
+        "name": "San Francisco",
+        "country": "USA",
+        "latitude": 37.781555,
+        "longitude": -122.39399
+      },
+      "node_type": "producer"
+    }
+  ]
+}
