@@ -27,20 +27,20 @@
   "nodes": [
     {
       "location": {
-        "name": "Tokyo",
-        "country": "JP",
-        "latitude": 35.679105,
-        "longitude": 139.779609
+        "name": "Taiwan",
+        "country": "CN",
+        "latitude": 23.553118,
+        "longitude": 121.0211024
       },
       "node_type": "seed",
       "p2p_endpoint": "p2p.meet.one:9876"
     },
     {
       "location": {
-        "name": "Tokyo",
-        "country": "JP",
-        "latitude": 35.679105,
-        "longitude": 139.779609
+        "name": "Taiwan",
+        "country": "CN",
+        "latitude": 23.553118,
+        "longitude": 121.0211024
       },
       "node_type": "full",
       "api_endpoint": "http://mainnet.meet.one",
@@ -48,21 +48,10 @@
     },
     {
       "location": {
-        "name": "HongKong",
+        "name": "Taiwan",
         "country": "CN",
-        "latitude": 22.28552,
-        "longitude": 114.15769
-      },
-      "node_type": "full",
-      "api_endpoint": "http://mainnet-history.meet.one",
-      "ssl_endpoint": "https://mainnet-history.meet.one"
-    },
-    {
-      "location": {
-        "name": "Tokyo",
-        "country": "JP",
-        "latitude": 35.679105,
-        "longitude": 139.779609
+        "latitude": 23.553118,
+        "longitude": 121.0211024
       },
       "node_type": "producer"
     }
