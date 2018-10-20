@@ -1,0 +1,56 @@
+{
+  "producer_account_name": "eosmatrixeos",
+  "org": {
+    "candidate_name": "EOSMatrix",
+    "website": "http://eosmatrix.co",
+    "email": "admin@eosmatrix.co",
+    "branding": {
+      "logo_256": "",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "location": {
+      "name": "India",
+      "country": "IN",
+      "latitude": 19.116395,
+      "longitude": 72.909039
+
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "facebook": "",
+      "github": "",
+      "telegram": ""
+    }
+  },
+  "nodes": [{
+    "location": {
+      "name": "India",
+      "country": "IN",
+      "latitude": 19.116395,
+      "longitude": 72.909039
+    },
+    "node_type": "full",
+    "api_endpoint": "http://eosmatrix.co:8888",
+    "ssl_endpoint": ""
+  },
+    {
+      "location": {
+        "name": "India",
+        "country": "IN"
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "eosmatrix.co:9876"
+    },
+    {
+      "location": {
+        "name": "India",
+        "country": "IN",
+        "latitude": 19.116395,
+        "longitude": 72.909039
+      },
+      "node_type": "producer"
+    }
+  ]
+}
