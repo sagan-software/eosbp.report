@@ -1,0 +1,59 @@
+{
+  "producer_account_name": "eos",
+  "org": {
+    "candidate_name": "ECAC",
+    "website": "https://www.ecac.io",
+    "code_of_conduct": "https://steemit.com/eos/@ecac/ecac-block-producer-announcement",
+    "ownership_disclosure":"https://www.ecac.io/ownership",
+    "email": "info@ecac.io",
+    "branding":{
+      "logo_256": "https://www.ecac.io/images/ecac_logo_256.png",
+      "logo_1024":"https://www.ecac.io/images/ecac_logo_1024.png",
+      "logo_svg":"https://www.ecac.io/images/ecac_logo.svg"
+    },
+    "location": {
+      "name": "Singapore",
+      "country": "SG",
+      "latitude": 1.274039,
+      "longitude": 103.839725
+    },
+    "social": {
+      "steemit": "ecac",
+      "twitter": "EOS_ECAC",
+      "telegram": "EOS_ECAC",
+	  "medium": "ECAC"
+    }
+  },
+  "nodes": [
+     {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 1.282848,
+        "longitude": 103.837598 
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "seed.ecac.io:9876"
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 1.282848,
+        "longitude": 103.837598 
+      },
+      "node_type": "full",
+      "api_endpoint": "http://api.ecac.io",
+      "ssl_endpoint": "https://api.ecac.io"  
+    },
+    {
+      "location": {
+        "name": "Singapore",
+        "country": "SG",
+        "latitude": 1.282848,
+        "longitude": 103.837598 
+      },
+      "node_type": "producer" 
+    }
+  ]
+}
