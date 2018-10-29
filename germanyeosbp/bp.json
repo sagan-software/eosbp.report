@@ -1,0 +1,45 @@
+{
+  "producer_account_name": "germanyeosbp",
+  "producer_public_key": "EOS7YYwiHhEHhKU7v8Ps6z4W3dj2V5q9P5sxYndFZEtp8D3NwqeWg",
+  "org": {
+    "candidate_name": "EOS Dusseldorf",
+    "website": "http://eosdusseldorf.de/",
+    "code_of_conduct": "http://eosdusseldorf.de/#Disclosures",
+    "ownership_disclosure": "http://eosdusseldorf.de/#Disclosures",
+    "email": "feedback@eosdusseldorf.de",
+    "branding": {
+      "logo_256": "http://eosdusseldorf.de/images/logo/logo.png",
+      "logo_1024": "http://eosdusseldorf.de/images/logo/logo1.PNG",
+      "logo_svg": "http://eosdusseldorf.de/images/logo/logo.png"
+    },
+    "location": {
+      "name": "Dusseldorf",
+      "country": "DE",
+      "latitude": 51.351286,
+      "longitude": 7.119453
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "facebook": "",
+      "youtube": "https://www.youtube.com/channel/UCSIvqN1uv60KIwVUUhcmmog",
+      "github": "",
+      "keybase": "",
+      "telegram": "https://t.me/EOSDusseldorf"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Dusseldorf",
+        "country": "DE",
+        "latitude": 51.351286,
+        "longitude": 7.119453
+      },
+      "node_type": "full",
+      "api_endpoint": "http://eosdusseldorf.de/",
+      "ssl_endpoint": "https://eosdusseldorf.de/",
+      "p2p_endpoint": "eosdusseldorf.de:9876"
+    }
+  ]
+}
