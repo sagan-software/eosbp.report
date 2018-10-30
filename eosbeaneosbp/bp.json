@@ -1,0 +1,65 @@
+{
+  "producer_account_name": "eosbeaneosbp",
+  "org": {
+    "candidate_name": "EOS Bean",
+    "website": "https://eosbean.com",
+    "code_of_conduct": "https://steemit.com/eos/@eosbean/eos-bean-code-of-conduct",
+    "ownership_disclosure": "https://steemit.com/eos/@eosbean/eos-bean-ownership-disclosure",
+    "email": "contact@eosbean.com",
+    "branding": {
+      "logo_256": "https://eosbean.com/assets/logo/logo-256.png",
+      "logo_1024": "https://eosbean.com/assets/logo/logo-1024.png",
+      "logo_svg": "https://eosbean.com/assets/logo/logo.svg"
+    },
+    "location": {
+      "name": "Boston",
+      "country": "US",
+      "latitude": 42.3687548,
+      "longitude": -71.1130146
+    },
+    "social": {
+      "steemit": "eosbean",
+      "twitter": "eosbean",
+      "youtube": "",
+      "facebook": "",
+      "github": "eosbean",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "eosbean",
+      "wechat": ""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Kansas",
+        "country": "US",
+        "latitude": 38.9536,
+        "longitude": -94.7336
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Kansas",
+        "country": "US",
+        "latitude": 38.9536,
+        "longitude": -94.7336
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "peer1.eosbean.com:9876",
+      "bnet_endpoint": "peer1.eosbean.com:4321"
+    },
+    {
+      "location": {
+        "name": "Kansas",
+        "country": "US",
+        "latitude": 38.9536,
+        "longitude": -94.7336
+      },
+      "node_type": "full",
+      "api_endpoint": "api.eosbean.com",
+      "ssl_endpoint": "api.eosbean.com"
+    }
+  ]
+}
