@@ -3,7 +3,7 @@
   "org": {
     "candidate_name": "eosDAC",
     "website": "https://eosdac.io",
-    "code_of_conduct": "https://eosdac.io#core",
+    "code_of_conduct": "https://eosdac.io#core-principles",
     "ownership_disclosure": "https://github.com/eosdac/constitution/blob/master/constitution.md",
     "email": "hello@eosdac.io",
     "branding": {
@@ -37,7 +37,7 @@
         "latitude": 44.4268,
         "longitude": 26.1025
       },
-      "node_type": "full",
+      "node_type": "api",
       "api_endpoint": "http://eu.eosdac.io",
       "ssl_endpoint": "https://eu.eosdac.io",
       "p2p_endpoint": "eu.eosdac.io:49876"
@@ -50,7 +50,7 @@
         "longitude": 127.0246
       },
       "node_type": "seed",
-      "p2p_endpoint": "as1.eosdac.io:49876"
+      "p2p_endpoint": "ro1.eosdac.io:49876"
     },
     {
       "location": {
