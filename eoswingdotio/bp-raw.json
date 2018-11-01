@@ -12,7 +12,7 @@
       "logo_svg": "https://eoswing.io/images/eoswing-logo.svg"
     },
     "location": {
-      "name": "Kunming",
+      "name": "KunMing",
       "country": "CN",
       "latitude": 25.0211,
       "longitude": 102.4231
@@ -32,7 +32,7 @@
   "nodes": [
     {
       "location": {
-        "name": "Kunming",
+        "name": "KunMing",
         "country": "CN",
         "latitude": 25.0211,
         "longitude": 102.4231
@@ -45,9 +45,9 @@
     {
       "location": {
         "name": "HongKong",
-        "country": "HK",
-        "latitude": 22.28193,
-        "longitude": 114.137487
+		"country": "HK",
+		"latitude": 22.28193,
+		"longitude": 114.137487
       },
       "node_type": "full",
       "api_endpoint": "http://api.eoswing.io",
@@ -56,9 +56,9 @@
     {
       "location": {
         "name": "HongKong",
-        "country": "HK",
-        "latitude": 22.28193,
-        "longitude": 114.137487
+		"country": "HK",
+		"latitude": 22.28193,
+		"longitude": 114.137487
       },
       "node_type": "seed",
       "p2p_endpoint": "node.eoswing.io:8769",
