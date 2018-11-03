@@ -1,6 +1,5 @@
 {
   "producer_account_name": "eosoceaniabp",
-  "producer_public_key": "EOS8BbufK9i7wTYp7QhUyxwvn4Rne9MBtLCJ1rfbUgc5CnF1Y6Udn",
   "org": {
     "candidate_name":"EOS Oceania",
     "website":"https://www.eosoceania.io",
@@ -14,7 +13,7 @@
     },
     "location": {
       "name": "Auckland, AKL",
-      "country": "NZ",
+      "country": "NZL",
       "latitude": -36.770905,
       "longitude": 174.740050
     },
@@ -32,7 +31,7 @@
     {
     "location": {
       "name": "Wellington, WLG",
-      "country": "NZ",
+      "country": "NZL",
       "latitude": -41.3003776,
       "longitude": 174.7801197
     },
@@ -43,40 +42,18 @@
     {
     "location": {
       "name": "Wellington, WLG",
-      "country": "NZ",
+      "country": "NZL",
       "latitude": -41.3003776,
       "longitude": 174.7801197
     },
-    "node_type": "seed",
-    "p2p_endpoint": "p2p.eosoceania.io:29876",
-	"bnet_endpoint": "bnet.eosoceania.io:29875"
-    },
-    {
-    "location": {
-      "name": "Wellington, WLG",
-      "country": "NZ",
-      "latitude": -41.3003776,
-      "longitude": 174.7801197
-    },
-    "node_type": "query",
+    "node_type": "full",
     "api_endpoint": "http://api.eosoceania.io:31888",
     "ssl_endpoint": "https://api.eosoceania.io:34443"
     },
     {
     "location": {
       "name": "Wellington, WLG",
-      "country": "NZ",
-      "latitude": -41.3003776,
-      "longitude": 174.7801197
-    },
-    "node_type": "query",
-    "api_endpoint": "http://api.eosoceania.io:41888",
-    "ssl_endpoint": "https://api.eosoceania.io:44443"
-    },
-    {
-    "location": {
-      "name": "Wellington, WLG",
-      "country": "NZ",
+      "country": "NZL",
       "latitude": -41.3003776,
       "longitude": 174.7801197
     },
