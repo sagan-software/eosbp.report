@@ -32,7 +32,9 @@
 				"latitude": 11.5976072,
 				"longitude": 48.1040971
 			},
-			"node_type": "producer"
+			"node_type": "full",
+			 "p2p_endpoint": "mainnet.eosarabia.net:3571",
+             "ssl_endpoint": "https://api.eosarabia.net"
 		},
 		{
 			"location": {
@@ -41,7 +43,7 @@
 				"latitude": 11.5976072,
 				"longitude": 48.1040971
 			},
-			"node_type": "seed",
+			"node_type": "peer",
 			"p2p_endpoint": "mainnet.eosarabia.net:3571"
 		}
 	]
