@@ -1,0 +1,64 @@
+{"producer_account_name": "cointelegrph",
+  "org": {
+    "candidate_name": "EOS Cointelegraph",
+    "website": "https://eosuperman.io/",
+    "code_of_conduct": "https://eosuperman.io/code-of-conduct/",
+    "ownership_disclosure": "https://eosuperman.io/ownership/",
+    "email": "info@eosuperman.io",
+    "branding": {
+      "logo_256": "/images/svg/logo_header-new_256.svg",
+      "logo_1024": "/images/svg/logo_header-new_1024.svg",
+      "logo_svg": "/images/svg/logo_header-new.svg"
+    },
+    "location": {
+      "name": "Amsterdam",
+      "country": "NL",
+      "latitude": 51.2993,
+      "longitude": 9.491
+    },
+    "social": {
+      "steemit": "eosuperman",
+      "twitter": "eosuperman",
+      "youtube": "cointelegraph",
+      "facebook": "eosuperman",
+      "github": "eosuperman",
+      "reddit": "eosuperman",
+      "keybase": "eosuperman",
+      "telegram": "eosuperman",
+      "wechat": "eosuperman"
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "Netherlands",
+        "country": "NL",
+        "Latitude": 51.2993,
+        "Longitude": 9.491
+      },
+      "node_type": "full",
+      "api_endpoint": "http://api.eosuperman.io",
+      "ssl_endpoint": "https://hapi.eosuperman.io"
+    },
+    {
+      "location": {
+        "name": "Netherlands",
+        "country": "NL",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "bp.eosuperman.io:9876",
+      "bnet_endpoint": "bnet.eosuperman.io:9875"
+    },
+    {
+      "location": {
+        "name": "Netherlands",
+        "country": "NL",
+        "latitude": 51.2993,
+        "longitude": 9.491
+      },
+      "node_type": "producer"
+    }
+  ]
+}
